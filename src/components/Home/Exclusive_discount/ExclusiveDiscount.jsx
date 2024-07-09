@@ -9,7 +9,6 @@ import {
   prototype,
   suntan,
 } from "../../../assets/assets";
-import "./ExclusiveDiscount.css";
 
 const ExclusiveDiscount = () => {
   return (

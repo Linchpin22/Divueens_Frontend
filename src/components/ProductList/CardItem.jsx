@@ -1,5 +1,5 @@
 import React from 'react'
-import { Lipstick } from '../../../assets/assets'
+import { Lipstick } from '../../assets/assets'
 
 const CardItem = () => {
 
@@ -71,7 +71,7 @@ const CardItem = () => {
                         </div>
                         <p className='text-left text-[1.3rem] font-medium leading-[1.5rem] mt-4'>{p.name}</p>
                         <div className='flex mt-1'>
-                            <div class="star icon text-white">
+                            <div className="star icon text-white">
                                 <span className="fa fa-star checked star text-[1rem] text-[#ffa200]" ></span>
                                 <span className="fa fa-star checked star text-[1rem] text-[#ffa200]" ></span>
                                 <span className="fa fa-star checked star text-[1rem] text-[#ffa200]" ></span>

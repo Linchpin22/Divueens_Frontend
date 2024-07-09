@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Carousel.css'; 
-import CustomSlide from '../CustomSlide/CustomSlide';
+import CustomSlide from './CustomSlide';
 
 const Carousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +13,7 @@ const Carousel = ({ slides }) => {
   }, [slides.length]);
 
   return (
-    <div className="carousel relative overflow-x-hidden">
+    <div className="carousel mb-[0%] relative overflow-x-hidden">
       <div className="slide-container flex transition-[transform_0.5s_ease-in-out]" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
         {slides.map((slide, index) => (
           <CustomSlide
@@ -27,7 +26,7 @@ const Carousel = ({ slides }) => {
           />
         ))}
       </div>
-      <div className="dot-container flex relative items-center justify-center gap-1 b-[1rem] mb-8">
+      {/* <div className="dot-container flex relative items-center justify-center b-[1rem] mb-8">
         {slides.map((_, index) => (
           <span
             key={index}
@@ -36,7 +35,7 @@ const Carousel = ({ slides }) => {
           >
           </span>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

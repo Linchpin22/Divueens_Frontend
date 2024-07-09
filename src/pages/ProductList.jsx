@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom'
-import Filter from './Filter'
-import CardItem from './CardItem';
+import Filter from '../components/ProductList/Filter'
+import CardItem from '../components/ProductList/CardItem';
 
 const ProductList = () => {
 
@@ -118,11 +118,7 @@ const ProductList = () => {
                                             <ul className="py-2 text-sm">
                                                 {d.options.map((p, index) => {
                                                     return <li key={index} className="px-4 py-2 hover:bg-gray-100">
-                                                        <Link
-                                                            href={''}
-                                                            className="text-gray-800  hover:text-gray-900"
-                                                        >
-                                                            {p}
+                                                        <Link to="/" className="text-gray-800  hover:text-gray-900"> {p}
                                                         </Link>
                                                     </li>
                                                 })}
@@ -143,7 +139,7 @@ const ProductList = () => {
                                     <ul className="py-2 text-sm">
                                         <li className="px-4 py-2 hover:bg-gray-100">
                                             <Link
-                                                href={''}
+                                                to="/"
                                                 className="text-gray-800  hover:text-gray-900"
                                             >
                                                 p
@@ -174,7 +170,7 @@ const ProductList = () => {
                             <div className="prodline flex font-normal items-center gap-5">
                                 <div className="show text-[1.1rem] text-gray-600">Showing 1-10 of 100 Products</div>
                                 <div className="sortby text-[18px]">
-                                    <label for="sort" className='text-gray-600'>Sort by: </label>
+                                    <label htmlfor="sort" className='text-gray-600'>Sort by: </label>
                                     <select className="select bg-transparent border-none text-[16px]" name="products" id="sort">
                                         <option value="a" selected>Most popular</option>
                                         <option value="b">b</option>

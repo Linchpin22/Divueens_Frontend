@@ -1,6 +1,5 @@
 import React from 'react';
 import { MdStar } from 'react-icons/md'; 
-import './SaleHeader.css';
 
 const SaleHeader = () => {
   const saleText = "Sale Live ";

@@ -9,7 +9,6 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
-import "./Footer.css";
 import MainLogo from "../../../assets/assets";
 
 const _1stList = [
@@ -143,7 +142,7 @@ function Footer() {
             onClick={() =>
               prev !== index + 1 ? cngView(index + 1) : cngView(0)
             }
-            className="drpBtn font-medium text-gray-900"
+            className="drpBtn text-rose-950 text-md font-bold"
           >
             {lst.title}
             {toggleView === index + 1 ? (
@@ -162,7 +161,7 @@ function Footer() {
                 <li key={int}>
                   <Link
                     to={list2.url}
-                    className="footerList text-gray-700 transition hover:text-pink-400"
+                    className="footerList text-rose-800 transition hover:text-pink-400"
                   >
                     {list2.txt}
                   </Link>
@@ -181,10 +180,10 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-8 py-16 sm:px-28 md:px-40 lg:px-8 lg:pt-16">
+    <footer data-footer-part="" >
+      <div className="md:pt-16 pt-14 ">
         <div
-          className="row_ mt-8 grid grid-cols-1 lg:mt-0 lg:grid-cols-5"
+          className="row_ md:mt-8 md:px-24 px-8 grid grid-cols-1 lg:mt-0 lg:grid-cols-5"
           data-footer-part=""
         >
           <div
@@ -193,7 +192,7 @@ function Footer() {
             data-footer-part=""
           >
             <Link to="/" className="logo">
-              <img alt="" className="object-contain h-14 w-20" src={MainLogo} />
+              <img alt="" className="object-contain h-[4.5rem] w-22" src={MainLogo} />
             </Link>
             <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
@@ -201,7 +200,7 @@ function Footer() {
                   <li key={int}>
                     <Link
                       to={list2.url}
-                      className="footerList text-gray-700 transition hover:text-pink-400"
+                      className="footerList text-rose-800 transition hover:text-pink-400"
                     >
                       {list2.txt}
                     </Link>
@@ -211,11 +210,11 @@ function Footer() {
             </ul>
           </div>
           <ListItemsAll />
-          <ul className="col_ col-span-2 flex justify-center gap-6 pt-4 md:pt-0 lg:pt-0 lg:pr-32 lg:col-span-5 lg:justify-end">
+          <ul className="col_ col-span-2 flex justify-center gap-8 pt-20 md:pt-0 lg:pt-0 lg:pr-32 lg:col-span-5 lg:justify-end">
             <li>
               <a
                 href=""
-                className="text-gray-700 transition hover:text-pink-400"
+                className="text-rose-950 transition hover:text-rose-600"
               >
                 <FaFacebookF className="h-6 w-6" />
               </a>
@@ -223,7 +222,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                className="text-gray-700 transition hover:text-pink-400"
+                 className="text-rose-950 transition hover:text-rose-600"
               >
                 <FaInstagram className="h-6 w-6" />
               </a>
@@ -231,7 +230,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                className="text-gray-700 transition hover:text-pink-400"
+                 className="text-rose-950 transition hover:text-rose-600"
               >
                 <FaWhatsapp className="h-6 w-6" />
               </a>
@@ -239,24 +238,24 @@ function Footer() {
             <li>
               <a
                 href=""
-                className="text-gray-700 transition hover:text-pink-400"
+                className="text-rose-950 transition hover:text-rose-600"
               >
                 <FaPinterest className="h-6 w-6" />
               </a>
             </li>
           </ul>
         </div>
-        <hr data-footer-part="" />
-        <div className="pt-4">
+        <hr data-footer-part="" className="mt-6 mx-4 mb-10 md:mb-3 border-none h-[0.06em] bg-rose-950" />
+        <div className="py-4 ">
           <div className="sm:flex sm:justify-between">
-            <p className="copyright text-xs text-gray-500" data-footer-part="">
+            <p className="copyright text-black/80 md:ml-20" data-footer-part="">
               DIVUEENS ©️ 2024 - All Rights Reserved
             </p>
-            <ul className="mt-8 flex flex-wrap justify-center gap-4 text-xs sm:mt-0 lg:justify-end">
+            <ul className="flex flex-wrap justify-center mr-20 gap-4 text-xs sm:mt-0">
               <li>
                 <a
                   href="/"
-                  className="text-gray-500 transition hover:text-pink-400"
+                  className="text-black/80 transition hover:underline"
                 >
                   {" "}
                   Terms & Conditions{" "}
@@ -266,7 +265,7 @@ function Footer() {
               <li>
                 <a
                   href="/"
-                  className="text-gray-500 transition hover:text-pink-400"
+                  className="text-black/80 transition hover:underline"
                 >
                   {" "}
                   Privacy Policy{" "}
@@ -276,7 +275,7 @@ function Footer() {
               <li>
                 <a
                   href="/"
-                  className="text-gray-500 transition hover:text-pink-400"
+                  className="text-black/80 transition hover:underline"
                 >
                   {" "}
                   Cookies{" "}

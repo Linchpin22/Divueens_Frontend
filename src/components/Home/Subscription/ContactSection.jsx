@@ -11,41 +11,34 @@ const ContactSection = () => {
   };
 
   return (
-
-    <div className="contact-section bg-[#fff] py-[50px] px-0 text-center">
-      <h2 className="try11 before:content-[''] before:w-[6px] after:content-[''] after:w-[60px] text-[24px] mb-[20px] text-[#333]" style={{ fontFamily: 'Montserrat' }}>
+    <div className="contact-section py-14 mx-auto text-center">
+      <h2
+        className="text-3xl mt-8 mb-4 text-rose-900 font-bold"
+        style={{ fontFamily: "Montserrat" }}
+      >
         Stay in Touch
       </h2>
       <p
-        className="text-[16px] mb-[30px] text-[#555]"
-        style={{ paddingLeft: "30px", fontFamily: "Montserrat" }}
+        className="mb-10 text-center text-rose-800"
+        style={{ fontFamily: "Montserrat" }}
       >
         Get latest beauty products on Email.
       </p>
       <div className="contact-form flex items-center justify-center">
         <input
           type="email"
-          className='p-[26px] border-[2px] border-rose-700 rounded-[5px] w-[300px]'
+          className=" py-3 px-4 md:w-96 w-60 rounded-s-xl shadow-xl focus:outline focus:outline-rose-700 text-sm border "
+
           placeholder="Your Email Address"
-          style={{
-            border: "solid 1px pink",
-            marginRight: "5px",
-            width: "400px",
-            height: "30px",
-          }}
         />
-        <button className='bg-darkeborder-rose-700 text-[#fff] py-[10px] px-[20px] border-none rounded-[5px] cursor-pointer text-[16px] bg-rose-700'
+        <button
+          className="bg-rose-700 text-[#fff] hover:bg-rose-600 py-[0.68rem] px-5 font-bold shadow-xl border rounded-e-lg cursor-pointer"
           onClick={subscribe}
-          style={{
-            paddingLeft: '25px',
-            paddingRight: '25px',
-            height: '53px',
-          }}
         >
           Send
         </button>
-      </div >
-    </div >
+      </div>
+    </div>
   );
 };
 
