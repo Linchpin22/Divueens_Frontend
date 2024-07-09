@@ -9,7 +9,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
+
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const TopBrands = () => {
   return (
@@ -49,29 +51,30 @@ const TopBrands = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
           {/* -------------- */}
         </div>
 
-        <div
-          className={`${styles["heading-2"]} mt-8 font-['Montserrat'] relative p-10 text-center`}
-        >
+        <Link to="/coins">
           <div
-            className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot1"]}`}
-          ></div>
-          <div
-            className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot2"]}`}
-          ></div>
-          <div
-            className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot3"]}`}
-          ></div>
-          <div
-            className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot4"]}`}
-          ></div>
-          <h1 className="font-semibold text-[2rem]">
-            Get Div coins on every order
-          </h1>
-        </div>
+            className={`${styles["heading-2"]} mt-8 font-['Montserrat'] relative p-10 text-center`}
+          >
+            <div
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot1"]}`}
+            ></div>
+            <div
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot2"]}`}
+            ></div>
+            <div
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot3"]}`}
+            ></div>
+            <div
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot4"]}`}
+            ></div>
+            <div className={`${styles["coinLink"]} font-semibold text-[2rem]`}>
+              Get Div coins on every order
+            </div>
+          </div>
+        </Link>
       </div>
     </>
   );

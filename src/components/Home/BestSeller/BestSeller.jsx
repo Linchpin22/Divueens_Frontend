@@ -388,7 +388,7 @@ const BestSeller = () => {
             backgroundColor: isClicked ? "#ffff" : "#be123c",
             color: isClicked ? "#be123c" : "#fff",
           }}
-          className={`${styles["first"]} transition-[all_0.8s_ease] py-2 px-12 font-semibold border border-rose-600 rounded-s-full shadow-xl`}
+          className={`${styles["first"]} transition-[all_0.8s_ease] py-2 lg:px-12 md:px-6 font-semibold border border-rose-600 rounded-s-full shadow-xl`}
         >
           Trending Now
         </button>
@@ -401,7 +401,7 @@ const BestSeller = () => {
             backgroundColor: isClicked ? "#be123c" : "#ffff",
             color: isClicked ? "#fff" : "#be123c",
           }}
-          className={`${styles["second"]} py-2 px-12 font-semibold rounded-e-full shadow-xl border border-rose-600 transition-[all_0.8s_ease]`}
+          className={`${styles["second"]} py-2 lg:px-12 md:px-6 font-semibold rounded-e-full shadow-xl border border-rose-600 transition-[all_0.8s_ease]`}
         >
           New Arrivals
         </button>

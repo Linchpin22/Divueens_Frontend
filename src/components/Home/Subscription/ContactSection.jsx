@@ -11,9 +11,9 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="contact-section py-24 mx-auto text-center">
+    <div className="contact-section py-14 mx-auto text-center">
       <h2
-        className="text-2xl mt-8 mb-4 text-rose-900 font-bold"
+        className="text-3xl mt-8 mb-4 text-rose-900 font-bold"
         style={{ fontFamily: "Montserrat" }}
       >
         Stay in Touch
