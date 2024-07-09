@@ -13,7 +13,7 @@ const ReferSection = () => {
       <div className="refer-section">
         <img
           src={ref_pic}
-          className="image1 h-[400px] w-[1200px] block m-auto shadow-[0px_0px_5px_#808080]"
+          className="image1 h-[32em] w-[1200px] block m-auto shadow-[0px_0px_5px_#808080]"
           style={{ borderRadius: "10px" }}
         />
       </div>

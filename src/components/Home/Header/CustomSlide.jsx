@@ -1,5 +1,4 @@
 import React from "react";
-import "./CustomSlide.css";
 
 const CustomSlide = ({ background, image, text, buttonText, buttonLink }) => {
   return (
