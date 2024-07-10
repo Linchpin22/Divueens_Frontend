@@ -7,7 +7,7 @@ import "./Subscription.css";
 function Subscription() {
   return (
     <div className="combos_here">
-      <div className="heading pt-16 pb-8">
+      <div className="heading pt-16 pb-8 my-5">
         <hr className="bg-gradient-to-l from-rose-700" />
         <h2 className="text-nowrap">Exclusive Combos</h2>
         <hr className="bg-gradient-to-r from-rose-700" />
