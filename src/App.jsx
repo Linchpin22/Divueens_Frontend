@@ -15,29 +15,22 @@ function App() {
     <>
       <Header />
       <Routes>
-        {/* Home Page */}
-        <Route path="/" element={<Home />} />
-
-        {/* Product - List */}
+        <Route path="/" element={<Home />} />     {/* Landing page */}
         <Route path="/products" element={<ProductList />} />
-
-        {/* Login page */}
-        <Route path="/login" element={<LoginPage />} />
-
-        {/* Signup page */}
-        <Route path="/signup" element={<SignUpPage />} />
-        
-        {/* Our Team page */}
-        <Route path="/ourteam" element={<TeamSection />} />
-
-        {/* CSR page */}
+        {/* <Route path="/login" element={<LoginPage />} /> */}
+        {/* <Route path="/signup" element={<SignUpPage />} /> */}
+        <Route path="/our-team" element={<TeamSection />} />
         <Route path="/CSR" element={<DivueensCSR />} />
-
-        {/* Div Coins page */}
         <Route path="/coins" element={<DivCoins />} />
-
-        {/* Blog page */}
         <Route path="/blogs" element={<BlogHome />} />
+        <Route path="/contact-us" element={<></>} />
+        <Route path="/help-center" element={<></>} />
+        <Route path="/return-policy" element={<></>} />
+        <Route path="/shipping-delivery" element={<></>} />
+        <Route path="/sell-on-divueens" element={<></>} />
+        <Route path="/privacy-policy" element={<></>} />
+        <Route path="/blogs" element={<></>} />
+        <Route path="/about-us" element={<></>} />
       </Routes>
       <Footer />
     </>

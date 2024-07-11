@@ -65,11 +65,13 @@ const Navbar = () => {
       {isMobile ? (
         <div className="container-fluid">
           <div className="logotoggler flex px-4 justify-between">
+            <Link to={'/'} >
             <img
               src={DivueensLogoImage}
               alt="Divueens"
               className="brand-icon h-[3em]"
             />
+            </Link>
             <button
               className="navbar-toggler bg-none border-none"
               onClick={toggleMenu}
@@ -245,11 +247,13 @@ const Navbar = () => {
         <>
           <div className="navbar-desktop relative flex items-center justify-between">
             <div className="navbar-brand">
+              <Link to={'/'} >
               <img
                 src={DivueensLogoImage}
                 alt="Divueens"
                 className="brand-icon absolute top-0 left-4 h-13"
               />
+              </Link>
             </div>
 
             {/* <div className="navbar-search">
