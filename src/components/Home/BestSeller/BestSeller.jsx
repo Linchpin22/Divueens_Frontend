@@ -13,6 +13,7 @@ import {
   FaStar,
   FaStarHalf,
 } from "react-icons/fa6";
+import { LiaShoppingCartSolid,LiaHeart } from "react-icons/lia";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -113,8 +114,9 @@ const BestSeller = () => {
           style={{
             backgroundColor: isClicked ? "#ffff" : "#be123c",
             color: isClicked ? "#be123c" : "#fff",
+         
           }}
-          className={`${styles["first"]} transition-[all_0.8s_ease] py-2 px-4 md:px-12 font-semibold border border-rose-600 rounded-s-full shadow-xl`}
+          className={`${styles["first"]} transition-[all_0.8s_ease] py-2 px-4 md:px-12 font-semibold shadow-sm shadow-slate-400`}
         >
           Trending Now
         </button>
@@ -126,15 +128,16 @@ const BestSeller = () => {
           style={{
             backgroundColor: isClicked ? "#be123c" : "#ffff",
             color: isClicked ? "#fff" : "#be123c",
+          
           }}
-          className={`${styles["second"]} py-2 px-4 md:px-12 font-semibold rounded-e-full shadow-xl border border-rose-600 transition-[all_0.8s_ease]`}
+          className={`${styles["second"]} py-2 px-4 md:px-12 shadow-sm shadow-slate-400 transition-[all_0.8s_ease]`}
         >
           New Arrivals
         </button>
       </div>
 
       <div
-        className={`${styles["products"]} overflow-hidden relative`}
+        className={`${styles["products"]} overflow-hidden bg-orange-50 relative`}
       >
         {selectedCategory === "trending" && (
           <Swiper
@@ -170,7 +173,7 @@ const BestSeller = () => {
                   }}
                   style={{ transform: `translateX(-${offset}%)` }}
                   className={`${styles["product-card"]
-                    } bg-rose-50 rounded-[10px] mx-auto shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
+                    } bg-amber-100 mx-auto shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
                     }`}
                   key={index}>
 
@@ -190,37 +193,40 @@ const BestSeller = () => {
                       className="w-full h-full object-cover" />
                   </div>
                   {/* animated icons */}
+                  {/* <div
+                    className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col z-10 transition-[0.9s] gap-3`}
+                  > */}
                   <div
-                    className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}
+                    className={`${styles["cart-info"]} absolute left-[90%] top-12 -translate-x-[50%] -translate-y-[50%] flex flex-col z-10 transition-[0.9s] gap-3`}
                   >
                     <button
                       title="Add to cart"
-                      className=" text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor"
+                      className="cursor-pointer translate-x-[100px]"
                       style={{ transition: ".2s" }}
                     >
-                      <FaCartShopping className="text-rose-500" />
-                    </button>
+                      <LiaShoppingCartSolid className="text-rose-700" />
+                    </button> 
                     <a
                       title="Add to Wishlist"
-                      className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor"
+                      className="cursor-pointer translate-x-[100px]"
                       style={{ transition: ".3s" }}
                     >
-                      <FaHeart className="text-rose-500" />
+                      <LiaHeart className="text-rose-700" />
                     </a>
-                    <a
+                    {/* <a
                       title="Quick View"
-                      className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor"
+                      className=" cursor-pointer translate-x-[100px]"
                       style={{ transition: ".4s" }}
                     >
                       <FaMagnifyingGlass className="text-rose-500" />
                     </a>
                     <a
                       title="Compare"
-                      className="border-none bg-none no-underline text-[#ddd] cursor-pointer translate-x-[100px] hover:text-darkerColor"
+                      className="cursor-pointer translate-x-[100px]"
                       style={{ transition: ".5s" }}
                     >
                       <FaArrowsRotate className="text-rose-500" />
-                    </a>
+                    </a> */}
                   </div>
                   <div className="flex flex-col px-4 py-2 w-full h-[30%]">
 
@@ -238,7 +244,7 @@ const BestSeller = () => {
                         </span>
                       </div>
                       <Link to="/">
-                        <button className="text-sm bg-rose-700 text-white border-[3px] border-rose-700 text-[12px] font-bold rounded-[8px] p-2 cursor-pointer shadow-[0px_1px_2px_#000] mt-5 hover:bg-white hover:text-rose-700">
+                        <button className="text-sm bg-rose-700 text-white p-2 px-3 cursor-pointer shadow-md shadow-slate-400 mt-5 hover:bg-rose-600">
                           Buy Now
                         </button>
                       </Link>
@@ -247,9 +253,9 @@ const BestSeller = () => {
                 </SwiperSlide>
               ))
             }
-            <div className="swiper-button-prev absolute top-1/2 left-2 text-sm transform -translate-y-1/2 w-[2.5rem] h-10 rounded-full flex items-center md:text-lg md:w-[3rem] md:h-[3rem]" onClick={handlePrevClick}>
+            <div className="swiper-button-prev after:content-['prev'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800 absolute top-1/2 left-2" onClick={handlePrevClick}>
             </div>
-            <div className="swiper-button-next absolute top-1/2 right-2 text-sm transform -translate-y-1/2 w-[2.5rem] h-10 rounded-full flex items-center md:text-lg md:w-[3rem] md:h-[3rem]" onClick={handleNextClick}></div>
+            <div className="swiper-button-next after:content-['prev'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800 absolute top-1/2 right-2" onClick={handleNextClick}></div>
           </Swiper >
         ) || selectedCategory === "newArrivals" && (
           <Swiper
@@ -285,7 +291,7 @@ const BestSeller = () => {
                   }}
                   style={{ transform: `translateX(-${offset}%)` }}
                   className={`${styles["product-card"]
-                    } bg-rose-50 rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
+                    } bg-rose-200 shadow-md shadow-slate-400 overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
                     }`}
                   key={index}>
 
@@ -353,7 +359,7 @@ const BestSeller = () => {
                         </span>
                       </div>
                       <Link to="/">
-                        <button className="text-sm bg-rose-700 text-white border-[3px] border-rose-700 text-[12px] font-bold rounded-[8px] p-2 cursor-pointer shadow-[0px_1px_2px_#000] mt-5 hover:bg-white hover:text-rose-700">
+                        <button className="text-sm bg-rose-700 text-white text-[12px] p-2 px-3 cursor-pointer mt-5 hover:bg-rose-600">
                           Buy Now
                         </button>
                       </Link>
@@ -362,9 +368,9 @@ const BestSeller = () => {
                 </SwiperSlide>
               ))
             }
-            <div className="swiper-button-prev absolute top-1/2 left-2 text-sm transform -translate-y-1/2 w-[2.5rem] h-10 rounded-full flex items-center md:text-lg md:w-[3rem] md:h-[3rem]" onClick={handlePrevClick}>
+            <div className="swiper-button-prev after:content-['prev'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800 absolute top-1/2 left-2" onClick={handlePrevClick}>
             </div>
-            <div className="swiper-button-next absolute top-1/2 right-2 text-sm transform -translate-y-1/2 w-[2.5rem] h-10 rounded-full flex items-center md:text-lg md:w-[3rem] md:h-[3rem]" onClick={handleNextClick}></div>
+            <div className="swiper-button-next after:content-['next'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800 absolute top-1/2 right-2" onClick={handleNextClick}></div>
           </Swiper >
         )}
 
