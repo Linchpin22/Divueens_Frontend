@@ -14,6 +14,7 @@ import PrivacyPolicy from "./pages/Privacy";
 import HelpCenter from "./pages/HelpCenter";
 import FaqsPage from "./pages/FAQ";
 import SpecialOffer from "./pages/SpecialOffer";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />     {/* Landing page */}
         <Route path="/products" element={<ProductList />} />
+        <Route path="/product-description" element={<ProductDetails />} />
 
         {/* Login page */}
         <Route path="/login" element={<Auth />} />
