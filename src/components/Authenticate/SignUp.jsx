@@ -1,17 +1,11 @@
+import React from "react";
 
-export default function Signup (){
+const Signup = () => {
     
     return(
       <>
-       
-      
-
       <div className="">
-        
-
-
         <div>
-         
           <form action="#" className="flex flex-col gap-6 mt-[30px]">
             <div>
               <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="text" placeholder="Email Address" required/>
@@ -27,20 +21,10 @@ export default function Signup (){
               <input className="text-2xl pt-2" type="submit" value="Signup"/>
             </div>
           </form>
-          
-          
-          
         </div>
       </div>
-      
-    
-
-      
-      
-      
-      
-      
-      
       </>  
     )
 }
+
+export default Signup;

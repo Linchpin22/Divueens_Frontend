@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import Login from './Login'
 import Signup from './Signup'
@@ -12,8 +11,7 @@ export default function Auth() {
           <button type="button" onClick={()=>settoggle(true)} className=" pt-[2px] px-[30px] cursor-pointer bg-transparent border-spacing-0 outline-none relative text-white">Log in</button>
           <button type="button" onClick={()=>settoggle(false)} className=" pt-[2px] px-[30px] cursor-pointer bg-transparent border-spacing-0 text-black outline-none relative ">Sign Up</button>
         </div>
-        { toggle?<Login />:<Signup />
-        }
+        {toggle?<Login />:<Signup />}
         
       </div>
     </>
