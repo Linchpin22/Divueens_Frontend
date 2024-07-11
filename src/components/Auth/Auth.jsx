@@ -12,7 +12,6 @@ export default function Auth() {
           <button type="button" onClick={()=>settoggle(false)} className=" pt-[2px] px-[30px] cursor-pointer bg-transparent border-spacing-0 text-black outline-none relative ">Sign Up</button>
         </div>
         {toggle?<Login />:<Signup />}
-        
       </div>
     </>
   )

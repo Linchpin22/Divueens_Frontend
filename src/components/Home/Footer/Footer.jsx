@@ -13,11 +13,11 @@ import MainLogo from "../../../assets/assets";
 
 const _1stList = [
   {
-    url: "",
+    url: "/about-us",
     txt: "Who are we ?",
   },
   {
-    url: "",
+    url: "/our-team",
     txt: "Our Team",
   },
   {
@@ -25,11 +25,11 @@ const _1stList = [
     txt: "Press",
   },
   {
-    url: "",
+    url: "/authenticity",
     txt: "Authenticity",
   },
   {
-    url: "",
+    url: "/CSR",
     txt: "Careers CSR",
   },
   {
@@ -37,7 +37,7 @@ const _1stList = [
     txt: "Divueens",
   },
   {
-    url: "",
+    url: "/investor-relation",
     txt: "Investor Relation",
   },
 ];
@@ -47,27 +47,27 @@ const baadiList = [
     title: "Help",
     chhotiList: [
       {
-        url: "",
+        url: "/contact-us",
         txt: "Contact Us",
       },
       {
-        url: "",
-        txt: "Frequently Asked Questions",
+        url: "/help-center",
+        txt: "FAQs",
       },
       {
-        url: "",
+        url: "/return-policy",
         txt: "Cancellation and Return",
       },
       {
-        url: "",
+        url: "/shipping-delivery",
         txt: "Shipping and Delivery ",
       },
       {
-        url: "",
+        url: "/sell-on-divueens",
         txt: "Sell on Divueens",
       },
       {
-        url: "",
+        url: "/privacy-policy",
         txt: "Privacy Policy",
       },
     ],
@@ -76,7 +76,7 @@ const baadiList = [
     title: "Inspire Us",
     chhotiList: [
       {
-        url: "",
+        url: "/blogs",
         txt: "Beauty Books",
       },
       {
@@ -89,11 +89,11 @@ const baadiList = [
     title: "Quick Links",
     chhotiList: [
       {
-        url: "",
+        url: "/special-offers",
         txt: "Special Offers",
       },
       {
-        url: "",
+        url: "/trendings",
         txt: "Trendings",
       },
       {
@@ -214,7 +214,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                className="text-rose-950 transition hover:text-rose-600"
+                className="text-rose-950 transition hover:text-rose-100"
               >
                 <FaFacebookF className="h-6 w-6" />
               </a>
@@ -222,7 +222,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                 className="text-rose-950 transition hover:text-rose-600"
+                 className="text-rose-950 transition hover:text-rose-100"
               >
                 <FaInstagram className="h-6 w-6" />
               </a>
@@ -230,7 +230,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                 className="text-rose-950 transition hover:text-rose-600"
+                 className="text-rose-950 transition hover:text-rose-100"
               >
                 <FaWhatsapp className="h-6 w-6" />
               </a>
@@ -238,7 +238,7 @@ function Footer() {
             <li>
               <a
                 href=""
-                className="text-rose-950 transition hover:text-rose-600"
+                className="text-rose-950 transition hover:text-rose-100"
               >
                 <FaPinterest className="h-6 w-6" />
               </a>

@@ -10,10 +10,10 @@ import product_7 from './product-7.jpg'
 import product_8 from './product-8.jpg'
 import product_9 from './product-9.jpeg'
 import product_10 from './product-10.jpeg'
-import product_11 from './product-5.jpeg'
+import product_11 from './product-11.png'
 import product_12 from './product-12.jpeg'
-import product_13 from './product-2.jpeg'
-import product_14 from './product-1.jpg'
+import product_13 from './product-13.png'
+import product_14 from './product-14.png'
 import product_15 from './product-5.jpeg'
 import product_16 from './product-8.jpg'
 
@@ -36,7 +36,7 @@ import banner_4 from './Banner/banner_4.png'
 
 import bestsellers_1 from './Exclusive_Discount/bestsellers_1.jpg'
 import example from './Exclusive_Discount/EXAMPLE- heading.jpg'
-import freebies from './Exclusive_Discount/freebies.jpg'
+import freebies from './Exclusive_Discount/Freebies.png'
 import loreal from './Exclusive_Discount/loreal.jpg'
 import mamaearth from './Exclusive_Discount/mamaearth_1.jpg'
 import output from './Exclusive_Discount/OUTPUT.png'
@@ -52,9 +52,9 @@ import Lips from './Shop_By_Category/Lips.webp'
 import Eyes from './Shop_By_Category/Eyes.webp'
 
 
-import sub_1 from './Subscription/1.jpg'
-import sub_2 from './Subscription/2.jpg'
-import sub_3 from './Subscription/3.jpg'
+import sub_1 from './Subscription/1.png'
+import sub_2 from './Subscription/2.png'
+import sub_3 from './Subscription/3.png'
 import sub_4 from './Subscription/4.jpg'
 import ref_pic from './Subscription/ref_pic1.gif'
 
@@ -121,6 +121,7 @@ export {
       sub_2,
       sub_3,
       sub_4,
+      // sub_5,
       ref_pic,
 }
 
