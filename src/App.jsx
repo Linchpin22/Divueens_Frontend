@@ -1,41 +1,45 @@
-import './App.css';
-import BestSeller from './components/BestSeller/BestSeller';
-import TopBrands from './components/TopBrands/TopBrands';
-import ExclusiveDiscount from './components/Exclusive_discount/ExclusiveDiscount';
-import ShopByCategory from './components/ShopByCategory/ShopByCategory';
-import Subscription from './components/Subscription/Subscription';
-import Banner from './components/Banner/Banner';
-import FooterBlock from './components/Footer/Footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Header/Home';
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Home/Header/Header";
+import Footer from "./components/Home/Footer/Footer";
+import Home from "./pages/Home";
+import ProductList from "./pages/ProductList";
+import TeamSection from "./pages/TeamSection";
+import DivueensCSR from "./pages/DivueensCSR";
+import BlogHome from "./pages/Blog";
+import DivCoins from "./pages/DivCoins";
+import Auth from "./components/Auth/Auth";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+      <Header />
       <Routes>
-        {/* Route for the home page */}
-        <Route
-          path="/"
-          element={
-            <>
-              {/* Components for the home page */}
-              <Home />
-              <div className="app">
-                <Banner />
-                <BestSeller />
-                <TopBrands />
-                <ExclusiveDiscount />
-                <ShopByCategory />
-                <Subscription />
-              </div>
-              {/* Footer for the home page */}
-              <FooterBlock />
-            </>
-          }
-        />
-        {/* Add more routes here if needed */}
+        <Route path="/" element={<Home />} />     {/* Landing page */}
+        <Route path="/products" element={<ProductList />} />
+
+        {/* Login page */}
+        <Route path="/login" element={<Auth />} />
+        
+        {/* Our Team page */}
+        <Route path="/ourteam" element={<TeamSection />} />
+
+        {/* CSR page */}
+        <Route path="/CSR" element={<DivueensCSR />} />
+        <Route path="/coins" element={<DivCoins />} />
+        <Route path="/blogs" element={<BlogHome />} />
+        <Route path="/contact-us" element={<></>} />
+        <Route path="/help-center" element={<></>} />
+        <Route path="/return-policy" element={<></>} />
+        <Route path="/shipping-delivery" element={<></>} />
+        <Route path="/sell-on-divueens" element={<></>} />
+        <Route path="/privacy-policy" element={<></>} />
+        <Route path="/blogs" element={<></>} />
+        <Route path="/about-us" element={<></>} />
       </Routes>
-    </BrowserRouter>
+      <Footer />
+    </>
+    // profile page, wishlist, Settings ---(designs ready)
+    // 
   );
 }
 
