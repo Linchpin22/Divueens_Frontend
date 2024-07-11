@@ -7,7 +7,7 @@ import TeamSection from "./pages/TeamSection";
 import DivueensCSR from "./pages/DivueensCSR";
 import BlogHome from "./pages/Blog";
 import DivCoins from "./pages/DivCoins";
-import Auth from "./components/Authenticate/Auth";
+import Auth from "./components/Auth/Auth";
 
 function App() {
   return (
