@@ -43,7 +43,6 @@ const BestSeller = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("trending");
   // slider
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [offset, setOffset] = useState(0);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,14 +61,12 @@ const BestSeller = () => {
     setSelectedCategory(cat);
 
     // console.log(e.target)
-    setIsClicked2(false);
     setIsClicked(true);
   };
   const HandleBtnClicked2 = (cat) => {
     setSelectedCategory(cat);
     setIsClicked(false);
     // console.log(e.target)
-    setIsClicked2(true);
   };
   // top buttons end
 
@@ -98,43 +95,36 @@ const BestSeller = () => {
         <hr className="bg-gradient-to-r from-rose-700 " />
       </div>
       <div
-        className={`${styles["subheading"]} text-center text-lg font-normal text-slate-400`}
+        className={`text-center text-lg font-normal text-slate-400`}
       >
         <p>Your Cosmetics and Skincare Products</p>
       </div>
 
       <div
-        className={`${styles["slideBtn"]} mt-16 mb-10 mx-auto ${styles["bestseller_container"]} text-center`}
+        className={`mt-16 mb-10 mx-auto text-center`}
       >
         <button
-          onClick={() => {
-            HandleBtnClicked2("trending");
-          }}
+          onClick={() => HandleBtnClicked2("trending")}
           style={{
             backgroundColor: isClicked ? "#ffff" : "#be123c",
             color: isClicked ? "#be123c" : "#fff",
           }}
-          className={`${styles["first"]} transition-[all_0.8s_ease] py-2 px-4 md:px-12 font-semibold border border-rose-600 rounded-s-full shadow-xl`}
+          className={`transition-[all_0.8s_ease] py-2 px-4 md:px-12 font-semibold border border-rose-600 rounded-s-full shadow-xl`}
         >
           Trending Now
         </button>
 
         <button
-          onClick={() => {
-            HandleBtnClicked("newArrivals");
-          }}
-          style={{
-            backgroundColor: isClicked ? "#be123c" : "#ffff",
-            color: isClicked ? "#fff" : "#be123c",
-          }}
-          className={`${styles["second"]} py-2 px-4 md:px-12 font-semibold rounded-e-full shadow-xl border border-rose-600 transition-[all_0.8s_ease]`}
+          onClick={() => HandleBtnClicked("newArrivals")}
+          style={{backgroundColor: isClicked ? "#be123c" : "#ffff", color: isClicked ? "#fff" : "#be123c",}}
+          className={`py-2 px-4 md:px-12 font-semibold rounded-e-full shadow-xl border border-rose-600 transition-[all_0.8s_ease]`}
         >
           New Arrivals
         </button>
       </div>
 
       <div
-        className={`${styles["products"]} overflow-hidden relative`}
+        className={`overflow-hidden relative`}
       >
         {selectedCategory === "trending" && (
           <Swiper
@@ -169,9 +159,7 @@ const BestSeller = () => {
                     hoverStartHandler(index);
                   }}
                   style={{ transform: `translateX(-${offset}%)` }}
-                  className={`${styles["product-card"]
-                    } bg-rose-50 rounded-[10px] mx-auto shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
-                    }`}
+                  className={`bg-rose-50 rounded-[10px] mx-auto shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""}`}
                   key={index}>
 
                   <div className="h-[70%] overflow-hidden">
@@ -191,7 +179,7 @@ const BestSeller = () => {
                   </div>
                   {/* animated icons */}
                   <div
-                    className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}
+                    className={`absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}
                   >
                     <button
                       title="Add to cart"
@@ -284,9 +272,7 @@ const BestSeller = () => {
                     hoverStartHandler(index);
                   }}
                   style={{ transform: `translateX(-${offset}%)` }}
-                  className={`${styles["product-card"]
-                    } bg-rose-50 rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""
-                    }`}
+                  className={`bg-rose-50 rounded-[10px] shadow-[0_4px_8px_#bbb] overflow-hidden cursor-pointer text-center transition-[0.3s_ease] ${hoveredIndex === index ? styles.hover : ""}`}
                   key={index}>
 
                   <div className="h-[70%] overflow-hidden">
@@ -306,7 +292,7 @@ const BestSeller = () => {
                   </div>
                   {/* animated icons */}
                   <div
-                    className={`${styles["cart-info"]} absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}
+                    className={`absolute left-[93%] top-1/2 -translate-x-[50%] -translate-y-[50%] flex flex-col justify-around w-[min-content] h-[40%] p-[10px] cursor-auto z-10 transition-[.3s]`}
                   >
                     <button
                       title="Add to cart"
