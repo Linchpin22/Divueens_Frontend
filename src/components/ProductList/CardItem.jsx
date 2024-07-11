@@ -1,70 +1,15 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react'
-import { Lipstick } from '../../assets/assets'
 
-const CardItem = () => {
+const CardItem = ({item}) => {
 
-    const productDetails = [
-        {
-            id: 1,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 2,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 3,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 4,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 5,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 6,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 7,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 8,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-        {
-            id: 9,
-            name: 'Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade',
-            price: 500,
-            image: Lipstick,
-        },
-    ]
-
+    console.log(item)
     return (
         <div className='w-full'>
 
             <div className='grid grid-cols-3 grid-rows-3 gap-5'>
-                {productDetails.map((p) => {
+                {item.map((p) => {
                     return <div key={p.id} className='w-full m-auto relative'>
                         <div className="m-auto bg-[#00000017] mt-[1rem] rounded-2xl">
                             <img src={p.image} alt='image' className='m-auto' />

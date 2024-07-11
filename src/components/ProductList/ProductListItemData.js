@@ -1,0 +1,123 @@
+import { Lipstick } from "../../assets/assets";
+const productDetails = [
+  {
+    id: 1,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    discount: "30% off",
+    category: "Eyeliner",
+    color: "bg-pink-500",
+    dresStyle: "formal",
+    shade : "pink"
+  },
+  {
+    id: 2,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Mascara",
+    color: "bg-yellow-500",
+    dresStyle: "party",
+    shade : "yellow"
+  },
+  {
+    id: 3,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "lipsticks",
+    color: "bg-red-500",
+    dresStyle: "gym",
+    shade : "pink"
+  },
+  {
+    id: 4,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Eyeliner",
+    color: "bg-pink-500",
+    dresStyle: "gym",
+    shade : "yellow"
+  },
+  {
+    id: 5,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Mascara",
+    color: "bg-blue-500",
+    dresStyle: "formal",
+    shade : "red"
+  },
+  {
+    id: 6,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Eyeliner",
+    color: "bg-red-500",
+    dresStyle: "gym",
+    shade : "pink"
+  },
+  {
+    id: 7,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Mascara",
+    color: "bg-green-500",
+    dresStyle: "formal",
+    shade : "blue"
+  },
+  {
+    id: 8,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Eyeliner",
+    color: "bg-yellow-500",
+    dresStyle: "gym",
+    shade : "brown"
+  },
+  {
+    id: 9,
+    name: "Moisture Matte Long Stay Lipstick - 2g | Pink Lemonade",
+    price: 500,
+    image: Lipstick,
+    rating: 4.2,
+    reviews: 36,
+    imageUrl: " ",
+    category: "Eyeliner",
+    color: "bg-violet-500",
+    dresStyle: "gym",
+    shade : "violet"
+  },
+];
+
+export default productDetails;

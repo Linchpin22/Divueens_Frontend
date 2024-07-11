@@ -56,8 +56,7 @@ import sub_1 from './Subscription/1.png'
 import sub_2 from './Subscription/2.png'
 import sub_3 from './Subscription/3.png'
 import sub_4 from './Subscription/4.jpg'
-import sub_5 from './Subscription/5.jpeg'
-import ref_pic from './Subscription/ref_pic.gif'
+import ref_pic from './Subscription/ref_pic1.gif'
 
 
 
