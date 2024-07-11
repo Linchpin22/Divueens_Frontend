@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom'
-import Filter from '../components/ProductList/Filter'
+import Filter from '../components/ProductList/Filter';
 import CardItem from '../components/ProductList/CardItem';
-
+import productDetails from './../components/ProductList/ProductListItemData'
 const ProductList = () => {
 
     const [isCategory, setcategory] = useState(false);
@@ -15,6 +16,8 @@ const ProductList = () => {
 
     const [isPrices, setPrices] = useState(false);
 
+    const [item , setItem ] = useState(productDetails)
+    
     const handleCate = () => {
         setcategory(!isCategory)
     }
@@ -36,6 +39,10 @@ const ProductList = () => {
 
     const handlePrices = () => {
         setPrices(!isPrices)
+    }
+
+    const changeData = (val) => {
+        setItem(val)
     }
 
     const dropdown = [
@@ -118,7 +125,11 @@ const ProductList = () => {
                                             <ul className="py-2 text-sm">
                                                 {d.options.map((p, index) => {
                                                     return <li key={index} className="px-4 py-2 hover:bg-gray-100">
-                                                        <Link to="/" className="text-gray-800  hover:text-gray-900"> {p}
+                                                        <Link
+                                                            href={''}
+                                                            className="text-gray-800  hover:text-gray-900"
+                                                        >
+                                                            {p}
                                                         </Link>
                                                     </li>
                                                 })}
@@ -139,7 +150,7 @@ const ProductList = () => {
                                     <ul className="py-2 text-sm">
                                         <li className="px-4 py-2 hover:bg-gray-100">
                                             <Link
-                                                to="/"
+                                                href={''}
                                                 className="text-gray-800  hover:text-gray-900"
                                             >
                                                 p
@@ -156,7 +167,7 @@ const ProductList = () => {
                 <div className='flex'>
                     {/* Filters */}
                     <div className='w-[25%]'>
-                        <Filter />
+                        <Filter itemData={productDetails} changedFunction={changeData}/>
                     </div>
 
                     {/* Cards */}
@@ -170,7 +181,7 @@ const ProductList = () => {
                             <div className="prodline flex font-normal items-center gap-5">
                                 <div className="show text-[1.1rem] text-gray-600">Showing 1-10 of 100 Products</div>
                                 <div className="sortby text-[18px]">
-                                    <label htmlfor="sort" className='text-gray-600'>Sort by: </label>
+                                    <label htmlFor="sort" className='text-gray-600'>Sort by: </label>
                                     <select className="select bg-transparent border-none text-[16px]" name="products" id="sort">
                                         <option value="a" selected>Most popular</option>
                                         <option value="b">b</option>
@@ -183,7 +194,7 @@ const ProductList = () => {
 
                         {/* Cards*/}
                         <div>
-                            <CardItem />
+                            <CardItem item={item}/>
                         </div>
 
                     </div>

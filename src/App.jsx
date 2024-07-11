@@ -1,14 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Home/Header/Header";
 import Footer from "./components/Home/Footer/Footer";
-import SignUpPage from "./components/Authenticate/SignUp";
-import LoginPage from "./components/Authenticate/login";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import TeamSection from "./pages/TeamSection";
 import DivueensCSR from "./pages/DivueensCSR";
 import BlogHome from "./pages/Blog";
 import DivCoins from "./pages/DivCoins";
+import Auth from "./components/Auth/Auth";
 
 function App() {
   return (
@@ -17,9 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />     {/* Landing page */}
         <Route path="/products" element={<ProductList />} />
-        {/* <Route path="/login" element={<LoginPage />} /> */}
-        {/* <Route path="/signup" element={<SignUpPage />} /> */}
-        <Route path="/our-team" element={<TeamSection />} />
+
+        {/* Login page */}
+        <Route path="/login" element={<Auth />} />
+        
+        {/* Our Team page */}
+        <Route path="/ourteam" element={<TeamSection />} />
+
+        {/* CSR page */}
         <Route path="/CSR" element={<DivueensCSR />} />
         <Route path="/coins" element={<DivCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
