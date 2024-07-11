@@ -36,7 +36,7 @@ import banner_4 from './Banner/banner_4.png'
 
 import bestsellers_1 from './Exclusive_Discount/bestsellers_1.jpg'
 import example from './Exclusive_Discount/EXAMPLE- heading.jpg'
-import freebies from './Exclusive_Discount/freebies.png'
+import freebies from './Exclusive_Discount/Freebies.png'
 import loreal from './Exclusive_Discount/loreal.jpg'
 import mamaearth from './Exclusive_Discount/mamaearth_1.jpg'
 import output from './Exclusive_Discount/OUTPUT.png'
@@ -121,7 +121,7 @@ export {
       sub_2,
       sub_3,
       sub_4,
-      sub_5,
+      // sub_5,
       ref_pic,
 }
 
