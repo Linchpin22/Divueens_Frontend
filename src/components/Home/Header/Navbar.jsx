@@ -65,11 +65,13 @@ const Navbar = () => {
       {isMobile ? (
         <div className="container-fluid">
           <div className="logotoggler flex px-4 justify-between">
+            <Link to={'/'} >
             <img
               src={DivueensLogoImage}
               alt="Divueens"
               className="brand-icon h-[3em]"
             />
+            </Link>
             <button
               className="navbar-toggler bg-none border-none"
               onClick={toggleMenu}
@@ -140,16 +142,16 @@ const Navbar = () => {
                       </h2>
                       <div className="button-loginsignup">
                         <button className="SignUp bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                          {" "}
-                          Sign Up{" "}
+                          
+                          Sign Up
                         </button>
                         <button className="Login bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                          {" "}
-                          Login{" "}
+                          
+                          Login
                         </button>
                         <button className="ViaGoogle bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                          {" "}
-                          Login / Signup via Google{" "}
+                          
+                          Login / Signup via Google
                         </button>
                       </div>
                     </div>
@@ -245,11 +247,13 @@ const Navbar = () => {
         <>
           <div className="navbar-desktop relative flex items-center justify-between">
             <div className="navbar-brand">
+              <Link to={'/'} >
               <img
                 src={DivueensLogoImage}
                 alt="Divueens"
                 className="brand-icon absolute top-0 left-4 h-13"
               />
+              </Link>
             </div>
 
             {/* <div className="navbar-search">
@@ -322,17 +326,16 @@ const Navbar = () => {
                       Login or SignUp
                     </h2>
                     <div className="button-loginsignup">
+                      <Link to="/login">
                       <button className="SignUp bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                        {" "}
-                        Sign Up{" "}
+                        Sign Up
                       </button>
+                      </Link>
                       <button className="Login bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                        {" "}
-                        Login{" "}
+                        Login
                       </button>
                       <button className="ViaGoogle bg-rose-700 border-rose-700 border-[0.1rem] w-full my-[0.5rem] text-[#fff] py-[0.5rem] px-[1rem] cursor-pointer font-bold rounded-[0.5rem] hover:bg-[#fff] hover:text-rose-700 hover:border-rose-700 hover:border-[0.1rem]">
-                        {" "}
-                        Login / Signup via Google{" "}
+                        Login / Signup via Google
                       </button>
                     </div>
                   </div>

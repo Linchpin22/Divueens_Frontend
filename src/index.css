@@ -225,11 +225,12 @@ footer[data-footer-part] {
 
 .col_[data-footer-part]>ul>li>.footerList {
   text-decoration: none;
-  color: #4c0519;
+  color: #2e030f;
 }
 
 .col_[data-footer-part]>ul>li>.footerList:hover {
   text-decoration: underline;
+  
 }
 
 .socialIcons[data-footer-part] {
