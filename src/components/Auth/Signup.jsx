@@ -1,30 +1,26 @@
 import React from "react";
 
 const Signup = () => {
-    
-    return(
-      <>
-      <div className="">
-        <div>
-          <form action="#" className="flex flex-col gap-6 mt-[30px]">
-            <div>
-              <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="text" placeholder="Email Address" required/>
-            </div>
-            <div>
-              <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg"type="password" placeholder="Password" required/>
-            </div>
-            <div>
-              <input className="h-[45px] w-80 ml-[30px] py-[20px] px-[20px] border-2 border-gray-400 rounded-lg" type="password" placeholder="Confirm password" required/>
-            </div>
-            <div className="ml-3 px-3"><input type="checkbox"/> I agree with the user's terms and conditions</div>
-            <div className="text-center bg-gradient-to-r from-rose-500 to-rose-800 text-white w-80 rounded-xl h-[45px] [b-3] ml-[35px] mb-[20px]">
-              <input className="text-2xl pt-2" type="submit" value="Signup"/>
-            </div>
-          </form>
+
+  return (
+    <>
+      <form action="#" className="w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)]">
+        <div className="h-[50px] w-full mt-[20px]">
+          <input className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]" type="text" placeholder="Email Address" required />
         </div>
-      </div>
-      </>  
-    )
+        <div className="h-[50px] w-full mt-[20px]">
+          <input className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]" type="password" placeholder="Password" required />
+        </div>
+        <div className="h-[50px] w-full mt-[20px]">
+          <input className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]" type="password" placeholder="Confirm password" required />
+        </div>
+        <div className="h-[50px] w-full mt-[20px] rounded-[15px] relative overflow-hidden group">
+          <div className="h-full w-[300%] absolute -left-full bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] [transition:all_0.4s_ease] group-hover:left-[0]"></div>
+          <input className="outline-none border-[1px] border-[lightgrey] border-b-2 [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185] h-full w-full relative bg-none border-[none] text-[#fff] pl-0 rounded-[15px] text-[20px] font-medium cursor-pointer" type="submit" value="Signup" />
+        </div>
+      </form>
+    </>
+  )
 }
 
 export default Signup;

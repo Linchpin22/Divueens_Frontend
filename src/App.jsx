@@ -48,8 +48,6 @@ function App() {
       </Routes>
       <Footer />
     </>
-    // profile page, wishlist, Settings ---(designs ready)
-    // 
   );
 }
 
