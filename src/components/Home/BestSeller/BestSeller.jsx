@@ -388,7 +388,7 @@
 // export default BestSeller;
 
 import React, { useState } from "react";
-// import styles from "./BestSeller.module.css";
+import styles from "./BestSeller.module.css";
 import { imageUrls } from "../../../assets/assets";
 import {
   FaCartShopping,
