@@ -75,11 +75,11 @@
     background-color: #feaed2;
   } */
   
-  .star {
+  /* .star {
     font-size: 18px;
     font-size: 18px;
     color: #ffa200;
-  }
+  } */
   
   /* .navigation {
     position: absolute;
@@ -265,7 +265,7 @@
     .refer-section {
       height: 200px;
     }
-    .contact-section {
+    /* .contact-section {
       padding: 10px 0;
     }
     .contact-form {
@@ -273,7 +273,7 @@
     }
     .contact-section input {
       width: 100%;
-    }
+    } */
     /* .try11::before {
       width: 60px;
     }
@@ -394,7 +394,7 @@
     --color-light-6: #F8E2EA;
    */
   }
-
+/* 
   .swiper-button-prev,
   .swiper-button-next {
     width: 3em;
@@ -411,11 +411,11 @@
   .swiper-button-next:hover{
     color: #fff;
     background-color: #be123c;
-  }
+  } */
 
-  .swiper-button-prev::after,
+  /* .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 1.2em;
     font-weight: bolder;
     text-shadow: 1px 0px 0px rgb(255, 255, 255);
-  }
+  } */
