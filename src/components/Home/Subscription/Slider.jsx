@@ -152,7 +152,7 @@ const Slider = () => {
           clickable: true,
         }}
         breakpoints={{
-          425: {
+          500: {
             slidesPerView: 2,
             spaceBetween: 30,
           },
@@ -195,7 +195,7 @@ const Slider = () => {
               <div className="flex justify-between">
                 <div className="">
                   {/* Product Name */}
-                  <p className="text-xl text-rose-950 ">{data.name}</p>
+                  <p className="text-xl text-rose-950 text-nowrap ">{data.name}</p>
                   {/* StarIcons */}
                   <div className="pb-2 gap-[0.02em] flex items-center text-[#f5911e]">
                     {[...Array(Math.floor(data.rating))].map((_, i) => (

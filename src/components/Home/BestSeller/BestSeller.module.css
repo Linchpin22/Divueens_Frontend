@@ -155,10 +155,10 @@
 /* border: 1px solid #FF5BB1; */
 /* min-width: 200px; */
 
-.product-card.hover {
-    /* transform: scale(1.2) !important; */
+/* transform: scale(1.2) !important; */
+/* .product-card.hover {
     box-shadow: 0 8px 16px #555;
-}
+} */
 
 /* .image-wrapper{
     transition: transform 2 esae-in-out;

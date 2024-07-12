@@ -44,6 +44,41 @@ const _1stList = [
 
 const baadiList = [
   {
+    title: "About us",
+    chhotiList: 
+      [
+        {
+          url: "/about-us",
+          txt: "Who are we ?",
+        },
+        {
+          url: "/our-team",
+          txt: "Our Team",
+        },
+        {
+          url: "",
+          txt: "Press",
+        },
+        {
+          url: "/authenticity",
+          txt: "Authenticity",
+        },
+        {
+          url: "/CSR",
+          txt: "Careers CSR",
+        },
+        {
+          url: "",
+          txt: "Divueens",
+        },
+        {
+          url: "/investor-relation",
+          txt: "Investor Relation",
+        },
+      ]
+    
+  },
+  {
     title: "Help",
     chhotiList: [
       {
@@ -194,7 +229,7 @@ function Footer() {
             <Link to="/" className="logo">
               <img alt="" className="object-contain h-[4.5rem] w-22" src={MainLogo} />
             </Link>
-            <ul className="all_Items mt-6 space-y-3 text-sm">
+            {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
                 return (
                   <li key={int}>
@@ -207,7 +242,7 @@ function Footer() {
                   </li>
                 );
               })}
-            </ul>
+            </ul> */}
           </div>
           <ListItemsAll />
           <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-0 lg:pr-3 lg:col-span-5 lg:justify-end">
