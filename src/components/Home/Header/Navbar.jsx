@@ -80,14 +80,14 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className={`offcanvas fixed top-0 right-0 h-full min-w-[20rem] w-[30%] bg-[#fff] shadow-[-2px_0_5px_rgba(173,65,65,0.5)] p-4 translate-x-full transition-[transform] duration-[0.5s] ease-in-out ${
+            className={`offcanvas fixed top-0 right-0 h-full min-w-[20rem] w-[30%] bg-white/70 backdrop-blur-sm shadow-[-2px_0_5px_rgba(173,65,65,0.5)] p-4 translate-x-full transition-[transform] duration-[0.5s] ease-in-out ${
               showMenu ? "show" : ""
             }`}
           >
             <div className="offcanvas-header flex justify-between items-center">
-              <button
+            <button
                 type="button"
-                className="btn-close bg-none border-none py-0 px-[1.1rem] text-[#fff] rounded-[3rem] bg-rose-700 text-[2.5rem] cursor-pointer"
+                className="btn-close border-none px-[1rem] text-[#fff] rounded-[3rem] bg-rose-700 text-[2rem] cursor-pointer"
                 onClick={toggleMenu}
               >
                 &times;
@@ -161,7 +161,7 @@ const Navbar = () => {
             </div>
             <form className="search-form flex items-center my-4 ">
               <input
-                className="p-2 border-[0.1rem] border-rose-700 rounded-l-[0.5rem] placeholder:text-rose-700"
+                className="p-2 bg-transparent border-[0.1rem] border-rose-700 rounded-l-[0.5rem] placeholder:text-rose-700"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -177,7 +177,7 @@ const Navbar = () => {
               <ul className="navbar-nav">
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Makeup
@@ -185,7 +185,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Skin
@@ -193,7 +193,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Hair Care
@@ -201,7 +201,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Nail Care
@@ -209,7 +209,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Body Care
@@ -217,7 +217,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Tools and Accessories
@@ -225,19 +225,19 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item mb-[0.5rem]">
                   <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
                     to="/"
                   >
                     Neauty Advice
                   </a>
                 </li>
                 <li className="nav-item mb-[0.5rem]">
-                  <a
-                    className="nav-link no-underline text-[#000] hover:text-rose-700"
-                    to="/"
+                  <Link
+                    className="nav-link no-underline text-[#000] font-medium hover:text-rose-700"
+                    to="/products"
                   >
                     Categories
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -345,49 +345,49 @@ const Navbar = () => {
           </div>
           <div className="navbar-links flex gap-10 justify-center w-[100%] ">
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Makeup
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Skin
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Hair Care
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Nail Care
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Body Care
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Tools and Accessories
             </Link>
             <Link
-              className="text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/"
             >
               Beauty Advice
             </Link>
             <Link
-              className="nav-link text-[#333] p-2 rounded-[0.4rem] hover:text-rose-700"
+              className="nav-link text-[#333] p-2 rounded-[0.4rem] font-semibold hover:text-rose-700"
               to="/products"
             >
               Categories

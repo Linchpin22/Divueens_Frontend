@@ -163,6 +163,7 @@ const baadiList = [
 function Footer() {
   const [toggleView, cngView] = useState(0);
   const [prev, cngPrev] = useState(0);
+  const [textStyle, cngTextStyle] = useState('text-black transition hover:text-rose-700');
 
   function ListItemsAll() {
     return baadiList.map((lst, index) => {
@@ -196,7 +197,7 @@ function Footer() {
                 <li key={int}>
                   <Link
                     to={list2.url}
-                    className="footerList"
+                    className={textStyle}
                   >
                     {list2.txt}
                   </Link>
@@ -235,7 +236,7 @@ function Footer() {
                   <li key={int}>
                     <Link
                       to={list2.url}
-                      className="footerList"
+                      className={textStyle}
                     >
                       {list2.txt}
                     </Link>
@@ -247,33 +248,29 @@ function Footer() {
           <ListItemsAll />
           <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-0 lg:pr-3 lg:col-span-5 lg:justify-end">
             <li>
-              <a
-                href=""
-                className=''
+              <a href="/"
+                className={textStyle}
               >
                 <FaFacebookF className="h-6 w-6 text-black hover:text-rose-200" />
               </a>
             </li>
             <li>
-              <a
-                href=""
-                 className=''
+              <a href="/"
+                 className={textStyle}
               >
                 <FaInstagram className="h-6 w-6 text-black hover:text-rose-200" />
               </a>
             </li>
             <li>
-              <a
-                href=""
-                 className=''
+              <a href="/"
+                 className={textStyle}
               >
                 <FaWhatsapp className="h-6 w-6 text-black hover:text-rose-200" />
               </a>
             </li>
             <li>
-              <a
-                href=""
-                className=""
+              <a href="/"
+                className={textStyle}
               >
                 <FaPinterest className="h-6 w-6 text-black hover:text-rose-200" />
               </a>
@@ -288,31 +285,21 @@ function Footer() {
             </p>
             <ul className="flex flex-wrap justify-center md:mr-20 md:gap-4 gap-2 text-xs sm:mt-0">
               <li>
-                <a
-                  href="/"
-                  className="text-black transition hover:underline"
-                >
+                <Link to="/terms-and-conditions" className="text-black/80 transition hover:text-slate-800 hover:underline">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="/"
-                  className="text-black/80 transition hover:underline"
-                >
+                <Link to="/privacy-policy" className="text-black/80 transition hover:text-slate-800 hover:underline">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="/"
-                  className="text-black/80 transition hover:underline"
-                >
-                  
+                <Link to="/" className="text-black/80 transition hover:text-slate-800 hover:underline">
                   Cookies
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

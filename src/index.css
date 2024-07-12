@@ -225,7 +225,7 @@ footer[data-footer-part] {
   background: linear-gradient(to bottom, #ffe4e6, #9f1239);
 }
 
-.col_[data-footer-part]>ul>li>.footerList {
+/* .col_[data-footer-part]>ul>li>.footerList {
   text-decoration: none;
   color: #573c43;
 }
