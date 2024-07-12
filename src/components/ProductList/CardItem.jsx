@@ -24,7 +24,7 @@ const CardItem = ({ item }) => {
         const endIndex = startIndex + 12;
         const currentPageImages = item.slice(startIndex, endIndex);
         return (
-            <div className='grid gap-x-4 gap-y-8 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-12 md:gap-x-6 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.6fr)]'>
+            <div className='grid gap-x-4 gap-y-8 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-12 md:gap-x-6 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.8fr)]'>
                 {currentPageImages.map((p) => {
                     return <div key={p.id} className=''>
                         <Link to={'/products'} className="group relative mb-2 block md:h-80 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
@@ -50,7 +50,7 @@ const CardItem = ({ item }) => {
                                 </div>
                                 <p className='ml-5'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
                             </div>
-                            <div className="flex items-end justify-between gap-2 absolute bottom-0 lg:-bottom-9 xl:-bottom-2 left-0 right-0">
+                            <div className="flex items-end justify-between gap-2 absolute bottom-0 lg:-bottom-9 xl:-bottom-4 left-0 right-0">
                                 <span className="font-semibold text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
                                 <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.8rem] px-2 py-1 md:p-1 lg:text-base'>Add To Cart</button>
                             </div>
@@ -66,7 +66,7 @@ const CardItem = ({ item }) => {
     return (
         <div className='w-full m-4'>
             {renderImages()}
-            <div className="flex my-10 items-center justify-around">
+            <div className="flex my-10 items-center justify-between">
 
                 <button className="border p-2 px-12 border-gray-400 rounded-xl flex max-sm:px-4" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
                     <svg className="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

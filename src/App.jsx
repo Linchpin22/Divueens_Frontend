@@ -8,6 +8,7 @@ import DivueensCSR from "./pages/DivueensCSR";
 import BlogHome from "./pages/Blog";
 import DivCoins from "./pages/DivCoins";
 import Auth from "./components/Auth/Auth";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -15,7 +16,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />     {/* Landing page */}
-        <Route path="/products" element={<ProductList />} />
+        <Route path="/products" element={<ProductList />} /> {/* Product list page */}
+
+        {/* Profile page */}
+        <Route path="/profile" element={<Profile />} />
 
         {/* Login page */}
         <Route path="/login" element={<Auth />} />

@@ -102,7 +102,7 @@ const ProductList = () => {
             name: 'Price',
             func: handlePrice,
             isOpen: isPrice,
-            options: [400, 500, 600]
+            options: [`₹${400}`, `₹${500}`, `₹${600}`]
         },
         {
             id: 3,
@@ -269,9 +269,9 @@ const ProductList = () => {
                 </div>
 
                 {/* Filters and Cards */}
-                <div className='flex lg:flex-row flex-col w-full'>
+                <div className='flex flex-col w-full lg:flex-row '>
                     {/* Filters */}
-                    <div className='hidden lg:block'>
+                    <div className='hidden lg:inline-flex'>
                         <Filter itemData={productDetails} changedFunction={changeData} />
                     </div>
 
@@ -289,9 +289,8 @@ const ProductList = () => {
                                     <label for="sort" className='text-gray-600'>Sort by: </label>
                                     <select className="select bg-transparent border-none text-[0.7rem] md:text-[0.9rem]" name="products" id="sort">
                                         <option defaultValue={'a'} selected>Most popular</option>
-                                        <option value="b">b</option>
-                                        <option value="c">c</option>
-                                        <option value="d">d</option>
+                                        <option value="b">Ascending A to Z</option>
+                                        <option value="c">Descending Z to A</option>
                                     </select>
                                 </div>
                             </div>
