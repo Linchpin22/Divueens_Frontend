@@ -223,15 +223,14 @@ footer[data-footer-part] {
   background: linear-gradient(to bottom, #ffe4e6, #9f1239);
 }
 
-.col_[data-footer-part]>ul>li>.footerList {
+/* .col_[data-footer-part]>ul>li>.footerList {
   text-decoration: none;
   color: #2e030f;
 }
 
 .col_[data-footer-part]>ul>li>.footerList:hover {
   text-decoration: underline;
-  
-}
+} */
 
 .socialIcons[data-footer-part] {
   text-align: center;
