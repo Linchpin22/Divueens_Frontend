@@ -410,6 +410,7 @@ const newArrivals = imageUrls.slice(imageUrls.length / 2);
 const BestSeller = () => {
   const [swiper, setSwiper] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("trending");
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
 
@@ -425,6 +426,7 @@ const BestSeller = () => {
         <h2 className="text-xl text-nowrap text-center">Best Seller</h2>
         <hr className="bg-gradient-to-r from-rose-700" />
       </div>
+
       <p
         className={`${styles.subheading} text-center text-lg font-normal text-slate-400`}
       >

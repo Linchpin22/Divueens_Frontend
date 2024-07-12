@@ -178,6 +178,7 @@ function Footer() {
             onClick={() =>
               prev !== index + 1 ? cngView(index + 1) : cngView(0)
             }
+
             className="drpBtn text-black text-base font-bold"
           >
             {lst.title}
@@ -277,7 +278,9 @@ function Footer() {
             </li>
           </ul>
         </div>
+
         <hr data-footer-part="" className="mt-6 mx-4 mb-3 border-none h-[0.06em] bg-rose-950" />
+
         <div className="py-4 ">
           <div className="sm:flex sm:justify-between">
             <p className="copyright text-sm md:text-base pb-3 md:pb-0 text-black md:ml-20" data-footer-part="">

@@ -232,9 +232,8 @@ footer[data-footer-part] {
 
 .col_[data-footer-part]>ul>li>.footerList:hover {
   text-decoration: underline;
-  color: #21030a;
-  
-}
+} */
+
 
 .socialIcons[data-footer-part] {
   text-align: center;
