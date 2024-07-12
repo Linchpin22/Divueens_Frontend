@@ -22,7 +22,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />     {/* Landing page */}
-        <Route path="/products" element={<ProductList />} />
+        <Route path="/products" element={<ProductList />} /> {/* Product list page */}
+
+        {/* Profile page */}
+        <Route path="/profile" element={<Profile />} />
         <Route path="/product-description" element={<ProductDetails />} />
 
         {/* Login page */}
