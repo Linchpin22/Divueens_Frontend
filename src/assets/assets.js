@@ -130,6 +130,7 @@ export {default as ShoppingCart} from "./CarouselImages/cart2.png"
 export {default as Cart} from "./CarouselImages/cart.png"
 export {default as searchImage} from "./CarouselImages/searchIcon.svg"
 export {default as Lipstick} from "./lip2.png"
+export {default as Profile_Pic} from "./profile-pic.png"
 
 
 export const imageUrls = [
