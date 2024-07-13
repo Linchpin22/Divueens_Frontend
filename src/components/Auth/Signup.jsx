@@ -1,4 +1,5 @@
 import React from "react";
+import { FcGoogle } from "react-icons/fc";
 
 const Signup = () => {
 
@@ -16,7 +17,12 @@ const Signup = () => {
         </div>
         <div className="h-[50px] w-full mt-[20px] rounded-[15px] relative overflow-hidden group">
           <div className="h-full w-[300%] absolute -left-full bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] [transition:all_0.4s_ease] group-hover:left-[0]"></div>
-          <input className="outline-none border-[1px] border-[lightgrey] border-b-2 [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185] h-full w-full relative bg-none border-[none] text-[#fff] pl-0 rounded-[15px] text-[20px] font-medium cursor-pointer" type="submit" value="Signup" />
+          <input className="outline-none h-full w-full relative bg-none border-[none] text-[#fff] pl-0 rounded-[15px] text-[20px] font-medium cursor-pointer" type="submit" value="Signup" />
+        </div>
+        <div className='h-[50px] w-full mt-[20px] flex justify-center'>
+          <button className="h-full w-3/4 text-center border flex justify-evenly items-center font-semibold border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+            <FcGoogle className="w-6 h-6"/><span>Continue with Google</span>
+          </button>
         </div>
       </form>
     </>

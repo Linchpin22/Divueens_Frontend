@@ -6,11 +6,11 @@ const ReachOut = () => {
     <div className="bg-rose-100 p-8 flex flex-col md:flex-row justify-between justify-items-center space-y-4 md:space-y-0">
       <div className="sm:flex sm:items-center ">
                         <div className="text-2xl   font-bold pl-20 text-gray-900">
-                        <h2 class="md:text-2xl text-xl item-center  font-bold  mb-4">How can we help you ?</h2>
+                        <h2 className="md:text-2xl text-xl item-center  font-bold  mb-4">How can we help you ?</h2>
         <div className="flex flex-col sm:flex-row items-center p-2 pl-2 pr-4 bg-white justify-center gap-4 mb-6 shadow-lg">
           
                 <input type="text" className="w-full sm:w-auto p-2    text-start text-xs" placeholder="Ask Your Question"/>
-                <button class="bg-orange-500 text-xs text-white px-4 py-2 rounded hover:bg-orange-600">Subscribe</button>
+                <button className="bg-orange-500 text-xs text-white px-4 py-2 rounded hover:bg-orange-600">Subscribe</button>
           
             </div>
    

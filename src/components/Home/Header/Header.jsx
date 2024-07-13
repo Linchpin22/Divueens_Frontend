@@ -90,13 +90,13 @@ function Header() {
 
   const location = useLocation();
   return (
-    <div className="app-home">
+    <>
       <SaleHeader />
+      <NavBar />
       <header>
-        <NavBar />
         {location.pathname === "/" ? <Carousel slides={slides} /> : <></>}
       </header>
-    </div>
+    </>
   );
 }
 

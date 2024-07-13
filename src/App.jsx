@@ -15,6 +15,7 @@ import HelpCenter from "./pages/HelpCenter";
 import FaqsPage from "./pages/FAQ";
 import SpecialOffer from "./pages/SpecialOffer";
 import ProductDetails from "./pages/ProductDetails";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -28,13 +29,12 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/product-description" element={<ProductDetails />} />
 
-        {/* Login page */}
-        <Route path="/login" element={<Auth />} />
+        {/* Login page
+        <Route path="/login" element={<Auth />} /> */}
 
         {/* Other Pages */}
         <Route path="/special-offers" element={<SpecialOffer />} />
         <Route path="/our-team" element={<TeamSection />} />
-        <Route path="/CSR" element={<DivueensCSR />} />
         <Route path="/CSR" element={<DivueensCSR />} />
         <Route path="/coins" element={<DivCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
