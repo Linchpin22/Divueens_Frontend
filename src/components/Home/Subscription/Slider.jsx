@@ -142,62 +142,65 @@ const Slider = () => {
   };
 
   return (
-    <div className="md:px-5">
+    <div className="bg-slate-50">
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={10}
         onSwiper={(swiper) => setSwiper(swiper)}
         pagination={{
           dynamicBullets: true,
           clickable: true,
         }}
         breakpoints={{
-          500: {
-            slidesPerView: 2,
-            spaceBetween: 30,
+          425:{slidesPerView:2,
+
+          },
+          600: {
+            slidesPerView: 3,
+            spaceBetween: 20,
           },
           800: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 20,
           },
           1170: {
-            slidesPerView: 4,
-            spaceBetween: 30,
+            slidesPerView: 5,
+            spaceBetween: 20,
           },
           1440: {
-            slidesPerView: 5,
-            spaceBetween: 40,
+            slidesPerView: 6,
+            spaceBetween: 20,
           },
         }}
         modules={[Navigation, Pagination]}
-        className="mySwiper relative px-10 py-10 md:px-16 "
+        className="mySwiper  w-[95%] relative px-9 py-6 "
       >
         {slidesData.map((data, i) => (
           <SwiperSlide
-            className="h-80 border overflow-hidden shadow-md shadow-zinc-400 bg-white md:h-96"
+            className="border rounded-lg overflow-hidden shadow-md shadow-zinc-400 bg-white"
             key={i}
           >
-            <div className="h-[70%] ">
+            <div className=" ">
               <img
                 src={data.img}
                 alt=""
-                className="h-full w-full object-cover object-center"
+                className="w-full h-[150px] md:h-[200px] object-cover bg-black"
               />
             </div>
             <div className="opacity-0 bg-black hover:opacity-100 hover:bg-opacity-20 absolute top-0 left-0 right-0 bottom-0 h-[100%] transition-all duration-[0.7s] flex items-center justify-center">
               <Link to={""}>
-                <button className="bg-rose-800 text-white tfont-bold cursor-pointe font-semibold p-3 px-5 shadow-lg shadow-black hover:bg-rose-600">
+                <button className="bg-rose-700 text-white cursor-pointe text-sm p-3 rounded-md shadow-md font-medium shadow-black hover:bg-rose-600">
                   Buy Now
                 </button>
               </Link>
             </div>
-            <div className="flex flex-col px-3 pt-2 w-full">
-              <div className="flex justify-between">
+            <div className="flex flex-col px-3 md:py-2 w-full">
+              <div className="flex flex-col items-start">
                 <div className="">
                   {/* Product Name */}
-                  <p className="text-xl text-rose-950 text-nowrap ">{data.name}</p>
+                  <p className=" text-rose-950 text-sm md:text-base font-medium">{data.name} product</p>
                   {/* StarIcons */}
-                  <div className="pb-2 gap-[0.02em] flex items-center text-[#f5911e]">
+                  <div className="flex text-[10px] md:text-xs  text-[#f5911e]">
                     {[...Array(Math.floor(data.rating))].map((_, i) => (
                       <FaStar key={i} />
                     ))}
@@ -216,10 +219,10 @@ const Slider = () => {
                   </div>
                 </div>
                 {/* Pricings */}
-                <div className="flex flex-col items-end">
-                  <p className="text-[22px] text-rose-800"><span className="text-[14px] align-text-top">₹</span>
+                <div className="flex gap-2">
+                  <p className="text-sm md:text-lg py-2 font-medium text-rose-800"><span className="text-xs align-text-top">₹</span>
                     {data.price}/-</p>
-                  <p className="text-[11px] text-slate-400">
+                  <p className="text-xs text-slate-400 self-center pt-3">
                     
                     <span className="text-emerald-600 pr-1">
                       {(data.price / data.original_price) * 100}%
@@ -228,9 +231,9 @@ const Slider = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-xs pr-3 py-1 text-slate-600">
+              {/* <p className="text-xs pr-3 py-1 text-slate-600">
                 Lorem ipsum dolor sit amet consec tetur adipisicing elit.
-              </p>
+              </p> */}
 
               {/* <div className="flex flex-col items-center">
                 <div className="text-black mt-[5px] mx-0 text-[1rem] font-medium text-left flex items-center gap-4 relative w-full">
