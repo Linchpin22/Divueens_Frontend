@@ -428,13 +428,13 @@ const BestSeller = () => {
       </div>
 
       <p
-        className={`${styles.subheading} text-center text-lg font-normal text-slate-400`}
+        className='text-center text-lg font-normal text-slate-400'
       >
         Your Cosmetics and Skincare Products
       </p>
 
       <div
-        className={`${styles.slideBtn} my-10 mx-auto ${styles.bestseller_container} text-center`}
+        className='my-10 mx-auto text-center'
       >
         {["trending", "newArrivals"].map((cat, idx) => (
           <button
@@ -453,7 +453,7 @@ const BestSeller = () => {
         ))}
       </div>
 
-      <div className={`${styles.products} bg-amber-50`}>
+      <div className='bg-amber-50'>
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
@@ -473,11 +473,7 @@ const BestSeller = () => {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`${
-                styles["product-card"]
-              } bg-white shadow-xl h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease] ${
-                hoveredIndex === index ? styles.hover : ""
-              }`}
+              className='bg-white rounded-lg shadow-xl h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease]'
             >
               <div className="h-[70%] overflow-hidden">
                 <img
@@ -495,7 +491,7 @@ const BestSeller = () => {
               </div>
               {/* hover icons */}
               <div
-                className={`${styles["cart-info"]} absolute left-[90%] top-12 -translate-x-[50%] -translate-y-[50%] flex flex-col z-10 transition-[0.9s] gap-3`}
+                className='absolute left-[90%] top-12 -translate-x-[50%] -translate-y-[50%] flex flex-col z-10 transition-[0.9s] gap-3'
               >
                 <button
                   title="Add to cart"
@@ -514,7 +510,7 @@ const BestSeller = () => {
               </div>
               <div className="flex flex-col px-2 md:px-3 pt-2 w-full">
                 {/* Product Name */}
-                <p className="text-lg pl-2 pb-1 text-black ">
+                <p className="text-base font-medium md:text-lg pl-2 pb-1 text-black ">
                   {data.Name}
                 </p>
                 <div className="flex px-2 justify-between">
@@ -540,8 +536,8 @@ const BestSeller = () => {
                  
                   {/* Pricings */}
                   <div className="flex flex-col ">
-                    <p className="text-xl text-rose-800">
-                      <span className="text-[14px] align-top">₹</span>
+                    <p className="text-sm md:text-lg font-semibold text-rose-800">
+                      <span className="text-xs align-top">₹</span>
                       {data.Price}/-
                     </p>
                     <p className="text-[11px] text-slate-400">
@@ -556,7 +552,7 @@ const BestSeller = () => {
 
                   {/* Buynow btn */}
                 <Link to="/">
-                  <button className="bg-rose-700 text-white text-nowrap p-2 md:px-4 cursor-pointer hover:bg-rose-600">
+                  <button className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
                     Buy Now
                   </button>
                 </Link>
