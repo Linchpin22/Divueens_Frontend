@@ -39,7 +39,7 @@ const Navbar = () => {
               <Link to="/blogs" className="text-gray-800 hover:text-gray-900 font-bold">Beauty Advice</Link>
               <div className="relative mt-3"><SearchBox /></div>
             </div>
-            <div className="hidden md:flex space-x-6 mt-3 mr-[-40px] text-gray-800">
+            <div className="hidden md:flex space-x-6 mt-3 text-gray-800">
               <button className="transition-colors duration-300 md:pl-7 hover:text-rose-500"><FiShoppingCart size={24} /></button>
               <button className="transition-colors duration-300 md:hover:text-rose-500"><FiHeart size={24} /></button>
               <button className="transition-colors duration-300 hover:text-rose-500" onClick={() => setDisplayAuth(true)}><FiUser size={24} /></button>
