@@ -19,7 +19,9 @@ const Filter = ({ itemData, changedFunction, small }) => {
     let newItems = itemData
 
     const AllItemsCategory = () => {
-        changedFunction(newItems)
+        changedFunction(newItems);
+        setSelectedColor(null);
+        setSelectedItem([]);
     }
 
     const filterItems = (userChoiceOption) => {
@@ -62,11 +64,6 @@ const Filter = ({ itemData, changedFunction, small }) => {
     const brandsButtonClick = () => {
         setShowBrands(!showBrands);
     };
-
-    const handleCancel = () => {
-        setSelectedColor(null)
-    }
-
 
 
     return (
@@ -118,12 +115,12 @@ const Filter = ({ itemData, changedFunction, small }) => {
                             {showShades && (
                                 <div className='w-full flex flex-wrap gap-6 border-2 px-4 py-2 rounded-lg'>
                                     {
-                                    menuColor.map(val =>
-                                        <div onClick={() => {
-                                            setSelectedColor(val);
-                                            filterItems(val);
-                                        }} className={` h-[30px] w-[30px] ${val} rounded-full cursor-pointer border-2 border-transparent ${selectedColor === val ? 'border-x-black scale-[1.2] transition-all' : ''}`}></div>
-                                    )}
+                                        menuColor.map(val =>
+                                            <div onClick={() => {
+                                                setSelectedColor(val);
+                                                filterItems(val);
+                                            }} className={` h-[30px] w-[30px] ${val} rounded-full cursor-pointer border-2 border-transparent ${selectedColor === val ? 'border-x-black scale-[1.2] transition-all' : ''}`}></div>
+                                        )}
                                 </div>
                             )}
                         </div>
@@ -139,14 +136,14 @@ const Filter = ({ itemData, changedFunction, small }) => {
                             {showDressStyle && (
                                 <div className='flex flex-col border-2 px-4 py-2 rounded-lg'>
                                     {
-                                    menuDressStyle.map((val, index) =>
-                                        <li className="flex justify-between items-center text-[0.9rem] my-1">
-                                            <label htmlFor={`categd-${index}`}>
-                                                {val}
-                                            </label>
-                                            <input onClick={() => filterItems(val)} type="checkbox" className='w-4 h-4' id={`categd-${index}`} name={`categd-${index}`} />
-                                        </li>
-                                    )}
+                                        menuDressStyle.map((val, index) =>
+                                            <li className="flex justify-between items-center text-[0.9rem] my-1">
+                                                <label htmlFor={`categd-${index}`}>
+                                                    {val}
+                                                </label>
+                                                <input onClick={() => filterItems(val)} type="checkbox" className='w-4 h-4' id={`categd-${index}`} name={`categd-${index}`} />
+                                            </li>
+                                        )}
 
                                 </div>)}
                         </div>
@@ -163,14 +160,14 @@ const Filter = ({ itemData, changedFunction, small }) => {
                                 {showBrands && (
                                     <div className='flex flex-col border-2 px-4 py-2 rounded-lg'>
                                         {
-                                        menuBrands.map((val, index) =>
-                                            <li className="flex justify-between items-center text-[0.9rem] my-1">
-                                                <label htmlFor={`categb-${index}`}>
-                                                    {val}
-                                                </label>
-                                                <input onClick={() => filterItems(val)} type="checkbox" className='w-4 h-4' id={`categb-${index}`} name={`categb-${index}`} />
-                                            </li>
-                                        )}
+                                            menuBrands.map((val, index) =>
+                                                <li className="flex justify-between items-center text-[0.9rem] my-1">
+                                                    <label htmlFor={`categb-${index}`}>
+                                                        {val}
+                                                    </label>
+                                                    <input onClick={() => filterItems(val)} type="checkbox" className='w-4 h-4' id={`categb-${index}`} name={`categb-${index}`} />
+                                                </li>
+                                            )}
 
                                     </div>)}
                             </div>
