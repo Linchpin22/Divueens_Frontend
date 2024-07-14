@@ -9,7 +9,7 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
-import MainLogo, { Divueens } from "../../../assets/assets";
+import { Divueens } from "../../../assets/assets";
 
 const _1stList = [
   {
