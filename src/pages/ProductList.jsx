@@ -135,27 +135,27 @@ const ProductList = () => {
                 {/* Home > Skin */}
                 <div className='flex flex-col gap-8 w-full px-5 lg:mb-4'>
                     <div className='flex flex-wrap items-center justify-between'>
-                        <ol className="inline-flex items-center gap-3">
+                        <ol className="inline-flex items-center gap-1 md:gap-3">
                             <li className='inline-flex items-center'>
-                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-[0.7rem] md:text-[1rem] font-medium'>
+                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium'>
                                     Home
                                 </Link>
                             </li>
                             <IoIosArrowForward size={15} />
                             <li className='inline-flex items-center'>
-                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.7rem] md:text-[1rem] font-medium'>
+                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium'>
                                     Skin care
                                 </Link>
                             </li>
-                            <div className='flex items-center gap-2 lg:hidden'>
+                            <div className='flex items-center gap-1 md:gap-2 lg:hidden'>
                                 <IoIosArrowForward size={15} />
-                                <span className="tracking-tighter text-[0.7rem] md:text-[1rem] font-medium">MakeUp</span>
+                                <span className="tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium">MakeUp</span>
                                 <IoIosArrowForward size={15} />
-                                <span className="tracking-tighter text-[0.7rem] md:text-[1rem] font-medium">Lipstick</span>
+                                <span className="tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium">Lipstick</span>
                             </div>
                         </ol>
                         <button
-                            className="text-[0.9rem] flex items-center justify-between gap-2 px-2 text-left rounded-full border md:px-4 md:py-1 lg:hidden"
+                            className="text-[0.8rem] flex items-center justify-between gap-2 px-2 text-left rounded-full border md:text-[0.9rem] md:px-4 md:py-1 lg:hidden"
                             onClick={toggleMenu}
                         >
                             Filters
@@ -213,13 +213,13 @@ const ProductList = () => {
                         <div className='flex items-center gap-2'>
                             {dropdown.map((d) => {
                                 return <div key={d.id} className='flex items-center relative'>
-                                    <button onClick={() => { handleDropdownClick(d.id), d.func }} className='bg-[#d4d4d4] px-4 py-2 rounded-full text-sm flex items-center gap-2 font-medium' >
+                                    <button onClick={() => { handleDropdownClick(d.id), d.func }} className='bg-[#d4d4d4] px-2 py-1 rounded-full text-xs flex items-center gap-2 font-medium' >
                                         {d.name}  <IoIosArrowDown size={15} className={`transition-all duration-[0.3s] ease-in-out ${openDropdown === d.id ? 'rotate-180' : 'rotate-0'}`} />
                                     </button>
 
                                     {openDropdown === d.id && (
                                         <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
-                                            <ul className="py-2 text-sm">
+                                            <ul className="py-2 text-xs">
                                                 {d.options.map((p, index) => {
                                                     return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
 
@@ -249,18 +249,18 @@ const ProductList = () => {
                     </div>
 
                     {/* Cards */}
-                    <div className='flex flex-col items-center w-full px-10 py-5'>
+                    <div className='flex flex-col items-center w-full px-8 py-5 lg:pr-10 lg:pl-0'>
                         <div className="makeup flex flex-col gap-3 md:flex-row justify-between w-full">
                             <div className='hidden lg:flex items-center gap-2'>
-                                <span className="a font-medium text-[1rem] text-gray-600">MakeUp</span>
-                                <IoIosArrowForward size={22} />
-                                <span className="aa font-semibold text-[1rem] text-black">Lipstick</span>
+                                <span className="a font-medium text-[0.9rem] text-gray-600">MakeUp</span>
+                                <IoIosArrowForward size={18} />
+                                <span className="aa font-semibold text-[0.9rem] text-black">Lipstick</span>
                             </div>
                             <div className="prodline flex font-normal items-center gap-5">
-                                <div className="show text-[0.7rem] md:text-[0.9rem] text-gray-600">Showing 1-10 of 100 Products</div>
-                                <div className="sortby text-[0.7rem] md:text-[0.9rem]">
+                                <div className="show text-[0.7rem] md:text-[0.8rem] text-gray-600">Showing 1-10 of 100 Products</div>
+                                <div className="sortby text-[0.7rem] md:text-[0.8rem]">
                                     <label for="sort" className='text-gray-600'>Sort by: </label>
-                                    <select className="select bg-transparent border-none text-[0.7rem] md:text-[0.9rem]" name="products" id="sort">
+                                    <select className="select bg-transparent border-none text-[0.7rem] md:text-[0.8rem]" name="products" id="sort">
                                         <option defaultValue={'a'} selected>Most popular</option>
                                         <option value="b">Ascending A to Z</option>
                                         <option value="c">Descending Z to A</option>

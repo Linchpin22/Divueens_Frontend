@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiMenu, FiSearch, FiShoppingCart, FiHeart, FiUser, FiTrendingUp } from 'react-icons/fi';
 import SearchBox from './SearchBox';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import Auth from '../../Auth/Auth';
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [displayAuth, setDisplayAuth] = useState(false)
+  const [scrollLimit, setLimit] = useState(true);
 
   const handleDropdown = (dropdown) => {
     if (openDropdown === dropdown) {
@@ -15,6 +16,7 @@ const Navbar = () => {
       setOpenDropdown(dropdown);
     }
   };
+  useEffect(()=> window.addEventListener("scroll", () => setLimit(window.scrollY < 100 ? true : false)), [])
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,9 +28,9 @@ const Navbar = () => {
   return (
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
-      <nav className="flex bg-white font-montserrat sticky top-0 z-40">
+      <nav className={`flex bg-white font-montserrat sticky top-0 z-40 ${scrollLimit ? '' : 'shadow-lg'}`}>
         <Link to="/">
-          <img className="md:w-40 w-20 h-8 md:h-16" src="https://www.figma.com/file/6bEbVeHrG8aDIqqx76AElp/image/8a133fe3436fdc169d72e042e2c70e97e5cd6c8a" alt="Description" />
+          <img className="md:w-40 w-20 h-8 m-2 md:h-16" src="https://www.figma.com/file/6bEbVeHrG8aDIqqx76AElp/image/8a133fe3436fdc169d72e042e2c70e97e5cd6c8a" alt="Description" />
         </Link>
         <div className="container mx-auto">
           <div className="w-full  flex justify-between items-center">
@@ -45,7 +47,7 @@ const Navbar = () => {
               <button className="transition-colors duration-300 hover:text-rose-500" onClick={() => setDisplayAuth(true)}><FiUser size={24} /></button>
             </div>
             <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-gray-800">  <FiMenu /></button>
+              <button onClick={toggleMenu} className="text-gray-800"> <FiMenu /></button>
             </div>
           </div>
           {isOpen && (
@@ -60,7 +62,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-      <div className="bg-white border-t mt-4 ">
+      <div className="bg-white border-t">
         <div className="container mx-auto ">
           <ul className="w-full flex justify-evenly">
             <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Home</Link></li>
