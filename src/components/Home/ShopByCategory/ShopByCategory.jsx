@@ -18,15 +18,16 @@ const ShopByCategory = () => {
           style={{
             backgroundImage: `url(${background})`,
           }}
-          className="main w-screen h-[80vh] bg-[#fff] my-[20px] mx-0 box-border p-[15px] flex flex-col bg-center bg-cover"
+          className="main w-screen bg-[#fff] my-[20px] mx-0 box-border flex flex-col bg-center bg-cover h-[90vh] lg:h-[80vh]"
         >
-          <div className="heading pt-16 pb-8">
+          <div className="heading md:pt-16 pb-8">
+
             <hr className="bg-gradient-to-l from-rose-700" />
             <h2 className="text-nowrap">Shop By Categories</h2>
             <hr className="bg-gradient-to-r from-rose-700" />
           </div>
           <div className="content w-full h-full box-border flex justify-center items-center">
-            <div className="categories-container grid justify-center items-center w-[75%] h-full grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 md:gap-[50px] md:w-1/2 md:h-[90%] box-border place-content-center z-[2]">
+            <div className="categories-container grid justify-center items-center w-[75%] h-full grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 md:gap-[50px] md:h-[80%] box-border place-content-center z-[2]">
               <div
                 style={{ backgroundImage: `url(${Eyes})` }}
                 className="categories-item w-full h-full rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline eyes"

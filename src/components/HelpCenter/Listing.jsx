@@ -82,7 +82,7 @@ export default function Example() {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {products.map((product) => (
             <Link key={product.id} to={product.href} className="group relative">
-              <div className="aspect-h-1 aspect-w-1 h-80 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 hover:shadow-sm">
+              <div className="aspect-h-1 aspect-w-1 h-64 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 hover:shadow-sm">
                 <img
                   alt={product.imageAlt}
                   src={product.imageSrc}
