@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import navItemData from "./NavDropDownItems";
 
 // const [headingIndex , setHeadingIndex] = useState()
@@ -7,7 +7,7 @@ import navItemData from "./NavDropDownItems";
 
 export default function HoverDropDown({ navItemText }) {
   if (navItemText !== '') return (
-    <div onMouseEnter={() => setItemData} className={`w-full h-auto p-12 absolute rounded-b-[20px] top-[9.5em] bg-white shadow-xl font-mono l-[30px] z-30 navItemMultipage`}>
+    <div className={`w-[80vw] h-auto p-12 absolute left-[50%] translate-x-[-50%] rounded-b-[20px] top-[9.7em] bg-white shadow-xl font-mono l-[30px] z-30 navItemMultipage`}>
       <div className=" mx-auto ">
         {Object.entries(navItemData).map(([key, val]) => {
           // console.log(typeof key);

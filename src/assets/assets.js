@@ -126,7 +126,7 @@ export {
 }
 
 export {default as DivueensLogoImage} from "./CarouselImages/DivueensLogoImage.png"
-export {default as Divueens} from "./Divueens.jpg"
+export {default as Divueens} from "./Divueens.png"
 export {default as ShoppingCart} from "./CarouselImages/cart2.png"
 export {default as Cart} from "./CarouselImages/cart.png"
 export {default as searchImage} from "./CarouselImages/searchIcon.svg"

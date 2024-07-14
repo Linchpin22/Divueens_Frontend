@@ -5,6 +5,7 @@ import BG3 from '../../assets/WhoWeAre/ima3.png'
 import L1 from '../../assets/WhoWeAre/l1.png'
 import L2 from '../../assets/WhoWeAre/l2.png'
 import L3 from '../../assets/WhoWeAre/l3.png'
+import n1Bg from '../../assets/WhoWeAre/n1.jpg';
 
 const WhoWeAre = () => {
     return(
@@ -99,19 +100,19 @@ const WhoWeAre = () => {
                 </div> */}
                 <div className='grid grid-cols-3 mt-28 ml-16 max-sm:block max-md:block max-lg:ml-0 max-md:ml-8 max-lg:gap-x-6'>
                     <div className='relative'>
-                        <div className="bg-[url('src/assets/WhoWeAre/n1.jpg')] relative bg-center bg-cover bg-no-repeat w-[85%] h-[250px] flex justify-center items-end pb-2 rounded-xl max-sm:my-6 max-md:my-6 max-lg:w-[95%]">      
+                        <div style={{backgroundImage: `url(${n1Bg})`}} className="relative bg-center bg-cover bg-no-repeat w-[85%] h-[250px] flex justify-center items-end pb-2 rounded-xl max-sm:my-6 max-md:my-6 max-lg:w-[95%]">      
                             <div className='bg-gradient-to-b from-[#ffffff00] via-[#ffffff00] to-rose-600 opacity-50 absolute h-[250px] w-[100%] rounded-xl top-0 left-0'></div>  
                         </div>
                         <p className='text-white text-[24px] font-[700] absolute bottom-2 left-[13%] max-[480px]:left-[8%]'>10000+ Products</p>
                     </div>
                     <div className='relative'>
-                        <div className="bg-[url('src/assets/WhoWeAre/n1.jpg')] relative bg-center bg-cover bg-no-repeat w-[85%] h-[250px] flex justify-center items-end pb-2 rounded-xl max-sm:my-6 max-md:my-6 max-lg:w-[95%]">      
+                        <div style={{backgroundImage: `url(${n1Bg})`}} className="relative bg-center bg-cover bg-no-repeat w-[85%] h-[250px] flex justify-center items-end pb-2 rounded-xl max-sm:my-6 max-md:my-6 max-lg:w-[95%]">      
                             <div className='bg-gradient-to-b from-[#ffffff00] via-[#ffffff00] to-rose-600 opacity-50 absolute h-[250px] w-[100%] rounded-xl top-0 left-0'></div>  
                         </div>
                         <p className='text-white text-[24px] font-[700] absolute bottom-2 left-[18%] max-[380px]:left-[2%] max-[480px]:left-[10%] max-[360px]:left-[18%]'>500+ Brands</p>
                     </div>
                     <div className='relative'>
-                        <div className="bg-[url('src/assets/WhoWeAre/n1.jpg')] relative bg-center bg-cover bg-no-repeat w-[85%] h-[250px] flex justify-center items-end pb-2 rounded-xl max-sm:my-6 max-md:my-6 max-lg:w-[95%]">      
+                        <div style={{backgroundImage: `url(${n1Bg})`}} className="relative bg-center bg-cover bg-no-repeat w-[85%] h-[250px] flex justify-center items-end pb-2 rounded-xl max-sm:my-6 max-md:my-6 max-lg:w-[95%]">      
                             <div className='bg-gradient-to-b from-[#ffffff00] via-[#ffffff00] to-rose-600 opacity-50 absolute h-[250px] w-[100%] rounded-xl top-0 left-0'></div>  
                         </div>
                         <p className='text-white text-[24px] font-[700] absolute bottom-2 left-[18%] max-[380px]:left-[18%] max-[480px]:left-[8%]'>Lorem Ipsum</p>
