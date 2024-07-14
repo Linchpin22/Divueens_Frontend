@@ -173,7 +173,7 @@ const Slider = () => {
           },
         }}
         modules={[Navigation, Pagination]}
-        className="mySwiper  w-[95%] relative px-9 py-6 "
+        className="mySwiper  w-[95%] relative px-12 md:px-9 py-6 "
       >
         {slidesData.map((data, i) => (
           <SwiperSlide
@@ -198,7 +198,7 @@ const Slider = () => {
               <div className="flex flex-col items-start">
                 <div className="">
                   {/* Product Name */}
-                  <p className=" text-rose-950 text-sm md:text-base font-medium">{data.name} product</p>
+                  <p className=" text-rose-950 text-sm md:text-base pt-1 font-medium">{data.name} product</p>
                   {/* StarIcons */}
                   <div className="flex text-[10px] md:text-xs  text-[#f5911e]">
                     {[...Array(Math.floor(data.rating))].map((_, i) => (
@@ -222,7 +222,7 @@ const Slider = () => {
                 <div className="flex gap-2">
                   <p className="text-sm md:text-lg py-2 font-medium text-rose-800"><span className="text-xs align-text-top">₹</span>
                     {data.price}/-</p>
-                  <p className="text-xs text-slate-400 self-center pt-3">
+                  <p className="text-xs text-slate-400 self-center ">
                     
                     <span className="text-emerald-600 pr-1">
                       {(data.price / data.original_price) * 100}%

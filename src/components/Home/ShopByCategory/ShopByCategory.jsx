@@ -20,7 +20,7 @@ const ShopByCategory = () => {
           }}
           className="main w-screen h-[80vh] bg-[#fff] my-[20px] mx-0 box-border p-[15px] flex flex-col bg-center bg-cover"
         >
-          <div className="heading pt-16 pb-8">
+          <div className="heading md:pt-16 pb-8">
             <hr className="bg-gradient-to-l from-rose-700" />
             <h2 className="text-nowrap">Shop By Categories</h2>
             <hr className="bg-gradient-to-r from-rose-700" />
