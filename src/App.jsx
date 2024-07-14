@@ -16,6 +16,7 @@ import FaqsPage from "./pages/FAQ";
 import SpecialOffer from "./pages/SpecialOffer";
 import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
+import WhoWeAre from "./components/Who we are/WhoWeAre";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         {/* Login page
         <Route path="/login" element={<Auth />} /> */}
 
+        
         {/* Other Pages */}
         <Route path="/special-offers" element={<SpecialOffer />} />
         <Route path="/our-team" element={<TeamSection />} />
@@ -46,7 +48,7 @@ function App() {
         <Route path="/sell-on-divueens" element={<></>} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/blogs" element={<BlogHome/>} />
-        <Route path="/about-us" element={<></>} />
+        <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
