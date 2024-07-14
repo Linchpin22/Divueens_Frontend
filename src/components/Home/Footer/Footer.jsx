@@ -229,7 +229,7 @@ function Footer() {
             data-footer-part=""
           >
             <Link to="/" className="logo">
-              <img alt="" className="object-contain h-[10rem] mix-blend-multiply" src={Divueens} />
+              <img alt="" className="object-contain h-[10rem] w-22" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {

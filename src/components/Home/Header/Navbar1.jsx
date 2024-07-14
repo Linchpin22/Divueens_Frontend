@@ -27,11 +27,11 @@ const Navbar1 = ({navItemText}) => {
             <Auth show={displayAuth} changeView={setDisplayAuth} />
             <nav className={`flex bg-white font-montserrat sticky top-0 z-40 w-full items-center justify-between lg:gap-8 ${displayOnScroll}`}>
                 <Link to="/">
-                    <img className=" w-[4.5rem] h-[4rem] md:w-28 md:h-22 lg:h-24 ml-4" src={Divueens} alt="Description" />
+                    <img className=" w-[4.5rem] h-[4rem] md:w-28 md:h-24 lg:h-24 ml-4" src={Divueens} alt="Description" />
                 </Link>
                 <div className="lg:w-full">
                     <div className="w-full flex justify-between items-center">
-                        <div className="w-full hidden lg:flex items-center justify-between text-base xl:text-lg">
+                        <div className="w-full hidden lg:flex items-center justify-center gap-10 text-base xl:text-lg">
                             <Link to="/products" className="text-gray-800 hover:text-gray-900 font-semibold">Categories</Link>
                             <Link to="/" className="text-gray-800 hover:text-gray-900 font-semibold">Brands</Link>
                             <Link to="/" className="text-gray-800 hover:text-gray-900 font-semibold">Div Fashion</Link>
@@ -90,18 +90,18 @@ const Navbar1 = ({navItemText}) => {
                     )}
                 </div>
             </nav>
-            <div className="bg-white border-t hidden lg:flex">
+            <div className="bg-white border-t hidden shadow-md lg:flex">
                 <div className="w-full py-2 px-4 ">
                     <ul className="w-full flex gap-12 justify-center">
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Skin Care')}>Face</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Hair Care')}>Hair</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Makeup')}>MakeUp</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Body Care')}>Body</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Baby</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Fragrance</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Combos</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Natural</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Tools and Accessories</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('Skin Care')}>Face</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('Hair Care')}>Hair</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('Makeup')}>MakeUp</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('Body Care')}>Body</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('')}>Baby</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('')}>Fragrance</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('')}>Combos</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('')}>Natural</Link></li>
+                        <li className="flex-shrink-0"><Link className="text-base hover:underline text-gray-600 hover:text-gray-500" onClick={() => navItemText('')}>Tools and Accessories</Link></li>
                     </ul>
                 </div>
             </div>
