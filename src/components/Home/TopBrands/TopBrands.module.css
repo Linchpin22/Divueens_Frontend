@@ -89,7 +89,7 @@
 
 .brand-background {
   /* background-color: #edeaf1; */
-  background: linear-gradient(to left, rgb(200, 200, 200), #e9acb6bd, #e9acb6bd, #e9acb6bd, rgb(200, 200, 200));
+  background: radial-gradient(#ffffff, rgba(199, 40, 72, 0.379));
   /* margin-top: 4px;
 padding: 20px 0; */
 }
@@ -183,20 +183,21 @@ padding: 20px 0; */
   /* background-color: #CF9FFF; */
   /* font-family: "Montserrat", sans-serif;
   position: relative; */
-  background: linear-gradient(to left, #d3defa, #c7aeef, #d3c4ec, #c5afed);
+  background: linear-gradient(to left, #d3defa, #83bef8, #c193ec, #c5afed);
   /* background-color: #3E111A; */
   /* padding: 1rem 1rem;
   text-align: center; */
 }
 
 .heading-2 .coinLink {
-  /* font-weight: 600;
-  font-size: 2rem; */
+  /* font-weight: 600;*/
+  font-size: 1.8rem; 
+  letter-spacing: 0.2em;
   text-shadow:
-    -1px -1px 0 #fff,   /* Top left shadow */
-    1px -1px 0 #fff,    /* Top right shadow */
-    -1px 1px 0 #fff,    /* Bottom left shadow */
-    1px 1px 0 #fff;     /* Bottom right shadow */
+    -1px -1px 0 #ffffff,  /*  Top left shadow */
+     3px 3px 0 #5f2b45,  /*   Top right shadow */
+    -1px 1px 0 #39125b,   /*  Bottom left shadow */
+     1px 1px 0 #39125b;   /*   Bottom right shadow */
 }
 
 /* animation */
@@ -274,11 +275,12 @@ padding: 20px 0; */
   }
 
   .heading-2 {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .heading-2 .coinLink {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+    letter-spacing: 0.17em;
   }
   .bar::-webkit-scrollbar {
     width: 13px;
@@ -309,11 +311,12 @@ padding: 20px 0; */
   }
 
   .heading-2 {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0px;
   }
 
   .heading-2 .coinLink {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
   }
   .bar::-webkit-scrollbar {
     width: 13px;
@@ -331,7 +334,8 @@ padding: 20px 0; */
   }
 
   .heading-2 .coinLink {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
   }
   .bar::-webkit-scrollbar {
     width: 13px;
