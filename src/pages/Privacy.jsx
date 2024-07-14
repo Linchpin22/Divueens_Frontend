@@ -57,13 +57,13 @@ const PrivacyPolicies = [
 
 function PrivacyPolicy() {
   return (
-    <div className="bg-[rgb(249,249,250)]">
+    <div className="py-3 mb-5 md:py-8 md:mb-8">
       <br />
-      <div className="w-2/3 mx-auto rounded-xl bg-white px-[5%] py-4">
-        <p className="text-center text-3xl font-bold py-4">DIVUEENS PRIVACY POLICIES</p>
+      <div className="w-[70%] max-sm:w-[90%] px-4 bg-rose-100/70 shadow-lg  mx-auto md:px-10 py-10">
+        <p className="text-center text-xl text-rose-900 font-bold mb-6 max-sm:text-lg">DIVUEENS PRIVACY POLICIES</p>
         {PrivacyPolicies.map((item, index) => (
           <React.Fragment key={index}>
-            <p className="text-lg font-semibold uppercase my-4">{item.title}</p>
+            <p className="text-lg font-semibold my-4">{item.title}</p>
             <p className="text-[14px]">{item.description}</p>
             <p className="text-[14px]">{item.description2}</p>
             <p className="text-[14px]">{item.description3}</p>
