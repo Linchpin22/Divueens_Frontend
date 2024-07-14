@@ -220,7 +220,7 @@ function Footer() {
     <footer data-footer-part="" >
       <div className="md:pt-16 pt-14 ">
         <div
-          className="row_ md:mt-8 md:px-24 px-8 grid grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
+          className="row_ md:mt-8 md:px-24 px-8 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
           data-footer-part=""
         >
           <div

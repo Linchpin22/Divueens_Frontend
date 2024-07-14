@@ -17,6 +17,7 @@ import SpecialOffer from "./pages/SpecialOffer";
 import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
 import WhoWeAre from "./components/Who we are/WhoWeAre";
+import StoreLocator from "./components/StoreLocator/StoreLocator";
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
         <Route path="/coins" element={<DivCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
         <Route path="/frequently-asked-questions" element={<FaqsPage />} />
-        <Route path="/contact-us" element={<></>} />
+        <Route path="/contact-us" element={<StoreLocator />} />
         <Route path="/help-center" element={<HelpCenter/>} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/shipping-delivery" element={<></>} />
