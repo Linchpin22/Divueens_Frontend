@@ -9,7 +9,7 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
-import MainLogo from "../../../assets/assets";
+import MainLogo, { Divueens } from "../../../assets/assets";
 
 const _1stList = [
   {
@@ -229,7 +229,7 @@ function Footer() {
             data-footer-part=""
           >
             <Link to="/" className="logo">
-              <img alt="" className="object-contain h-[4.5rem] w-22" src={MainLogo} />
+              <img alt="" className="object-contain h-[4.5rem] w-22 mix-blend-multiply" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
