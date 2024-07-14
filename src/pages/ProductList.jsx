@@ -134,8 +134,8 @@ const ProductList = () => {
             <div className='flex flex-col items-center w-full h-full my-10'>
                 {/* Home > Skin */}
                 <div className='flex flex-col gap-8 w-full px-5 lg:mb-4'>
-                    <div className='flex flex-wrap items-center justify-between'>
-                        <ol className="inline-flex items-center gap-1 md:gap-3">
+                    <div className='flex flex-wrap items-center justify-between gap-4 sm:gap-0'>
+                        <ol className="inline-flex items-center gap-3">
                             <li className='inline-flex items-center'>
                                 <Link to={'/'} className='inline-flex items-center tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium'>
                                     Home
@@ -155,7 +155,7 @@ const ProductList = () => {
                             </div>
                         </ol>
                         <button
-                            className="text-[0.8rem] flex items-center justify-between gap-2 px-2 text-left rounded-full border md:text-[0.9rem] md:px-4 md:py-1 lg:hidden"
+                            className="text-[0.8rem] sm:text-[0.9rem] flex items-center justify-between gap-2 px-2 text-left rounded-full border md:px-4 md:py-1 lg:hidden"
                             onClick={toggleMenu}
                         >
                             Filters
@@ -249,7 +249,7 @@ const ProductList = () => {
                     </div>
 
                     {/* Cards */}
-                    <div className='flex flex-col items-center w-full px-8 py-5 lg:pr-10 lg:pl-0'>
+                    <div className='flex flex-col items-center w-full py-5 px-4 sm:px-10'>
                         <div className="makeup flex flex-col gap-3 md:flex-row justify-between w-full">
                             <div className='hidden lg:flex items-center gap-2'>
                                 <span className="a font-medium text-[0.9rem] text-gray-600">MakeUp</span>

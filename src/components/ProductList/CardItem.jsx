@@ -55,8 +55,8 @@ const CardItem = ({ item }) => {
                             <img src={p.image} alt='image' className="h-full w-full object-center transition duration-200 group-hover:scale-110" />
 
                             <div className="absolute left-0 top-0 right-0 px-3 py-1.5 flex items-center justify-between text-white">
-                                <p className=" text-[0.8rem] text-rose-500 bg-white px-2 rounded-full" > {p.discount} </p>
-                                <div className='text-[0.9rem] text-rose-600 bg-white p-2 rounded-full md:text-[1rem]' onClick={() => handleLike(p.id)}>
+                                <p className="text-[0.7rem] sm:text-[0.8rem] text-rose-500 bg-white px-2 rounded-full lg:text-[1rem]" > {p.discount} </p>
+                                <div className='text-[0.9rem] text-rose-600 bg-white p-2 rounded-full md:text-[1.3rem]' onClick={() => handleLike(p.id)}>
                                     {likedCards[p.id] ? <FaHeart /> : <FaRegHeart />}
                                 </div>
                             </div>
@@ -71,13 +71,11 @@ const CardItem = ({ item }) => {
                                     <FaStar />
                                     <FaStar />
                                 </div>
-                                <p className='ml-5 text-[0.9rem] text-gray-500'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
+                                <p className='ml-5 text-[0.8rem] sm:text-base'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
                             </div>
-                            <div className="flex items-end justify-between gap-2 absolute bottom-0 lg:-bottom-9 xl:bottom-0 left-0 right-0">
-                                <span className="font-semibold text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
-                                <button onClick={() => addingItemToCart(p.id)} className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.8rem] px-2 py-1 md:p-1 lg:text-[0.9rem]'>
-                                    {isInCart ? "Remove" : "Add to Cart"}
-                                </button>
+                            <div className="flex items-end justify-between  absolute bottom-0 sm:gap-2 lg:-bottom-9 xl:-bottom-4 left-0 right-0">
+                                <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
+                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-1 lg:text-base'>Add To Cart</button>
                             </div>
                         </div>
 
@@ -103,11 +101,11 @@ const CardItem = ({ item }) => {
                     Previous
                 </button>
 
-                <p className=" text-[20px] mt-1">
+                <p className="text-[15px] sm:text-[20px] mt-1">
                     {currentPage} of {lastPage}
                 </p>
 
-                <button className="border p-2 px-12 border-gray-400 rounded-xl max-sm:px-4 flex" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === lastPage}>
+                <button className="border p-2 px-12 border-gray-400 rounded-xl text-base max-sm:px-4 flex" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === lastPage}>
                     Next
                     <svg className="h-6 w-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
