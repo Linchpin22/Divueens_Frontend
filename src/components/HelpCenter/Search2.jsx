@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div>
-      <div className="absolute top-[65%] mt-3 w-full z-10">
+      <div className="absolute top-[60%] mt-3 w-full z-10">
         <form className="w-[80%] mx-auto mb-4 mt-4 shadow-xl">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">
             search

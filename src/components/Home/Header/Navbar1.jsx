@@ -7,22 +7,14 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { FaBars } from 'react-icons/fa6';
 import { Divueens } from '../../../assets/assets';
 
-const Navbar1 = () => {
+const Navbar1 = ({navItemText}) => {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [displayAuth, setDisplayAuth] = useState(false)
     const [isDrop, setIsDrop] = useState(false)
+    const [displayOnScroll, setDisplayOnScroll] = useState('')
 
-    const handleDropdown = (dropdown) => {
-        if (openDropdown === dropdown) {
-            setOpenDropdown(null);
-        } else {
-            setOpenDropdown(dropdown);
-        }
-    };
+    useEffect(() => window.addEventListener("scroll", () => setDisplayOnScroll(scrollY >= 50 ? 'shadow-md' : '')), []);
 
-    const handleDrop = () => {
-        setIsDrop(!isDrop)
-    }
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -33,9 +25,9 @@ const Navbar1 = () => {
     return (
         <>
             <Auth show={displayAuth} changeView={setDisplayAuth} />
-            <nav className="flex bg-white font-montserrat sticky top-0 z-40 w-full items-center justify-between lg:gap-8">
+            <nav className={`flex bg-white font-montserrat sticky top-0 z-40 w-full items-center justify-between lg:gap-8 ${displayOnScroll}`}>
                 <Link to="/">
-                    <img className=" w-[6rem] h-[4rem] my-2 md:w-40 md:h-24 lg:h-20" src={Divueens} alt="Description" />
+                    <img className=" w-[4.5rem] h-[4rem] md:w-28 md:h-22 lg:h-24 ml-4" src={Divueens} alt="Description" />
                 </Link>
                 <div className="lg:w-full">
                     <div className="w-full flex justify-between items-center">
@@ -82,15 +74,15 @@ const Navbar1 = () => {
                                     <Link to="/" className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70">  Brands </Link>
                                     <Link to="/" className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70">  Div Fashion  </Link>
                                     <Link to="/blogs" className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70">  Beauty Advice  </Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Face</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Hair</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">MakeUp</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Body</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Baby</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Fragrance</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Combos</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Natural</Link>
-                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium">Tools and Accessories</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Face</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Hair</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >MakeUp</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Body</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Baby</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Fragrance</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Combos</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Natural</Link>
+                                    <Link to="/" className="px-2 py-1 text-gray-800 font-medium" >Tools and Accessories</Link>
                                 </div>
 
                             </div>
@@ -101,15 +93,15 @@ const Navbar1 = () => {
             <div className="bg-white border-t hidden lg:flex">
                 <div className="w-full py-2 px-4 ">
                     <ul className="w-full flex gap-12 justify-center">
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Face</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Hair</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">MakeUp</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Body</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Baby</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Fragrance</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Combos</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Natural</Link></li>
-                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500">Tools and Accessories</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Skin Care')}>Face</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Hair Care')}>Hair</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Makeup')}>MakeUp</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('Body Care')}>Body</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Baby</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Fragrance</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Combos</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Natural</Link></li>
+                        <li className="flex-shrink-0"><Link to="/" className="text-base text-gray-600 hover:text-gray-500" onMouseLeave={() => navItemText('')} onMouseEnter={() => navItemText('')}>Tools and Accessories</Link></li>
                     </ul>
                 </div>
             </div>

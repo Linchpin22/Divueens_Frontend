@@ -51,7 +51,7 @@ const CardItem = ({ item }) => {
                     const isInCart = (cardItem).includes(p.id);
                     console.log(isInCart)
                     return <div key={p.id} className=''>
-                        <Link to={'/products'} className="group relative mb-2 block md:h-80 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
+                        <Link className="group relative mb-2 block md:h-80 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
                             <img src={p.image} alt='image' className="h-full w-full object-center transition duration-200 group-hover:scale-110" />
 
                             <div className="absolute left-0 top-0 right-0 px-3 py-1.5 flex items-center justify-between text-white">
@@ -63,7 +63,7 @@ const CardItem = ({ item }) => {
                         </Link>
 
                         <div className='relative h-36 md:h-32'>
-                            <a href="#" className="hover:text-gray-800 tracking-tighter mb-1 transition duration-100 font-semibold text-[0.8rem] lg:text-[1rem]">{p.name} - {p.category} - {p.shade} - {p.material} - {p.brands}</a>
+                            <Link to="/product-description" className="hover:text-gray-800 tracking-tighter mb-1 transition duration-100 font-semibold text-[0.8rem] lg:text-[1rem]">{p.name} - {p.category} - {p.shade} - {p.material} - {p.brands}</Link>
                             <div className='flex items-center lg:mt-1'>
                                 <div className="text-[#ffa200] flex items-center">
                                     <FaStar />

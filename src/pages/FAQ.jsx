@@ -11,9 +11,9 @@ export const Faqs = ({ question, active, answer, onClick }) => {
     return (
             <li className='py-3 w-full h-fit'>
                 <div className='flex justify-between' onClick={toggle}>
-                    <h2 className={`w-70% max-sm:w-72 font-semibold hover:text-[#ff61c8] cursor-pointer ${active ? 'text-[#ff61c8]' : 'text-[#000000]'}`} >{question}</h2>
-                    <button className={`${active ? "text-pink-500" : ""} "text-pink-500"`}>
-                        {active ? <FaCircleMinus  /> : <FaCirclePlus className='text-pink-500'/>}
+                    <h2 className={`w-70% max-sm:w-72 font-semibold hover:text-rose-500 cursor-pointer ${active ? 'text-rose-500' : 'text-[#000000]'}`} >{question}</h2>
+                    <button className="text-rose-500">
+                        {active ? <FaCircleMinus  /> : <FaCirclePlus />}
                     </button>
                 </div>
                 <p className={`text-start py-3 mb-3 leading-tight ${active ? 'block' : 'hidden'} text-[#3f3c3e]`}>{answer}</p>
@@ -73,9 +73,10 @@ const faqs = [
     setActive((pre)=> (pre === question ? null : question ));
   }
   return (
-    <div className="w-full  bg-gradient-to-r from-[#efdce8] via-[#faa3c5] via-30% to-[#e0d2d7] ">
+    // <div className="w-full  bg-gradient-to-r from-[#efdce8] via-[#faa3c5] via-30% to-[#e0d2d7] ">
+    <div className="w-full">
       <div className="flex items-center flex-col justify-center w-full ">
-      <h1 className="text-4xl m-4 text-white">Divueens</h1>
+      {/* <h1 className="text-4xl m-4 text-white">Divueens</h1> */}
         
         <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl w-2/3 max-sm:w-3/4 h-fit">
           <div className="flex flex-row items-center text-2xl pb-10 gap-3">
