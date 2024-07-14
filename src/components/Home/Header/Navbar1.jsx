@@ -100,7 +100,7 @@ const Navbar1 = ({ navItemText }) => {
               </button>
             </div>
           </div>
-          <div className="hidden lg:flex justify-center gap-x-7 font-semibold tracking-wider">
+          <div className="hidden lg:flex justify-center gap-x-9 pr-16 font-semibold tracking-wider">
             {mainNavItems.map((item, index) => (
               <Link
                 key={index}
