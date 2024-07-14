@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import { Link } from 'react-router-dom';
 import SaleHeader from "./SaleHeader";
 import Carousel from "./Carousel";
@@ -11,6 +11,7 @@ import Image4 from "../../../assets/CarouselImages/Image4.png";
 import Image5 from "../../../assets/CarouselImages/Image5.png";
 import { useLocation } from "react-router-dom";
 import Navbar1 from "./Navbar1";
+import HoverDropDown from "./HoverDropDown";
 function Header() {
   const slides = [
     // {
@@ -87,13 +88,14 @@ function Header() {
       buttonLink: "#slide3",
     },
   ];
-
+  const [itemText, setItemText] = useState('')
   const location = useLocation();
   return (
     <>
       <SaleHeader />
       {/* <NavBar /> */}
-      <Navbar1 />
+      <Navbar1 navItemText={setItemText} />
+      <HoverDropDown navItemText={itemText}/>
       <header>
         {location.pathname === "/" ? <Carousel slides={slides} /> : <></>}
       </header>

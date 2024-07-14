@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Home/Header/Header";
 import Footer from "./components/Home/Footer/Footer";
-import Auth from "./components/Auth/Auth";
 import BlogHome from "./pages/Blog";
 import ReturnPolicy from "./pages/cancellation";
 import DivCoins from "./pages/DivCoins";

@@ -259,9 +259,9 @@ const ProductList = () => {
                             <div className="prodline flex font-normal items-center gap-5">
                                 <div className="show text-[0.7rem] md:text-[0.8rem] text-gray-600">Showing 1-10 of 100 Products</div>
                                 <div className="sortby text-[0.7rem] md:text-[0.8rem]">
-                                    <label for="sort" className='text-gray-600'>Sort by: </label>
+                                    <label htmlFor="sort" className='text-gray-600'>Sort by: </label>
                                     <select className="select bg-transparent border-none text-[0.7rem] md:text-[0.8rem]" name="products" id="sort">
-                                        <option defaultValue={'a'} selected>Most popular</option>
+                                        <option defaultValue={'a'}>Most popular</option>
                                         <option value="b">Ascending A to Z</option>
                                         <option value="c">Descending Z to A</option>
                                     </select>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FcGoogle } from 'react-icons/fc'
+import { Link } from 'react-router-dom'
 
 const Login = ({ move, setMove }) => {
   return (
@@ -14,7 +15,9 @@ const Login = ({ move, setMove }) => {
         <div className="mt-[5px]"><a href="/" className='text-[#fb7185] no-underline hover:underline'>Forgot password?</a></div>
         <div className="h-[50px] w-full mt-[20px] rounded-[15px] relative overflow-hidden group">
           <div className="h-full w-[300%] absolute -left-full bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] [transition:all_0.4s_ease] group-hover:left-[0]"></div>
+          <Link to="/profile"> {/* Remove It During Changes */}
           <input className="outline-none h-full w-full relative bg-none border-[none] text-[#fff] pl-0 rounded-[15px] text-[20px] font-medium cursor-pointer" type="submit" value="Login" />
+          </Link>
         </div>
         <div className="text-center mt-[20px]">Not a member? <span onClick={() => setMove(false)} className='text-[#fb7185] no-underline cursor-pointer hover:underline'>Signup now</span></div>
         <div className='h-[50px] w-full flex justify-center'>

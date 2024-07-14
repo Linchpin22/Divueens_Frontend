@@ -3,7 +3,7 @@ import { FaShippingFast, FaTrophy, FaHeadset, FaShieldAlt } from 'react-icons/fa
 
 export default function Lower() {
   return (
-    <div className="bg-rose-100 p-8 flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
+    <div className="bg-rose-100 p-8 mb-20 flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
       <div className="sm:flex sm:items-center">
         <div className="text-2xl font-bold text-center md:text-left md:pl-20 text-gray-900">
           <h2 className="md:text-2xl text-xl font-bold mb-4">How can we help you?</h2>
