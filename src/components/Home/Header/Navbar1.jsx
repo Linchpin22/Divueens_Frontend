@@ -25,7 +25,7 @@ const Navbar1 = ({ navItemText }) => {
     "Div Fashion",
     "Beauty Advice",
     "Tools and Accessories",
-    "Offers"
+    "Offers",
   ];
   const subNavItems = [
     "Face",
@@ -35,7 +35,7 @@ const Navbar1 = ({ navItemText }) => {
     "Fragrance",
     "Combos",
     "Natural",
-    "Health & Wellness"
+    "Health & Wellness",
   ];
 
   useEffect(
@@ -43,7 +43,7 @@ const Navbar1 = ({ navItemText }) => {
       window.addEventListener("scroll", () =>
         setDisplayOnScroll(
           scrollY >= 50
-            ? "shadow-md border-b border-rose-200 bg-rose-300 backdrop-filter backdrop-blur-lg bg-opacity-30"
+            ? "shadow-md border-b border-rose-500 bg-rose-200 backdrop-filter backdrop-blur-lg bg-opacity-30"
             : ""
         )
       ),
@@ -60,19 +60,19 @@ const Navbar1 = ({ navItemText }) => {
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
       <nav
-        className={`flex font-montserrat px-8 sticky top-0 z-40 w-full items-center justify-center ${displayOnScroll}`}
+        className={`flex font-montserrat pl-4 lg:px-8 sticky top-0 z-40 w-full items-center justify-between ${displayOnScroll}`}
       >
-        <div className="w-[20%]">
+        <div className="">
           <Link to="/">
             <img
-              className=" w-[200px] h-[100px] pt-2"
+              className="w-[100%] h-[70px] md:h-[90px] lg:h-[100px] pt-2"
               src={Divueens}
               alt="Description"
             />
           </Link>
         </div>
         <div
-          className="w-[80%] flex flex-col gap-3"
+          className=" flex flex-col gap-3"
           // style={{fontFamily: 'Josefin Sans'}}
         >
           <div className="w-full flex lg:justify-center justify-end lg:pr-40 items-center ">
@@ -102,21 +102,22 @@ const Navbar1 = ({ navItemText }) => {
           </div>
           <div className="hidden lg:flex justify-center gap-x-7 font-semibold tracking-wider">
             {mainNavItems.map((item, index) => (
-                <Link key={index}
-                  to="/products"
-                  className="hover:underline-offset-2 text-nowrap hover:underline hover:text-rose-800"
-                >
-                  {item}
-                </Link>
+              <Link
+                key={index}
+                to="/products"
+                className="hover:underline-offset-2 text-nowrap hover:underline hover:text-rose-800"
+              >
+                {item}
+              </Link>
             ))}
           </div>
           {isOpen && (
-            <div className="absolute top-0 right-0 h-screen bg-white/80 min-w-[15rem] sm:min-w-[20rem] z-50 w-[30%] backdrop-blur-sm shadow-[-2px_0_5px_rgba(173,65,65,0.5)] py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
+            <div className="absolute max-h-screen top-0 bg-white/70 right-0 w-[80%] md:w-[60%] z-50 backdrop-blur-lg shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
               <div>
                 <div className="flex items-center justify-between pr-4">
                   <button
                     type="button"
-                    className="btn-close border-none px-[1rem] text-[#fff] rounded-[3rem] bg-rose-700 text-[2rem] cursor-pointer"
+                    className="btn-close font-medium text-3xl cursor-pointer"
                     onClick={toggleMenu}
                   >
                     &times;
@@ -136,62 +137,20 @@ const Navbar1 = ({ navItemText }) => {
                   <SearchBox />
                 </div>
 
-                <div className="flex flex-col w-full gap-4 overflow-auto max-h-screen scroll-smooth">
-                  <Link
-                    to="/products"
-                    className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70"
-                  >
-                    {" "}
-                    Categories{" "}
-                  </Link>
-                  <Link
-                    to="/"
-                    className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70"
-                  >
-                    {" "}
-                    Brands{" "}
-                  </Link>
-                  <Link
-                    to="/"
-                    className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70"
-                  >
-                    {" "}
-                    Div Fashion{" "}
-                  </Link>
-                  <Link
-                    to="/blogs"
-                    className="px-2 py-1 text-gray-800 font-semibold border-b border-rose-700 w-[13rem] sm:w-[17rem] shadow-sm rounded-l-md shadow-rose-700/70"
-                  >
-                    {" "}
-                    Beauty Advice{" "}
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Face
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Hair
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    MakeUp
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Body
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Baby
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Fragrance
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Combos
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Natural
-                  </Link>
-                  <Link to="/" className="px-2 py-1 text-gray-800 font-medium">
-                    Tools and Accessories
-                  </Link>
+                <div className="flex text-sm flex-col w-full gap-4 overflow-auto max-h-screen scroll-smooth">
+                  {mainNavItems.map((item, index) => (
+                    <Link
+                      to="/products"
+                      className="px-2 py-1 text-gray-800 font-medium shadow"
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                  {subNavItems.map((item, index) => (
+                    <Link to="/" className="px-2 text-gray-800 font-medium">
+                      {item}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
