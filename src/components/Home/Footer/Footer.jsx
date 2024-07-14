@@ -191,7 +191,7 @@ function Footer() {
           <ul
             className={`close ${
               toggleView === index + 1 ? "all_Items" : ""
-            } mt-6 space-y-3 text-sm`}
+            } mt-4 space-y-1 text-sm`}
           >
             {lst.chhotiList.map((list2, int) => {
               return (
@@ -220,7 +220,7 @@ function Footer() {
     <footer data-footer-part="" >
       <div className="md:pt-16 pt-14 ">
         <div
-          className="row_ md:mt-8 md:px-24 px-8 grid grid-cols-1 lg:mt-0 lg:grid-cols-5"
+          className="row_ md:mt-8 md:px-24 px-8 grid grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
           data-footer-part=""
         >
           <div
@@ -247,7 +247,7 @@ function Footer() {
             </ul> */}
           </div>
           <ListItemsAll />
-          <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-0 lg:pr-3 lg:col-span-5 lg:justify-end">
+          <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
             <li>
               <a href="/"
                 className={textStyle}

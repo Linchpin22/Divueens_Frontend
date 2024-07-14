@@ -1,26 +1,29 @@
 import React from 'react'
+import { FcGoogle } from 'react-icons/fc'
 
-const Login = () => {
+const Login = ({ move, setMove }) => {
   return (
     <>
-       <div className="">
-         <div>
-           <form action="#" className="flex flex-col gap-6 mt-[30px]">
-             <div>
-               <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="text" placeholder="Email Address" required />
-             </div>
-             <div>
-               <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="password" placeholder="Password" required />
-             </div>
-             <div className="ml-7 text-xl text-rose-400"><a href="#">Forgot Password?</a></div>
-             <div className="text-center bg-gradient-to-r from-rose-500 to-rose-800 text-white w-80 rounded-xl h-[45px] [b-3] ml-[35px] mb-[20px]">
-               <input className="text-2xl pt-2" type="submit" value="Login" />
-             </div>
-           </form>
-         </div>
-         <div className="text-center text-xl mt-3">Not a member? <a href="#" className=" text-rose-400">Signup now</a></div>
-       </div>
-   </>
+      <form action="/" className={`w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)] ${move ? 'ml-0' : 'ml-[-50%]'}`}>
+        <div className="h-[50px] w-full mt-[20px]">
+          <input className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]" type="text" placeholder="Email Address" required />
+        </div>
+        <div className="h-[50px] w-full mt-[20px]">
+          <input className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]" type="password" placeholder="Password" required />
+        </div>
+        <div className="mt-[5px]"><a href="/" className='text-[#fb7185] no-underline hover:underline'>Forgot password?</a></div>
+        <div className="h-[50px] w-full mt-[20px] rounded-[15px] relative overflow-hidden group">
+          <div className="h-full w-[300%] absolute -left-full bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] [transition:all_0.4s_ease] group-hover:left-[0]"></div>
+          <input className="outline-none h-full w-full relative bg-none border-[none] text-[#fff] pl-0 rounded-[15px] text-[20px] font-medium cursor-pointer" type="submit" value="Login" />
+        </div>
+        <div className="text-center mt-[20px]">Not a member? <span onClick={() => setMove(false)} className='text-[#fb7185] no-underline cursor-pointer hover:underline'>Signup now</span></div>
+        <div className='h-[50px] w-full flex justify-center'>
+          <button className="h-full w-3/4 text-center mt-[10px] border flex justify-evenly items-center font-semibold border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+            <FcGoogle className="w-6 h-6"/><span>Continue with Google</span>
+          </button>
+        </div>
+      </form>
+    </>
   )
 }
 
