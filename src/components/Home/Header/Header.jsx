@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 // import { Link } from 'react-router-dom';
 import SaleHeader from "./SaleHeader";
-import NavBar from "./Navbar";
 import Carousel from "./Carousel";
 
 import logo from "../../../assets/CarouselImages/heart.png";
@@ -11,6 +10,7 @@ import Image3 from "../../../assets/CarouselImages/Image3.png";
 import Image4 from "../../../assets/CarouselImages/Image4.png";
 import Image5 from "../../../assets/CarouselImages/Image5.png";
 import { useLocation } from "react-router-dom";
+import Navbar1 from "./Navbar1";
 function Header() {
   const slides = [
     // {
@@ -92,7 +92,8 @@ function Header() {
   return (
     <>
       <SaleHeader />
-      <NavBar />
+      {/* <NavBar /> */}
+      <Navbar1 />
       <header>
         {location.pathname === "/" ? <Carousel slides={slides} /> : <></>}
       </header>

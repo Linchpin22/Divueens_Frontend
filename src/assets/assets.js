@@ -56,7 +56,7 @@ import sub_1 from './Subscription/1.png'
 import sub_2 from './Subscription/2.png'
 import sub_3 from './Subscription/3.png'
 import sub_4 from './Subscription/4.jpg'
-import ref_pic from './Subscription/ref_pic1.gif'
+import ref_pic from './Subscription/ref_pic2.gif'
 
 
 
@@ -126,6 +126,7 @@ export {
 }
 
 export {default as DivueensLogoImage} from "./CarouselImages/DivueensLogoImage.png"
+export {default as Divueens} from "./Divueens.jpg"
 export {default as ShoppingCart} from "./CarouselImages/cart2.png"
 export {default as Cart} from "./CarouselImages/cart.png"
 export {default as searchImage} from "./CarouselImages/searchIcon.svg"
