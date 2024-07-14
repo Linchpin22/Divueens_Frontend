@@ -22,7 +22,7 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <main className="container mx-auto text-center py-2 mb-4 ">
           <p className=" bg-clip-text text-black text-3xl md:text-4xl lg:text-5xl font-extrabold font-montserrat my-7">Our Team</p>
-          <p className=" bg-clip-text text-slate-500 text-2xl md:text-3xl lg:text-4xl font-montserrat my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, quasi modi. Deserunt repudiandae provident rem aut incidunt quam enim corporis?</p>
+          <p className=" bg-clip-text text-slate-500 text-lg md:text-xl lg:text-2xl font-montserrat my-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, quasi modi. Deserunt repudiandae provident rem aut incidunt quam enim corporis?</p>
         </main>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(3,_0.3fr)] gap-8 justify-center items-center mb-40">
           {teamMembers.map((member, index) => (

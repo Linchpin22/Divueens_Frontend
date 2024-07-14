@@ -11,7 +11,7 @@ import Image4 from "../../../assets/CarouselImages/Image4.png";
 import Image5 from "../../../assets/CarouselImages/Image5.png";
 import { useLocation } from "react-router-dom";
 import Navbar1 from "./Navbar1";
-import HoverDropDown from "./HoverDropDown";
+// import HoverDropDown from "./HoverDropDown";
 function Header() {
   const slides = [
     // {
@@ -90,12 +90,14 @@ function Header() {
   ];
   const [itemText, setItemText] = useState('')
   const location = useLocation();
+  // useEffect(()=>window.addEventListener('click',setItemText('')), [])
   return (
     <>
       <SaleHeader />
       {/* <NavBar /> */}
       <Navbar1 navItemText={setItemText} />
-      <HoverDropDown navItemText={itemText}/>
+      {/* <Navbar1 navItemText={setItemText} /> */}
+      {/* <HoverDropDown navItemText={itemText}/> */}
       <header>
         {location.pathname === "/" ? <Carousel slides={slides} /> : <></>}
       </header>
