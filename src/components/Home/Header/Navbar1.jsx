@@ -21,18 +21,20 @@ const Navbar1 = ({ navItemText }) => {
   const [displayOnScroll, setDisplayOnScroll] = useState("");
   const mainNavItems = [
     "Categories",
-    "Brands",
+    "Top Brands",
     "Div Fashion",
     "Beauty Advice",
-    "Tools and Accessories",
-    "Offers",
+    "Tools & Accessories",
+    "Offers"
   ];
   const subNavItems = [
-    "Face",
-    "Hair",
+    "Face care",
+    "Skin care",
+    "Hair care",
     "MakeUp",
     "Body care",
     "Fragrance",
+    "MakeUp",
     "Combos",
     "Natural",
     "Health & Wellness",
@@ -43,7 +45,7 @@ const Navbar1 = ({ navItemText }) => {
       window.addEventListener("scroll", () =>
         setDisplayOnScroll(
           scrollY >= 50
-            ? "shadow-md border-b border-rose-500 bg-rose-200 backdrop-filter backdrop-blur-lg bg-opacity-30"
+            ? "shadow-md border-b border-rose-100 bg-rose-100 backdrop-filter backdrop-blur-lg bg-opacity-30"
             : ""
         )
       ),
@@ -60,22 +62,22 @@ const Navbar1 = ({ navItemText }) => {
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
       <nav
-        className={`flex font-montserrat pl-4 lg:px-8 sticky top-0 z-40 w-full items-center justify-between ${displayOnScroll}`}
+        className={`flex font-montserrat pl-4 xl:pl-10 sticky top-0 z-40 w-full items-center justify-between ${displayOnScroll}`}
       >
         <div className="">
           <Link to="/">
             <img
-              className="w-[100%] h-[70px] md:h-[90px] lg:h-[100px] pt-2"
+              className="w-[100%] h-[70px] md:h-[90px] lg:h-[100px] py-1 md:py-2"
               src={Divueens}
               alt="Description"
             />
           </Link>
         </div>
         <div
-          className=" flex flex-col gap-3"
+          className=" flex flex-col gap-3 lg:px-8 xl:pr-20"
           // style={{fontFamily: 'Josefin Sans'}}
         >
-          <div className="w-full flex lg:justify-center justify-end lg:pr-40 items-center ">
+          <div className="w-full flex lg:justify-center justify-end items-center ">
             <div className="hidden lg:w-[70%] lg:block">
               <SearchBox />
             </div>
@@ -100,7 +102,7 @@ const Navbar1 = ({ navItemText }) => {
               </button>
             </div>
           </div>
-          <div className="hidden lg:flex justify-center gap-x-9 pr-16 font-semibold tracking-wider">
+          <div className="hidden lg:flex justify-center gap-x-6 xl:gap-x-10 xl:pr-6 font-semibold text-slate-600  tracking-wider">
             {mainNavItems.map((item, index) => (
               <Link
                 key={index}
@@ -159,7 +161,7 @@ const Navbar1 = ({ navItemText }) => {
       </nav>
       <div className="bg-white w-full mx-auto border border-t hidden shadow-md lg:flex">
         <div className="w-full py-2 px-4 ">
-          <ul className="w-full flex gap-10 justify-center">
+          <ul className="w-full flex gap-6 justify-end lg:justify-center xl:gap-8 tracking-wide">
             {subNavItems.map((item, index) => (
               <>
                 <li className="flex-shrink-0 " key={index}>
