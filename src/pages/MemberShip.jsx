@@ -103,16 +103,84 @@ const MemberShip = () => {
         },
     ]
 
+    const features = [
+        "Exclusive discounts",
+        "Early access to products",
+        "Loyalty points/rewards",
+        "Free samples/gifts",
+        "Special events",
+        "Personalized recommendations",
+    ];
+
     return (
         <div className='p-4 w-full h-full flex flex-col items-center'>
             {/* Mahak */}
-            <div></div>
+            <div>
+                <div className="flex items-center justify-center  bg-white">
+
+                    <div className="relative max-w-6xl xl:h-80 md:mx-20">
+                        <img src="https://ideogram.ai/assets/progressive-image/balanced/response/KHAy-nYvTimiAa32Po365A" alt="Sample" className="object-cover w-full h-full absolute inset-0" />
+                        <div className="relative z-10 p-8 md:w-3/5 xl:h-80 bg-white opacity-80 ">
+                            <h1 className="md:text-4xl text-xl  font-bold text-black mb-4 mr-6">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor</h1>
+                            <p class="mt-4 text-black mr-6">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor</p>
+                            <button className="bg-black  text-white font-bold py-2 px-10 rounded-full shadow-lg hover:bg-rose-400 focus:outline-none mt-4">
+                                Explore products
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+                    <h1 className="md:text-4xl text-xl font-bold mb-10 mt-10">Membership plans</h1>
+                    <div className="flex flex-col md:flex-row gap-8 md:max-w-full ">
+                        <div className="bg-gradient-to-b from-rose-100  to-rose-300 rounded-lg shadow-lg text-center overflow-hidden transform transition-transform duration-500 hover:scale-105 border outline-gray-900 mb-10">
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4 py-2 bg-rose-300">Basic</h2>
+                            <div className='px-6'>
+                                <p className="text-4xl font-bold mb-4">$10<span className="text-lg font-normal">/month</span></p>
+                                <button className="w-full md:text-xl  text-base md:py-3  px-4 py-2 mb-4 text-white bg-black rounded-full hover:bg-gray-600 shadow-xl">Get now</button>
+                            </div>
+                            <ul className="space-y-4 px-6 pb-6">
+                                {features.map((feature, index) => (
+                                    <li key={index} className="flex items-center ">
+                                        <span className="flex-shrink-0 w-4 h-4 mr-3 flex items-center justify-center border-2 border-black rounded-full  ">
+                                            <svg className="w-4 h-4  text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </span>
+                                        <span className="text-black">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="bg-gradient-to-b from-rose-100  to-rose-300 rounded-lg shadow-lg text-center overflow-hidden transform transition-transform duration-500 hover:scale-105 border outline-gray-900 mb-10">
+                            <h2 className="text-2xl font-bold text-gray-800 mb-4 py-2 bg-rose-300">Premium</h2>
+                            <div className='px-6'>
+                                <p className="text-4xl font-bold mb-4">$20<span className="text-lg font-normal">/month</span></p>
+                                <button className="w-full md:text-xl  text-base md:py-3  px-4 py-2 mb-4 text-white bg-black rounded-full hover:bg-gray-600 shadow-xl">Get now</button>
+                            </div>
+                            <ul className="space-y-4 px-6 pb-6">
+                                {features.map((feature, index) => (
+                                    <li key={index} className="flex items-center ">
+                                        <span className="flex-shrink-0 w-4 h-4 mr-3 flex items-center justify-center border-2 border-black rounded-full  ">
+                                            <svg className="w-4 h-4  text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </span>
+                                        <span className="text-black">{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* Aayush */}
             <div className='w-full flex flex-col gap-10 md:px-10 lg:px-32'>
                 <div className='w-full h-full my-4'>
-                    <h3 className=' font-semibold text-center my-4 text-2xl md:text-3xl'>Customer Reviews</h3>
-                    <div className='w-72 h-72 relative mx-auto md:w-full md:h-80 lg:w-[45rem]'>
+                    <h3 className=' font-bold text-center my-4 text-2xl md:text-4xl'>Customer Reviews</h3>
+                    <div className='w-72 relative mx-auto md:w-full h-80 lg:w-[45rem]'>
                         <Swiper
                             slidesPerView={1}
                             spaceBetween={0}
@@ -124,7 +192,7 @@ const MemberShip = () => {
                                 },
                             }}
                             modules={[Navigation]}
-                            className="mySwiper w-full h-full py-2 bg-rose-300 rounded-lg"
+                            className="mySwiper w-full h-full py-2 bg-gradient-to-b from-rose-200  to-rose-400 rounded-lg"
                         >
                             {customer.map((customer) => {
                                 return <SwiperSlide key={customer.id} className='w-full h-full px-2 text-white flex flex-col items-center transition-all duration-[0.3s] hover:shadow-lg hover:shadow-rose-600 md:border-r-[1px] md:border-black'>
@@ -153,7 +221,7 @@ const MemberShip = () => {
                     </div>
                 </div>
 
-                <div className=' h-full bg-rose-300 rounded-lg p-4 md:p-8 md:w-full'>
+                <div className=' h-full bg-gradient-to-b from-rose-300  to-rose-400 rounded-lg p-4 md:p-8 md:w-full'>
                     <ol >
                         {accord.map((acc) => {
                             return <li key={acc.id} className='my-2 w-full bg-rose-200'>
