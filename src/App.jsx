@@ -17,6 +17,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
 import WhoWeAre from "./components/Who we are/WhoWeAre";
 import StoreLocator from "./components/StoreLocator/StoreLocator";
+import MemberShip from "./pages/MemberShip";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/blogs" element={<BlogHome/>} />
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/membership" element={<MemberShip />} />
       </Routes>
       <Footer />
     </>
