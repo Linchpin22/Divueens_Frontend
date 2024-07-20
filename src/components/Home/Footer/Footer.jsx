@@ -64,12 +64,12 @@ const baadiList = [
           txt: "Authenticity",
         },
         {
-          url: "/CSR",
-          txt: "Careers CSR",
+          url: "/careers",
+          txt: "Careers",
         },
         {
-          url: "",
-          txt: "Divueens",
+          url: "/CSR",
+          txt: "Divueens CSR",
         },
         {
           url: "/investor-relation",
