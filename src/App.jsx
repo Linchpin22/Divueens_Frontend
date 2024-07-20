@@ -18,6 +18,7 @@ import Profile from "./pages/Profile";
 import WhoWeAre from "./components/Who we are/WhoWeAre";
 import StoreLocator from "./components/StoreLocator/StoreLocator";
 import MemberShip from "./pages/MemberShip";
+import VirtualTryOnPage from "./pages/VirtualTryOnPage";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
+        <Route path="/virtualtryon" element={<VirtualTryOnPage />} />
       </Routes>
       <Footer />
     </>
