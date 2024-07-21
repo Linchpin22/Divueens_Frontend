@@ -131,19 +131,19 @@ const ProductList = () => {
 
     return (
         <>
-            <div className='flex flex-col items-center w-full h-full my-10'>
+            <div className='flex flex-col items-center w-full h-full my-6'>
                 {/* Home > Skin */}
-                <div className='flex flex-col gap-8 w-full px-5 lg:mb-4'>
+                <div className='flex flex-col gap-4 w-full px-5'>
                     <div className='flex flex-wrap items-center justify-between gap-4 sm:gap-0'>
                         <ol className="inline-flex items-center gap-3">
                             <li className='inline-flex items-center'>
-                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium'>
+                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-[0.8rem] font-medium'>
                                     Home
                                 </Link>
                             </li>
                             <IoIosArrowForward size={15} />
                             <li className='inline-flex items-center'>
-                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium'>
+                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.8rem] font-medium'>
                                     Skin care
                                 </Link>
                             </li>
@@ -249,7 +249,7 @@ const ProductList = () => {
                     </div>
 
                     {/* Cards */}
-                    <div className='flex flex-col items-center w-full py-5 px-4 sm:px-10'>
+                    <div className='flex flex-col items-center w-full py-5 px-4 sm:px-10 lg:pr-6 lg:pl-4'>
                         <div className="makeup flex flex-col gap-3 md:flex-row justify-between w-full">
                             <div className='hidden lg:flex items-center gap-2'>
                                 <span className="a font-medium text-[0.9rem] text-gray-600">MakeUp</span>
