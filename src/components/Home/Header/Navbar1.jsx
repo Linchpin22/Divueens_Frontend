@@ -13,9 +13,10 @@ import Auth from "../../Auth/Auth";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBars } from "react-icons/fa6";
 import { Divueens } from "../../../assets/assets";
+import navItemData from "./NavDropDownItems";
 
 const Navbar1 = ({ navItemText }) => {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
   const [displayOnScroll, setDisplayOnScroll] = useState("");
@@ -34,7 +35,6 @@ const Navbar1 = ({ navItemText }) => {
     "MakeUp",
     "Body care",
     "Fragrance",
-    "MakeUp",
     "Combos",
     "Natural",
     "Health & Wellness",
@@ -58,6 +58,9 @@ const Navbar1 = ({ navItemText }) => {
     setIsOpen(!isOpen);
   };
 
+  const [hoveredCategory, setHoveredCategory] = useState(null);
+
+
   return (
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
@@ -75,7 +78,7 @@ const Navbar1 = ({ navItemText }) => {
         </div>
         <div
           className=" flex flex-col gap-3 lg:px-8 xl:pr-20"
-          // style={{fontFamily: 'Josefin Sans'}}
+        // style={{fontFamily: 'Josefin Sans'}}
         >
           <div className="w-full flex lg:justify-center justify-end items-center ">
             <div className="hidden lg:w-[70%] lg:block">
@@ -114,7 +117,7 @@ const Navbar1 = ({ navItemText }) => {
             ))}
           </div>
           {isOpen && (
-            <div className="absolute max-h-screen top-0 bg-white/70 right-0 w-[80%] md:w-[60%] z-50 backdrop-blur-lg shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
+            <div className="absolute max-h-screen top-0 bg-white/95 right-0 w-[80%] md:w-[60%] z-50 backdrop-blur-lg shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
               <div>
                 <div className="flex items-center justify-between pr-4">
                   <button
@@ -148,11 +151,49 @@ const Navbar1 = ({ navItemText }) => {
                       {item}
                     </Link>
                   ))}
-                  {subNavItems.map((item, index) => (
-                    <Link to="/" className="px-2 text-gray-800 font-medium">
-                      {item}
-                    </Link>
-                  ))}
+                  <div className="flex text-sm flex-col w-full gap-4 ">
+                    {Object.keys(navItemData).map((category, index) => {
+                      const categoryData = navItemData[category];
+                      if (!categoryData) return null;
+
+                      return (
+                        <div className="flex-shrink-0 " key={index}>
+                          <Link
+                            className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
+                            onClick={() => {
+                              setOpenDropdown(!openDropdown)
+                              setHoveredCategory(category);
+                            }}
+                          >
+                            {category} <IoIosArrowDown size={15} className={`transition-all duration-[0.3s] ease-in-out ${openDropdown && hoveredCategory === category && 'rotate-180'}`} />
+                          </Link>
+                          {openDropdown && hoveredCategory === category && (
+                            <div onMouseEnter={() => {
+                              setOpenDropdown(true);
+                              setHoveredCategory(category);
+                            }} className="w-full h-auto px-8 py-4 rounded-[20px] bg-white/50 shadow-xl l-[30px] z-30 navItemMultipage">
+                              {categoryData.map((subcategory) => {
+                                const subcategoryLabel = Object.keys(subcategory)[0];
+                                const subcategoryItems = subcategory[subcategoryLabel];
+                                if (!subcategoryItems) return null;
+
+                                return (
+                                  <div className="w-full" key={subcategoryLabel}>
+                                    <h3 className="text-black font-semibold text-sm leading-tight py-2 tracking-tight">{subcategoryLabel}</h3>
+                                    <ul>
+                                      {subcategoryItems.map((item) => (
+                                        <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -162,18 +203,71 @@ const Navbar1 = ({ navItemText }) => {
       <div className="bg-white w-full mx-auto border border-t hidden shadow-md lg:flex">
         <div className="w-full py-2 px-4 ">
           <ul className="w-full flex gap-6 justify-end lg:justify-center xl:gap-8 tracking-wide">
-            {subNavItems.map((item, index) => (
+
+            {/* {subNavItems.map((item, index) => (
               <>
                 <li className="flex-shrink-0 " key={index}>
                   <Link
-                    className="hover:underline text-sm font-medium text-slate-500 hover:text-rose-800"
-                    onClick={() => navItemText(item)}
+                    className="hover:underline text-sm font-medium text-slate-500 hover:text-rose-800 relative"
+                    onMouseEnter={() => setIsDrop(true)}
+                    onMouseLeave={() => setIsDrop(false)}
                   >
                     {item}
+                    {isDrop && (
+                      <div className="w-[80vw] h-auto p-12 absolute left-[50%] translate-x-[-50%] rounded-b-[20px] top-8 bg-white border shadow-xl font-mono l-[30px] z-30 navItemMultipage">
+                      </div>
+                    )}
                   </Link>
                 </li>
               </>
-            ))}
+            ))} */}
+
+            {Object.keys(navItemData).map((category, index) => {
+              const categoryData = navItemData[category];
+              if (!categoryData) return null;
+
+              return (
+                <li className="flex-shrink-0 " key={index}>
+                  <Link
+                    className="hover:underline text-sm font-medium text-slate-500 hover:text-rose-800 relative"
+                    onMouseEnter={() => {
+                      setIsDrop(true);
+                      setHoveredCategory(category);
+                    }}
+                    onMouseLeave={() => {
+                      setIsDrop(false);
+                      setHoveredCategory(null);
+                    }}
+                  >
+                    {category}
+                    {isDrop && hoveredCategory === category && (
+                      <div onMouseEnter={() => {
+                        setIsDrop(true);
+                        setHoveredCategory(category);
+                      }} className={"w-[30rem] h-auto px-8 py-4 absolute rounded-b-[20px] top-4 bg-white shadow-xl l-[30px] z-30 navItemMultipage grid grid-cols-3 gap-5"}>
+                        {categoryData.map((subcategory) => {
+                          const subcategoryLabel = Object.keys(subcategory)[0];
+                          const subcategoryItems = subcategory[subcategoryLabel];
+                          if (!subcategoryItems) return null;
+                          console.log(categoryData);
+
+                          return (
+                            <div className="w-full" key={subcategoryLabel}>
+                              <h3 className="text-black font-semibold text-sm leading-tight py-2 tracking-tight">{subcategoryLabel}</h3>
+                              <ul>
+                                {subcategoryItems.map((item) => (
+                                  <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
