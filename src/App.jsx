@@ -3,8 +3,8 @@ import Header from "./components/Home/Header/Header";
 import Footer from "./components/Home/Footer/Footer";
 import BlogHome from "./pages/Blog";
 import ReturnPolicy from "./pages/cancellation";
-import DivCoins from "./pages/DivCoins";
-import DivueensCSR from "./pages/DivueensCSR";
+import DivaCoins from "./pages/DivaCoins";
+// import DivueensCSR from "./pages/DivueensCSR";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import TeamSection from "./pages/TeamSection";
@@ -14,7 +14,6 @@ import HelpCenter from "./pages/HelpCenter";
 import FaqsPage from "./pages/FAQ";
 import SpecialOffer from "./pages/SpecialOffer";
 import ProductDetails from "./pages/ProductDetails";
-import Profile from "./pages/Profile";
 import WhoWeAre from "./components/Who we are/WhoWeAre";
 import StoreLocator from "./components/StoreLocator/StoreLocator";
 import MemberShip from "./pages/MemberShip";
@@ -22,6 +21,7 @@ import VirtualTryOnPage from "./pages/VirtualTryOnPage";
 import Sell from "./pages/sellOnDivueens";
 import OrderDetails from "./pages/OrderDetails";
 import ProfilePage from "./pages/Profile";
+import Relate from "./pages/Relation";
 
 function App() {
   return (
@@ -42,8 +42,8 @@ function App() {
         {/* Other Pages */}
         <Route path="/special-offers" element={<SpecialOffer />} />
         <Route path="/our-team" element={<TeamSection />} />
-        <Route path="/CSR" element={<DivueensCSR />} />
-        <Route path="/coins" element={<DivCoins />} />
+        {/* <Route path="/CSR" element={<DivueensCSR />} /> */}
+        <Route path="/coins" element={<DivaCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
         <Route path="/frequently-asked-questions" element={<FaqsPage />} />
         <Route path="/contact-us" element={<StoreLocator />} />
@@ -57,7 +57,8 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
         <Route path="/order-now" element={<OrderDetails />} />
-        <Route path="/virtualtryon" element={<VirtualTryOnPage />} />
+        <Route path="/investor-relation" element={<Relate />} />
+        <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
       </Routes>
       <Footer />
     </>

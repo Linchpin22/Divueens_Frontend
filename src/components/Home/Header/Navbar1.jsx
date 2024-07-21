@@ -158,7 +158,7 @@ const Navbar1 = ({ navItemText }) => {
 
                       return (
                         <div className="flex-shrink-0 " key={index}>
-                          <Link
+                          <button
                             className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
                             onClick={() => {
                               setOpenDropdown(!openDropdown)
@@ -166,7 +166,7 @@ const Navbar1 = ({ navItemText }) => {
                             }}
                           >
                             {category} <IoIosArrowDown size={15} className={`transition-all duration-[0.3s] ease-in-out ${openDropdown && hoveredCategory === category && 'rotate-180'}`} />
-                          </Link>
+                          </button>
                           {openDropdown && hoveredCategory === category && (
                             <div onMouseEnter={() => {
                               setOpenDropdown(true);
@@ -196,8 +196,19 @@ const Navbar1 = ({ navItemText }) => {
                   </div>
                 </div>
               </div>
+
+              {/* -------------------------- Remove line below after this ------------------------------- */}
+              <Link to="/membership"
+                className="hover:underline text-sm font-medium flex items-center pt-1 justify-between px-2 text-slate-500 hover:text-rose-800 relative"
+              >Membership</Link>
+              <Link to="/virtual-try-on"
+                className="hover:underline text-sm font-medium flex items-center pt-1 justify-between px-2 text-slate-500 hover:text-rose-800 relative"
+              >Virtual TryOn</Link>
+
             </div>
           )}
+
+
         </div>
       </nav>
       <div className="bg-white w-full mx-auto border border-t hidden shadow-md lg:flex">
@@ -268,6 +279,15 @@ const Navbar1 = ({ navItemText }) => {
                 </li>
               );
             })}
+
+            {/* --------------------- Remove line below after this --------------------------- */}
+            <Link to="/membership"
+              className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
+            >Membership</Link>
+            <Link to="/virtual-try-on"
+              className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
+            >Virtual TryOn</Link>
+            
           </ul>
         </div>
       </div>

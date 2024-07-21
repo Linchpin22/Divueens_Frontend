@@ -1,18 +1,18 @@
 const navItemData = {
   "Face care": [
     {
-      Cleansers: [
+      "Cleansers": [
         "Face wash",
         "Cleaning oil",
         "Cleansing wipes",
         "Micellar water",
       ],
-      Moisturizers: ["Gel", "Cream", "Lotion", "Face oils"],
-      Toners: ["Hydrating toners", "Stringent toners"],
+      "Moisturizers": ["Gel", "Cream", "Lotion", "Face oils"],
+      "Toners": ["Hydrating toners", "Stringent toners"],
     },
     {
-      Exfoliants: ["Scrubs", "Chemical exfoliants", "Enzyme"],
-      Masks: [
+      "Exfoliants": ["Scrubs", "Chemical exfoliants", "Enzyme"],
+      "Masks": [
         "Sheet masks",
         "Clay masks",
         "Peels-off masks",
@@ -23,41 +23,41 @@ const navItemData = {
   ],
   "Skin Care": [
     {
-      Cleanser: [
+      "Cleanser": [
         "Face wash",
         "Cleaning oil",
         "Cleansing wipes",
         "Micellar water",
       ],
-      Moisturizers: ["Gel", "Cream", "Lotion", "Face oils"],
-      Toners: ["Hydrating toners", "Stringent toners"],
+      "Moisturizers": ["Gel", "Cream", "Lotion", "Face oils"],
+      "Toners": ["Hydrating toners", "Stringent toners"],
     },
     {
-      Masks: [
+      "Masks": [
         "Sheet masks",
         "Clay masks",
         "Peels-off masks",
         "Overnight masks",
       ],
       "Eye Care": ["Eye gel", "Eye Cream", "Eye serums"],
-      Sunscreens: ["Physical sunscreens", "Chemical sunscreens"],
+      "Sunscreens": ["Physical sunscreens", "Chemical sunscreens"],
     },
     {
-      Serum: [
+      "Serum": [
         "Hydrating",
         "Anti-Aging serums",
         "Brightening serums",
         "Acne treatment serums",
       ],
-      Exfoliants: ["Scrubs", "Chemical exfoliants", "Enzyme"],
+      "Exfoliants": ["Scrubs", "Chemical exfoliants", "Enzyme"],
       "Speciality products": ["Anti-pollution SkinCare", "Hydrating mists"],
     },
   ],
   "Hair Care": [
     {
-      Styling: ["Hair gel", "Hair Spray", "Serum & Oil"],
-      Cleansing: ["Shampoo"],
-      Conditioning: ["Conditioner"],
+      "Styling": ["Hair gel", "Hair Spray", "Serum & Oil"],
+      "Cleansing": ["Shampoo"],
+      "Conditioning": ["Conditioner"],
     },
     {
       "Hair Masks": [
@@ -69,7 +69,7 @@ const navItemData = {
       "Hair Accessories": ["Hair ties", "Hair clips", "Hair bands"],
     },
   ],
-  Makeup: [
+  "Makeup": [
     {
       "Face Products": [
         "Foundation",
@@ -100,7 +100,7 @@ const navItemData = {
     {
       "Lip products": ["Lipstick", "Lip gloss", "Lip Liner", "Lip balm"],
       "Nail products": ["Nail polish", "Nail glue", "Nail files"],
-      Tools: ["Makeup brushes", "Makeup sponges", "Tweezers"],
+      "Tools": ["Makeup brushes", "Makeup sponges", "Tweezers"],
     },
   ],
   "Body Care": [
@@ -124,32 +124,32 @@ const navItemData = {
       "Wellness products": ["Body scrubs", "Body wraps"],
     },
   ],
-  Fragrance: [
+  "Fragrance": [
     {
-      Perfumes: ["Floral", "Oriental", "Woody", "Fresh"],
-      Colognes: ["Citrus", "Oriental", "Woody", "Fresh"],
-      Deodorants: ["Stick", "Roll-on", "Spray"],
+      "Perfumes": ["Floral", "Oriental", "Woody", "Fresh"],
+      "Colognes": ["Citrus", "Oriental", "Woody", "Fresh"],
+      "Deodorants": ["Stick", "Roll-on", "Spray"],
     },
   ],
-  Combos: [
+  "Combos": [
     {
-      SkinCareCombos: ["Face wash and moisturizer", "Toner and serum"],
-      HairCareCombos: ["Shampoo and conditioner", "Hair mask and oil"],
-      MakeupCombos: ["Foundation and concealer", "Eyeshadow and eyeliner"],
+      "SkinCareCombos": ["Face wash and moisturizer", "Toner and serum"],
+      "HairCareCombos": ["Shampoo and conditioner", "Hair mask and oil"],
+      "MakeupCombos": ["Foundation and concealer", "Eyeshadow and eyeliner"],
     },
   ],
-  Natural: [
+  "Natural": [
     {
-      NaturalSkinCare: ["Face wash", "Moisturizer", "Toner"],
-      NaturalHairCare: ["Shampoo", "Conditioner", "Hair oil"],
-      NaturalMakeup: ["Foundation", "Eyeshadow", "Lipstick"],
+      "NaturalSkinCare": ["Face wash", "Moisturizer", "Toner"],
+      "NaturalHairCare": ["Shampoo", "Conditioner", "Hair oil"],
+      "NaturalMakeup": ["Foundation", "Eyeshadow", "Lipstick"],
     },
   ],
   "Health & Wellness": [
     {
-      Supplements: ["Vitamins", "Proteins", "Minerals"],
-      Fitness: ["Yoga mats", "Dumbbells", "Fitness trackers"],
-      HealthyFood: ["Protein powder", "Healthy snacks", "Supplements"],
+      "Supplements": ["Vitamins", "Proteins", "Minerals"],
+      "Fitness": ["Yoga mats", "Dumbbells", "Fitness trackers"],
+      "HealthyFood": ["Protein powder", "Healthy snacks", "Supplements"],
     },
   ],
   "Nail Care": [

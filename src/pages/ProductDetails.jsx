@@ -4,6 +4,7 @@ import StarRating from '../components/ProductDescription/StarRating';
 import SizeSelector from '../components/ProductDescription/SizeSelector';
 import QuantitySelector from '../components/ProductDescription/QuantitySelector';
 import RelatedProducts from '../components/ProductDescription/RelatedProducts';
+import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState('106 cm (42)');
@@ -95,9 +96,9 @@ const ProductDetails = () => {
           <div className="flex flex-col items-center lg:items-start justify-start gap-4 mt-4">
             <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
             <div  className='flex gap-x-5 lg:text-lg'>
-            <button className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl">
+            <Link to="/order-now" className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl">
               Buy Now
-            </button>
+            </Link>
             <button className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl flex-shrink-0">
               Add to Cart
             </button>
