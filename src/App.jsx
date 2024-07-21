@@ -19,6 +19,9 @@ import WhoWeAre from "./components/Who we are/WhoWeAre";
 import StoreLocator from "./components/StoreLocator/StoreLocator";
 import MemberShip from "./pages/MemberShip";
 import VirtualTryOnPage from "./pages/VirtualTryOnPage";
+import Sell from "./pages/sellOnDivueens";
+import OrderDetails from "./pages/OrderDetails";
+import ProfilePage from "./pages/Profile";
 
 function App() {
   return (
@@ -29,7 +32,7 @@ function App() {
         <Route path="/products" element={<ProductList />} /> {/* Product list page */}
 
         {/* Profile page */}
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/product-description" element={<ProductDetails />} />
 
         {/* Login page
@@ -47,12 +50,13 @@ function App() {
         <Route path="/help-center" element={<HelpCenter/>} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/shipping-delivery" element={<></>} />
-        <Route path="/sell-on-divueens" element={<></>} />
+        <Route path="/sell-on-divueens" element={<Sell />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/blogs" element={<BlogHome/>} />
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
+        <Route path="/order-now" element={<OrderDetails />} />
         <Route path="/virtualtryon" element={<VirtualTryOnPage />} />
       </Routes>
       <Footer />
