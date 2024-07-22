@@ -72,7 +72,7 @@ const TopBrands = () => {
               className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[65px] bg-white rounded-[50%] blur-[15px] ${styles["spot4"]}`}
             ></div>
             <h2 className={`${styles["coinLink"]} text-white font-bold`}>
-            Get Div coins on every order
+            Get Diva coins on every order
             </h2>
           </div>
         </Link>

@@ -1,15 +1,13 @@
 import React from 'react';
 import Cards from './Cards';
-
+import Slider from './cardSlider';
 
 const RelatedProducts = () => {
   return (
-    <>
-    <div className="mt-8">
-      <h2 className="text-[30px] font-bold text-center -mb-[28px] mt-[5rem] 2xs:ml-[150px] 1xs:ml-[120px] sm:ml-[100px] xl:ml-0 w-[500px] ">Related Products</h2>
+    <div className='flex flex-col w-full mt-20 justify-center items-center'>
+      <h2 className="text-[30px] font-bold text-center mb-10">Related Products</h2>
+    <Slider />
     </div>
-    <Cards />
-    </>
   );
 };
 

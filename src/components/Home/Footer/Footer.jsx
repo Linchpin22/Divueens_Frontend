@@ -11,37 +11,6 @@ import {
 } from "react-icons/fa6";
 import { Divueens } from "../../../assets/assets";
 
-const _1stList = [
-  {
-    url: "/about-us",
-    txt: "Who are we ?",
-  },
-  {
-    url: "/our-team",
-    txt: "Our Team",
-  },
-  {
-    url: "",
-    txt: "Press",
-  },
-  {
-    url: "/authenticity",
-    txt: "Authenticity",
-  },
-  {
-    url: "/CSR",
-    txt: "Careers CSR",
-  },
-  {
-    url: "",
-    txt: "Divueens",
-  },
-  {
-    url: "/investor-relation",
-    txt: "Investor Relation",
-  },
-];
-
 const baadiList = [
   {
     title: "About us",
@@ -64,12 +33,12 @@ const baadiList = [
           txt: "Authenticity",
         },
         {
-          url: "/CSR",
-          txt: "Careers CSR",
+          url: "/careers",
+          txt: "Careers",
         },
         {
-          url: "",
-          txt: "Divueens",
+          url: "/CSR",
+          txt: "Divueens CSR",
         },
         {
           url: "/investor-relation",

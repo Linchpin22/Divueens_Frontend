@@ -46,13 +46,13 @@ const CardItem = ({ item }) => {
         const endIndex = startIndex + 12;
         const currentPageImages = item.slice(startIndex, endIndex);
         return (
-            <div className='grid gap-x-4 gap-y-8 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-8 md:gap-x-6 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.8fr)]'>
+            <div className='grid gap-x-4 gap-y-2 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-8 md:gap-x-6 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.8fr)]'>
                 {currentPageImages.map((p) => {
                     const isInCart = (cardItem).includes(p.id);
                     console.log(isInCart)
                     return <div key={p.id} className=''>
-                        <Link className="group relative mb-2 block md:h-80 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
-                            <img src={p.image} alt='image' className="h-full w-full object-center transition duration-200 group-hover:scale-110" />
+                        <Link className="group relative mb-2 block h-60 md:h-64 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
+                            <img src={p.image} alt='image' className="h-full w-full object-center object-cover transition duration-200 group-hover:scale-110" />
 
                             <div className="absolute left-0 top-0 right-0 px-3 py-1.5 flex items-center justify-between text-white">
                                 <p className="text-[0.7rem] sm:text-[0.8rem] text-rose-500 bg-white px-2 rounded-full lg:text-[1rem]" > {p.discount} </p>
@@ -73,7 +73,7 @@ const CardItem = ({ item }) => {
                                 </div>
                                 <p className='ml-5 text-[0.8rem] sm:text-base'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
                             </div>
-                            <div className="flex items-end justify-between  absolute bottom-0 sm:gap-2 lg:-bottom-9 xl:-bottom-4 left-0 right-0">
+                            <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
                                 <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
                                 <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-1 lg:text-base'>Add To Cart</button>
                             </div>
