@@ -20,7 +20,7 @@ function Cards() {
     { id: 8, src: img, title: 'CL Roku Smart Android Tv', price: '$800.22', buttonText: 'Out of Stock',},
   ];
   return (
-    <div className='w-[60vh] h-[400px] sm:w-full sm:min-h-[600px] mx-auto box-border overflow-hidden'>
+    <div className='w-full'>
       <Swiper
         breakpoints={{
           200: {
@@ -43,7 +43,7 @@ function Cards() {
         modules={[FreeMode,Navigation]}
         navigation={true}
         freeMode={true}
-        className='w-full mx-auto'
+        className=''
       >
         {relatedProducts.map((product) => (
           <SwiperSlide className='p-4 flex justify-center items-center' key={product.id}>

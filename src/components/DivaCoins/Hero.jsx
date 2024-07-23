@@ -25,7 +25,7 @@ const Hero = () => {
                             >
                                 <h1 className='montserrat text-[1.8rem] leading-[2.5rem] mb-2 md:leading-[3.5rem] md:text-[2rem] xl:text-[3rem] md:w-[40rem]'>Digital curency of Divueens</h1>
 
-                                <p className='text-[0.7rem] leading-[1.1rem] md:leading-[1.5rem] md:w-[30rem] md:text-[1rem] text-[#e1e1e1] poppins-medium'>Stay informed with the latest insights and updates on our unique digital coin. Join us in exploring the innvoative world of Div Coins.</p>
+                                <p className='text-[0.7rem] leading-[1.1rem] md:leading-[1.5rem] md:w-[30rem] md:text-[1rem] text-[#e1e1e1] poppins-medium'>Stay informed with the latest insights and updates on our unique digital coin. Join us in exploring the innvoative world of Diva Coins.</p>
                             </div>
                         </div>
                     </div>

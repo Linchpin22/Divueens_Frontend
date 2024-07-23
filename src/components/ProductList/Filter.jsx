@@ -177,7 +177,7 @@ const Filter = ({ itemData, changedFunction, small }) => {
                     </div>
                 </>
             ) : (
-                <div className="flex flex-col items-center m-8 h-fit w-[25%] rounded-xl border-[2px] border-gray-200 px-6 py-9 lg:min-w-56 ">
+                <div className="flex flex-col items-center m-6 h-fit w-[25%] rounded-xl border-[2px] border-gray-200 px-6 py-9 lg:min-w-56 ">
                     {/* Filters */}
                     <div className="w-full flex flex-col">
                         {/* Filters Heading */}
