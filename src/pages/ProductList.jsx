@@ -1,23 +1,59 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom'
-import Filter from '../components/ProductList/Filter';
-import CardItem from '../components/ProductList/CardItem';
-import productDetails from './../components/ProductList/ProductListItemData'
+import { MdFilterList } from 'react-icons/md';
+import Filter from '../components/ProductList/Filter'
+import CardItem from '../components/ProductList/CardItem'
+import productDetails from '../components/ProductList/ProductListItemData';
+
 const ProductList = () => {
 
+    const [openDropdown, setOpenDropdown] = useState(null);
+    const handleDropdownClick = (dropdownId) => {
+        if (openDropdown === dropdownId) {
+            setOpenDropdown(null);
+        } else {
+            setOpenDropdown(dropdownId);
+        }
+    };
+
+    const filterItemsCategory = (cat) => {
+        const newItems = productDetails.filter((newval) => newval.category === cat)
+        setItem(newItems)
+    }
+
+    const checkDName = (p, dname) => {
+        if (dname === 'Review') {
+            const newItems = productDetails.filter((newval) => newval.rating == p)
+            setItem(newItems)
+        }
+        else if (dname === 'Price') {
+            const newItems = productDetails.filter((newval) => newval.price == p)
+            setItem(newItems)
+        }
+        else if (dname === 'Color') {
+            const newItems = productDetails.filter((newval) => newval.shade == p)
+            setItem(newItems)
+        }
+        else if (dname === 'Material') {
+            const newItems = productDetails.filter((newval) => newval.material == p)
+            setItem(newItems)
+        }
+        else {
+            const newItems = productDetails.filter((newval) => newval.discount == p)
+            setItem(newItems)
+        }
+    }
+    const [item, setItem] = useState(productDetails)
     const [isCategory, setcategory] = useState(false);
     const [isPrice, setPrice] = useState(false);
     const [isReview, setReview] = useState(false);
     const [isColor, setColor] = useState(false);
     const [isMaterial, setMaterial] = useState(false);
     const [isOffer, setOffer] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth > 1024);
 
-    const [isPrices, setPrices] = useState(false);
-
-    const [item , setItem ] = useState(productDetails)
-    
     const handleCate = () => {
         setcategory(!isCategory)
     }
@@ -37,13 +73,15 @@ const ProductList = () => {
         setOffer(!isOffer)
     }
 
-    const handlePrices = () => {
-        setPrices(!isPrices)
-    }
-
     const changeData = (val) => {
         setItem(val)
     }
+
+
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
 
     const dropdown = [
         {
@@ -51,86 +89,146 @@ const ProductList = () => {
             name: 'Category',
             func: handleCate,
             isOpen: isCategory,
-            options: ['option1', 'option2']
+            options: ['Lipstick', 'Eyeliner', 'Kajal', 'Mascara', 'Foundation']
         },
         {
             id: 2,
             name: 'Price',
             func: handlePrice,
             isOpen: isPrice,
-            options: ['option1', 'option2']
+            options: [`₹${400}`, `₹${500}`, `₹${600}`]
         },
         {
             id: 3,
             name: 'Review',
             func: handleReview,
             isOpen: isReview,
-            options: ['option1', 'option2']
+            options: ['5', '4', '3', '2', '1']
         },
         {
             id: 4,
             name: 'Color',
             func: handleColor,
             isOpen: isColor,
-            options: ['option1', 'option2']
+            options: ['Pink', 'Rose', 'DarkPink']
         },
         {
             id: 5,
             name: 'Material',
             func: handleMaterial,
             isOpen: isMaterial,
-            options: ['option1', 'option2']
+            options: ['Soft', 'Hard']
         },
         {
             id: 6,
             name: 'Offer',
             func: handleOffer,
             isOpen: isOffer,
-            options: ['option1', 'option2']
+            options: ['10% OFF', '20% OFF']
         },
 
     ]
 
     return (
         <>
-            <div className='flex flex-col items-center w-full h-full'>
+            <div className='flex flex-col items-center w-full h-full my-6'>
                 {/* Home > Skin */}
-                <div className='flex flex-col gap-8 w-full px-[3rem] mb-4'>
-                    <div className='flex items-center'>
+                <div className='flex flex-col gap-4 w-full px-5'>
+                    <div className='flex flex-wrap items-center justify-between gap-4 sm:gap-0'>
                         <ol className="inline-flex items-center gap-3">
                             <li className='inline-flex items-center'>
-                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-lg font-medium'>
+                                <Link to={'/'} className='inline-flex items-center tracking-tighter text-[0.8rem] font-medium'>
                                     Home
                                 </Link>
                             </li>
-                            <IoIosArrowForward size={22} />
+                            <IoIosArrowForward size={15} />
                             <li className='inline-flex items-center'>
-                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-lg font-medium'>
+                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.8rem] font-medium'>
                                     Skin care
                                 </Link>
                             </li>
+                            <div className='flex items-center gap-1 md:gap-2 lg:hidden'>
+                                <IoIosArrowForward size={15} />
+                                <span className="tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium">MakeUp</span>
+                                <IoIosArrowForward size={15} />
+                                <span className="tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium">Lipstick</span>
+                            </div>
                         </ol>
-                    </div>
+                        <button
+                            className="text-[0.8rem] sm:text-[0.9rem] flex items-center justify-between gap-2 px-2 text-left rounded-full border md:px-4 md:py-1 lg:hidden"
+                            onClick={toggleMenu}
+                        >
+                            Filters
+                            <MdFilterList size={15} />
+                        </button>
 
-                    <div className='flex items-center justify-between w-full'>
+                        {showMenu && (
+                            <div
+                                className="fixed bottom-0 left-0 overflow-auto w-full h-[29rem] bg-rose-200 shadow-md z-[1001]"
+                            >
+                                <div className="flex justify-between h-16 items-center px-4 bg-rose-200 text-rose-700 sticky top-0 left-0 right-0 z-50">
+                                    <h5 className="text-lg font-semibold">Filters</h5>
+                                    <button type="button" className="text-[3rem] cursor-pointer" onClick={toggleMenu}>&times;</button>
+                                </div>
+
+                                <div className="navbar-nav p-4">
+                                    <div className='grid grid-cols-2 gap-2'>
+                                        {dropdown.map((d) => {
+                                            return <div key={d.id} className='flex items-center relative group'>
+                                                <button onClick={() => { handleDropdownClick(d.id), d.func, handleDropdownClick('dropdown-1') }} className='border-rose-600 border text-rose-700 px-4 py-2 w-full rounded-lg flex items-center justify-between font-medium text-[15px]' >
+                                                    {d.name}
+
+                                                    <IoIosArrowDown className={`transition-all duration-[0.3s] ease-in-out ${openDropdown === d.id ? 'rotate-180' : 'rotate-0'}`} size={20} />
+
+                                                </button>
+
+                                                {openDropdown === d.id && (
+                                                    <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
+                                                        {/* when clicked on any option the menu will be closed */}
+                                                        <ul className="py-2 text-sm" onClick={() => setShowMenu(false)} data-dropdown-id="dropdown-1">
+                                                            {d.options.map((p, index) => {
+                                                                return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
+                                                                    <p
+                                                                        onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}
+                                                                        className="text-gray-800  hover:text-gray-900"
+                                                                    >
+                                                                        {p}
+                                                                    </p>
+                                                                </li>
+                                                            })}
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        })}
+
+                                    </div>
+                                    <Filter itemData={productDetails} changedFunction={changeData} small={true} />
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    {/* Short Filter */}
+                    <div className='hidden lg:flex lg:flex-row flex-col items-center justify-between '>
                         <div className='flex items-center gap-2'>
                             {dropdown.map((d) => {
                                 return <div key={d.id} className='flex items-center relative'>
-                                    <button onClick={d.func} className='bg-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2 font-medium'>
-                                        {d.name} <IoIosArrowDown size={15} />
+                                    <button onClick={() => { handleDropdownClick(d.id), d.func }} className='bg-[#d4d4d4] px-2 py-1 rounded-full text-xs flex items-center gap-2 font-medium' >
+                                        {d.name}  <IoIosArrowDown size={15} className={`transition-all duration-[0.3s] ease-in-out ${openDropdown === d.id ? 'rotate-180' : 'rotate-0'}`} />
                                     </button>
 
-                                    {d.isOpen && (
+                                    {openDropdown === d.id && (
                                         <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
-                                            <ul className="py-2 text-sm">
+                                            <ul className="py-2 text-xs">
                                                 {d.options.map((p, index) => {
-                                                    return <li key={index} className="px-4 py-2 hover:bg-gray-100">
-                                                        <Link
-                                                            href={''}
+                                                    return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
+
+                                                        <p
+                                                            onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}
                                                             className="text-gray-800  hover:text-gray-900"
                                                         >
                                                             {p}
-                                                        </Link>
+                                                        </p>
                                                     </li>
                                                 })}
                                             </ul>
@@ -140,63 +238,39 @@ const ProductList = () => {
                             })}
 
                         </div>
-                        <div className='relative'>
-                            <button onClick={handlePrices} className='border border-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2'>
-                                <span>Prices</span> <IoIosArrowDown size={15} />
-                            </button>
-
-                            {isPrices && (
-                                <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
-                                    <ul className="py-2 text-sm">
-                                        <li className="px-4 py-2 hover:bg-gray-100">
-                                            <Link
-                                                href={''}
-                                                className="text-gray-800  hover:text-gray-900"
-                                            >
-                                                p
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
                     </div>
                 </div>
 
                 {/* Filters and Cards */}
-                <div className='flex'>
+                <div onClick={() => setOpenDropdown(null)} className='flex flex-col w-full lg:flex-row '>
                     {/* Filters */}
-                    <div className='w-[25%]'>
-                        <Filter itemData={productDetails} changedFunction={changeData}/>
+                    <div className='hidden lg:inline-flex'>
+                        <Filter itemData={productDetails} changedFunction={changeData} />
                     </div>
 
                     {/* Cards */}
-                    <div className='flex flex-col items-center w-[70%]'>
-                        <div className="makeup flex justify-between w-full">
-                            <div className='flex items-center gap-2'>
-                                <span className="a font-medium text-[1.3rem] text-gray-600">MakeUp</span>
-                                <IoIosArrowForward size={22} />
-                                <span className="aa font-semibold text-[1.3rem] text-black">Lipstick</span>
+                    <div className='flex flex-col items-center w-full py-5 px-4 sm:px-10 lg:pr-6 lg:pl-4'>
+                        <div className="makeup flex flex-col gap-3 md:flex-row justify-between w-full">
+                            <div className='hidden lg:flex items-center gap-2'>
+                                <span className="a font-medium text-[0.9rem] text-gray-600">MakeUp</span>
+                                <IoIosArrowForward size={18} />
+                                <span className="aa font-semibold text-[0.9rem] text-black">Lipstick</span>
                             </div>
                             <div className="prodline flex font-normal items-center gap-5">
-                                <div className="show text-[1.1rem] text-gray-600">Showing 1-10 of 100 Products</div>
-                                <div className="sortby text-[18px]">
+                                <div className="show text-[0.7rem] md:text-[0.8rem] text-gray-600">Showing 1-10 of 100 Products</div>
+                                <div className="sortby text-[0.7rem] md:text-[0.8rem]">
                                     <label htmlFor="sort" className='text-gray-600'>Sort by: </label>
-                                    <select className="select bg-transparent border-none text-[16px]" name="products" id="sort">
-                                        <option value="a" selected>Most popular</option>
-                                        <option value="b">b</option>
-                                        <option value="c">c</option>
-                                        <option value="d">d</option>
+                                    <select className="select bg-transparent border-none text-[0.7rem] md:text-[0.8rem]" name="products" id="sort">
+                                        <option defaultValue={'a'}>Most popular</option>
+                                        <option value="b">Ascending A to Z</option>
+                                        <option value="c">Descending Z to A</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
                         {/* Cards*/}
-                        <div>
-                            <CardItem item={item}/>
-                        </div>
-
+                        <CardItem item={item} />
                     </div>
                 </div>
             </div>

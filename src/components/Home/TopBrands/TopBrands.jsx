@@ -29,22 +29,22 @@ const TopBrands = () => {
           {/* -------------- */}
           <Swiper
             slidesPerView={brands.length - 3}
-            spaceBetween={50}
+            spaceBetween={40}
             loop={true}
             autoplay={{
               delay: 500,
               disableOnInteraction: false,
             }}
             modules={[Autoplay]}
-            className={`${styles["bar"]} mySwiper flex items-center gap-[30px] w-[100%] py-0 px-[40px] my-[25px] mx-auto relative overflow-hidden scroll-smooth snap-start pb-[10px]`}
+            className={`${styles["bar"]} mySwiper mx-auto relative overflow-hidden scroll-smooth snap-start`}
           >
             {brands.map((item, index) => (
               <SwiperSlide
                 key={index}
-                className={`${styles["card"]} min-w-[24%] h-full bg-[#fff] border-[2px] border-[#e9acb6] py-[5px] px-0 text-[#fff] flex items-center justify-center text-center snap-start`}
+                className={`${styles["card"]} h-[40px] md:h-[100px] flex items-center justify-center text-center snap-start`}
               >
                 <img
-                  className="max-w-full max-h-[10vh] object-contain flex justify-center items-center w-auto h-auto p-0 box-border snap-start"
+                  className="w-full h-full object-contain snap-start"
                   src={item}
                   alt=""
                 />
@@ -56,23 +56,24 @@ const TopBrands = () => {
 
         <Link to="/coins">
           <div
-            className={`${styles["heading-2"]} mt-8 font-['Montserrat'] relative p-10 text-center`}
+            className={`${styles["heading-2"]} mt-8 font-['Montserrat'] relative p-5 text-center`}
           >
             <div
-              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot1"]}`}
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[35px] bg-white rounded-[50%] blur-[15px] ${styles["spot1"]}`}
+            ></div>
+            
+            <div
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[45px] bg-white rounded-[50%] blur-[15px] ${styles["spot2"]}`}
             ></div>
             <div
-              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot2"]}`}
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[15px] ${styles["spot3"]}`}
             ></div>
             <div
-              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot3"]}`}
+              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[65px] bg-white rounded-[50%] blur-[15px] ${styles["spot4"]}`}
             ></div>
-            <div
-              className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[25px] bg-white rounded-[50%] blur-[10px] ${styles["spot4"]}`}
-            ></div>
-            <div className={`${styles["coinLink"]} font-semibold text-[2rem]`}>
-              Get Div coins on every order
-            </div>
+            <h2 className={`${styles["coinLink"]} text-white font-bold`}>
+            Get Diva coins on every order
+            </h2>
           </div>
         </Link>
       </div>

@@ -18,7 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: inherit;
+  /* font-family: 'Josefin Sans'; */
 }
 
 body {
@@ -28,70 +28,14 @@ body {
 
 /* -----------------------------------------------Navbar Style --------------------------------------------------------- */
 
-.offcanvas.show {
-  /* display: block; */
-  transform: translateX(0);
-}
-
-.navbar-nav {
-  list-style: none;
-}
-
-.popover-content {
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.15);
-  padding: 1rem;
-  border-radius: 0.8rem;
-  width: 16rem;
-  margin-left: -5rem;
-}
-
-.navbar-icon-wrapper {
-  position: relative;
-}
-
-.navbar-icon-wrapper:hover .popover-content {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.popover-content::before {
-  content: '';
-  position: absolute;
-  top: -0.5rem;
-  left: calc(85% - 0.5rem);
-  border-width: 0 0.5rem 0.5rem 0.5rem;
-  border-style: solid;
-  border-color: transparent transparent rgb(255, 255, 255) transparent;
-}
-
-.wrap-input-17 * {
-  box-sizing: border-box;
-}
-
-.wrap-input-17 .input-search::placeholder {
-  color: #333;
-}
-
-.wrap-input-17 .input-search:focus::placeholder {
-  color: #ff475a;
-}
-
-.wrap-input-17 .input-search {
-  padding-left: 1.5rem;
-  width: 13rem;
-  background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, .5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-  caret-color: #ff475a;
-}
-
-.wrap-input-17 .input-search:focus {
-  width: 13rem;
-  background-color: transparent;
-  border-bottom: 1px solid #ff475a;
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+/* --------- Sale Header --------*/
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* -------- Navbar Slider ------ */
@@ -142,23 +86,27 @@ body {
   /* font-family: "Playwrite DE Grund", cursive; */
   width: 100%;
   height: 10vh;
+  margin: 0 auto;
 }
 
 .heading hr {
-  width: 300px;
+  width: 15%;
   height: 4px;
   outline: none;
   border: none;
+  border-radius: 90px;
 }
 
 .heading h2 {
   /* font-family: "Playwrite DE Grund", cursive; */
-  margin: 20px;
-  margin-block: 25px;
-  font-weight: 900;
-  font-size: 2rem;
+  /* font-weight: 900; */
   /* font-family: "Playwrite DE Grund", cursive; */
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: 'Josefin Sans'; */
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0 1.5%;
+  text-align: center;
 }
 
 .heading .hr-right {
@@ -219,19 +167,20 @@ body {
 footer[data-footer-part] {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to bottom, #ffe4e6, #9f1239);
+  font-family: 'Josefin Sans';
+  /* background: linear-gradient(to bottom, #ffe4e6, #9f1239); */
+  background: #ffe4e6;
 }
 
-.col_[data-footer-part]>ul>li>.footerList {
+/* .col_[data-footer-part]>ul>li>.footerList {
   text-decoration: none;
-  color: #2e030f;
+  color: #573c43;
 }
 
 .col_[data-footer-part]>ul>li>.footerList:hover {
   text-decoration: underline;
-  
-}
+} */
+
 
 .socialIcons[data-footer-part] {
   text-align: center;
