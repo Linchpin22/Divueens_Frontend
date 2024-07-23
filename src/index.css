@@ -170,7 +170,8 @@ footer[data-footer-part] {
   font-family: 'Josefin Sans';
   /* background: linear-gradient(to bottom, #ffe4e6, #9f1239); */
   /* background: #ffe4e6; */
-  background:radial-gradient(#f1f1f1, #a4a4a4)
+  background:#cbd5e1;
+/*   background:radial-gradient(#f1f1f1, #a4a4a4) */
 }
 
 /* .col_[data-footer-part]>ul>li>.footerList {
