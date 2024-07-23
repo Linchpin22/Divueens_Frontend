@@ -1,13 +1,13 @@
 import React from 'react'
-import discount from "./../../assets/DivCoins/discount.png";
-import collecting from "./../../assets/DivCoins/collecting.png";
-import onlineConnections from "./../../assets/DivCoins/online-connections.png";
+import discount from "./../../assets/DivaCoins/discount.png";
+import collecting from "./../../assets/DivaCoins/collecting.png";
+import onlineConnections from "./../../assets/DivaCoins/online-connections.png";
 
 const Section1 = () => {
     return (
         <div className='w-full h-full flex flex-col items-center gap-5 py-10 mb-5'>
-            <h1 className='montserrat text-[1.5rem] md:text-[2rem] font-medium'>Redeem Gifts Using Div Coins?</h1>
-            <p className='poppins-medium p-color text-xs text-center w-[22rem] md:text-base md:w-full'>Explore the unparalleled features that make Div Coins the leading choice in digital currency.</p>
+            <h1 className='montserrat text-[1.5rem] md:text-[2rem] font-medium'>Redeem Gifts Using Diva Coins?</h1>
+            <p className='poppins-medium p-color text-xs text-center w-[22rem] md:text-base md:w-full'>Explore the unparalleled features that make Diva Coins the leading choice in digital currency.</p>
 
             <div className='flex items-center flex-col gap-5 lg:flex-row justify-between mt-2'>
                 <div className="w-80 md:w-full relative shadow-lg hover:shadow-rose-700 hover:scale-[1.1] hover:-translate-y-5 md:hover:translate-y-0 xl:hover:-translate-x-5 transition-all duration-500 flex items-center justify-center h-auto rounded-xl overflow-hidden">
@@ -29,7 +29,7 @@ const Section1 = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center py-6 gap-4 text-center">
                             <h4 className="font-bold text-center montserrat text-xl text-white">Market Growth</h4>
-                            <p className="font-medium mb-4 text-center poppins-regular text-rose-200 text-sm">Benefit from the growing market and maximize your returns with Div Coins.</p>
+                            <p className="font-medium mb-4 text-center poppins-regular text-rose-200 text-sm">Benefit from the growing market and maximize your returns with Diva Coins.</p>
 
                         </div>
                     </div>

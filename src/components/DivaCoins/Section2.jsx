@@ -1,12 +1,12 @@
 import React from 'react'
-import Gift1 from "./../../assets/DivCoins/gift1.png";
-import Gift2 from "./../../assets/DivCoins/gift2.png";
-import winner from "./../../assets/DivCoins/winner.png";
+import Gift1 from "./../../assets/DivaCoins/gift1.png";
+import Gift2 from "./../../assets/DivaCoins/gift2.png";
+import winner from "./../../assets/DivaCoins/winner.png";
 
 const Section2 = () => {
     return (
         <div className='w-full h-full flex flex-col items-center gap-5 py-5'>
-            <h1 className='montserrat text-[1.5rem] md:text-[2rem] font-medium'>Collect your Div Coins?</h1>
+            <h1 className='montserrat text-[1.5rem] md:text-[2rem] font-medium'>Collect your Diva Coins?</h1>
             <p className='poppins-medium p-color text-xs text-center w-[22rem] md:text-base md:w-full'>Stay updated with our latest blog posts, offering deep insights and news.</p>
 
             <div className='flex flex-col lg:flex-row items-center gap-5'>
@@ -35,9 +35,9 @@ const Section2 = () => {
                     </div>
 
                     <div className='flex flex-col items-center justify-center gap-2 py-2'>
-                        <h1 className='w-[80%] montserrat text-center mt-2 text-xl text-white'>The Rise of Div Coins</h1>
+                        <h1 className='w-[80%] montserrat text-center mt-2 text-xl text-white'>The Rise of Diva Coins</h1>
 
-                        <p className='poppins-regular text-rose-200 text-sm text-center w-[15rem] px-1'>Explore the journey and success story of Div Coins in the digital currency market.</p>
+                        <p className='poppins-regular text-rose-200 text-sm text-center w-[15rem] px-1'>Explore the journey and success story of Diva Coins in the digital currency market.</p>
                     </div>
                 </div>
 
@@ -50,9 +50,9 @@ const Section2 = () => {
                     </div>
 
                     <div className='flex flex-col items-center justify-center gap-2 py-2'>
-                        <h1 className='w-[80%] montserrat text-center mt-2 text-xl text-white'>Investing in Div Coins</h1>
+                        <h1 className='w-[80%] montserrat text-center mt-2 text-xl text-white'>Investing in Diva Coins</h1>
 
-                        <p className='poppins-regular text-rose-200 text-sm text-center w-[15rem] px-1'>Learn the best strategies for investing in Div Coins to maximize your returns.</p>
+                        <p className='poppins-regular text-rose-200 text-sm text-center w-[15rem] px-1'>Learn the best strategies for investing in Diva Coins to maximize your returns.</p>
                     </div>
                 </div>
 

@@ -6,7 +6,7 @@ const StarRating = ({ rating }) => {
       {[...Array(5)].map((_, index) => (
         <svg
           key={index}
-          className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${index < rating ? 'text-rose-700' : 'text-gray-300'}`}
+          className={`w-4 h-4 ${index < rating ? 'text-rose-700' : 'text-gray-300'}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
