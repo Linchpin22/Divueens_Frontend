@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./BestSeller.module.css";
+// import styles from "./BestSeller.module.css";
 import { imageUrls } from "../../../assets/assets";
 import { LiaShoppingCartSolid, LiaHeart } from "react-icons/lia";
 import "swiper/css";
@@ -49,16 +49,15 @@ const BestSeller = () => {
               backgroundColor: selectedCategory === cat ? "#be123c" : "#fff",
               color: selectedCategory === cat ? "#fff" : "#be123c",
             }}
-            className={`${
-              styles[idx === 0 ? "first" : "second"]
-            } transition-all py-2 px-4 md:px-12 font-semibold shadow-sm shadow-slate-400`}
+            className={`${idx === 0 ? "first rounded-s-lg" : "second rounded-e-lg"
+            } text-xs md:text-sm transition-all py-1 md:py-2 px-4 md:px-12  font-semibold shadow shadow-slate-400`}
           >
             {cat === "trending" ? "Trending Now" : "New Arrivals"}
           </button>
         ))}
       </div>
 
-      <div className='bg-amber-50'>
+      <div className='bg-rose-50'>
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
@@ -78,7 +77,7 @@ const BestSeller = () => {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className='bg-white rounded-lg shadow-xl h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease]'
+              className='bg-white rounded-lg shadow-xl h-[17rem] md:h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease]'
             >
               <div className="h-[70%] overflow-hidden">
                 <img
