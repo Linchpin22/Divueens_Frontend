@@ -22,6 +22,7 @@ import Sell from "./pages/sellOnDivueens";
 import OrderDetails from "./pages/OrderDetails";
 import ProfilePage from "./pages/Profile";
 import Relate from "./pages/Relation";
+import AuthenticityPage from "./pages/AuthenticityPage";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
         <Route path="/order-now" element={<OrderDetails />} />
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
+        <Route path="/authenticity" element={<AuthenticityPage />} />
       </Routes>
       <Footer />
     </>
