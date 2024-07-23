@@ -132,7 +132,7 @@ const baadiList = [
 function Footer() {
   const [toggleView, cngView] = useState(0);
   const [prev, cngPrev] = useState(0);
-  const [textStyle, cngTextStyle] = useState('text-black transition hover:text-rose-700');
+  const [textStyle, cngTextStyle] = useState('text-xs text-black transition hover:underline hover:text-rose-800');
 
   function ListItemsAll() {
     return baadiList.map((lst, index) => {
@@ -148,7 +148,7 @@ function Footer() {
               prev !== index + 1 ? cngView(index + 1) : cngView(0)
             }
 
-            className="drpBtn text-black text-base font-bold"
+            className="drpBtn pb-1 text-xs text-black lg:text-base font-semibold"
           >
             {lst.title}
             {toggleView === index + 1 ? (
@@ -187,9 +187,9 @@ function Footer() {
 
   return (
     <footer data-footer-part="" >
-      <div className="md:pt-16 pt-14 ">
+      <div className="md:pt-16 pt-1 ">
         <div
-          className="row_ md:mt-8 md:px-24 px-8 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
+          className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
           data-footer-part=""
         >
           <div
@@ -198,7 +198,7 @@ function Footer() {
             data-footer-part=""
           >
             <Link to="/" className="logo">
-              <img alt="" className="object-contain h-[10rem] w-22" src={Divueens} />
+              <img alt="" className="object-contain h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
@@ -216,46 +216,49 @@ function Footer() {
             </ul> */}
           </div>
           <ListItemsAll />
-          <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
+          {/* <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
+             */}
+        </div>
+             <ul className="flex justify-center gap-4 md:gap-6 w-full float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
+           
             <li>
               <a href="/"
                 className={textStyle}
               >
-                <FaFacebookF className="h-6 w-6 text-black hover:text-rose-200" />
+                <FaFacebookF className="md:h-5 md:w-5 text-black hover:text-white" />
               </a>
             </li>
             <li>
               <a href="/"
                  className={textStyle}
               >
-                <FaInstagram className="h-6 w-6 text-black hover:text-rose-200" />
+                <FaInstagram className="md:h-5 md:w-5 text-black hover:text-white" />
               </a>
             </li>
             <li>
               <a href="/"
                  className={textStyle}
               >
-                <FaWhatsapp className="h-6 w-6 text-black hover:text-rose-200" />
+                <FaWhatsapp className="md:h-5 md:w-5 text-black hover:text-white" />
               </a>
             </li>
             <li>
               <a href="/"
                 className={textStyle}
               >
-                <FaPinterest className="h-6 w-6 text-black hover:text-rose-200" />
+                <FaPinterest className="md:h-5 md:w-5 text-black hover:text-white" />
               </a>
             </li>
           </ul>
-        </div>
 
-        <hr data-footer-part="" className="mt-6 mx-4 mb-3 border-none h-[0.06em] bg-rose-950" />
+        <hr data-footer-part="" className="mt-6 mx-4 mb-3 border-none h-[0.6px] bg-black" />
 
-        <div className="py-4 ">
+        <div className="py-2 md:py-4 ">
           <div className="sm:flex sm:justify-between">
-            <p className="copyright text-sm md:text-base pb-3 md:pb-0 text-black md:ml-20" data-footer-part="">
+            <p className="copyright text-xs md:text-base pb-3 md:pb-0 text-black md:ml-20" data-footer-part="">
               DIVUEENS ©️ 2024 - All Rights Reserved
             </p>
-            <ul className="flex flex-wrap justify-center md:mr-20 md:gap-4 gap-2 text-xs sm:mt-0">
+            <ul className="flex flex-wrap justify-center md:mr-20 md:gap-4 gap-2 text-[0.6rem] sm:mt-0">
               <li>
                 <Link to="/terms-and-conditions" className="text-black/80 transition hover:text-slate-800 hover:underline">
                   Terms & Conditions
