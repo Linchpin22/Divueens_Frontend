@@ -45,7 +45,7 @@ const Navbar1 = ({ navItemText }) => {
       window.addEventListener("scroll", () =>
         setDisplayOnScroll(
           scrollY >= 50
-            ? "shadow-md border-b border-rose-100 bg-rose-100 backdrop-filter backdrop-blur-lg bg-opacity-30"
+            ? "shadow-md border-b border-rose-200 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30"
             : ""
         )
       ),
