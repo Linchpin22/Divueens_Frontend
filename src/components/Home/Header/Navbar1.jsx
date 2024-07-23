@@ -117,7 +117,7 @@ const Navbar1 = ({ navItemText }) => {
             ))}
           </div>
           {isOpen && (
-            <div className="absolute max-h-screen top-0 bg-white/95 right-0 w-[80%] md:w-[60%] z-50 backdrop-blur-lg shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
+            <div className="absolute max-h-screen h-screen top-0 bg-white/95 right-0 w-[80%] md:w-[60%] z-50 backdrop-blur-lg shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
               <div>
                 <div className="flex items-center justify-between pr-4">
                   <button
@@ -151,7 +151,7 @@ const Navbar1 = ({ navItemText }) => {
                       {item}
                     </Link>
                   ))}
-                  <div className="flex text-sm flex-col w-full gap-4 ">
+                  {/* <div className="flex text-sm flex-col w-full gap-4 ">
                     {Object.keys(navItemData).map((category, index) => {
                       const categoryData = navItemData[category];
                       if (!categoryData) return null;
@@ -193,17 +193,17 @@ const Navbar1 = ({ navItemText }) => {
                         </div>
                       );
                     })}
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
               {/* -------------------------- Remove line below after this ------------------------------- */}
-              <Link to="/membership"
+              {/* <Link to="/membership"
                 className="hover:underline text-sm font-medium flex items-center pt-1 justify-between px-2 text-slate-500 hover:text-rose-800 relative"
               >Membership</Link>
               <Link to="/virtual-try-on"
                 className="hover:underline text-sm font-medium flex items-center pt-1 justify-between px-2 text-slate-500 hover:text-rose-800 relative"
-              >Virtual TryOn</Link>
+              >Virtual TryOn</Link> */}
 
             </div>
           )}
@@ -281,12 +281,12 @@ const Navbar1 = ({ navItemText }) => {
             })}
 
             {/* --------------------- Remove line below after this --------------------------- */}
-            <Link to="/membership"
+            {/* <Link to="/membership"
               className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
             >Membership</Link>
             <Link to="/virtual-try-on"
               className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
-            >Virtual TryOn</Link>
+            >Virtual TryOn</Link> */}
             
           </ul>
         </div>
