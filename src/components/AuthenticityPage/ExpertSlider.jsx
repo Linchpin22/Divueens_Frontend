@@ -5,11 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import { FreeMode , Pagination } from 'swiper/modules';
+import docimg from '../../assets/AuthenticityPage/doc_1.png'
 
 const experts = [
-  { image:"src/assets/AuthenticityPage/doc_1.png", name: 'Betty A.', title: 'Dermatologist, Beauty Expert', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam placeat ducimus minima id corporis maiores aperiam cupiditate officia perferendis recusandae nostrum, quisquam autem dolorem inventore sapiente error repellat libero sequi modi totam? Ex debitis quod incidunt natus, nulla aspernatur!' },
-  { image: "src/assets/AuthenticityPage/doc_1.png", name: 'John B.', title: 'Plastic Surgeon', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam placeat ducimus minima id corporis maiores aperiam cupiditate officia perferendis recusandae nostrum, quisquam autem dolorem inventore sapiente error repellat libero sequi modi totam? Ex debitis quod incidunt natus, nulla aspernatur!' },
-  { image: "src/assets/AuthenticityPage/doc_1.png", name: 'Alice C.', title: 'Cosmetologist', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam placeat ducimus minima id corporis maiores aperiam cupiditate officia perferendis recusandae nostrum, quisquam autem dolorem inventore sapiente error repellat libero sequi modi totam? Ex debitis quod incidunt natus, nulla aspernatur!' },
+  { image:docimg, name: 'Betty A.', title: 'Dermatologist, Beauty Expert', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam placeat ducimus minima id corporis maiores aperiam cupiditate officia perferendis recusandae nostrum, quisquam autem dolorem inventore sapiente error repellat libero sequi modi totam? Ex debitis quod incidunt natus, nulla aspernatur!' },
+  { image: docimg, name: 'John B.', title: 'Plastic Surgeon', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam placeat ducimus minima id corporis maiores aperiam cupiditate officia perferendis recusandae nostrum, quisquam autem dolorem inventore sapiente error repellat libero sequi modi totam? Ex debitis quod incidunt natus, nulla aspernatur!' },
+  { image: docimg, name: 'Alice C.', title: 'Cosmetologist', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, veniam placeat ducimus minima id corporis maiores aperiam cupiditate officia perferendis recusandae nostrum, quisquam autem dolorem inventore sapiente error repellat libero sequi modi totam? Ex debitis quod incidunt natus, nulla aspernatur!' },
 ];
 
 const ExpertSlider = () => {

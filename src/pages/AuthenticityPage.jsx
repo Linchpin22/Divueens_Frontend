@@ -6,6 +6,13 @@ import ethics from '../assets/AuthenticityPage/ethics.png';
 import two from '../assets/AuthenticityPage/two.png';
 import influencer from '../assets/AuthenticityPage/influencer.png';
 import certificate from '../assets/AuthenticityPage/1.png'
+import banner from '../assets/AuthenticityPage/banner.jpg' 
+import badge from '../assets/AuthenticityPage/badge.png'
+import icon from '../assets/AuthenticityPage/icon.png'
+import arrow from '../assets/AuthenticityPage/arrow.png'
+import howto from '../assets/AuthenticityPage/howto.png'
+import product from '../assets/AuthenticityPage/product.png'
+import tools from '../assets/AuthenticityPage/tools.png'
 import { useState } from 'react';
 
 
@@ -105,25 +112,25 @@ const AuthenticityPage = () => {
         <div className='w-full p-4 md:p-16 md:my-10 my-6'>
             {/* Banner */}
             <div className="w-full min-h-[150px] md:min-h-80 relative flex justify-center items-center">
-                <img src="src/assets/AuthenticityPage/banner.jpg" className='absolute w-full h-full -z-10' />
+                <img src={banner} className='absolute w-full h-full -z-10' />
                 <div className='w-full h-full bg-white absolute inset-0 opacity-30 -z-10' />
                 <div className='font-bold text-sm md:text-3xl'>100% Safe, Genuine And Trustable</div>
             </div>
             {/* Authenticity Badge */}
             <div className="flex md:justify-between justify-center gap-4 flex-col md:flex-row items-center md:my-20 my-10 w-full">
                 <div className="flex flex-col md:w-1/2 w-full gap-5">
-                    <p className='font-semibold md:text-3xl text-xl w-fit mx-auto md:mx-0'>Authenticity Badge <hr className='border-black mt-2' /></p>
+                    <div className='font-semibold md:text-3xl text-xl w-fit mx-auto md:mx-0'>Authenticity Badge <hr className='border-black mt-2' /></div>
                     <p className='font-medium text-center md:text-left text-sm md:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dignissimos sequi reiciendis neque, consectetur, nobis quod, nostrum temporibus error eum obcaecati? Iusto pariatur nostrum ex autem quidem amet suscipit nisi? Nisi, aspernatur non ipsa nulla iusto molestiae velit, nemo, tenetur praesentium error expedita cumque nam tempora! Consequuntur corrupti dicta deserunt!</p>
                 </div>
-                <img src="src/assets/AuthenticityPage/badge.png" alt="" className='md:w-1/5 w-1/3' />
+                <img src={badge} alt="" className='md:w-1/5 w-1/3' />
             </div>
             {/* Authenticity Certification */}
             <div className="flex flex-col gap-10 my-20">
                 {/* Heading */}
                 <div className='flex flex-col md:flex-row md:justify-between gap-4 items-center'>
                     <div className='flex flex-row md:gap-5 gap-3 md:mx-0 mx-auto items-center'>
-                        <img src="src/assets/AuthenticityPage/icon.png" alt="" className='md:w-[50px] w-1/6' />
-                        <p className='font-semibold md:text-3xl text-xl w-fit'>Authenticity Certificates <hr className='border-black mt-2' /></p>
+                        <img src={icon} alt="" className='md:w-[50px] w-1/6' />
+                        <div className='font-semibold md:text-3xl text-xl w-fit'>Authenticity Certificates <hr className='border-black mt-2' /></div>
                     </div>
                     <button className='font-bold text-xs text-blue-600 w-fit mx-auto md:mx-0'
                     onClick={handleToggleViewCert}
@@ -157,19 +164,19 @@ const AuthenticityPage = () => {
                             </ol>
                         </div>
                     </div>
-                    <img src="src/assets/AuthenticityPage/howto.png" alt="" className='w-full md:w-1/2' />
+                    <img src={howto} alt="" className='w-full md:w-1/2' />
                 </div>
                 {/* Verif. and Auth. */}
                 <div className="flex flex-col gap-8 my-10">
                     {/* Heading */}
                     <div className='flex flex-row md:gap-5 gap-3 mx-auto items-center'>
-                        <p className='font-semibold md:text-xl text-sm w-fit'>Verification and Authentication <hr className='border-black mt-2' /></p>
+                        <div className='font-semibold md:text-xl text-sm w-fit'>Verification and Authentication <hr className='border-black mt-2' /></div>
                     </div>
                     {/* Instruction */}
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center flex-col md:flex-row gap-y-10">
                         {/* Product Registration */}
                         <div className="flex flex-col justify-center items-center md:w-1/2 gap-2 mx-auto">
-                            <img src="src/assets/AuthenticityPage/product.png" alt="" className='w-1/5' />
+                            <img src={product} alt="" className='w-1/5' />
                             <p className='text-center text-md font-semibold'>Product Registration</p>
                             <p className='text-center text-sm font-medium '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, iste?
                             </p>
@@ -177,20 +184,20 @@ const AuthenticityPage = () => {
                         {/* Verification Tools */}
                         <div className='flex flex-row justify-evenly gap-20'>
                             <div className="flex flex-col justify-center items-center md:w-1/2 gap-2">
-                                <img src="src/assets/AuthenticityPage/tools.png" alt="" className='w-1/5' />
+                                <img src={tools} alt="" className='w-1/5' />
                                 <p className='text-center text-md font-semibold'>Verification Tools</p>
                                 <p className='text-center text-sm font-medium'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, iste?
                                 </p>
                             </div>
                             {/* Lets try*/}
-                            <div className='font-semibold inline-flex items-center md:gap-2 text-md md:w-1/4'>Let's Check <img src="src/assets/AuthenticityPage/arrow.png" alt="" className='md:w-1/5 w-1/2' /></div>
+                            <div className='font-semibold inline-flex items-center md:gap-2 text-md md:w-1/4'>Let's Check <img src={arrow} alt="" className='md:w-1/5 w-1/2' /></div>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Company History Section */}
             <div className="flex flex-col items-center w-full gap-10 my-10">
-                <p className='font-semibold md:text-3xl text-lg w-fit'>Company History <hr className='border-black mt-2' /></p>
+                <div className='font-semibold md:text-3xl text-lg w-fit'>Company History <hr className='border-black mt-2' /></div>
                 <div className="flex flex-col md:flex-row md:justify-between w-full items-center gap-8">
                     <div className="flex flex-col md:w-1/2 w-full gap-4">
                         <p className="text-md md:text-lg font-semibold">Company History</p>
@@ -221,7 +228,7 @@ const AuthenticityPage = () => {
             </div>
             {/* Celebrity Partnerships Section */}
             <div className="flex flex-col gap-10 text-center w-full my-20">
-                <p className="font-semibold md:text-3xl text-xl w-fit mx-auto">Celebrity Partnerships <hr className='border-black mt-2' /></p>
+                <div className="font-semibold md:text-3xl text-xl w-fit mx-auto">Celebrity Partnerships <hr className='border-black mt-2' /></div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-y-10">
                     {visibleCards.map((card, index) => (
                         <CelebrityCard
@@ -242,7 +249,7 @@ const AuthenticityPage = () => {
             {/* Testimonials */}
             <div className="w-full my-20 flex flex-col gap-10 items-center">
                 {/* Heading */}
-                <p className="font-semibold md:text-3xl text-lg w-fit mx-auto">Testimonials <hr className='border-black mt-2' /></p>
+                <div className="font-semibold md:text-3xl text-lg w-fit mx-auto">Testimonials <hr className='border-black mt-2' /></div>
                 <TestimonialCarousel />
             </div>
             {/* Experts */}

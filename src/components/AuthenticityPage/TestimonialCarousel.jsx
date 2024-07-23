@@ -8,14 +8,15 @@ import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import '../input.css';
 import { FreeMode, Navigation } from 'swiper/modules';
+import influencer from '../../assets/AuthenticityPage/influencer.png'
 
 const testimonials = [
-  { image: "src/assets/AuthenticityPage/influencer.png", name: 'Alexa', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
-  { image: "src/assets/AuthenticityPage/influencer.png", name: 'Diana', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
-  { image: "src/assets/AuthenticityPage/influencer.png", name: 'Hera', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
-  { image: "src/assets/AuthenticityPage/influencer.png", name: 'John', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
-  { image: "src/assets/AuthenticityPage/influencer.png", name: 'Jane', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
-  { image: "src/assets/AuthenticityPage/influencer.png", name: 'Mike', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
+  { image: influencer, name: 'Alexa', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
+  { image: influencer, name: 'Diana', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
+  { image: influencer, name: 'Hera', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
+  { image: influencer, name: 'John', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
+  { image: influencer, name: 'Jane', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
+  { image: influencer, name: 'Mike', text: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit...', fullText: 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.' },
 ];
 
 const TestimonialCarousel = () => {
