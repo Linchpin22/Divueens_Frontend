@@ -219,8 +219,7 @@ function Footer() {
           {/* <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
              */}
         </div>
-             <ul className="flex justify-center gap-4 md:gap-6 w-full float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
-           
+            <ul className="flex justify-center gap-4 md:gap-6 w-full float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
             <li>
               <a href="/"
                 className={textStyle}
