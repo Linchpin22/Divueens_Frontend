@@ -7,7 +7,7 @@ const Login = ({ move, setMove }) => {
   const [forgotPass, setForgotPass] = useState(false);
   const [generateOTP, setGenerateOTP] = useState(false);
   const [otpText, setOtpText] = useState(false);
-  const [otpV, setOtpV] = useState('');
+  // const [otpV, setOtpV] = useState('');
   const [count, setCount] = useState(60);
   const [resendOTP, setResendOTP] = useState(false);
 
@@ -37,10 +37,10 @@ const Login = ({ move, setMove }) => {
     setGenerateOTP(true);
     const otp = Math.floor(1000 + Math.random() * 9000);
     console.log(otp);
-    setTimeout(() => {
-      setOtpV(otp.toString());
-    }, 5000)
-    setOtpText(true);
+    // setTimeout(() => {
+    //   setOtpV(otp.toString());
+    // }, 5000)
+    // setOtpText(true);
     setCount(60);
     setResendOTP(false);
   };
@@ -54,7 +54,7 @@ const Login = ({ move, setMove }) => {
           className="h-[50px] w-full mt-[20px]">
           <input
             className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-            inputmode="numeric"
+            inputMode="numeric"
             placeholder="Phone Number"
             required />
         </div>
@@ -63,10 +63,10 @@ const Login = ({ move, setMove }) => {
           {forgotPass ? (
             <input
               className="h-full w-full appearance-none outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-              inputmode="numeric"
+              inputMode="numeric"
               // because of value you can't type anything
             // remove it when the otp is send via message
-              value={otpV}
+              // value={otpV}
               placeholder="OTP"
               required />
           ) : (
@@ -81,7 +81,7 @@ const Login = ({ move, setMove }) => {
           className="mt-[5px]">
           <p
             onClick={togglePass}
-            className='text-[#fb7185] no-underline hover:underline'>Forgot password?</p>
+            className='text-[#fb7185] no-underline cursor-pointer hover:underline'>{forgotPass ? 'Use Password?':'Forgot password?'}</p>
           {generateOTP && (
             <>
               {count > 0 ? (
@@ -115,13 +115,13 @@ const Login = ({ move, setMove }) => {
           <span onClick={() => setMove(false)}
             className='text-[#fb7185] no-underline cursor-pointer hover:underline'> Signup now</span>
         </div>
-        {/* <div
+        <div
           className='h-[50px] w-full flex justify-center'>
           <button
             className="h-full w-3/4 text-center mt-[10px] border flex justify-evenly items-center font-semibold border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
             <FcGoogle className="w-6 h-6" /><span>Continue with Google</span>
           </button>
-        </div> */}
+        </div>
       </form >
     </>
   )

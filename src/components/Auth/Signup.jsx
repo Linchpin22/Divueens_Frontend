@@ -56,7 +56,7 @@ const Signup = () => {
           className="h-[50px] w-full mt-[20px]">
           <input
             className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-            inputmode="numeric"
+            inputMode="numeric"
             placeholder="Phone Number"
             required />
         </div>
@@ -72,7 +72,7 @@ const Signup = () => {
           className="h-[50px] w-full mt-[20px] flex items-center">
           <input
             className="h-full w-[15.5rem] outline-none pl-[15px] rounded-l-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-            inputmode="numeric"
+            inputMode="numeric"
             // because of value you can't type anything
             // remove it when the otp is send via message
             value={otpV}
@@ -102,11 +102,11 @@ const Signup = () => {
             type="submit"
             value="Signup" />
         </div>
-        {/* <div className='h-[50px] w-full mt-[20px] flex justify-center'>
+        <div className='h-[50px] w-full mt-[20px] flex justify-center'>
           <button className="h-full w-3/4 text-center border flex justify-evenly items-center font-semibold border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
             <FcGoogle className="w-6 h-6" /><span>Continue with Google</span>
           </button>
-        </div> */}
+        </div>
       </form>
     </>
   )
