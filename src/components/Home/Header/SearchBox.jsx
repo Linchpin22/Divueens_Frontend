@@ -97,8 +97,8 @@ const SearchBox = () => {
         onChange={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        placeholder="Search..."
-        className="w-full shadow text-sm pl-4 pr-20 py-2 border border-gray-300 rounded-full focus:outline focus:outline-rose-800"
+        placeholder="Search . . ."
+        className="w-full text-sm pl-4 pr-20 py-2 border border-gray-300 rounded-lg focus:outline focus:outline-rose-800"
       />
       <FiSearch className="absolute top-3 right-3 text-gray-400" />
       {
