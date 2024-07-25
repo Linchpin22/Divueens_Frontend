@@ -24,6 +24,7 @@ import OrderDetails from "./pages/OrderDetails";
 import ProfilePage from "./pages/Profile";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
+import AddToCart from "./components/ProductList/AddToCart";
 
 function App() {
   const { pathname } = useLocation();
@@ -66,6 +67,7 @@ function App() {
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
+        <Route path="/addtocart" element={<AddToCart />} />
       </Routes>
       <Footer />
     </>
