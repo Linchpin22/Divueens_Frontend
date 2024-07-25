@@ -7,7 +7,6 @@ export const Faqs = ({ question, active, answer, onClick }) => {
     const toggle = () => {
         onClick(question);
     }
-
     return (
             <li className='py-3 w-full h-fit'>
                 <div className='flex justify-between' onClick={toggle}>
