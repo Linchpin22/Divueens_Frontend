@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Home/Header/Header";
 import Footer from "./components/Home/Footer/Footer";
 import BlogHome from "./pages/Blog";
@@ -22,8 +23,13 @@ import Sell from "./pages/sellOnDivueens";
 import OrderDetails from "./pages/OrderDetails";
 import ProfilePage from "./pages/Profile";
 import Relate from "./pages/Relation";
+import AuthenticityPage from "./pages/AuthenticityPage";
 
 function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <Header />
@@ -59,6 +65,7 @@ function App() {
         <Route path="/order-now" element={<OrderDetails />} />
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
+        <Route path="/authenticity" element={<AuthenticityPage />} />
       </Routes>
       <Footer />
     </>
