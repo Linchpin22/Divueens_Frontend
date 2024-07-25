@@ -97,19 +97,19 @@ const SearchBox = () => {
         onChange={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        placeholder="Search..."
-        className="w-full shadow text-sm pl-4 pr-20 py-2 border border-gray-300 rounded-full focus:outline focus:outline-rose-800"
+        placeholder="Search . . ."
+        className="w-full text-sm pl-4 pr-20 py-2 border border-gray-300 rounded-lg focus:outline focus:outline-rose-800"
       />
       <FiSearch className="absolute top-3 right-3 text-gray-400" />
       {
         showDropdown
-         && (
+        && (
           <div
             ref={dropdownRef}
             className="absolute w-full mt-0.5 bg-white border rounded-lg shadow-lg z-10"
           >
             <div className="py-4 px-6 text-sm ">
-              
+
               <h3 className="font-semibold mb-2 flex items-center text-gray-800 text-left">
                 <FiTrendingUp size={16} className="mr-2" />
                 Trending Searches
