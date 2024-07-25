@@ -20,10 +20,10 @@ import MemberShip from "./pages/MemberShip";
 import VirtualTryOnPage from "./pages/VirtualTryOnPage";
 import Sell from "./pages/sellOnDivueens";
 import OrderDetails from "./pages/OrderDetails";
-import ProfilePage from "./pages/Profile";
+import ProfilePage from "./components/profilePage/ProfilePage";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
-
+import Transaction from "./pages/Transaction";
 function App() {
   return (
     <>
@@ -61,6 +61,7 @@ function App() {
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
+        <Route path="/transaction" element={<Transaction/>} />
       </Routes>
       <Footer />
     </>
