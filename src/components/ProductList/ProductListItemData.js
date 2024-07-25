@@ -15,8 +15,8 @@ const productDetails = [
     dresStyle: "Casuals",
     brands: "Lakme",
     shade: "Pink",
-    material: "Soft",
-    quantity: 1,
+    material: "Soft", 
+    quantity:1,
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const productDetails = [
     shade: "Pink",
     material: "Hard",
     discount: "10% OFF",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const productDetails = [
     shade: "Rose",
     discount: "10% OFF",
     material: "Hard",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ const productDetails = [
     shade: "Pink",
     discount: "20% OFF",
     material: "Soft",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ const productDetails = [
     shade: "Dark Pink",
     discount: "20% OFF",
     material: "Soft",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 6,
@@ -101,7 +101,7 @@ const productDetails = [
     shade: "Rose",
     discount: "20% OFF",
     material: "Soft",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 7,
@@ -118,7 +118,7 @@ const productDetails = [
     shade: "Rose",
     discount: "10% OFF",
     material: "Soft",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 8,
@@ -135,7 +135,7 @@ const productDetails = [
     shade: "Pink",
     discount: "10% OFF",
     material: "Soft",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 9,
@@ -152,7 +152,7 @@ const productDetails = [
     brands: "Lakme",
     discount: "20% OFF",
     material: "Hard",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 10,
@@ -169,7 +169,7 @@ const productDetails = [
     brands: "Lakme",
     discount: "20% OFF",
     material: "Hard",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 11,
@@ -186,7 +186,7 @@ const productDetails = [
     brands: "Lakme",
     discount: "20% OFF",
     material: "Hard",
-    quantity: 1,
+    quantity:1,
   },
   {
     id: 12,
@@ -203,7 +203,7 @@ const productDetails = [
     brands: "Lakme",
     discount: "20% OFF",
     material: "Hard",
-    quantity: 1,
+    quantity:1,
   },
 ];
 

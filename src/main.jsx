@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
 
   <React.StrictMode>
-    <BrowserRouter onChange={() => window.scrollTo(0, 0)}>
+    <BrowserRouter onChange={()=>window.scrollTo(0, 0)}>
       <App />
     </BrowserRouter>
   </React.StrictMode>

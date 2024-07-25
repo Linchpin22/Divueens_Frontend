@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaRegCircleQuestion } from 'react-icons/fa6';
-import { Faqs } from './FAQ';
+import {Faqs} from './FAQ';
 const Data = [
   {
     title: 'Step 1',
@@ -30,8 +30,8 @@ const Data = [
 
 const VirtualTryOnPage = () => {
   const [active, setActive] = useState(false);
-  const handleActive = (question) => {
-    setActive((pre) => (pre === question ? null : question));
+  const handleActive = (question) =>{
+    setActive((pre)=> (pre === question ? null : question ));
   }
   return (
     <div className="flex flex-col w-full min-h-[90vh] xl:m-6 my-7 overflow-hidden">
@@ -67,24 +67,24 @@ const VirtualTryOnPage = () => {
       </div>
       {/* FAQs */}
       <div className="w-full">
-        <div className="flex items-stretch flex-col justify-stretch w-full ">
-          {/* <h1 className="text-4xl m-4 text-white">Divueens</h1> */}
-
-          <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl  h-fit">
-            <div className="flex flex-row items-stretch text-2xl pb-10 gap-3">
-              <FaRegCircleQuestion />
-              <h1 className="text-4xl font-bold ]">FAQs</h1>
-            </div>
-            <ul className="flex flex-col">
-              {Data.map((item, index) => (
-                <Faqs key={index} question={item.question} answer={item.answer} active={active === item.question} onClick={handleActive} />
-              ))}
-            </ul>
+      <div className="flex items-stretch flex-col justify-stretch w-full ">
+      {/* <h1 className="text-4xl m-4 text-white">Divueens</h1> */}
+        
+        <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl  h-fit">
+          <div className="flex flex-row items-stretch text-2xl pb-10 gap-3">
+            <FaRegCircleQuestion/>
+            <h1 className="text-4xl font-bold ]">FAQs</h1>
           </div>
-
+          <ul className="flex flex-col">
+            {Data.map((item, index)=>(
+              <Faqs key={index} question={item.question} answer={item.answer} active={active === item.question}  onClick={handleActive} />
+            ))}
+          </ul>
         </div>
-
+       
       </div>
+
+    </div>
 
     </div>
   )

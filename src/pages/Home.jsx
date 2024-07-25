@@ -4,9 +4,9 @@ import BestSeller from "../components/Home/BestSeller/BestSeller";
 import ExclusiveDiscount from "../components/Home/Exclusive_discount/ExclusiveDiscount";
 import ShopByCategory from "../components/Home/ShopByCategory/ShopByCategory";
 import Subscription from "../components/Home/Subscription/Subscription";
-import SwiperProducts from "../components/Home/SwiperCards/SwiperProducts";
-import BentoBox from "../components/Home/SwiperCards/BentoBox";
-import BlogCards from "../components/Home/SwiperCards/BlogCards";
+import NewArrivals from "../components/Home/NewArrivals/NewArrivals";
+import BlogCards from "../components/Home/BlogCards/BlogCards";
+import BrandProducts from "../components/Home/BrandsProduct/BrandProducts";
 
 const Home = () => {
   return (
@@ -15,9 +15,9 @@ const Home = () => {
       <TopBrands />
       <ExclusiveDiscount />
       <ShopByCategory />
-      <SwiperProducts />
-      <BentoBox />
+      <NewArrivals />
       <BlogCards />
+      <BrandProducts />
       <Subscription />
 
     </>

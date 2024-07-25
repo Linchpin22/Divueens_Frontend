@@ -62,7 +62,7 @@ const TestimonialCarousel = () => {
         ))}
       </Swiper>
       <button className="text-gray-600 absolute nextBtn border-[3px] border-black rounded-[50%] w-[30px] h-[30px] md:right-0 right-[-10px] z-10">
-        <FaArrowRight size={20} className='mx-auto' />
+        <FaArrowRight size={20} className='mx-auto'/>
       </button>
     </div>
   );

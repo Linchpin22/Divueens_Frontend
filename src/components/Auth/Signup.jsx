@@ -67,8 +67,8 @@ const Signup = ({ move, setMove }) => {
             </button>
           </div>
           <div className='border mt-2 w-[45%] px-4 py-2 text-white bg-gradient-to-l from-rose-700 to-rose-300 rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
-            <button >
-              <span>Send OTP</span>
+          <button >
+                <span>Send OTP</span>
             </button>
           </div>
         </div>
