@@ -5,8 +5,10 @@ import { FaRegHeart } from "react-icons/fa"
 import { RiShoppingCartLine } from "react-icons/ri";
 import { MdLogout } from "react-icons/md";
 // import MyProfileSection from './MyProfileSection';
-import MyProfilePage from '../components/profilePage/MyProfilePage';
-import AddressCard from '../components/profilePage/AddressPage';
+import MyProfilePage from './GauravAndMahak/MyProfilePage';
+import AddressCard from './GauravAndMahak/AddressPage';
+import Wishlist from './Arpana/Wishlist'
+import MyOrder from './Jatin/myOrder';
 
 
 function ProfilePage() {
@@ -55,6 +57,8 @@ function ProfilePage() {
         {/* Profile Design */}
         {isTabActive === 'myprofile' && <MyProfilePage />}
         {isTabActive === 'address' && <AddressCard />}
+        {isTabActive === 'wishlist' && <Wishlist />}
+        {isTabActive === 'myorders' && <MyOrder />}
 
       </div>
     </div>
