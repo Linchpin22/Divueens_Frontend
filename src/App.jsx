@@ -25,6 +25,7 @@ import ProfilePage from "./pages/Profile";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   const { pathname } = useLocation();
@@ -53,7 +54,7 @@ function App() {
         <Route path="/coins" element={<DivaCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
         <Route path="/frequently-asked-questions" element={<FaqsPage />} />
-        <Route path="/contact-us" element={<StoreLocator />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/shipping-delivery" element={<></>} />
