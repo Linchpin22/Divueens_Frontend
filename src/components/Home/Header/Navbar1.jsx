@@ -89,12 +89,14 @@ const Navbar1 = ({ navItemText }) => {
                 <button className=" md:hover:text-rose-800">
                   <FiHeart size={20} />
                 </button>
+                <NavLink to='/profile'>
                 <button
                   className=" hover:text-rose-800"
                   onClick={() => setDisplayAuth(true)}
                 >
                   <FiUser size={20} />
                 </button>
+                </NavLink>
               </div>
 
               <div className="pr-6 lg:hidden">
@@ -141,12 +143,13 @@ const Navbar1 = ({ navItemText }) => {
                       className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
                     >Home</Link>
                     {mainNavItems.map((item, index) => (
-                      <Link
+                      <NavLink
                         to="/products"
+                        key={index}
                         className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
                       >
                         {item}
-                      </Link>
+                      </NavLink>
                     ))}
                     {/* -------------------------- Remove line below after this ------------------------------- */}
                     <Link to="/membership"
