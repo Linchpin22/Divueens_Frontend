@@ -260,7 +260,7 @@ const Navbar1 = ({ navItemText }) => {
                           const subcategoryLabel = Object.keys(subcategory)[0];
                           const subcategoryItems = subcategory[subcategoryLabel];
                           if (!subcategoryItems) return null;
-                          console.log(categoryData);
+                          // console.log(categoryData);
 
                           return (
                             <div className="w-full" key={subcategoryLabel}>
