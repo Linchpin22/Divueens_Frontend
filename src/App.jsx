@@ -66,6 +66,7 @@ function App() {
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
+        <Route path="/store-locator" element={<StoreLocator />} />
       </Routes>
       <Footer />
     </>
