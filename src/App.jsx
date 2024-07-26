@@ -31,6 +31,11 @@ import ContactUs from "./pages/ContactUs";
 import WishList from './components/profilePage/Arpana/Wishlist'
 import ShippingDelivery from "./pages/ShippingDelivery";
 import Transaction from "./pages/Transaction";
+import Discount from "./pages/discountPage";
+import TopCategories from "./pages/TopCategories";
+import ReferralPage from "./pages/Referral";
+import Network from "./components/Network/Network";
+import Afterorder from "./pages/OrderConfirmation";
 
 function App() {
   const { pathname } = useLocation();
@@ -77,8 +82,11 @@ function App() {
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/maintennace" element={<MaintennacePage />} />
-
-        <Route path="/transaction" element={<Transaction />} />
+        <Route path="/transaction" element={<Transaction />} /><Route path="/discounts" element={<Discount />} />
+        <Route path="/top-catagories" element={<TopCategories />} />
+        <Route path="/referral" element={<ReferralPage />} />
+        <Route path="/divueens-network" element={<Network />} />
+        <Route path="/confirm-order" element={<Afterorder />} />
       </Routes>
       <Footer />
     </>

@@ -88,7 +88,7 @@ const baadiList = [
         txt: "Beauty Books",
       },
       {
-        url: "",
+        url: "/divueens-network",
         txt: "Divueens Network",
       },
       {

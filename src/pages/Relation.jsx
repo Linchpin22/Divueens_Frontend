@@ -46,13 +46,13 @@ function Relate() {
   return (
     // Main Div
     <div className='font-[Montserrat]'>
-      <p className='text-[50px] max-md:text-xl font-semibold text-center my-10'>Investor Relations</p>
+      <p className='text-[40px] max-md:text-xl font-semibold text-center my-10'>Investor Relations</p>
       {/* <p className='relative text-2xl font-semibold text-center my-10 before:content-[""] after:content-[""] before:absolute after:absolute before:top-1/2 after:top-1/2 before:left-[17%] max-xl:before:left-[10%] max-lg:before:left-0 max-lg:after:right-0 after:right-[17%] before:w-80 max-xl:after:right-[9%] max-lg:before:w-60 max-md:before:w-40 max-sm:before:w-40 max-[520px]:before:w-20 after:w-80 max-lg:after:w-60 max-md:after:w-40 max-sm:after:w-40 max-[520px]:after:w-20 before:h-0.5 after:h-0.5 before:bg-gradient-to-r from-white via-rose-300 to-rose-500 after:bg-gradient-to-l   before:transform before:-translate-y-1/2 after:transform after:-translate-y-1/2'>
         Investor Relation
       </p> */}
 
       <div className='flex items-center justify-center max-sm:block  bg-rose-100'>
-        <p className='w-[45%] mr-20 text-[20px] max-md:text-base max-lg:pt-2 text-slate-500 max-sm:mx-[5%] max-sm:w-[90%]'>
+        <p className='w-[45%] mr-20 text-[16px] max-md:text-base max-lg:pt-2 text-slate-500 max-sm:mx-[5%] max-sm:w-[90%]'>
           Divueens is a trailblazer in the beauty ecommerce industry,
           driven by a dedicated team focused on providing the best
           customer experience. We are committed to expanding our
@@ -63,14 +63,14 @@ function Relate() {
       </div>
 
       {/* Financial Statement */}
-      <p className='text-[36px] max-sm:text-lg font-semibold text-center my-10'>Financial Statement</p>
+      <p className='text-[24px] max-sm:text-lg font-semibold text-center my-10'>Financial Statement</p>
       {/* Dropdown */}
       <div className='relative'>
         <div className='flex justify-center relative'>
 
           {/* Year */}
           <div className="relative flex flex-col items-center w-[180px] h-[340px] rounded-lg mr-20 max-sm:mr-8 max-sm:w-[130px]">
-            <button onClick={() => setIsOpen((prev) => !prev)} className="bg-white p-4 w-full flex items-center justify-between font-medium text-lg rounded-lg tracking-wider border-gray-400 border-solid border-2 active:border-rose-300 duration-300 active:text-rose-300 ">
+            <button onClick={() => setIsOpen((prev) => !prev)} className="bg-white px-4 py-2 w-full flex items-center justify-between font-medium text-lg rounded-lg tracking-wider border-gray-400 border-solid border-2 active:border-rose-300 duration-300 active:text-rose-300 ">
               {selectedYear}
               {!isOpen ? (<RxCaretDown className="h-8" />) : (<RxCaretUp className="h-8" />)}
             </button>
@@ -87,7 +87,7 @@ function Relate() {
 
           {/* Quarter */}
           <div className="relative flex flex-col items-center w-[180px] h-[340px] rounded-lg">
-            <button onClick={() => setIsOpen2((prev) => !prev)} className="bg-white p-4 max-[320px]:py-4 max-[330px]:px-2 max-[320px]:p-1 w-full flex items-center justify-between font-medium text-lg rounded-lg tracking-wider border-gray-400 border-solid border-2 active:border-rose-300 duration-300 active:text-rose-300 ">
+            <button onClick={() => setIsOpen2((prev) => !prev)} className="bg-white px-4 py-2 max-[320px]:py-2 max-[330px]:px-2 max-[320px]:p-1 w-full flex items-center justify-between font-medium text-lg rounded-lg tracking-wider border-gray-400 border-solid border-2 active:border-rose-300 duration-300 active:text-rose-300 ">
               {selectedQuarter}
               {!isOpen2 ? (<RxCaretDown className="h-8" />) : (<RxCaretUp className="h-8" />)}
             </button>
@@ -104,29 +104,29 @@ function Relate() {
 
         </div>
 
-        <div className={"mx-[10%] absolute top-28 ${isOpen || isOpen2 ? 'none' : ''}"}>
+        <div className={"mx-[10%] absolute top-24 ${isOpen || isOpen2 ? 'none' : ''}"}>
           <ul className='list-disc'>
             <div className='flex my-4'>
               <li className='text-base text-slate-500'>
-                <p className='text-[22px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
+                <p className='text-[19px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
               </li>
               <button><MdOutlineFileDownload className='ml-4 mt-0 text-rose-400 w-6 h-6' /></button>
             </div>
             <div className='flex my-4'>
               <li className='text-base text-slate-500'>
-                <p className='text-[22px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
+                <p className='text-[19px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
               </li>
               <button><MdOutlineFileDownload className='ml-4 mt-0 text-rose-400 w-6 h-6' /></button>
             </div>
             <div className='flex my-4'>
               <li className='text-base text-slate-500'>
-                <p className='text-[22px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
+                <p className='text-[19px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
               </li>
               <button><MdOutlineFileDownload className='ml-4 mt-0 text-rose-400 w-6 h-6' /></button>
             </div>
             <div className='flex my-4'>
               <li className='text-base text-slate-500'>
-                <p className='text-[22px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
+                <p className='text-[19px] max-sm:text-base'>Transcript - Analyst / Investor Conference Call {selectedQuarter.substring(0,2)} {selectedYear.substring(0,4)}</p>
               </li>
               <button><MdOutlineFileDownload className='ml-4 mt-0 text-rose-400 w-6 h-6' /></button>
             </div>
@@ -135,7 +135,7 @@ function Relate() {
       </div>
 
       {/* Company Highlights */}
-      <p className='text-[36px] max-sm:text-lg font-semibold text-center my-10 mt-0 max-sm:mt-20 max-[338px]:mt-40'>Company Highlights</p>
+      <p className='text-[24px] max-sm:text-lg font-semibold text-center my-10 mt-0 max-sm:mt-20 max-[338px]:mt-40'>Company Highlights</p>
       <div className='flex justify-center text-center'>
         <div>
           <div className='border-2 border-rose-400 rounded-full'>
@@ -155,25 +155,28 @@ function Relate() {
       </div>
       <div className='flex justify-center text-center'>
         <div>
-          <p className='text-[20px] max-sm:text-base'>10000+ Products</p>
+          <p className='text-[16px] max-sm:text-base'>10000+ Products</p>
         </div>
         <div>
-          <p className='text-[20px] max-sm:text-base max-sm:ml-[10%] max-sm:mr-[10%] mx-20 max-lg:mx-20 max-[900px]:mx-8 max-md:mx-14'>10000+ Products</p>
+          <p className='text-[16px] max-sm:text-base max-sm:ml-[10%] max-sm:mr-[10%] mx-28 max-[1400px]:mx-24 max-[1300px]:mx-20 max-lg:mx-16 max-[900px]:mx-8 max-md:mx-14'>10000+ Products</p>
         </div>
         <div>
-          <p className='text-[20px] max-sm:text-base'>10000+ Products</p>
+          <p className='text-[16px] max-sm:text-base'>10000+ Products</p>
         </div>
       </div>
         {/* Press Release */}
-        <p className='text-[36px] max-sm:text-xl font-semibold text-center my-20 max-sm:my-10'>Press Release</p>
-        {news.slice(0, showAllNews ? news.length : 3).map((item, i) => (
-          <div className='mx-20 max-sm:mx-5' key={i}>
-            <p className='text-slate-400 text-sm mt-2'>{item.title}</p>
-            <p className='max-sm:text-lg max-sm:font-normal mb-4 text-[24px] font-semibold'>{item.description}</p>
-            <hr />
-          </div>
-        ))}
-        <button onClick={toggleReadMore} className='text-[16px] text-rose-500 my-4 mx-20 max-sm:mx-5'>{showAllNews ? "Show Less" : "All Releases"}</button>
+        <div className='w-[50%] m-auto'>
+          <p className='text-[24px] max-sm:text-xl font-semibold text-center my-20 max-sm:my-10'>Press Release</p>
+          {news.slice(0, showAllNews ? news.length : 3).map((item, i) => (
+            <div className='' key={i}>
+              <p className='text-slate-400 text-sm mt-2'>{item.title}</p>
+              <p className='max-sm:text-lg max-sm:font-normal mb-4 text-[20px] font-semibold'>{item.description}</p>
+              <hr />
+            </div>
+          ))}
+          <button onClick={toggleReadMore} className='text-[16px] text-rose-500 my-4'>{showAllNews ? "Show Less" : "All Releases"}</button>
+        </div>
+        
         </div>
         );
 
