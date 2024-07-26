@@ -111,7 +111,7 @@ const ProductDetails = () => {
                             <div className="flex flex-col items-center lg:items-start justify-start gap-4 mt-4">
                                 <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
                                 <div className='flex gap-x-5 lg:text-lg'>
-                                    <Link to="/order-now" className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl">
+                                    <Link to={`/order-now/${productDetail.id}`}className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl">
                                         Buy Now
                                     </Link>
                                     <button className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl flex-shrink-0">

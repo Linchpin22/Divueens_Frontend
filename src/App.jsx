@@ -68,7 +68,7 @@ function App() {
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
-        <Route path="/order-now" element={<OrderDetails />} />
+        <Route path="/order-now/:id" element={<OrderDetails />} />
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
