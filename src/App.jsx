@@ -82,7 +82,8 @@ function App() {
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/maintennace" element={<MaintennacePage />} />
-        <Route path="/transaction" element={<Transaction />} /><Route path="/discounts" element={<Discount />} />
+        <Route path="/transaction" element={<Transaction />} />
+        <Route path="/discounts" element={<Discount />} />
         <Route path="/top-catagories" element={<TopCategories />} />
         <Route path="/referral" element={<ReferralPage />} />
         <Route path="/divueens-network" element={<Network />} />

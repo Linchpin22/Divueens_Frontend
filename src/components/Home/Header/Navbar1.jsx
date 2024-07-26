@@ -149,11 +149,11 @@ const Navbar1 = ({ navItemText }) => {
                     >Home</Link>
                     {mainNavItems.map((item, index) => (
                       <NavLink
-                        to="/products"
+                        to={item.url}
                         key={index}
                         className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
                       >
-                        {item}
+                        {item.title}
                       </NavLink>
                     ))}
                     {/* -------------------------- Remove line below after this ------------------------------- */}
