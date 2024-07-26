@@ -14,7 +14,8 @@ import PrivacyPolicy from "./pages/Privacy";
 import HelpCenter from "./pages/HelpCenter";
 import FaqsPage from "./pages/FAQ";
 import SpecialOffer from "./pages/SpecialOffer";
-import ProductDetails from "./pages/ProductDetails";
+// import ProductDetails from "./pages/ProductDetails";
+import ProductDetails from './components/ProductDescription/[id]/ProductDetails'
 import WhoWeAre from "./components/Who we are/WhoWeAre";
 import StoreLocator from "./components/StoreLocator/StoreLocator";
 import MemberShip from "./pages/MemberShip";
@@ -44,7 +45,8 @@ function App() {
 
         {/* Profile page */}
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/product-description" element={<ProductDetails />} />
+        {/* <Route path="/product-description" element={<ProductDetails />} /> */}
+        <Route path="/product-description/:id" element={<ProductDetails />} />
 
         {/* Login page
         <Route path="/login" element={<Auth />} /> */}
@@ -67,7 +69,7 @@ function App() {
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
-        <Route path="/order-now" element={<OrderDetails />} />
+        <Route path="/order-now/:id" element={<OrderDetails />} />
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
