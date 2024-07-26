@@ -6,6 +6,8 @@ import V1 from './../assets/SellOnDivueens/v1.png';
 import V2 from './../assets/SellOnDivueens/v2.png';
 import V3 from './../assets/SellOnDivueens/v3.png';
 import V4 from './../assets/SellOnDivueens/v4.png';
+import MaintennacePage from '../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 
 const Sell = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -51,7 +53,7 @@ const Sell = () => {
             Expand your reach and grow your beauty business with our innovative
             ecommerce platform.
           </p>
-          <button className='text-[24px] max-lg:text-lg font-semibold bg-rose-400 py-3 px-8 rounded-xl'>Register Now</button>
+          <Link to={"/maintennace"} className='text-[24px] max-lg:text-lg font-semibold bg-rose-400 py-3 px-8 rounded-xl'>Register Now</Link>
         </div>
 
         <div>

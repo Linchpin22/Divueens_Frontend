@@ -2,10 +2,10 @@ import React from 'react'
 
 const Section2 = () => {
     return (
-        <div className='w-full h-full flex flex-col items-center gap-5 py-10 mb-5 lg:px-12'>
+        <div className='w-full h-full flex flex-col items-center gap-5 mb-5 lg:px-12'>
 
-            <div className='w-full h-full flex flex-col items-center gap-5 pb-12 xl:px-32'>
-                <h1 className='montserrat text-[1.2rem] md:text-[2rem] font-medium'>How to Use Diva Coins: </h1>
+            <div className='w-full h-full flex flex-col items-center gap-5 pb-2 xl:px-32'>
+                <h1 className='montserrat text-[1.2rem] md:text-[2rem] font-medium'>How to Use Diva Coins </h1>
 
                 <div className="container">
                     <div
@@ -63,7 +63,7 @@ const Section2 = () => {
             <h1 className='montserrat text-center text-[1.5rem] md:text-[2rem] font-medium'>Maximizing Your Diva Coins</h1>
             <p className='poppins-medium p-color text-xs text-center w-[20rem] md:text-base md:w-full'>Maximize Your Diva Coins and Get the Most Out of Divueens’ Rewards Program</p>
 
-            <p className='text-[0.6rem] text-center px-4 md:text-left md:px-20 md:text-[0.9rem]'>At Divueens, we always make everyone love getting and using the Diva Coins being offered to customers for support. Here are some tips to help you maximize your Diva Coins and enjoy the best shopping experience:</p>
+            <p className='text-[0.6rem] text-center px-4 md:px-20 md:text-[0.7rem] lg:text-[0.9rem]'>At Divueens, we always make everyone love getting and using the Diva Coins being offered to customers for support. Here are some tips to help you maximize your Diva Coins and enjoy the best shopping experience:</p>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-2'>
                 <div className="w-full lg:h-72 xl:h-full md:w-full relative shadow-lg hover:shadow-rose-700 hover:scale-[1.1] hover:-translate-y-5 md:hover:-translate-x-5 transition-all duration-500 flex items-center justify-center rounded-xl overflow-hidden">
@@ -109,7 +109,7 @@ const Section2 = () => {
 
             </div>
 
-            <p className='poppins-medium p-color text-xs text-center w-[20rem] md:text-base md:w-1/2'>Following these tips, you will be able to maximize the use of your Diva Coins and receive all the advantages of being a customer of Divueens. Happy shopping!</p>
+            <p className='poppins-medium p-color text-xs text-center w-72 md:w-[25rem] md:text-base lg:w-1/2'>Following these tips, you will be able to maximize the use of your Diva Coins and receive all the advantages of being a customer of Divueens. Happy shopping!</p>
         </div>
     )
 }

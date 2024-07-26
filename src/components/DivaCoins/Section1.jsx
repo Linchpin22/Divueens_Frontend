@@ -4,8 +4,8 @@ const Section1 = () => {
     return (
         <div className='w-full h-full flex flex-col items-center'>
 
-            <div className='w-full h-full flex flex-col items-center gap-4 md:gap-0 lg:pb-12 xl:px-32'>
-                <h1 className='montserrat text-[1.2rem] md:text-[2rem] font-medium'>How to Earn Diva Coins: </h1>
+            <div className='w-full h-full flex flex-col items-center gap-4 lg:pb-12 xl:px-32'>
+                <h1 className='montserrat text-[1.2rem] md:text-[2rem] font-medium'>How to Earn Diva Coins </h1>
 
                 <div className="container">
                     <div
