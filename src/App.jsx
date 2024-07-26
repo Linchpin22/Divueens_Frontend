@@ -36,6 +36,7 @@ import TopCategories from "./pages/TopCategories";
 import ReferralPage from "./pages/Referral";
 import Network from "./components/Network/Network";
 import Afterorder from "./pages/OrderConfirmation";
+import CareersPage from "./pages/CareersPage";
 
 function App() {
   const { pathname } = useLocation();
@@ -88,6 +89,7 @@ function App() {
         <Route path="/referral" element={<ReferralPage />} />
         <Route path="/divueens-network" element={<Network />} />
         <Route path="/confirm-order" element={<Afterorder />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Routes>
       <Footer />
     </>
