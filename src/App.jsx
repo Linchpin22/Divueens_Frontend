@@ -25,6 +25,7 @@ import ProfilePage from "./components/profilePage/ProfilePage";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
+import MaintennacePage from "./pages/MaintennacePage";
 import ContactUs from "./pages/ContactUs";
 import ShippingDelivery from "./pages/ShippingDelivery";
 import Transaction from "./pages/Transaction";
@@ -72,6 +73,8 @@ function App() {
         <Route path="/authenticity" element={<AuthenticityPage />} />
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
+        <Route path="/maintennace" element={<MaintennacePage />} />
+
         <Route path="/transaction" element={<Transaction />} />
       </Routes>
       <Footer />
