@@ -26,6 +26,7 @@ import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
 import ContactUs from "./pages/ContactUs";
+import ShippingDelivery from "./pages/ShippingDelivery";
 
 function App() {
   const { pathname } = useLocation();
@@ -57,7 +58,7 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
-        <Route path="/shipping-delivery" element={<></>} />
+        <Route path="/shippingdelivery" element={<ShippingDelivery />} />
         <Route path="/sell-on-divueens" element={<Sell />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/blogs" element={<BlogHome />} />
