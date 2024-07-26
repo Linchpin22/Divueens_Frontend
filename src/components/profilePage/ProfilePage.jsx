@@ -30,7 +30,7 @@ function ProfilePage() {
             default:
                 return <MyProfilePage />;
         }
-    };
+    }
 
     return (
         <div className='bg-slate-100 flex my-10 h-auto'>
