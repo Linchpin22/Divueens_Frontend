@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 const Signup = ({ move, setMove, changeView }) => {
   const [generateOTP, setGenerateOTP] = useState(false);
@@ -68,14 +68,14 @@ const Signup = ({ move, setMove, changeView }) => {
         action="#"
         className="w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)]"
       >
-        <h1 className='font-semibold text-[25px] text-center mt-[20px]'>Verify Your OTP</h1>
-        <div className="h-[50px] mb-[60px] w-full mt-[50px] flex items-center"> {/* Changed mb-[60px] to mb-[50px] */}
+        <h2 className='font-semibold text-[25px] text-center mt-[20px]'>Verify Your OTP</h2>
+        <div className="h-[50px] mb-4 md:mb-[60px] w-full mt-6 md:mt-[50px] flex items-center"> {/* Changed mb-[60px] to mb-[50px] */}
           <div className="flex space-x-6">
             {[...Array(4)].map((_, index) => (
               <input
                 key={index}
                 ref={(el) => (inputRefs.current[index] = el)} 
-                className="h-[4rem] w-[4rem] text-center font-bold outline-none rounded-[15px] border-[2px] border-[solid] border-[#5c5b5b] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
+                className="h-[3rem] w-[3rem] md:h-[4rem] md:w-[4rem] text-center font-bold outline-none rounded-xl md:rounded-[15px] border-[2px] border-[solid] border-[#5c5b5b] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
                 inputMode="numeric"
                 maxLength={1}
                 required
@@ -86,7 +86,7 @@ const Signup = ({ move, setMove, changeView }) => {
             ))}
           </div>
         </div>
-        <div className="flex items-center mb-[10px]"> {/* Changed mb-[25px] to mb-[10px] */}
+        <div className="flex items-center md:mb-[10px]"> {/* Changed mb-[25px] to mb-[10px] */}
           <input
             type="checkbox"
             id="acceptTerms"
@@ -95,7 +95,7 @@ const Signup = ({ move, setMove, changeView }) => {
             onChange={(e) => setAcceptTerms(e.target.checked)}
           />
           <label htmlFor="acceptTerms" className="text-[16px] text-sm">
-            I have read and agree to the <NavLink to="/Privacy-policy" onClick={() => changeView(false)} className="font-semibold">Privacy Policy</NavLink> and <NavLink to="/terms-and-conditions" onClick={() => changeView(false)} className="font-semibold">Terms of Service.</NavLink>
+            I have read and agree to the <Link to="/Privacy-policy" onClick={() => changeView(false)} className="font-semibold">Privacy Policy</Link> and <Link to="/terms-and-conditions" onClick={() => changeView(false)} className="font-semibold">Terms of Service.</Link>
           </label>
         </div>
         <div className="flex">
