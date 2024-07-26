@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Home/Header/Header";
 import Footer from "./components/Home/Footer/Footer";
 import BlogHome from "./pages/Blog";
@@ -20,10 +21,19 @@ import MemberShip from "./pages/MemberShip";
 import VirtualTryOnPage from "./pages/VirtualTryOnPage";
 import Sell from "./pages/sellOnDivueens";
 import OrderDetails from "./pages/OrderDetails";
-import ProfilePage from "./pages/Profile";
+import ProfilePage from "./components/profilePage/ProfilePage";
 import Relate from "./pages/Relation";
+import AuthenticityPage from "./pages/AuthenticityPage";
+import AddToCart from "./components/ProductList/AddToCart";
+import ContactUs from "./pages/ContactUs";
+import ShippingDelivery from "./pages/ShippingDelivery";
+import Transaction from "./pages/Transaction";
 
 function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <Header />
@@ -38,7 +48,7 @@ function App() {
         {/* Login page
         <Route path="/login" element={<Auth />} /> */}
 
-        
+
         {/* Other Pages */}
         <Route path="/special-offers" element={<SpecialOffer />} />
         <Route path="/our-team" element={<TeamSection />} />
@@ -46,19 +56,23 @@ function App() {
         <Route path="/coins" element={<DivaCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
         <Route path="/frequently-asked-questions" element={<FaqsPage />} />
-        <Route path="/contact-us" element={<StoreLocator />} />
-        <Route path="/help-center" element={<HelpCenter/>} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
-        <Route path="/shipping-delivery" element={<></>} />
+        <Route path="/shippingdelivery" element={<ShippingDelivery />} />
         <Route path="/sell-on-divueens" element={<Sell />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/blogs" element={<BlogHome/>} />
+        <Route path="/blogs" element={<BlogHome />} />
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
         <Route path="/order-now" element={<OrderDetails />} />
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
+        <Route path="/authenticity" element={<AuthenticityPage />} />
+        <Route path="/store-locator" element={<StoreLocator />} />
+        <Route path="/addtocart" element={<AddToCart />} />
+        <Route path="/transaction" element={<Transaction />} />
       </Routes>
       <Footer />
     </>
