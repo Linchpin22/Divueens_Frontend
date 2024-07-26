@@ -80,9 +80,9 @@ const CardItem = ({ item }) => {
                                 </div>
                                 <p className='ml-2 text-[0.8rem] sm:text-xs tracking-tighter'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
                             </div>
-                            <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
-                                <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
-                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-base' onClick={() => {
+                            <div className="flex items-end justify-between absolute bottom-6 md:bottom-2 sm:gap-2 lg:-bottom-4 xl:-bottom-0 left-0 right-0 xl:px-4">
+                                <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-xl">₹ {p.price} /-</span>
+                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-600'} text-white md:w-fit rounded-lg text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-2`} onClick={() => {
                                     if (isInCart) {
                                         subCartItemNumber()
                                     addingItemToCart(p.id)}
