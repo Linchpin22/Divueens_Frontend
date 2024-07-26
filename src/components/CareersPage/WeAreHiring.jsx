@@ -50,7 +50,7 @@ function WeAreHiring() {
         <div className="text-sm border-slate-900 border  font-semibold rounded-2xl py-1 px-4">
           We're hiring!
         </div>
-        <h1 className="text-2xl font-semibold ">We Have 12 Job Openings</h1>
+        <h1 className="text-2xl text-center font-semibold ">We Have 12 Job Openings</h1>
         <p className="font-semibold text-center w-3/4">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum libero
           earum autem aliquid reprehenderit aperiam iste aspernatur cumquemap
