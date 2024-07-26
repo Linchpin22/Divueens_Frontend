@@ -27,6 +27,11 @@ import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
 import ContactUs from "./pages/ContactUs";
 import ShippingDelivery from "./pages/ShippingDelivery";
+import Discount from "./pages/discountPage";
+import TopCategories from "./pages/TopCategories";
+import ReferralPage from "./pages/Referral";
+import Network from "./components/Network/Network";
+import Afterorder from "./pages/OrderConfirmation";
 
 function App() {
   const { pathname } = useLocation();
@@ -46,7 +51,6 @@ function App() {
 
         {/* Login page
         <Route path="/login" element={<Auth />} /> */}
-
 
         {/* Other Pages */}
         <Route path="/special-offers" element={<SpecialOffer />} />
@@ -71,6 +75,11 @@ function App() {
         <Route path="/authenticity" element={<AuthenticityPage />} />
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
+        <Route path="/discounts" element={<Discount />} />
+        <Route path="/top-catagories" element={<TopCategories />} />
+        <Route path="/referral" element={<ReferralPage />} />
+        <Route path="/divueens-network" element={<Network />} />
+        <Route path="/confirm-order" element={<Afterorder />} />
       </Routes>
       <Footer />
     </>
