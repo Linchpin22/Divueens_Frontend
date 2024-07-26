@@ -59,7 +59,7 @@ const CardItem = ({ item }) => {
                     const isInCart = (cardItem).includes(p.id);
                     console.log(isInCart)
                     return <div key={p.id} className=''>
-                        <Link className="group relative mb-2 block h-60 md:h-64 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
+                        <Link to={`/product-description/${p.id}`} className="group relative mb-2 block h-60 md:h-64 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
                             <img src={p.image} alt='image' className="h-full w-full object-center object-cover transition duration-200 group-hover:scale-110" />
 
                             <div className="absolute left-0 top-0 right-0 px-3 py-1.5 flex items-center justify-between text-white">
