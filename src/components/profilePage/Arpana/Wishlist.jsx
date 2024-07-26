@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHeart, FaRegHeart, FaTrash, FaShare, FaShareSquare} from 'react-icons/fa';
+import { FaHeart} from 'react-icons/fa';
 import Trash from '../../../assets/trash.png';
 import Share from '../../../assets/share.png';
 import productData from '../../ProductList/ProductListItemData';
@@ -20,13 +20,28 @@ const Wishlist = () => {
     const updatedWishlist = wishlist.filter(item => item !== id);
     setWishlist(updatedWishlist);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
-  };
+  }; 
+
+  const [cardItem, setCardItem] = useState([]);
+  const addingItemToCart = (ItemId) => {
+    let updatedItems;
+    if (cardItem.includes(ItemId)) {
+        updatedItems = cardItem.filter(id => id !== ItemId);
+    } else {
+        updatedItems = [...cardItem, ItemId];
+    }
+    setCardItem(updatedItems);
+    localStorage.setItem("Item-Id", JSON.stringify(updatedItems));
+};
 
   return (
     <div className="mx-auto p-8">
       <h1 className="text-2xl font-bold mb-4 flex items-center gap-2">Wishlist<FaHeart className='text-pink-400'/></h1>
       <div className="">
-        {wishListItem.map((item) => (
+        {wishListItem.map((item) => {
+          const isInCart = (cardItem).includes(item.id);
+          console.log(isInCart)
+          return (
           <div key={item.id} className="border-2 border-pink-300 mb-4 flex">
             <div className=" p-3 border-r-2 border-pink-300 w-64 ">
               <img
@@ -55,7 +70,7 @@ const Wishlist = () => {
               </div>
               <div className="font-semibold text-[0.8rem] sm:text-sm md:text-base lg:text-lg my-3 ">MRP: ₹ {item.price}</div>
               <div className="flex  sm:gap-4 gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
-                <button className="bg-pink-400 font-bold  text-white  rounded-2xl text-[0.7rem]  px-6 py-1  lg:text-base">Add To Cart</button>
+                <button className="bg-pink-400 font-bold  text-white  rounded-2xl text-[0.7rem]  px-6 py-1  lg:text-base" onClick={() => addingItemToCart(item.id)}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
                 <button><img src={Share}  className='md:h-6 h-5' /> </button>
               </div>
             </div>
@@ -67,7 +82,7 @@ const Wishlist = () => {
                 </div>
             </div>
           </div>
-        ))}
+        )}) || <div> No Data ! </div>}
       </div>
     </div>
   );
