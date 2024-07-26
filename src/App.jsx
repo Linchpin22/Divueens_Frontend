@@ -25,8 +25,8 @@ import ProfilePage from "./components/profilePage/ProfilePage";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
+import MaintennacePage from "./pages/MaintennacePage";
 import ContactUs from "./pages/ContactUs";
-
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -70,6 +70,7 @@ function App() {
         <Route path="/authenticity" element={<AuthenticityPage />} />
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
+        <Route path="/maintennace" element={<MaintennacePage />} />
       </Routes>
       <Footer />
     </>
