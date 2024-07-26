@@ -28,6 +28,7 @@ import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
 import MaintennacePage from "./pages/MaintennacePage";
 import ContactUs from "./pages/ContactUs";
+import WishList from './components/profilePage/Arpana/Wishlist'
 import ShippingDelivery from "./pages/ShippingDelivery";
 import Transaction from "./pages/Transaction";
 
@@ -48,8 +49,8 @@ function App() {
         {/* <Route path="/product-description" element={<ProductDetails />} /> */}
         <Route path="/product-description/:id" element={<ProductDetails />} />
 
-        {/* Login page
-        <Route path="/login" element={<Auth />} /> */}
+       
+        <Route path="/wishlist" element={<WishList />} />
 
 
         {/* Other Pages */}

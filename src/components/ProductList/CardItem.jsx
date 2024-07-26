@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 // import { Lipstick } from '../../../assets/assets'
 import productDetails from './ProductListItemData'
 import { FaHeart, FaRegHeart, FaStar } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-import AddCart from './AddCart';
+// import AddCart from './AddCart';
+import {CartContext} from '../../context/CartContext';
 
 
 const CardItem = ({ item }) => {
-
+    const {addCartItemNumber , subCartItemNumber} = useContext(CartContext)
     const [currentPage, setCurrentPage] = useState(1);
     const lastPage = Math.ceil(item.length / 12)
     const [likedCards, setLikedCards] = useState({});
@@ -17,12 +18,10 @@ const CardItem = ({ item }) => {
         const storedItems = JSON.parse(localStorage.getItem("Item-Id")) || [];
         setCardItem(storedItems);
 
-        // return () => {
-        //   setCardItem(storedItems)
-        // }
     }, []);
 
     const addingItemToCart = (ItemId) => {
+        // addCartItemNumber()
         let updatedItems;
         if (cardItem.includes(ItemId)) {
             updatedItems = cardItem.filter(id => id !== ItemId);
@@ -81,13 +80,16 @@ const CardItem = ({ item }) => {
                                 </div>
                                 <p className='ml-2 text-[0.8rem] sm:text-xs tracking-tighter'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
                             </div>
-                            <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:bottom-4 left-0 right-0 lg:px-4">
-                                <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-xl">₹{p.price} /-</span>
-                                <button
-                                    className={`${isInCart ? 'bg-black' : 'bg-rose-700'} text-white md:w-fit rounded-lg font-semibold text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-[0.8rem]`}
-                                    onClick={() => addingItemToCart(p.id)}>
-                                    {isInCart ? "Remove from Cart" : "Add to Cart"}
-                                </button>
+                            <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
+                                <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
+                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-base' onClick={() => {
+                                    if (isInCart) {
+                                        subCartItemNumber()
+                                    addingItemToCart(p.id)}
+                                    else{
+                                        addCartItemNumber()
+                                        addingItemToCart(p.id)
+                                    }}}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
                             </div>
                         </div>
 
