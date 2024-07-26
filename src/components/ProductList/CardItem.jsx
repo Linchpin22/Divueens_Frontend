@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 // import { Lipstick } from '../../../assets/assets'
 import productDetails from './ProductListItemData'
 import { FaHeart, FaRegHeart, FaStar } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-import AddCart from './AddCart';
+// import AddCart from './AddCart';
+import {CartContext} from '../../context/CartContext';
 
 
 const CardItem = ({ item }) => {
-
+    const {addCartItemNumber , subCartItemNumber} = useContext(CartContext)
     const [currentPage, setCurrentPage] = useState(1);
     const lastPage = Math.ceil(item.length / 12)
     const [likedCards, setLikedCards] = useState({});
@@ -17,12 +18,10 @@ const CardItem = ({ item }) => {
         const storedItems = JSON.parse(localStorage.getItem("Item-Id")) || [];
         setCardItem(storedItems);
 
-        // return () => {
-        //   setCardItem(storedItems)
-        // }
     }, []);
 
     const addingItemToCart = (ItemId) => {
+        // addCartItemNumber()
         let updatedItems;
         if (cardItem.includes(ItemId)) {
             updatedItems = cardItem.filter(id => id !== ItemId);
@@ -83,7 +82,14 @@ const CardItem = ({ item }) => {
                             </div>
                             <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
                                 <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
-                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-base' onClick={() => addingItemToCart(p.id)}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
+                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-base' onClick={() => {
+                                    if (isInCart) {
+                                        subCartItemNumber()
+                                    addingItemToCart(p.id)}
+                                    else{
+                                        addCartItemNumber()
+                                        addingItemToCart(p.id)
+                                    }}}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
                             </div>
                         </div>
 

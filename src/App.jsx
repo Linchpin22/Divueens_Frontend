@@ -26,6 +26,7 @@ import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
 import ContactUs from "./pages/ContactUs";
+import WishList from './components/profilePage/Arpana/Wishlist'
 
 function App() {
   const { pathname } = useLocation();
@@ -43,8 +44,8 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/product-description" element={<ProductDetails />} />
 
-        {/* Login page
-        <Route path="/login" element={<Auth />} /> */}
+       
+        <Route path="/wishlist" element={<WishList />} />
 
 
         {/* Other Pages */}
