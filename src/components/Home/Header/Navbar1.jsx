@@ -22,12 +22,12 @@ const Navbar1 = ({ navItemText }) => {
   const [isDrop, setIsDrop] = useState(false);
   const [displayOnScroll, setDisplayOnScroll] = useState("");
   const mainNavItems = [
-    "Categories",
-    "Top Brands",
+    {"title":"Categories", "url":"/products"},
+    {"title":"Top Brands", "url":"/"},
     // "Div Fashion",
-    "Beauty Advice",
-    "Tools & Accessories",
-    "Offers"
+    {"title":"Beauty Advice", "url":"/virtual-try-on"},
+    {"title":"Tools & Accessories", "url":"/virtual-try-on"},
+    {"title":"Offers", "url":"/special-offers"},
   ];
   const subNavItems = [
     "Face care",
@@ -107,10 +107,10 @@ const Navbar1 = ({ navItemText }) => {
               {mainNavItems.map((item, index) => (
                 <Link
                   key={index}
-                  to="/products"
+                  to={item.url}
                   className="text-nowrap hover:text-rose-800"
                 >
-                  {item}
+                  {item.title}
                 </Link>
               ))}
             </div>
