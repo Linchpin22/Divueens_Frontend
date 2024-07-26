@@ -63,7 +63,7 @@ const baadiList = [
         txt: "Cancellation and Return",
       },
       {
-        url: "/shipping-delivery",
+        url: "/shippingdelivery",
         txt: "Shipping and Delivery ",
       },
       {
