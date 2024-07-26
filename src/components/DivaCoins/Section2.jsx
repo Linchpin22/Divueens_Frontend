@@ -5,7 +5,7 @@ const Section2 = () => {
         <div className='w-full h-full flex flex-col items-center gap-5 py-10 mb-5 lg:px-12'>
 
             <div className='w-full h-full flex flex-col items-center gap-5 pb-12 xl:px-32'>
-                <h1 className='montserrat text-[1.2rem] md:text-[2rem] font-medium'>How to Use Diva Coins: </h1>
+                <h1 className='montserrat text-[1.2rem] md:text-[2rem] font-medium'>How to Use Diva Coins </h1>
 
                 <div className="container">
                     <div
