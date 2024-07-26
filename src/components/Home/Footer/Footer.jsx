@@ -63,7 +63,7 @@ const baadiList = [
         txt: "Cancellation and Return",
       },
       {
-        url: "/shipping-delivery",
+        url: "/shippingdelivery",
         txt: "Shipping and Delivery ",
       },
       {
@@ -90,6 +90,10 @@ const baadiList = [
       {
         url: "",
         txt: "Divueens Network",
+      },
+      {
+        url: "/virtual-try-on",
+        txt: "Virtual TryOn",
       },
     ],
   },

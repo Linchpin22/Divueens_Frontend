@@ -12,7 +12,7 @@ const CardItem = ({ item }) => {
     const lastPage = Math.ceil(item.length / 12)
     const [likedCards, setLikedCards] = useState({});
     const [cardItem, setCardItem] = useState([]);
-
+    const [wishlist, setWishlist] = useState([]);
     useEffect(() => {
         const storedItems = JSON.parse(localStorage.getItem("Item-Id")) || [];
         setCardItem(storedItems);
@@ -38,7 +38,15 @@ const CardItem = ({ item }) => {
     };
 
     const handleLike = (id) => {
-        setLikedCards((prevLikedCards) => ({ ...prevLikedCards, [id]: !prevLikedCards[id] }));
+        let updatedWishlist;
+        if (likedCards[id]) {
+          updatedWishlist = wishlist.filter(item => item !== id);
+        } else {
+          updatedWishlist = [...wishlist, id];
+        }
+        setWishlist(updatedWishlist);
+        setLikedCards((prev) => ({ ...prev, [id]: !prev[id] }));
+        localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
     };
 
     const renderImages = () => {
