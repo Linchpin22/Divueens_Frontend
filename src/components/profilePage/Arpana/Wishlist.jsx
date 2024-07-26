@@ -1,29 +1,36 @@
-import  { useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHeart} from 'react-icons/fa';
 import Trash from '../../../assets/trash.png';
 import Share from '../../../assets/share.png';
 import productData from '../../ProductList/ProductListItemData';
+import {CartContext} from '../../../context/CartContext';
+import Cart from '../../ProductList/AddToCart';
 
 const Wishlist = () => {
+  const {addCartItemNumber , subCartItemNumber} = useContext(CartContext)
   const [wishlist, setWishlist] = useState([]);
   const [wishListItem , setWishListItem] = useState(productData)
+  const [addCartItemList , setCartItemList] = useState([...new Set(JSON.parse(localStorage.getItem('wishlist')))] || [])
 
   useEffect(() => {
     const storedWishlist = [...new Set(JSON.parse(localStorage.getItem('wishlist')))] || [];
     setWishlist(storedWishlist);
     const tempData = wishListItem.filter(product => storedWishlist.includes(product.id));
-    setWishListItem(tempData)
+    if(wishListItem !== tempData)setWishListItem(tempData)
+    
   }, [wishListItem]);
 
   const handleRemoveFromWishlist = (id) => {
+    subCartItemNumber()
     const updatedWishlist = wishlist.filter(item => item !== id);
     setWishlist(updatedWishlist);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
   }; 
 
-  const [cardItem, setCardItem] = useState([]);
+  const [cardItem, setCardItem] = useState([...new Set(JSON.parse(localStorage.getItem('wishlist')))] || []);
   const addingItemToCart = (ItemId) => {
+    
     let updatedItems;
     if (cardItem.includes(ItemId)) {
         updatedItems = cardItem.filter(id => id !== ItemId);
@@ -70,7 +77,14 @@ const Wishlist = () => {
               </div>
               <div className="font-semibold text-[0.8rem] sm:text-sm md:text-base lg:text-lg my-3 ">MRP: ₹ {item.price}</div>
               <div className="flex  sm:gap-4 gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
-                <button className="bg-pink-400 font-bold  text-white  rounded-2xl text-[0.7rem]  px-6 py-1  lg:text-base" onClick={() => addingItemToCart(item.id)}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
+                <button className="bg-pink-400 font-bold  text-white  rounded-2xl text-[0.7rem]  px-6 py-1  lg:text-base" onClick={() => {
+                  if (isInCart) {
+                    subCartItemNumber()
+                    addingItemToCart(item.id)}
+                else{
+                    addCartItemNumber()
+                    addingItemToCart(item.id)
+                  }}}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
                 <button><img src={Share}  className='md:h-6 h-5' /> </button>
               </div>
             </div>

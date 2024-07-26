@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FaRegCircleQuestion } from 'react-icons/fa6';
+import MaintennacePage from '../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 import {Faqs} from './FAQ';
 const Data = [
   {
@@ -46,7 +48,7 @@ const VirtualTryOnPage = () => {
             the art technology allows you to try on a wide range of
             beauty products from the comfort of your home.</p>
           {/* TryOn Button */}
-          <button className="bg-rose-400 px-6 py-3 font-semibold text-center rounded-sm">TRY NOW</button>
+          <Link to={"/maintennace"} className="bg-rose-400 px-6 py-3 font-semibold text-center rounded-sm">TRY NOW</Link>
         </div>
         {/* Image Compare */}
         <div className="w-full lg:w-auto">
