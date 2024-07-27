@@ -63,16 +63,20 @@ const baadiList = [
         txt: "Cancellation and Return",
       },
       {
-        url: "/shipping-delivery",
+        url: "/shippingdelivery",
         txt: "Shipping and Delivery ",
+      },
+      {
+        url: "/privacy-policy",
+        txt: "Privacy Policy",
       },
       {
         url: "/sell-on-divueens",
         txt: "Sell on Divueens",
       },
       {
-        url: "/privacy-policy",
-        txt: "Privacy Policy",
+        url: "/store-locator",
+        txt: "Store Locator",
       },
     ],
   },
@@ -84,8 +88,12 @@ const baadiList = [
         txt: "Beauty Books",
       },
       {
-        url: "",
+        url: "/divueens-network",
         txt: "Divueens Network",
+      },
+      {
+        url: "/virtual-try-on",
+        txt: "Virtual TryOn",
       },
     ],
   },
@@ -105,8 +113,8 @@ const baadiList = [
         txt: "New Launches",
       },
       {
-        url: "",
-        txt: "Divueens Fashion",
+        url: "/membership",
+        txt: "Membership",
       },
     ],
   },

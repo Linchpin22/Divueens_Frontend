@@ -145,7 +145,7 @@ const AuthenticityPage = () => {
                 </div>
             </div>
             {/* Verification and Authentication */}
-            <div className="flex flex-col w-full my-20">
+            <div className="flex flex-col w-full my-15">
                 {/* Why Verify? */}
                 <div className="flex flex-col md:pl-20 gap-4 md:w-[90%]">
                     <p className='font-semibold md:text-2xl text-lg'>Why Verify ?</p>
@@ -167,21 +167,21 @@ const AuthenticityPage = () => {
                     <img src={howto} alt="" className='w-full md:w-1/2' />
                 </div>
                 {/* Verif. and Auth. */}
-                <div className="flex flex-col gap-8 my-10">
-                    {/* Heading */}
+                {/* <div className="flex flex-col gap-8 my-10">
+                    Heading
                     <div className='flex flex-row md:gap-5 gap-3 mx-auto items-center'>
                         <div className='font-semibold md:text-xl text-sm w-fit'>Verification and Authentication <hr className='border-black mt-2' /></div>
                     </div>
-                    {/* Instruction */}
+                    Instruction
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center flex-col md:flex-row gap-y-10">
-                        {/* Product Registration */}
+                        Product Registration
                         <div className="flex flex-col justify-center items-center md:w-1/2 gap-2 mx-auto">
                             <img src={product} alt="" className='w-1/5' />
                             <p className='text-center text-md font-semibold'>Product Registration</p>
                             <p className='text-center text-sm font-medium '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, iste?
                             </p>
                         </div>
-                        {/* Verification Tools */}
+                        Verification Tools
                         <div className='flex flex-row justify-evenly gap-20'>
                             <div className="flex flex-col justify-center items-center md:w-1/2 gap-2">
                                 <img src={tools} alt="" className='w-1/5' />
@@ -189,11 +189,11 @@ const AuthenticityPage = () => {
                                 <p className='text-center text-sm font-medium'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, iste?
                                 </p>
                             </div>
-                            {/* Lets try*/}
+                            Lets try
                             <div className='font-semibold inline-flex items-center md:gap-2 text-md md:w-1/4'>Let's Check <img src={arrow} alt="" className='md:w-1/5 w-1/2' /></div>
                         </div>
                     </div>
-                </div>
+                    </div> */}
             </div>
             {/* Company History Section */}
             <div className="flex flex-col items-center w-full gap-10 my-10">

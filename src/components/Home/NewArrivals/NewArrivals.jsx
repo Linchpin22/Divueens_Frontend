@@ -3,13 +3,12 @@ import { Pic57 } from '../../../assets/assets'
 import "swiper/css";
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination, Scrollbar } from "swiper/modules";
+import { Pagination, Scrollbar } from "swiper/modules";
 
 const NewArrivals = () => {
     return (
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
-
                 <hr className="bg-gradient-to-l from-rose-700" />
                 <h2 className="text-nowrap">New Arrivals</h2>
                 <hr className="bg-gradient-to-r from-rose-700" />
@@ -27,7 +26,6 @@ const NewArrivals = () => {
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={20}
-                        mousewheel={true}
                         scrollbar={{
                             hide: true,
                         }}
@@ -36,7 +34,7 @@ const NewArrivals = () => {
                             768: { slidesPerView: 3, spaceBetween: 20 },
                             1440: { slidesPerView: 4, spaceBetween: 20 },
                         }}
-                        modules={[Mousewheel, Pagination, Scrollbar]}
+                        modules={[Pagination, Scrollbar]}
                         className="mySwiper w-full h-full py-4 lg:px-4">
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
                             <img src={Pic57} alt="" className="w-full h-full object-cover transition group-hover:scale-110 duration-75" />
