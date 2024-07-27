@@ -9,6 +9,7 @@ import MyProfilePage from './GauravAndMahak/MyProfilePage';
 // import AddressCard from './GauravAndMahak/AddressPage';
 import Wishlist from './Arpana/Wishlist';
 import MyOrder from './Jatin/myOrder';
+import LogoutPage from './GauravAndMahak/LogOut';
 
 function ProfilePage() {
     const [isTabActive, setIsTabActive] = useState('');
@@ -26,7 +27,7 @@ function ProfilePage() {
             case 'myorders':
                 return <MyOrder />;
             case 'logout':
-                return <><div className='flex justify-center items-center '><button className='py-3 px-5 text-rose-600 bg-transparent border-[2px] border-rose-600 rounded-lg hover:bg-rose-600 hover:text-white'>Log Out !</button></div></>;
+                return <LogoutPage />;
             default:
                 return <MyProfilePage />;
         }

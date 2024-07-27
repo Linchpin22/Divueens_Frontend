@@ -1,11 +1,13 @@
-import { useState , useEffect} from "react";
+import { useState , useEffect, useContext} from "react";
 import { RiDeleteBin6Line, RiDiscountPercentLine} from "react-icons/ri";
 import { FaStar , FaChevronRight } from "react-icons/fa6";
 // import { product1, product2 } from '../../assets/assets'
 import allItemData from './ProductListItemData';
 import CartItem from './cardItem2'
+import {CartContext} from '../../context/CartContext';
 
 function Cart() {
+  const {subCartItemNumber} = useContext(CartContext)
   const [arrayOfCartItemId, setArrayOfCartItemId] = useState(JSON.parse(localStorage.getItem("Item-Id")) || []);
     const [cartItemData , setCartItemData] = useState([]);
   const [itemData , setItemData] = useState(allItemData)
@@ -20,6 +22,7 @@ function Cart() {
     },[arrayOfCartItemId,itemData]);
 
     const toRemoveItemFromCart =  (itemId) => {
+      subCartItemNumber()
          setArrayOfCartItemId((prevArray) => {
             const updatedCartArray = prevArray.filter((val) => val !== itemId);
             localStorage.setItem("Item-Id", JSON.stringify(updatedCartArray));
