@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { MdFilterList } from 'react-icons/md';
 import Filter from '../components/ProductList/Filter'
 import CardItem from '../components/ProductList/CardItem'
 import productDetails from '../components/ProductList/ProductListItemData';
 
 const ProductList = () => {
+    const { category, subcategory } = useParams()
+    console.log(subcategory,': subcategory to be used later')
 
+    console.log(category, subcategory , 'subcategory Product List')
     const [openDropdown, setOpenDropdown] = useState(null);
     const handleDropdownClick = (dropdownId) => {
         if (openDropdown === dropdownId) {
@@ -144,9 +147,17 @@ const ProductList = () => {
                             <IoIosArrowForward size={15} />
                             <li className='inline-flex items-center'>
                                 <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.8rem] font-medium'>
-                                    Skin care
+                                    {/* Skin care */} { category }
                                 </Link>
                             </li>
+                            
+                            <IoIosArrowForward size={15} />
+                            <li className='inline-flex items-center'>
+                                <Link to={'/products'} className='inline-flex items-center tracking-tighter text-[0.8rem] font-medium'>
+                                    {/* Skin care */} { subcategory }
+                                </Link>
+                            </li>
+
                             <div className='flex items-center gap-1 md:gap-2 lg:hidden'>
                                 <IoIosArrowForward size={15} />
                                 <span className="tracking-tighter text-[0.8rem] md:text-[0.9rem] font-medium">MakeUp</span>
