@@ -99,14 +99,14 @@ const Navbar1 = ({ navItemText }) => {
                     <FiHeart size={20} />
                   </button>
                 </NavLink>
-                <NavLink to='/profile'>
+                {/* <NavLink to='/profile'> */}
                   <button
                     className="hover:text-rose-800"
                     onClick={() => setDisplayAuth(true)}
                   >
                     <FiUser size={20} />
                   </button>
-                </NavLink>
+                {/* </NavLink> */}
               </div>
 
               <div className="pr-6 lg:hidden">
