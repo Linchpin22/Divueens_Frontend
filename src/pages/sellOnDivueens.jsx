@@ -6,9 +6,16 @@ import V1 from './../assets/SellOnDivueens/v1.png';
 import V2 from './../assets/SellOnDivueens/v2.png';
 import V3 from './../assets/SellOnDivueens/v3.png';
 import V4 from './../assets/SellOnDivueens/v4.png';
+import Swal from 'sweetalert2';
 
 const Sell = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [Data, setData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: ''
+  });
 
   const toggleIndex = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -21,29 +28,62 @@ const Sell = () => {
     },
     {
       question: 'What kind of products can I sell on Divueens?',
-      answer: 'Ans'
+      answer: 'You can sell a wide range of beauty products including skincare, haircare, cosmetics, and more.'
     },
     {
       question: 'Are there any fees to sell on Divueens?',
-      answer: 'Ans'
+      answer: 'There are no listing fees, but we do charge a small commission on each sale.'
     },
     {
       question: 'How do I list my products?',
-      answer: 'Ans'
+      answer: 'You can list your products through your seller dashboard by providing product details and images.'
     },
     {
       question: 'How do I get paid?',
-      answer: 'Ans'
+      answer: 'Payments are processed through our secure payment gateway and transferred to your bank account.'
     },
     {
       question: 'Can I track my sales performance?',
-      answer:'Ans'
+      answer: 'Yes, you can track your sales performance through the analytics section in your seller dashboard.'
     },
   ];
 
+  const InputChange = (e) => {
+    const { id, value } = e.target;
+    setData({
+      ...Data,
+      [id]: value
+    });
+  };
+
+  const Phone = (e) => {
+    const value = e.target.value;
+    const onlyNumbersAndSpaces = /^[\d\s+]*$/;
+    if (onlyNumbersAndSpaces.test(value)) {
+      setData({
+        ...Data,
+        phone: value
+      });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, phone, company } = Data;
+    if (name && email && phone && company) {
+      Swal.fire("Thank You For Subscribing");
+      setData({
+        name: '',
+        email: '',
+        phone: '',
+        company: ''
+      });
+    }
+  };
+
   return (
     <div>
-      <div className='flex justify-center items-center m-10 max-lg:mx-5 max-md:mx-2'>
+      <div className='flex flex-col-reverse min-[600px]:flex-row justify-center items-center m-10 max-lg:mx-5 max-md:mx-2'>
         <div className='bg-rose-100 rounded-xl p-8 max-md:p-4 mx-[5%]'>
           <p className='text-[50px] max-lg:text-3xl font-bold'>Become a</p>
           <p className='text-[50px] max-lg:text-3xl font-bold'>Divueens Seller</p>
@@ -51,11 +91,11 @@ const Sell = () => {
             Expand your reach and grow your beauty business with our innovative
             ecommerce platform.
           </p>
-          <button className='text-[24px] max-lg:text-lg font-semibold bg-rose-400 py-3 px-8 rounded-xl'>Register Now</button>
+          <button className='text-[24px] max-lg:text-lg font-semibold bg-rose-400 py-3 px-8 rounded-xl max-[250px]:px-2'>Register Now</button>
         </div>
 
-        <div>
-          <img src={P1} className='w-[90%] rounded-xl max-lg:w-full'/>
+        <div className='mb-4 lg:mb-0 max-w-[90%]'>
+          <img src={P1} className='w-[90%] rounded-xl max-lg:w-full max-[600px]:w-[500px] max-[600px]:h-[200px]'/>
         </div>
       </div>
       <div>
@@ -79,7 +119,7 @@ const Sell = () => {
           </div>
         </div>
       </div>
-      <div style={{backgroundImage: `url(${P1})`}} className='bg-no-repeat bg-cover w-[80%] m-auto py-8 px-12 mt-20'>
+      <div style={{backgroundImage: `url(${P1})`}} className='bg-no-repeat bg-cover w-[80%] m-auto py-8 px-12 max-sm:px-4 mt-20'>
         <p className='text-2xl font-semibold text-white'>
           As a seller on Divueens, you'll gain access to a vibrant community of beauty
           enthusiasts and benefit from our robust marketing and sales infrastructure.
@@ -95,12 +135,15 @@ const Sell = () => {
               </p>
             </div>
             <div className="flex justify-center items-center">
-              <form className="bg-rose-200 p-6 rounded-lg shadow-md w-full max-w-sm">
+              <form className="bg-rose-200 p-6 rounded-lg shadow-md w-full max-w-sm" onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="block text-black mb-2" htmlFor="name">Name</label>
                   <input
                     type="text"
                     id="name"
+                    value={Data.name}
+                    onChange={InputChange}
+                    required
                     placeholder="Your Name"
                     className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
                   />
@@ -110,24 +153,40 @@ const Sell = () => {
                   <input
                     type="email"
                     id="email"
+                    value={Data.email}
+                    onChange={InputChange}
+                    required
                     placeholder="Your Email"
                     className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
                   />
                 </div>
                 <div className="mb-4">
                   <label className="block text-black mb-2" htmlFor="phone">Phone</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    placeholder="Your Phone"
-                    className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
-                  />
+                  <div className='flex'>
+                    <input
+                      type="text"
+                      id="phone"
+                      value={Data.phone}
+                      onChange={Phone}
+                      required
+                      placeholder="Your Number"
+                      className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+                      onKeyDown={(e) => {
+                        if (!/[0-9\s+]/.test(e.key) && e.key !== 'Backspace') {
+                          e.preventDefault();
+                        }
+                      }}
+                    />
+                  </div>
                 </div>
                 <div className="mb-4">
                   <label className="block text-black mb-2" htmlFor="company">Company</label>
                   <input
                     type="text"
                     id="company"
+                    value={Data.company}
+                    onChange={InputChange}
+                    required
                     placeholder="Company Name"
                     className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
                   />
@@ -145,16 +204,17 @@ const Sell = () => {
           </div>
         </div>
       </div>
+      {/* FAQ */}
       <div>
         <p className='text-[50px] text-center max-lg:text-3xl font-bold my-20'>Frequently Asked Questions</p>
-        <div className="w-[65%] mx-auto my-10 px-4 sm:px-6 lg:px-8">
+        <div className="w-[65%] max-sm:w-[80%] mx-auto my-10 px-4 sm:px-6 lg:px-8">
           {faqData.map((item, index) => (
             <div key={index} className="mb-4">
               <button
                 onClick={() => toggleIndex(index)}
                 className="w-full text-left p-4 bg-red-100 text-black focus:outline-none flex justify-between items-center"
               >
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">{item.question}</span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold pr-2">{item.question}</span>
                 <span>{openIndex === index ? (<FaAngleUp className="h-8"/>) : (<FaAngleDown className='h-8'/>)}</span>
               </button>
               {openIndex === index && (
@@ -171,3 +231,4 @@ const Sell = () => {
 };
 
 export default Sell;
+
