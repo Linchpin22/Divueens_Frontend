@@ -20,6 +20,9 @@ const OrderDetails = () => {
   }, [id])
 
   console.log(productDetail);
+
+  // Added products info 
+  
   const navigate = useNavigate();
   const [cart, setCart] = useState([
     { id: 1, name: 'Prime Red Luck Lipstick', quantity: 1 },
