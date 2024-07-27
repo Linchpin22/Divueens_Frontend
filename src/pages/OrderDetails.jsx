@@ -1,19 +1,32 @@
 // OrderDetails.js
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import productData from '../components/OrderingGateway/productData'; // Import product data
 import DiscountCode from '../components/OrderingGateway/DiscountCode'; // Import DiscountCode component
 import FormComponent from '../components/OrderingGateway/FormComponent';
 import Slider from '../components/OrderingGateway/Slider'; // Import Slider component
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 // import PaymentOptions from '../components/OrderingGateway/PaymentOptions' 
-import FormAddress from '../components/profilePage/GauravAndMahak/AddressPage' 
+import FormAddress from '../components/profilePage/GauravAndMahak/AddressPage'
+import productDetails from '../components/ProductList/ProductListItemData';
 
 const OrderDetails = () => {
+  const { id } = useParams();
+  const products = productDetails
+  const [productDetail, setProductDetail] = useState({})
+  useEffect(() => {
+    const filterData = products.filter(p => p.id == id)
+    setProductDetail(filterData[0])
+  }, [id])
+
+  console.log(productDetail);
+
+  // Added products info 
+  
   const navigate = useNavigate();
   const [cart, setCart] = useState([
     { id: 1, name: 'Prime Red Luck Lipstick', quantity: 1 },
-    { id: 2, name: 'Royal Eyeshadow Palette', quantity: 1 }
+    // { id: 2, name: 'Royal Eyeshadow Palette', quantity: 1 }
   ]);
 
   const handleCheckout = () => {
@@ -33,7 +46,7 @@ const OrderDetails = () => {
   };
 
   const handleDiscountCode = () => {
-    const foundDiscount = discountCodes.find(dc => dc.code === discountCode);
+    const foundDiscount = discountCode.find(dc => dc.code === discountCode);
     if (foundDiscount) {
       setDiscount(foundDiscount.value);
     } else {
@@ -60,10 +73,10 @@ const OrderDetails = () => {
 
       <div className="p-4 flex flex-col lg:flex-row min-h-screen">
         <div className="w-full lg:w-3/5 p-4">
-        <h2 className="text-xl font-bold mb-5 ">General Information</h2>
+          <h2 className="text-xl font-bold mb-5 ">General Information</h2>
           {/* <FormComponent/> */}
           <FormAddress />
-          
+
         </div>
         <div className="w-full lg:w-2/5 p-4 flex flex-col justify-between">
           <div>
@@ -76,13 +89,14 @@ const OrderDetails = () => {
             </div>
             <div className="bg-white shadow-2xl p-4 rounded-lg w-full">
               {cart.map((item) => {
-                const product = productData.find((p) => p.name === item.name);
+                // const product = productData.find((p) => p.name === item.name);
+                const product = productDetail;
                 return (
                   <div key={item.id} className="flex items-center justify-between border-b border-b-slate-800 py-2">
-                    <img src={product.photo} alt={product.name} className="w-20 h-20 object-cover" />
+                    <img src={product.image} alt={product.name} className="w-20 h-20 object-cover" />
                     <div className="flex-1 ml-4">
                       <h3 className="font-bold">{product.name}</h3>
-                      <p>Qty: 
+                      <p>Qty:
                         <button onClick={() => handleQuantityChange(item.id, -1)} className="px-2">-</button>
                         {item.quantity}
                         <button onClick={() => handleQuantityChange(item.id, 1)} className="px-2">+</button>
@@ -101,7 +115,8 @@ const OrderDetails = () => {
                 <p>Delivery: Free</p>
                 <p>Discount: ${discountAmount.toFixed(2)}</p>
                 <p>Convenience fee: ${convenienceFee}</p>
-                <p>Total: ${total.toFixed(2)} (Including tax)</p>
+                {/* <p>Total: ${total.toFixed(2)} (Including tax)</p> */}
+                <p>Total: ${productDetail.price}</p>
               </div>
             </div>
           </div>

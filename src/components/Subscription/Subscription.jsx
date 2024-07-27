@@ -1,4 +1,4 @@
-
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
@@ -7,7 +7,15 @@ const Subscription = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        Swal.fire("Thank You For Subscribing");
+        if (!email || !email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+            Swal.fire({
+                icon:"error",
+                text:"Please enter a valid email address"});
+        } else {
+            Swal.fire({
+                icon:"success",
+                text:"Thank You For Subscribing"});
+        }
     };
 
     return (
@@ -32,4 +40,4 @@ const Subscription = () => {
     );
 };
 
-export default Subscription
+export default Subscription;

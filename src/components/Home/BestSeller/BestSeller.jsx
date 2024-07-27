@@ -79,7 +79,7 @@ const BestSeller = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className='bg-white rounded-lg shadow-xl h-[17rem] md:h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease]'
             >
-              <div className="h-[70%] overflow-hidden">
+              <Link to = {`/product/${data.Name}`} className="h-[70%] block overflow-hidden">
                 <img
                   onMouseEnter={() => setHoveredImageIndex(index)}
                   onMouseLeave={() => setHoveredImageIndex(null)}
@@ -92,7 +92,7 @@ const BestSeller = () => {
                   alt={`product ${index}`}
                   className="w-full h-full object-cover"
                 />
-              </div>
+              </Link>
               {/* hover icons */}
               <div
                 className='absolute left-[90%] top-12 -translate-x-[50%] -translate-y-[50%] flex flex-col z-10 transition-[0.9s] gap-3'

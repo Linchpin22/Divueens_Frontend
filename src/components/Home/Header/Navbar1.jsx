@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef  , useContext} from "react";
 import {
   FiMenu,
   FiSearch,
@@ -15,8 +15,10 @@ import { FaBars } from "react-icons/fa6";
 import { Divueens } from "../../../assets/assets";
 import navItemData from "./NavDropDownItems";
 import SearchBoxMob from "./SearchBoxMob";
+import {CartContext} from '../../../context/CartContext';
 
 const Navbar1 = ({ navItemText }) => {
+  const {numCartItem} = useContext(CartContext)
   const [openDropdown, setOpenDropdown] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
@@ -82,21 +84,29 @@ const Navbar1 = ({ navItemText }) => {
               <div className="hidden lg:w-[70%] lg:block">
                 <SearchBox />
               </div>
+              
               <div className="hidden lg:flex space-x-6 text-slate-500">
-                <button className="md:pl-7 hover:text-rose-800">
-                <NavLink to="/addtocart"> <FiShoppingCart size={20} /> </NavLink>
+                <button className="relative md:pl-7 hover:text-rose-800 px-4">
+                  <NavLink to="/addtocart"> <FiShoppingCart size={30} /> </NavLink>
+                  {numCartItem > 0 && (
+                    <div className="absolute rounded-full top-0 right-0 w-[20px] h-[20px] bg-rose-600 text-white flex items-center justify-center text-xs">
+                      {numCartItem}
+                    </div>
+                  )}
                 </button>
-                <button className=" md:hover:text-rose-800">
-                  <FiHeart size={20} />
-                </button>
-                <NavLink to='/profile'>
-                <button
-                  className=" hover:text-rose-800"
-                  onClick={() => setDisplayAuth(true)}
-                >
-                  <FiUser size={20} />
-                </button>
+                <NavLink to='/wishlist'>
+                  <button className="md:hover:text-rose-800">
+                    <FiHeart size={20} />
+                  </button>
                 </NavLink>
+                {/* <NavLink to='/profile'> */}
+                  <button
+                    className="hover:text-rose-800"
+                    onClick={() => setDisplayAuth(true)}
+                  >
+                    <FiUser size={20} />
+                  </button>
+                {/* </NavLink> */}
               </div>
 
               <div className="pr-6 lg:hidden">
@@ -144,11 +154,11 @@ const Navbar1 = ({ navItemText }) => {
                     >Home</Link>
                     {mainNavItems.map((item, index) => (
                       <NavLink
-                        to="/products"
+                        to={item.url}
                         key={index}
                         className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
                       >
-                        {item}
+                        {item.title}
                       </NavLink>
                     ))}
                     {/* -------------------------- Remove line below after this ------------------------------- */}
@@ -263,7 +273,8 @@ const Navbar1 = ({ navItemText }) => {
                                   <h3 className="text-black font-semibold text-sm leading-tight py-2 tracking-tight">{subcategoryLabel}</h3>
                                   <ul>
                                     {subcategoryItems.map((item) => (
-                                      <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
+                                      // <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
+                                      <Link to={`${category}/${item}`} className="text-slate-500 block text-[0.8rem] hover:text-rose-800" key={item}>{item}</Link>
                                     ))}
                                   </ul>
                                 </div>
