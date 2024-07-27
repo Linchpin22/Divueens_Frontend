@@ -177,7 +177,7 @@ footer[data-footer-part] {
   font-family: "Josefin Sans";
   /* background: linear-gradient(to bottom, #ffe4e6, #9f1239); */
   /* background: #ffe4e6; */
-  background: rgb(220, 217, 217);
+  background: #c43f58;
   /*   background:radial-gradient(#f1f1f1, #a4a4a4) */
 }
 
@@ -359,4 +359,19 @@ footer[data-footer-part] {
 
 .our_team .tint:hover + .bg-zoom-out {
   transform: 0.9;
+}
+
+/* -------------------------------------------- Careers Page Style ------------------------------------------------------- */
+
+@media (min-width:1024px) {
+  .coreItem:nth-child(4){
+    grid-column: 1/3;
+    margin-left: 25%;
+    width: 50%;
+  }
+  .coreItem:nth-child(5){
+    grid-column: 3/4;
+    margin-left: -55%;
+    width: 90%;
+  }
 }
