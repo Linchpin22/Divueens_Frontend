@@ -177,7 +177,7 @@ footer[data-footer-part] {
   font-family: "Josefin Sans";
   /* background: linear-gradient(to bottom, #ffe4e6, #9f1239); */
   /* background: #ffe4e6; */
-  background: #c43f58;
+  background: rgb(220, 217, 217)
   /*   background:radial-gradient(#f1f1f1, #a4a4a4) */
 }
 
