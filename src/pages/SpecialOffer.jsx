@@ -1,6 +1,8 @@
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MaintennacePage from '../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 import img1 from './../assets/SpecialOffers/img1.png'
 import img2 from './../assets/SpecialOffers/img2.png'
 import img3 from './../assets/SpecialOffers/img3.png'
@@ -114,9 +116,14 @@ export default function Offer(){
       </div>
 
 
-      <button className="w-[5rem] h-[2rem] ml-[38%] md:w-[5rem] md:h-[2rem] md:text-[1rem] md:ml-[18rem] lg:w-[6.5rem] lg:h-[2.4rem] lg:text-[1.4rem] lg:ml-[24rem] xl:w-[7rem] xl:h-[2.5rem] xl:text-[1.5rem] xl:ml-[30rem] xxl:w-[7rem] xxl:h-[2.5rem] xxl:text-[1.5rem] xxl:ml-[50rem] bg-rose-600 text-[1rem] text-white rounded-lg">Explore</button>
+      
     
-  
+      <div className="title font-bold mt-[15px] text-sm text-center xl:mt-12 lg:relative xl:w-21 md:w-[100px] md:h-[17px] xxl:relative xxl:left-[180%] xl:h-15 lg:left-[180%] lg:mb-4 lg:h-[25px] xl:mb-[30px] lg:w-[150px]  sm:mb-1 sm:relative sm:mt-[5px] xl:relative xl:left-[180%] md:relative md:left-[180%] sm:left-[180%] sm:h-[17px]  sm:w-[100px] ml-[6%]">
+      <Link to={"/maintennace"}
+      className="bg-rose-600 text-white text-sm py-2  xl:text-xl  md:mb-5 md:text-sm px-3 sm:hover:py-2 sm:py-2 sm:px-3 sm:text-xs hover:bg-white hover:text-rose-600 hover:border-[2px] hover:border-rose-600 rounded-lg hover:py-[15px]"    >
+      Explore
+    </Link>
+    </div>
     </div>
 
 
@@ -164,9 +171,12 @@ export default function Offer(){
       </div>
 
 
-      <button className="w-[5rem] h-[2rem] text-[1rem] ml-[38%] sm:w-[5rem] sm:h-[2rem] sm:text-[1rem] sm:ml-[14rem] md:w-[5rem] md:h-[2rem] md:text-[1rem] md:ml-[18rem] lg:w-[6.5rem] lg:h-[2.4rem] lg:text-[1.4rem] lg:ml-[24rem] xl:w-[7rem] xl:h-[2.5rem] xl:text-[1.5rem] xl:ml-[30rem] xxl:w-[7rem] xxl:h-[2.5rem] xxl:text-[1.5rem] xxl:ml-[40rem] bg-rose-600  text-white rounded-lg">Explore</button>
-
-
+    <div className="title font-bold mt-[15px] text-sm text-center xl:mt-12 lg:relative xl:w-21 md:w-[100px] md:h-[17px] xxl:relative xxl:left-[180%] xl:h-15 lg:left-[180%] lg:mb-4 lg:h-[25px] lg:w-[150px]  sm:mb-1 sm:relative sm:mt-[5px] xl:relative xl:left-[180%] md:relative md:left-[180%] sm:left-[180%] sm:h-[17px]  sm:w-[100px] ml-[6%]">
+    <Link to={"/maintennace"}
+      className="bg-rose-600 text-white text-sm py-2  xl:text-xl  md:mb-5 md:text-sm px-3 sm:hover:py-2 sm:py-2 sm:px-3 sm:text-xs hover:bg-white hover:text-rose-600 hover:border-[2px] hover:border-rose-600 rounded-lg hover:py-[15px]"    >
+      Explore
+    </Link>
+    </div>
    </div>
    
 

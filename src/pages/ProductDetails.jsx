@@ -4,9 +4,13 @@ import StarRating from '../components/ProductDescription/StarRating';
 import SizeSelector from '../components/ProductDescription/SizeSelector';
 import QuantitySelector from '../components/ProductDescription/QuantitySelector';
 import RelatedProducts from '../components/ProductDescription/RelatedProducts';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
+ 
+  const { subcategory } =  useParams()
+  console.log(subcategory,': subcategory to be used later')
+
   const [selectedSize, setSelectedSize] = useState('106 cm (42)');
   const [quantity, setQuantity] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState(productData[0]);
