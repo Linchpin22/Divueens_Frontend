@@ -263,7 +263,8 @@ const Navbar1 = ({ navItemText }) => {
                                   <h3 className="text-black font-semibold text-sm leading-tight py-2 tracking-tight">{subcategoryLabel}</h3>
                                   <ul>
                                     {subcategoryItems.map((item) => (
-                                      <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
+                                      // <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
+                                      <Link to={`${category}/${item}`} className="text-slate-500 block text-[0.8rem] hover:text-rose-800" key={item}>{item}</Link>
                                     ))}
                                   </ul>
                                 </div>

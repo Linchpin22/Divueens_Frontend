@@ -73,6 +73,12 @@ function App() {
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/transaction" element={<Transaction />} />
+        
+{/* change */}
+        <Route path="/:category/:subcategory" element={<ProductList />} />
+        <Route path="/product/:productName" element={<ProductDetails />} />
+{/* change */}
+
       </Routes>
       <Footer />
     </>
