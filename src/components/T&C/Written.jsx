@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const Written = () => {
   return (
     <div className="bg-white md:py-8 md:px-32 px-8">
@@ -7,7 +9,8 @@ const Written = () => {
         <h1 className="font-bold text-center text-[1rem] md:text-[1.2rem] lg:text-[1.4rem]">TERMS & CONDITIONS</h1>
 
         <section className="px-4 md:px-10 lg:px-16 xl:px-24">
-          <h2 className="font-semibold my-5 text-[0.9rem] md:text-[1.1rem] xl:text-[1.2rem]">Introduction</h2>
+          <h2 className="font-semibold my-5 text-[0.9rem] md:text-[1.1rem] xl:text-[1.2rem]
+          ">Introduction</h2>
           <p className="text-slate-700 flex flex-col gap-2 px-2 text-[0.7rem] md:text-[0.8rem] lg:px-8 xl:px-10 xl:text-[0.9rem]">
             <span>
               Welcome to Diuveens, your trusted destination for premium cosmetics and skincare products. We are dedicated to providing you with high-quality beauty solutions that enhance your natural glow. These Terms and Conditions outline the rules and regulations for the use of our website and the purchase of our products.
@@ -177,7 +180,7 @@ const Written = () => {
                 content.
               </li>
               <li className="text-slate-700 text-[0.7rem] md:text-[0.8rem] xl:text-[0.9rem]">
-                pou agree not to submit any content that is unlawful, defamatory, obscene,
+                You agree not to submit any content that is unlawful, defamatory, obscene,
                 threatening, infringing on intellectual property rights, or otherwise objectionable.
               </li>
             </ul>

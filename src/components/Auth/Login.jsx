@@ -1,73 +1,108 @@
-import React, { useEffect, useState } from 'react'
-import { FcGoogle } from 'react-icons/fc'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { FcGoogle } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const Login = ({ move, setMove }) => {
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [error, setError] = useState('');
 
-  const [forgotPass, setForgotPass] = useState(false);
-  const [generateOTP, setGenerateOTP] = useState(false);
-  const [otpText, setOtpText] = useState(false);
-  const [otpV, setOtpV] = useState('');
-  const [count, setCount] = useState(60);
-  const [resendOTP, setResendOTP] = useState(false);
+  const handleOTP = (event) => {
+    event.preventDefault();
 
-  const togglePass = () => {
-    setForgotPass(!forgotPass);
-  };
+    const phoneRegex = /^\d{10}$/; 
 
-  useEffect(() => {
-    let timer;
-    if (generateOTP) {
-      timer = setInterval(() => {
-        setCount(count - 1);
-        if (count === 0) {
-          clearInterval(timer);
-          setResendOTP(true);
-        }
-      }, 1000);
+    if (!phoneRegex.test(phoneNumber)) {
+      setError('Please enter a valid 10-digit phone number.');
+      return;
     }
-    return () => {
-      if (timer) {
-        clearInterval(timer);
-      }
-    };
-  }, [generateOTP, count]);
 
-  const otpGenerate = () => {
-    setGenerateOTP(true);
-    const otp = Math.floor(1000 + Math.random() * 9000);
-    console.log(otp);
-    setTimeout(() => {
-      setOtpV(otp.toString());
-    }, 5000)
-    setOtpText(true);
-    setCount(60);
-    setResendOTP(false);
+    setError('');
+    setMove(false); 
   };
 
   return (
     <>
       <form
+        onSubmit={handleOTP}
         action="/"
-        className={`w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)] ${move ? 'ml-0' : 'ml-[-50%]'}`}>
-          <h1 className='font-semibold text-[25px] text-center  mt-[10px]'>Login With Mobile</h1>
-          <div
-          className="h-[50px] w-full mt-[50px]">
+        className={`w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)] ${move ? 'ml-0' : 'ml-[-50%]'}`}
+      >
+        <h2 className='font-semibold text-[25px] text-center mt-[30px]'>Login With Mobile</h2>
+        <div className="h-[50px] w-full mt-8 md:mt-[50px] ">
           <input
+            type="text"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
             className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-            inputmode="text"
-            placeholder="Name"
-            required />
-        </div>
-        <div
-          className="h-[50px] w-full mt-[30px] ">
-          <input
-            className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-            inputmode="numeric"
+            inputMode="numeric"
             placeholder="Phone Number"
-            required />
+            required
+          />
         </div>
-        {/* <div
+        {error && <p className="text-red-500 text-center md:mt-2">{error}</p>}
+        <div className='border mt-8 md:mt-[50px] px-4 py-2 text-white bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
+          <button type="submit">
+            <span>Send OTP</span>
+          </button>
+        </div>
+        <div className="mt-2 text-center">
+          <a
+            href="#"
+            className="text-gray-700 "
+            onClick={() => setMove(true)}
+          >
+            Login via Email
+          </a>
+        </div>
+      </form>
+    </>
+  );
+}
+
+export default Login;
+
+
+  // const [forgotPass, setForgotPass] = useState(false);
+  // const [generateOTP, setGenerateOTP] = useState(false);
+  // const [otpText, setOtpText] = useState(false);
+  // const [otpV, setOtpV] = useState('');
+  // const [count, setCount] = useState(60);
+  // const [resendOTP, setResendOTP] = useState(false);
+
+  // const togglePass = () => {
+  //   setForgotPass(!forgotPass);
+  // };
+
+  // useEffect(() => {
+  //   let timer;
+  //   if (generateOTP) {
+  //     timer = setInterval(() => {
+  //       setCount(count - 1);
+  //       if (count === 0) {
+  //         clearInterval(timer);
+  //         setResendOTP(true);
+  //       }
+  //     }, 1000);
+  //   }
+  //   return () => {
+  //     if (timer) {
+  //       clearInterval(timer);
+  //     }
+  //   };
+  // }, [generateOTP, count]);
+
+  // const otpGenerate = () => {
+  //   setGenerateOTP(true);
+  //   const otp = Math.floor(1000 + Math.random() * 9000);
+  //   console.log(otp);
+  //   setTimeout(() => {
+  //     setOtpV(otp.toString());
+  //   }, 5000)
+  //   setOtpText(true);
+  //   setCount(60);
+  //   setResendOTP(false);
+  // };
+ {/* <div
           className="h-[50px] w-full mt-[20px]">
           {forgotPass ? (
             <input
@@ -105,14 +140,7 @@ const Login = ({ move, setMove }) => {
             </>
           )}
         </div> */}
-
-<div className='border mt-10 px-4 py-2 text-white bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
-            
-            <button onClick={() => setMove(false)}>
-                <span>Send OTP</span>
-            </button>
-        </div >
-
+        
         {/* <div className='border mt-24 px-4 py-2 text-white bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
           {forgotPass ? (
             <button onClick={<link to="/src/components/Auth/Signup.jsx"></link>}>
@@ -138,9 +166,3 @@ const Login = ({ move, setMove }) => {
             <FcGoogle className="w-6 h-6" /><span>Continue with Google</span>
           </button>
         </div> */}
-      </form >
-    </>
-  )
-}
-
-export default Login

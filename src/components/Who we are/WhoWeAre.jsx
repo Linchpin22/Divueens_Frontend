@@ -151,8 +151,8 @@ const WhoWeAre = () => {
         {/* Update */}
         <div className='bg-[#FECDD3] grid grid-cols-2 gap-x-32 max-md:block '>
             <div className='ml-[14%] my-[8%] max-md:ml-[10%]'>
-                <p className='text-lg font-semibold max-sm:text-base mb-4'>Don't miss an Update!!</p>
-                <p className='text-[25px] font-[400]'>Get the latest beauty trends, exclusive offers, and stories
+                <p className='text-2xl font-semibold max-sm:text-xl max-sm:pt-4 mb-4'>Don't miss an Update!!</p>
+                <p className='text-[20px] font-[400]'>Get the latest beauty trends, exclusive offers, and stories
                     straight to your inbox. Subscribe now and enjoy 20% off
                     your next purchase!
                 </p>

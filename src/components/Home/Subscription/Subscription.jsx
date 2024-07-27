@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "./Slider";
 import ReferSection from "./ReferSection";
 import ContactSection from "./ContactSection";
+import BlogCards from '../BlogCards/BlogCards'
 import "./Subscription.css";
 
 function Subscription() {
@@ -16,6 +17,7 @@ function Subscription() {
       <Slider />
     </div>
     <ReferSection />
+    <BlogCards />
     <ContactSection />
     </>
   );
