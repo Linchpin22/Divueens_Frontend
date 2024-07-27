@@ -79,7 +79,9 @@ const VirtualTryOnPage = () => {
           </div>
           <ul className="flex flex-col">
             {Data.map((item, index)=>(
-              <Faqs key={index} question={item.question} answer={item.answer} active={active === item.question}  onClick={handleActive} />
+              <Faqs key={index} question={item.question} answer={item.answer} 
+              // active={active === item.question}  
+              onClick={handleActive} />
             ))}
           </ul>
         </div>
