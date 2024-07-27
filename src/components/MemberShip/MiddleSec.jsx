@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { IoIosArrowDown } from 'react-icons/io';
 
+
 const MiddleSec = () => {
 
     const [swiper, setSwiper] = useState(null);
@@ -130,7 +131,7 @@ const MiddleSec = () => {
 
                                 <p className='font-medium py-2 text-lg md:text-xl'>{customer.name}</p>
 
-                                <div className='text-center text-sm flex flex-col items-center'>
+                                <div className='text-center text-sm flex flex-col items-center '>
                                     <p className=''>{customer.text}</p>
                                     <button className='border-b border-black cursor-pointer w-fit pt-2'>More</button>
                                 </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef  , useContext} from "react";
 import {
   FiMenu,
   FiSearch,
@@ -15,19 +15,21 @@ import { FaBars } from "react-icons/fa6";
 import { Divueens } from "../../../assets/assets";
 import navItemData from "./NavDropDownItems";
 import SearchBoxMob from "./SearchBoxMob";
+import {CartContext} from '../../../context/CartContext';
 
 const Navbar1 = ({ navItemText }) => {
+  const {numCartItem} = useContext(CartContext)
   const [openDropdown, setOpenDropdown] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
   const [displayOnScroll, setDisplayOnScroll] = useState("");
   const mainNavItems = [
-    "Categories",
-    "Top Brands",
+    {"title":"Categories", "url":"/products"},
+    {"title":"Top Brands", "url":"/"},
     // "Div Fashion",
-    "Beauty Advice",
-    "Tools & Accessories",
-    "Offers"
+    {"title":"Beauty Advice", "url":"/virtual-try-on"},
+    {"title":"Tools & Accessories", "url":"/virtual-try-on"},
+    {"title":"Offers", "url":"/special-offers"},
   ];
   const subNavItems = [
     "Face care",
@@ -83,18 +85,23 @@ const Navbar1 = ({ navItemText }) => {
                 <SearchBox />
               </div>
               <div className="hidden lg:flex space-x-6 text-slate-500">
-                <button className="md:pl-7 hover:text-rose-800">
-                <NavLink to="/addtocart"> <FiShoppingCart size={20} /> </NavLink>
+                <button className="relative md:pl-7 hover:text-rose-800 px-4">
+                <NavLink to="/addtocart"> <FiShoppingCart size={30} /> </NavLink>
+                <div className="absolute rounded-full top-0 right-0 w-[20px] h-[20px] bg-rose-600 text-white">{numCartItem}</div>
                 </button>
+                <NavLink to='/wishlist'>
                 <button className=" md:hover:text-rose-800">
                   <FiHeart size={20} />
                 </button>
+                </NavLink>
+                <NavLink to='/profile'>
                 <button
                   className=" hover:text-rose-800"
                   onClick={() => setDisplayAuth(true)}
                 >
                   <FiUser size={20} />
                 </button>
+                </NavLink>
               </div>
 
               <div className="pr-6 lg:hidden">
@@ -107,10 +114,10 @@ const Navbar1 = ({ navItemText }) => {
               {mainNavItems.map((item, index) => (
                 <Link
                   key={index}
-                  to="/products"
+                  to={item.url}
                   className="text-nowrap hover:text-rose-800"
                 >
-                  {item}
+                  {item.title}
                 </Link>
               ))}
             </div>
@@ -141,12 +148,13 @@ const Navbar1 = ({ navItemText }) => {
                       className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
                     >Home</Link>
                     {mainNavItems.map((item, index) => (
-                      <Link
-                        to="/products"
+                      <NavLink
+                        to={item.url}
+                        key={index}
                         className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
                       >
-                        {item}
-                      </Link>
+                        {item.title}
+                      </NavLink>
                     ))}
                     {/* -------------------------- Remove line below after this ------------------------------- */}
                     <Link to="/membership"
