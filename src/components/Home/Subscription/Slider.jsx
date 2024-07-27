@@ -142,7 +142,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="bg-slate-50">
+    <div className="">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -163,14 +163,11 @@ const Slider = () => {
             slidesPerView: 4,
             spaceBetween: 20,
           },
-          1170: {
+          1024: {
             slidesPerView: 5,
             spaceBetween: 20,
           },
-          1440: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-          },
+          
         }}
         modules={[Navigation, Pagination]}
         className="mySwiper  w-[95%] relative px-12 md:px-9 py-6 "

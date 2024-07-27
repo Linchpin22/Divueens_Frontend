@@ -35,7 +35,7 @@ function AddressForm({ addAddress , showForm ,setShowForm }) {
   };
 
   return (
-    <form className="bg-rose-100 md:w-96 h-fit p-4 rounded shadow-md" onSubmit={(e) => handleSubmit(e)}>
+    <form className="bg-rose-100 md:w-[600px] h-fit p-4 rounded shadow-md" onSubmit={(e) => handleSubmit(e)}>
       <div className="grid md:grid-cols-2 gap-4">
         {Object.keys(formData).map((key) => (
           <div key={key} className="col-span-1">

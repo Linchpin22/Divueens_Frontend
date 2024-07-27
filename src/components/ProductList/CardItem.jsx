@@ -12,7 +12,7 @@ const CardItem = ({ item }) => {
     const lastPage = Math.ceil(item.length / 12)
     const [likedCards, setLikedCards] = useState({});
     const [cardItem, setCardItem] = useState([]);
-
+    const [wishlist, setWishlist] = useState([]);
     useEffect(() => {
         const storedItems = JSON.parse(localStorage.getItem("Item-Id")) || [];
         setCardItem(storedItems);
@@ -38,7 +38,15 @@ const CardItem = ({ item }) => {
     };
 
     const handleLike = (id) => {
-        setLikedCards((prevLikedCards) => ({ ...prevLikedCards, [id]: !prevLikedCards[id] }));
+        let updatedWishlist;
+        if (likedCards[id]) {
+          updatedWishlist = wishlist.filter(item => item !== id);
+        } else {
+          updatedWishlist = [...wishlist, id];
+        }
+        setWishlist(updatedWishlist);
+        setLikedCards((prev) => ({ ...prev, [id]: !prev[id] }));
+        localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
     };
 
     const renderImages = () => {
@@ -75,7 +83,7 @@ const CardItem = ({ item }) => {
                             </div>
                             <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
                                 <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
-                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-1 lg:text-base'>Add To Cart</button>
+                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-base' onClick={() => addingItemToCart(p.id)}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
                             </div>
                         </div>
 

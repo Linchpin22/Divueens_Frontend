@@ -5,6 +5,7 @@ import BG3 from '../../assets/WhoWeAre/ima3.png'
 import L1 from '../../assets/WhoWeAre/l1.png'
 import L2 from '../../assets/WhoWeAre/l2.png'
 import L3 from '../../assets/WhoWeAre/l3.png'
+import Subscription from '../Subscription/Subscription'
 
 import background from '../../assets/WhoWeAre/background.jpg';
 
@@ -156,14 +157,15 @@ const WhoWeAre = () => {
                     your next purchase!
                 </p>
             </div>
-            <div className='max-md:ml-[10%]'>
+            <Subscription/>
+            {/* <div className='max-md:ml-[10%]'>
                 <form action="">
                     <fieldset>
                         <input type="email" name='email' placeholder='Enter Your Email' required="@gmail.com" className='border border-black w-[80%] mt-24 p-4 max-md:mt-12'/>
                         <input type="Submit" className='w-[80%] bg-rose-600 text-white text-[20px] font-[600] py-4 my-4' defaultValue="Subscribe"/>
                     </fieldset>
                 </form>
-            </div>
+            </div> */}
         </div>
         {/* Last */}
         <div className='w-[90%] m-auto grid grid-cols-3 my-16 max-sm:block max-md:block max-lg:gap-8'>
