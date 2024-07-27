@@ -10,6 +10,7 @@ import {
   FaChevronDown,
 } from "react-icons/fa6";
 import { Divueens } from "../../../assets/assets";
+import { FaLinkedin } from "react-icons/fa";
 
 const baadiList = [
   {
@@ -236,7 +237,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/"
+              <a href="https://www.instagram.com/divueens/"
                  className={textStyle}
               >
                 <FaInstagram className="md:h-5 md:w-5 text-black hover:text-white" />
@@ -250,10 +251,10 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/"
+              <a href="https://www.linkedin.com/company/divueens/about/"
                 className={textStyle}
               >
-                <FaPinterest className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-white" />
               </a>
             </li>
           </ul>

@@ -84,12 +84,22 @@ function App() {
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/maintennace" element={<MaintennacePage />} />
         <Route path="/transaction" element={<Transaction />} />
+
+        
+{/* change */}
+        <Route path="/:category/:subcategory" element={<ProductList />} />
+        <Route path="/product/:productName" element={<ProductDetails />} />
+{/* change */}
+
+
         <Route path="/discounts" element={<Discount />} />
         <Route path="/top-catagories" element={<TopCategories />} />
         <Route path="/referral" element={<ReferralPage />} />
         <Route path="/divueens-network" element={<Network />} />
         <Route path="/confirm-order" element={<Afterorder />} />
+
         <Route path="/careers" element={<CareersPage />} />
+
       </Routes>
       <Footer />
     </>
