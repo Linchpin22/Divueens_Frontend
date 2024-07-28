@@ -25,7 +25,7 @@ const Navbar1 = ({ navItemText }) => {
   const [displayOnScroll, setDisplayOnScroll] = useState("");
   const mainNavItems = [
     {"title":"Categories", "url":"/products"},
-    {"title":"Top Brands", "url":"/"},
+    {"title":"Top Brands", "url":"/top-catagories"},
     // "Div Fashion",
     {"title":"Beauty Advice", "url":"/virtual-try-on"},
     {"title":"Tools & Accessories", "url":"/virtual-try-on"},
