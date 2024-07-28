@@ -90,17 +90,17 @@ const SearchBox = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-md mx-auto lg:float-right">
+    <div className="relative w-full">
       <input
         type="text"
         value={searchTerm}
         onChange={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        placeholder="Search . . ."
-        className="w-full text-sm pl-4 pr-20 py-2 border border-gray-300 rounded-lg focus:outline focus:outline-rose-800"
+        placeholder="Search..."
+        className="text-xs px-3 py-2 w-[12rem] shadow-sm shadow-slate-400 rounded-full focus:outline focus:outline-rose-800"
       />
-      <FiSearch className="absolute top-3 right-3 text-gray-400" />
+      <FiSearch className="absolute top-2 right-3 text-slate-400" />
       {
         showDropdown
         && (
