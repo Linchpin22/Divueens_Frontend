@@ -82,7 +82,7 @@ const CardItem = ({ item }) => {
                             </div>
                             <div className="flex items-end justify-between absolute bottom-6 md:bottom-2 sm:gap-2 lg:-bottom-4 xl:-bottom-0 left-0 right-0 xl:px-4">
                                 <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-xl">₹ {p.price} /-</span>
-                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-600'} text-white md:w-fit rounded-lg text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-2`} onClick={() => {
+                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-700'} text-white hover:bg-rose-600 md:w-fit rounded-lg text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-2`} onClick={() => {
                                     if (isInCart) {
                                         subCartItemNumber()
                                     addingItemToCart(p.id)}

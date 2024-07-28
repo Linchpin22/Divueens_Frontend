@@ -1,15 +1,45 @@
-import React from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import { FaShippingFast, FaTrophy, FaHeadset, FaShieldAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 export default function Lower() {
+  const [inputField, setInputField] = useState('');
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (inputField === '') {
+      Swal.fire({
+        icon:"error",
+        text:"Please enter your question"});
+    } else {
+      Swal.fire({
+        title: "Thank you for connecting with us!",
+        icon: "success",
+        confirmButtonText: "OK"
+      });
+      setInputField(''); 
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setInputField(e.target.value);
+  };
+
   return (
     <div className="bg-rose-100 my-14 p-8 flex flex-col md:flex-row justify-between justify-items-center space-y-4 md:space-y-0">
       <div className="font-bold text-gray-900 flex flex-col items-center justify-center">
         <h2 className="item-center font-bold mb-4 text-[1.2rem] xl:text-[1.4rem]">How can we help you ?</h2>
         <div className="flex rounded-md items-center p-2 pl-2 pr-4 bg-white justify-center gap-4 mb-6 shadow-lg">
 
-          <input type="text" className="w-full px-4 text-[0.8rem]" placeholder="Ask Your Question" />
-          <button className="bg-orange-500 text-xs text-white px-4 py-2 rounded hover:bg-orange-600">Subscribe</button>
+          <input 
+            type="text" 
+            className="w-full px-4 text-[0.8rem]" 
+            placeholder="Ask Your Question" 
+            value={inputField} 
+            onChange={handleInputChange} 
+          />
+          <button onClick={handleClick} className="bg-rose-700 text-xs text-white px-4 py-2 rounded-lg hover:bg-rose-600">Subscribe</button>
 
         </div>
       </div>
@@ -17,8 +47,7 @@ export default function Lower() {
         <div className="flex flex-col items-center text-center text-[0.8rem] md:text-base">
           <FaShippingFast size={32} className="mb-2" />
           <span>Free Shipping</span>
-          <span className="text-xs md:text-sm text-gray-500
-          ">Order over 150 $</span>
+          <span className="text-xs md:text-sm text-gray-500">Order over 150 $</span>
         </div>
         <div className="flex flex-col items-center text-center text-[0.8rem] md:text-base ">
           <FaTrophy size={32} className="mb-2" />
@@ -38,5 +67,4 @@ export default function Lower() {
       </div>
     </div>
   );
-};
-
+}
