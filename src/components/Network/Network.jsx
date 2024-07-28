@@ -138,7 +138,7 @@ const Network = () => {
           <div className="flex flex-row items-center"></div>
           <div className="flex flex-row items-center"></div>
         </div>
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none flex items-center">
+        <button className="mt-4 px-4 py-2 bg-rose-700 text-white rounded-md hover:bg-rose-600 focus:outline-none flex items-center">
           Discover More
         </button>
       </div>
@@ -298,7 +298,7 @@ const Network = () => {
                 Ut enim ad minim veniam?
               </h3>
               <button
-                className="mt-4 bg-gray-200 flex-nowrap py-2 px-4 rounded hover:bg-gray-300 "
+                className="mt-4 bg-rose-700 text-white flex-nowrap py-2 px-4 rounded-lg hover:bg-rose-600 "
                 onClick={handleAnswer}
               >
                 Write An Answer

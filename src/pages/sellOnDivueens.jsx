@@ -96,7 +96,7 @@ const Sell = () => {
             Expand your reach and grow your beauty business with our innovative
             ecommerce platform.
           </p>
-           <Link to={"/maintennace"}><button className='text-[24px] max-lg:text-lg font-semibold bg-rose-400 py-3 px-8 rounded-xl max-[250px]:px-2'>Register Now</button></Link>
+           <Link to={"/maintennace"}><button className='text-[24px] max-lg:text-lg font-semibold bg-rose-700 text-white hover:bg-rose-600 py-3 px-8 rounded-lg max-[250px]:px-2'>Register Now</button></Link>
         </div>
 
         <div className='mb-4 lg:mb-0 max-w-[90%]'>
