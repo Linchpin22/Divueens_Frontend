@@ -66,20 +66,20 @@ const Navbar1 = ({ navItemText }) => {
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
       <div
-        className={`flex text-center py-3 bg-white justify-center gap-x-5 items-center sticky top-0 z-40 w-full ${displayOnScroll}`}
+        className={`flex text-center md:py-1 lg:py-3 bg-white lg:justify-center justify-between md:gap-x-5 items-center sticky top-0 z-40 w-full ${displayOnScroll}`}
       >
-        <div className="w-fit">
+        <div className="w-fit pl-6 md:pl-10 lg:pl-0">
           {/* <Link to="/"> */}
           {/* <img
               className="w-full h-[70px] md:h-[90px] lg:h-[100px] py-1 md:py-2"
               src={Divueens}
               alt="Description"
             /> */}
-          <img className="w-[140px] object-cover" src={Divueens} alt="Description" />
+          <img className="w-[100px] h-[60px] md:w-[120px] md:h-[80px] object-cover" src={Divueens} alt="Description" />
 
           {/* </Link> */}
         </div>
-        <div className="flex flex-col items-center pl-2">
+        <div className="flex flex-col items-center pl-4">
           <div className="flex flex-row-reverse items-center w-full">
             <div className="w-full flex lg:justify-start justify-end items-center">
               <div className="w-[70%] mr-6 lg:hidden">
