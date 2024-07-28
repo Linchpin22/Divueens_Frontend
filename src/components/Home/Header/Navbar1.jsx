@@ -12,10 +12,12 @@ import { Link , NavLink} from "react-router-dom";
 import Auth from "../../Auth/Auth";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBars } from "react-icons/fa6";
-import { Divueens } from "../../../assets/assets";
+// import { Divueens } from "../../../assets/assets";
 import navItemData from "./NavDropDownItems";
 import SearchBoxMob from "./SearchBoxMob";
 import {CartContext} from '../../../context/CartContext';
+import Divueens from "../../../assets/Divueens3.jpg";
+
 
 const Navbar1 = ({ navItemText }) => {
   const {numCartItem} = useContext(CartContext)
@@ -68,16 +70,22 @@ const Navbar1 = ({ navItemText }) => {
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
       <div className={`flex bg-white justify-between font-montserrat sticky pl-4 xl:pl-10 top-0 z-40 w-full ${displayOnScroll}`}>
-        <div className="">
-          <Link to="/">
-            <img
+        <div className="w-[20%]">
+          {/* <Link to="/"> */}
+            {/* <img
               className="w-full h-[70px] md:h-[90px] lg:h-[100px] py-1 md:py-2"
               src={Divueens}
               alt="Description"
+            /> */}
+            <img
+              className="w-24 md:w-[120px] lg:w-[120px]"
+              src={Divueens}
+              alt="Description"
             />
-          </Link>
+            
+          {/* </Link> */}
         </div>
-        <div className="flex flex-col items-center py-2 justify-between">
+        <div className="w-[80%] flex flex-col items-center py-2 justify-between">
           <div className=" flex flex-row-reverse items-center gap-3 lg:px-8 xl:pr-20">
             <div className="w-full flex lg:justify-center justify-end items-center ">
               <div className="w-[70%] mr-6 lg:hidden"><SearchBoxMob /></div>
