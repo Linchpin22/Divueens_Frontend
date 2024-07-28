@@ -9,8 +9,9 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
-import { Divueens } from "../../../assets/assets";
+// import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
+import Divueens from "../../../assets/Divueens3.jpg";
 
 const baadiList = [
   {
