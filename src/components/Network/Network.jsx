@@ -131,8 +131,10 @@ const Network = () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </p>
+
         
         <button className="mt-4 px-4 py-2 bg-rose-700 hover:bg-rose-900 text-white  rounded-md w-fit mx-auto focus:outline-none flex items-center">
+
           Discover More
         </button>
       </div>
@@ -296,7 +298,9 @@ const Network = () => {
                 Ut enim ad minim veniam?
               </h3>
               <button
+
                 className="mt-4bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900 bg-rose-700 "
+
                 onClick={handleAnswer}
               >
                 Write An Answer
