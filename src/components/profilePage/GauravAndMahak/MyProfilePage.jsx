@@ -46,9 +46,9 @@ const MyProfilePage = () => {
     setPicture(null);
   };
 
-  const handleChange = (e) => {
-    setProfile({ ...profile, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e) => {
+  //   setProfile({ ...profile, [e.target.name]: e.target.value });
+  // };
 
   const handleSave = () => {
     setIsEditing(false);
@@ -81,8 +81,8 @@ const MyProfilePage = () => {
               <input
                 name="name"
                 type="text"
-                value={profile.name || name}
-                onChange={(e) => setProfile({ ...profile, name: e.target.value })}
+                value={profile.name}
+                onChange={(e) => setProfile({name: e.target.value })}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -93,8 +93,8 @@ const MyProfilePage = () => {
               <input
                 name="email"
                 type="tel"
-                value={profile.email || email}
-                onChange={(e) => setProfile({ ...profile, email: e.target.value })}
+                value={profile.email }
+                onChange={(e) => setProfile({ email: e.target.value })}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -105,8 +105,8 @@ const MyProfilePage = () => {
               <input
                 name="phoneNumber"
                 type="tel"
-                value={profile.phoneNumber || contact}
-                onChange={(e) => setProfile({ ...profile, phoneNumber: e.target.value })}
+                value={profile.phoneNumber }
+                onChange={(e) => setProfile({ phoneNumber: e.target.value })}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -117,8 +117,8 @@ const MyProfilePage = () => {
               <input
                 name="birthday"
                 type="date"
-                value={profile.birthday || birthday}
-                onChange={(e) => setProfile({ ...profile, birthday: e.target.value })}
+                value={profile.birthday }
+                onChange={(e) => setProfile({ birthday: e.target.value })}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -130,8 +130,8 @@ const MyProfilePage = () => {
                     type="radio"
                     name="gender"
                     value="Female"
-                    checked={profile.gender === 'Female' || gender === 'Female'}
-                    onChange={(e) => setProfile({ ...profile, gender: e.target.value })}
+                    checked={profile.gender === 'Female'}
+                    onChange={(e) => setProfile({  gender: e.target.value })}
                     className="mr-1"
                   />
                   Female
@@ -141,8 +141,8 @@ const MyProfilePage = () => {
                     type="radio"
                     name="gender"
                     value="Male"
-                    checked={profile.gender === 'Male' || gender === 'Male'}
-                    onChange={(e) => setProfile({ ...profile, gender: e.target.value })}
+                    checked={profile.gender === 'Male' }
+                    onChange={(e) => setProfile({ gender: e.target.value })}
                     className="mr-1"
                   />
                   Male

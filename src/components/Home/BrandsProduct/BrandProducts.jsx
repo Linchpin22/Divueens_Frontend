@@ -2,7 +2,7 @@ import React from 'react'
 import "swiper/css";
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination, Scrollbar } from "swiper/modules";
+import { Pagination, Scrollbar } from "swiper/modules";
 import { Pic58, brand_2, brand_3, product_1, product_2, product_3, product_4, product_5, product_6 } from '../../../assets/assets';
 
 
@@ -22,7 +22,6 @@ const BrandProducts = () => {
                         <Swiper
                             slidesPerView={3}
                             spaceBetween={20}
-                            mousewheel={true}
                             scrollbar={{
                                 hide: true,
                             }}
@@ -32,7 +31,7 @@ const BrandProducts = () => {
                                 768: { slidesPerView: 1, spaceBetween: 20 },
                                 1024: { slidesPerView: 3, spaceBetween: 20 }
                             }}
-                            modules={[Mousewheel, Pagination, Scrollbar]}
+                            modules={[Pagination, Scrollbar]}
                             className="mySwiper w-full h-full">
                             <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
                                 <img src={product_4} alt="" className="w-full h-full object-cover transition group-hover:scale-110 duration-75" />
@@ -83,7 +82,6 @@ const BrandProducts = () => {
                         <Swiper
                             slidesPerView={3}
                             spaceBetween={20}
-                            mousewheel={true}
                             scrollbar={{
                                 hide: true,
                             }}
@@ -94,7 +92,7 @@ const BrandProducts = () => {
                                 1024: { slidesPerView: 3, spaceBetween: 20 }
 
                             }}
-                            modules={[Mousewheel, Pagination, Scrollbar]}
+                            modules={[ Pagination, Scrollbar]}
                             className="mySwiper w-full h-full">
                             <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
                                 <img src={product_1} alt="" className="w-full h-full object-cover transition group-hover:scale-110 duration-75" />
