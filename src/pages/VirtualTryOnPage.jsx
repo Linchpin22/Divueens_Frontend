@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FaRegCircleQuestion } from 'react-icons/fa6';
+import MaintennacePage from '../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 import {Faqs} from './FAQ';
 const Data = [
   {
@@ -46,7 +48,7 @@ const VirtualTryOnPage = () => {
             the art technology allows you to try on a wide range of
             beauty products from the comfort of your home.</p>
           {/* TryOn Button */}
-          <button className="bg-rose-400 px-6 py-3 font-semibold text-center rounded-sm">TRY NOW</button>
+          <Link to={"/maintennace"} className="bg-rose-700 text-white hover:bg-rose-600 rounded-lg px-6 py-3 font-semibold text-center ">TRY NOW</Link>
         </div>
         {/* Image Compare */}
         <div className="w-full lg:w-auto">
@@ -77,7 +79,9 @@ const VirtualTryOnPage = () => {
           </div>
           <ul className="flex flex-col">
             {Data.map((item, index)=>(
-              <Faqs key={index} question={item.question} answer={item.answer} active={active === item.question}  onClick={handleActive} />
+              <Faqs key={index} question={item.question} answer={item.answer} 
+              // active={active === item.question}  
+              onClick={handleActive} />
             ))}
           </ul>
         </div>
