@@ -76,7 +76,9 @@ function WeAreHiring() {
                 return (
                   <button
                     key={index}
+
                     className="capitalize text-nowrap py-1 px-4 hover:bg-rose-700  hover:text-white focus:bg-rose-700 focus:text-white font-semibold rounded-3xl text-black text-lg cursor-pointer "
+
                   >
                     {catagory}
                   </button>
@@ -143,7 +145,9 @@ function WeAreHiring() {
                     </h1>
                     <p className="text-base mt-2">{item.description}</p>
                   </div>
+
                   <button className="capitalize text-nowrap py-2 text-center px-4 bg-rose-700 hover:bg-rose-900 text-white font-semibold rounded-3xl text-sm cursor-pointer h-fit flex items-center mt-4 gap-2">
+
                     Apply Now <MdArrowOutward className="font-bold text-lg" />
                   </button>
                 </div>

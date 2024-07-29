@@ -31,6 +31,7 @@ export default function Lower() {
       <div className="font-bold text-gray-900 flex flex-col items-center justify-center">
         <h2 className="item-center font-bold mb-4 text-[1.2rem] xl:text-[1.4rem]">How can we help you ?</h2>
         <div className="flex rounded-md items-center p-2 pl-2 pr-4 bg-white justify-center gap-4 mb-6 shadow-lg">
+
           <input 
             type="text" 
             className="w-full px-4 text-[0.8rem]" 
@@ -38,7 +39,8 @@ export default function Lower() {
             value={inputField} 
             onChange={handleInputChange} 
           />
-          <button onClick={handleClick} className="bg-orange-500 text-xs text-white px-4 py-2 rounded hover:bg-orange-600">Summit</button>
+          <button onClick={handleClick} className="bg-rose-700 text-xs text-white px-4 py-2 rounded-lg hover:bg-rose-600">Subscribe</button>
+
         </div>
       </div>
       <div className="w-full grid grid-cols-2 gap-4 md:w-1/2 xl:flex xl:items-center xl:justify-between xl:flex-row">

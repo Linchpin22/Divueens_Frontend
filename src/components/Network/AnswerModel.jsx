@@ -38,7 +38,9 @@ const AnswerModal = () => {
     <>
       <div className="container mx-auto">
         <button
+
           className="text-nowrap bg-rose-700 hover:bg-rose-900 text-white text-lg mx-auto shadow-md hover:shadow-inner px-4 rounded font-medium  py-2 mt-8"
+
           ref={trigger}
           onClick={() => setModalOpen(true)}
         >
