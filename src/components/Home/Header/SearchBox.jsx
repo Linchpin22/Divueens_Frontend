@@ -98,9 +98,9 @@ const SearchBox = () => {
         onFocus={handleFocus}
         onBlur={handleBlur}
         placeholder="Search..."
-        className="text-xs px-3 py-2 w-[12rem] shadow-sm shadow-slate-400 rounded-full focus:outline focus:outline-rose-800"
+        className="text-xs px-3 py-2 w-full shadow-sm shadow-slate-400 rounded-full focus:outline focus:outline-rose-800"
       />
-      <FiSearch className="absolute top-2 right-4 text-slate-400" />
+      <FiSearch className="absolute top-2 right-3 text-slate-400" />
       {
         showDropdown
         && (
