@@ -235,28 +235,28 @@ function Footer() {
               <a href="/"
                 className={textStyle}
               >
-                <FaFacebook className="md:h-5  md:w-5 text-blue-500 hover:text-rose-700" />
+                <FaFacebook className="md:h-5  md:w-5 text-black hover:text-blue-500" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/divueens/"
                  className={textStyle}
               >
-                <FaInstagram className="md:h-5 md:w-5 text-pink-500 hover:text-current" />
+                <FaInstagram className="md:h-5 md:w-5 text-black hover:text-pink-500" />
               </a>
             </li>
             <li>
               <a href="/"
                  className={textStyle}
               >
-                <FaWhatsapp className="md:h-5 md:w-5 text-green-500 hover:text-current" />
+                <FaWhatsapp className="md:h-5 md:w-5 text-black hover:text-green-500" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/company/divueens/about/"
                 className={textStyle}
               >
-                <FaLinkedin className="md:h-5 md:w-5 text-blue-600 hover:text-current" />
+                <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-blue-600" />
               </a>
             </li>
           </ul>
