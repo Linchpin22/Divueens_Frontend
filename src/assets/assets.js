@@ -120,6 +120,10 @@ export {default as product_3} from "./product-3.jpeg";
 export {default as product_4} from "./product-4.jpg";
 export {default as product_5} from "./product-5.jpeg";
 export {default as product_6} from "./product-6.jpeg";
+export {default as Amazon } from "./CareersPage/amazon.svg";
+export {default as Flipkart } from "./CareersPage/flipkart.svg";
+export {default as PhonePe } from "./CareersPage/phonepe.svg";
+export {default as SnapInc } from "./CareersPage/snapinc.svg";
 
 export const imageUrls = [
   {
