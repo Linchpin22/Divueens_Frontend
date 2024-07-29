@@ -9,8 +9,10 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
-import { Divueens } from "../../../assets/assets";
-
+// import { Divueens } from "../../../assets/assets";
+import { FaLinkedin } from "react-icons/fa";
+import Divueens from "../../../assets/Divueens3.jpg";
+import bg from "../../../assets/Shop_By_Category/background.svg";
 const baadiList = [
   {
     title: "About us",
@@ -194,7 +196,7 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="" >
+    <footer data-footer-part="" style={{backgroundImage: `url(${bg})`}} >
       <div className="md:pt-16 pt-1 ">
         <div
           className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
@@ -236,7 +238,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/"
+              <a href="https://www.instagram.com/divueens/"
                  className={textStyle}
               >
                 <FaInstagram className="md:h-5 md:w-5 text-black hover:text-white" />
@@ -250,10 +252,10 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/"
+              <a href="https://www.linkedin.com/company/divueens/about/"
                 className={textStyle}
               >
-                <FaPinterest className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-white" />
               </a>
             </li>
           </ul>

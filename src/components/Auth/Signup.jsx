@@ -10,7 +10,7 @@ const Signup = ({ move, setMove, changeView }) => {
   const [resendOTP, setResendOTP] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [otpInputs, setOtpInputs] = useState(["", "", "", ""]);
-  const inputRefs = useRef([]); 
+  const inputRefs = useRef([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,17 +31,6 @@ const Signup = ({ move, setMove, changeView }) => {
     };
   }, [generateOTP, count]);
 
-  const otpGenerate = () => {
-    setGenerateOTP(true);
-    const otp = Math.floor(1000 + Math.random() * 9000);
-    console.log(otp);
-    setTimeout(() => {
-      setOtpV(otp.toString());
-    }, 5000);
-    setOtpText(true);
-    setCount(60);
-    setResendOTP(false);
-  };
 
   const handleOtpChange = (value, index) => {
     const newOtpInputs = [...otpInputs];
@@ -68,8 +57,8 @@ const Signup = ({ move, setMove, changeView }) => {
         action="#"
         className="w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)]"
       >
-        <h2 className='font-semibold text-[25px] text-center mt-[20px]'>Verify Your OTP</h2>
-        <div className="h-[50px] mb-4 md:mb-[60px] w-full mt-6 md:mt-[50px] flex items-center"> {/* Changed mb-[60px] to mb-[50px] */}
+        <h2 className='font-semibold text-[25px] text-center sm:mt-[10px] mt-[20px]'>Verify Your OTP</h2>
+        <div className="h-[50px] mb-4 md:mb-[60px] w-full mt-6 md:mt-[50px] flex items-center">
           <div className="flex space-x-6">
             {[...Array(4)].map((_, index) => (
               <input
@@ -86,16 +75,26 @@ const Signup = ({ move, setMove, changeView }) => {
             ))}
           </div>
         </div>
-        <div className="flex items-center md:mb-[10px]"> {/* Changed mb-[25px] to mb-[10px] */}
+
+        <div className="flex justify-center mt-4">
+          <button
+            className="sm:pl-[190px] pl-[150px] text-sm sm:text-base -mb-[15px] sm:pb-[40px] lg:pb-[60px] sm:-mt-[40px]  text-blue-500 decoration-none border-none rounded-lg"
+            type="button"
+          >
+            Resend OTP
+          </button>
+        </div>
+
+        <div className="flex items-center mt-[25px] sm:-mt-[20px] md:mb-[10px]">
           <input
             type="checkbox"
             id="acceptTerms"
-            className="mr-2 mt-1"
+            className="mr-2 mt-0"
             checked={acceptTerms}
             onChange={(e) => setAcceptTerms(e.target.checked)}
           />
           <label htmlFor="acceptTerms" className="text-[16px] text-sm">
-            I have read and agree to the <Link to="/Privacy-policy" onClick={() => changeView(false)} className="font-semibold">Privacy Policy</Link> and <Link to="/terms-and-conditions" onClick={() => changeView(false)} className="font-semibold">Terms of Service.</Link>
+            I have read and agree to the <Link to="/Privacy-policy" onClick={() => changeView(false)} className="font-semibold hover:underline">Privacy Policy</Link> and <Link to="/terms-and-conditions" onClick={() => changeView(false)} className="font-semibold hover:underline">Terms of Service.</Link>
           </label>
         </div>
         <div className="flex">
