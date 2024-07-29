@@ -9,7 +9,7 @@ import { TiPin } from "react-icons/ti";
 import { GoPerson } from "react-icons/go";
 import { BsQuestionSquare } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
-import {  PiNotePencilBold } from "react-icons/pi";
+import { PiNotePencilBold } from "react-icons/pi";
 import AnswerModal from "./AnswerModel";
 import ReadMore from "./ReadMore";
 import BannerTop from "./../../assets/DivueenNetwork/BannerTop1.png";
@@ -19,7 +19,7 @@ import CuratedImg1 from "./../../assets/DivueenNetwork/CuratedImg1.png";
 import CuratedImg2 from "./../../assets/DivueenNetwork/CuratedImg2.png";
 import CuratedImg3 from "./../../assets/DivueenNetwork/CuratedImg3.png";
 import Logo from "./../../assets/DivueenNetwork/logo.png";
-import profilePic from '../../assets/DivueenNetwork/Ellipse.png'
+import profilePic from "../../assets/DivueenNetwork/Ellipse.png";
 import { FcLike } from "react-icons/fc";
 
 const Network = () => {
@@ -115,7 +115,6 @@ const Network = () => {
             cum.
           </p>{" "}
           <p className=" md:leading-10 leading-8 ">
-            {" "}
             Nostrum officiis cupiditate qui ad! Necessitatibus facere dicta quas
             quasi quis. Sit dolor, cupiditate corrupti necessitatibus placeat ea
             harum repellat quasi minima laudantium maiores. Minus modi, vel
@@ -163,12 +162,11 @@ const Network = () => {
             </div>
             <div className="flex flex-col font-semibold gap-2 my-2">
               <p className="font-bold">The Divas</p>
-              <div className="flex gap-2  text-gray-500">
-              <p className="font-medium text-nowrap">
-                Posted 2 months ago
-              </p>
-              <p className="flex items-center gap-1"><FcLike /> {post.likes} Likes</p>
-              <p> {post.comments} Comments</p>
+              <div className="flex gap-2 flex-wrap text-gray-500">
+                <p className="font-medium text-nowrap">Posted 2 months ago</p>
+                <p className="flex items-center gap-1">
+                  <FcLike /> {post.likes} Likes
+                </p>
               </div>
             </div>
           </div>
@@ -179,16 +177,16 @@ const Network = () => {
           </p>
           <div className="overflow-hidden  md:px-8 md:py-2 max-w-full bg-cover bg-no-repeat">
             <img className="" src={NetworkBanner} alt="" />
-            <div className="mt-4 flex items-center space-x-4">
-              <button className="bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900">
-                Like <FaRegHeart className="inline mx-2 " />
+            <div className="mt-4 flex items-center justify-evenly md:justify-center md:space-x-4">
+              <button className="bg-rose-700 font-semibold text-white w-fit py-2 px-4 rounded hover:bg-rose-900">
+                <span className="hidden sm:inline-block">Like</span> <FaRegHeart className="inline text-lg mx-2 " />
               </button>
-              <button className="bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900">
-                Comment <FaRegComment className="inline mx-2 " />
+              <button className="bg-rose-700 font-semibold text-white w-fit py-2 px-4 rounded hover:bg-rose-900">
+                <span className="hidden sm:inline-block">Comment</span> <FaRegComment className="inline text-lg mx-2 " />
               </button>
-              <button className="bg-rose-700 font-semibold text-white py-2 md:px-4 px-2 rounded text-center hover:bg-rose-900">
-                <span className="text-nowrap ">Share Post</span>{" "}
-                <FaShare className="inline mx-2 " />
+              <button className="bg-rose-700 font-semibold text-white w-fit py-2 md:px-4 px-2 rounded text-center hover:bg-rose-900">
+                <span className="hidden sm:inline-block">Share Post</span>{" "}
+                <FaShare className="inline text-lg mx-2 " />
               </button>
             </div>
           </div>
@@ -222,27 +220,36 @@ const Network = () => {
                   <span className="font-bold text-lg">Q :</span> Lorem ipsum
                   dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non perspiciatis voluptas cupiditate nam maxime id.
+                  minim veniam? Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Non perspiciatis voluptas cupiditate nam
+                  maxime id.
                 </p>
                 <div>
                   <div>
-                    <img src={profilePic} className="size-10 rounded-full" alt="" />
+                    <img
+                      src={profilePic}
+                      className="size-10 rounded-full"
+                      alt=""
+                    />
                     <p className="md:text-nowrap">Bella D.</p>
                   </div>
                   <div className="mt-1 flex justify-between font-semibold">
-                  <div className="flex gap-4">
-                  <p className="md:text-nowrap">Answered 1 month ago</p>
-                  <p className="md:text-nowrap">
-                    {reactions} reactions
-                  </p>
-                 </div>
-                  <p className="flex gap-1 items-center">{noOfAns} More Answers <IoIosArrowForward/></p>
+                    <div className="flex gap-4">
+                      <p className="md:text-nowrap">Answered 1 month ago</p>
+                      <p className="md:text-nowrap">{reactions} reactions</p>
+                    </div>
+                    <p className="flex gap-1 items-center">
+                      {noOfAns} More Answers <IoIosArrowForward />
+                    </p>
                   </div>
-                </div>  
-                <div className="mt-4">
-                Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem adipisci, rerum explicabo aperiam suscipit tempore maxime fugiat commodi voluptates enim. sit amet consectetur adipisicing elit. Illo dicta eius id quos obcaecati eos aliquid ipsa incidunt, beatae omnis!
                 </div>
-                
+                <div className="mt-4">
+                  Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Voluptatem adipisci, rerum explicabo aperiam
+                  suscipit tempore maxime fugiat commodi voluptates enim. sit
+                  amet consectetur adipisicing elit. Illo dicta eius id quos
+                  obcaecati eos aliquid ipsa incidunt, beatae omnis!
+                </div>
               </div>
               {/* <button className="mt-4 bg-transparent mx-auto shadow-md hover:shadow-inner flex-nowrap py-2 px-4 rounded hover:bg-rose-100">
                 Write An Answer
