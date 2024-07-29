@@ -42,7 +42,7 @@ const Wishlist = () => {
 };
 
   return (
-    <div className="mx-auto p-8">
+    <div className="mx-auto p-8 w-[80%]">
       <h1 className="text-2xl font-bold mb-4 flex items-center gap-2">Wishlist<FaHeart className='text-pink-400'/></h1>
       <div className="">
         {wishListItem.map((item) => {
