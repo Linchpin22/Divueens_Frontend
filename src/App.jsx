@@ -82,7 +82,7 @@ function App() {
         <Route path="/authenticity" element={<AuthenticityPage />} />
         <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
-        <Route path="/MaintennacePage" element={<MaintennacePage />} />
+        <Route path="/maintennace" element={<MaintennacePage />} />
         <Route path="/transaction" element={<Transaction />} />
 
         
