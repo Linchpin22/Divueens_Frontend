@@ -9,6 +9,7 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
 // import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
 import Divueens from "../../../assets/Divueens3.jpg";
@@ -234,28 +235,28 @@ function Footer() {
               <a href="/"
                 className={textStyle}
               >
-                <FaFacebookF className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaFacebook className="md:h-5  md:w-5 text-blue-500 hover:text-rose-700" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/divueens/"
                  className={textStyle}
               >
-                <FaInstagram className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaInstagram className="md:h-5 md:w-5 text-pink-500 hover:text-current" />
               </a>
             </li>
             <li>
               <a href="/"
                  className={textStyle}
               >
-                <FaWhatsapp className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaWhatsapp className="md:h-5 md:w-5 text-green-500 hover:text-current" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/company/divueens/about/"
                 className={textStyle}
               >
-                <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaLinkedin className="md:h-5 md:w-5 text-blue-600 hover:text-current" />
               </a>
             </li>
           </ul>
