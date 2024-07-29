@@ -6,6 +6,8 @@ import {
   FaShare,
 } from "react-icons/fa6";
 import { TiPin } from "react-icons/ti";
+import MaintennacePage from '../../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
 import { BsQuestionSquare } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
@@ -133,10 +135,10 @@ const Network = () => {
         </p>
 
         
-        <button className="mt-4 px-4 py-2 bg-rose-700 hover:bg-rose-900 text-white  rounded-md w-fit mx-auto focus:outline-none flex items-center">
+        <Link to={'/maintennace'} className="mt-4 px-4 py-2 bg-rose-700 hover:bg-rose-900 text-white  rounded-md w-fit mx-auto focus:outline-none flex items-center">
 
           Discover More
-        </button>
+        </Link>
       </div>
 
       <div className="mt-12  w-11/12 mx-auto">

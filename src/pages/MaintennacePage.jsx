@@ -10,7 +10,7 @@
 import React from 'react';
 
 import {Link} from 'react-router-dom';
-const MaintenancePage = ({ onBack }) => {
+const MaintennacePage = ({ onBack }) => {
     return (
 
 
@@ -46,5 +46,5 @@ const MaintenancePage = ({ onBack }) => {
     );
 };
 
-export default MaintenancePage;
+export default MaintennacePage;
 

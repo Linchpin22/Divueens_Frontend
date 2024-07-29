@@ -5,6 +5,8 @@ import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Scrollbar } from "swiper/modules";
 
+import {Link} from 'react-router-dom';
+
 const NewArrivals = () => {
     return (
         <>
@@ -44,7 +46,18 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
+                            <img src={Pic57} alt="" className="w-full h-full object-cover transition group-hover:scale-110 duration-75" />
+                            <div className="absolute bg-black/20 flex flex-col justify-between top-0 bottom-0 right-0 left-0 group-hover:bg-black/50">
+                                <div>
+                                    <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">Vaseline Shea Butter for Glowing skin (180g), whipped body butter</p>
+                                    <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
+                                </div>
+                                <Link to={'/Maintennace'}
+                                 className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -55,7 +68,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -66,7 +79,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -77,7 +90,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -88,18 +101,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
-                            <img src={Pic57} alt="" className="w-full h-full object-cover transition group-hover:scale-110 duration-75" />
-                            <div className="absolute bg-black/20 flex flex-col justify-between top-0 bottom-0 right-0 left-0 group-hover:bg-black/50">
-                                <div>
-                                    <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">Vaseline Shea Butter for Glowing skin (180g), whipped body butter</p>
-                                    <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
-                                </div>
-
-                                <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
 

@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="relative z-10 p-8 md:w-3/5 xl:h-80 bg-white opacity-80 ">
                         <h1 className="md:text-4xl text-xl font-bold text-black mb-6 mr-6">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor</h1>
                         <p className="mt-4 text-black mr-6 mb-6">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor</p>
-                        <Link to={"/maintennace"} className="bg-rose-700 text-white font-bold py-2 px-10 rounded-lg shadow-lg hover:bg-rose-600 focus:outline-none mt-6 opacity-100">
+                        <Link to={'/maintennace'} className="bg-rose-700 text-white font-bold py-2 px-10 rounded-lg shadow-lg hover:bg-rose-600 focus:outline-none mt-6 opacity-100">
                             Explore products
                         </Link>
                     </div>

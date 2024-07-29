@@ -156,9 +156,9 @@ const BestSeller = () => {
 
                   {/* Buynow btn */}
                 <Link to="/">
-                  <button className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
+                <Link to={'/Maintennace'}className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
                     Buy Now
-                  </button>
+                  </Link>
                 </Link>
                 </div>
                 

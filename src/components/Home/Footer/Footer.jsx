@@ -27,7 +27,7 @@ const baadiList = [
           txt: "Our Team",
         },
         {
-          url: "",
+          url: "/maintennace",
           txt: "Press",
         },
         {
@@ -39,7 +39,7 @@ const baadiList = [
           txt: "Careers",
         },
         {
-          url: "/CSR",
+          url: "/maintennace",
           txt: "Divueens CSR",
         },
         {
@@ -107,11 +107,11 @@ const baadiList = [
         txt: "Special Offers",
       },
       {
-        url: "/trendings",
+        url: "/maintennace",
         txt: "Trendings",
       },
       {
-        url: "",
+        url: "/maintennace",
         txt: "New Launches",
       },
       {
@@ -124,15 +124,15 @@ const baadiList = [
     title: "Top Categories",
     chhotiList: [
       {
-        url: "",
+        url: "/maintennace",
         txt: "Makeup",
       },
       {
-        url: "",
+        url: "/maintennace",
         txt: "Hair",
       },
       {
-        url: "",
+        url: "/maintennace",
         txt: "Organics",
       },
     ],
