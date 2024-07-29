@@ -26,10 +26,10 @@ const baadiList = [
           url: "/our-team",
           txt: "Our Team",
         },
-        {
-          url: "",
-          txt: "Press",
-        },
+        // {
+        //   url: "",
+        //   txt: "Press",
+        // },
         {
           url: "/authenticity",
           txt: "Authenticity",
@@ -38,10 +38,10 @@ const baadiList = [
           url: "/careers",
           txt: "Careers",
         },
-        {
-          url: "/CSR",
-          txt: "Divueens CSR",
-        },
+        // {
+        //   url: "/CSR",
+        //   txt: "Divueens CSR",
+        // },
         {
           url: "/investor-relation",
           txt: "Investor Relation",
@@ -52,46 +52,46 @@ const baadiList = [
   {
     title: "Help",
     chhotiList: [
-      {
-        url: "/contact-us",
-        txt: "Contact Us",
-      },
-      {
-        url: "/help-center",
-        txt: "FAQs",
-      },
-      {
-        url: "/return-policy",
-        txt: "Cancellation and Return",
-      },
-      {
-        url: "/shippingdelivery",
-        txt: "Shipping and Delivery ",
-      },
-      {
-        url: "/privacy-policy",
-        txt: "Privacy Policy",
-      },
-      {
-        url: "/sell-on-divueens",
-        txt: "Sell on Divueens",
-      },
-      {
-        url: "/store-locator",
-        txt: "Store Locator",
-      },
-    ],
+      // {
+        //   url: "/privacy-policy",
+        //   txt: "Privacy Policy",
+        // },
+        {
+          url: "/contact-us",
+          txt: "Contact Us",
+        },
+        {
+          url: "/sell-on-divueens",
+          txt: "Sell on Divueens",
+        },
+        {
+          url: "/help-center",
+          txt: "FAQs",
+        },
+        {
+          url: "/return-policy",
+          txt: "Cancellation & Returns",
+        },
+        {
+          url: "/shippingdelivery",
+          txt: "Shipping & Delivery",
+        },
+        {
+          url: "/store-locator",
+          txt: "Store Locator",
+        },
+      ],
   },
   {
     title: "Inspire Us",
     chhotiList: [
       {
         url: "/blogs",
-        txt: "Beauty Books",
+        txt: "Cosmetic Chronicles",
       },
       {
         url: "/divueens-network",
-        txt: "Divueens Network",
+        txt: "Network O' Divueens",
       },
       {
         url: "/virtual-try-on",
@@ -106,14 +106,14 @@ const baadiList = [
         url: "/special-offers",
         txt: "Special Offers",
       },
-      {
-        url: "/trendings",
-        txt: "Trendings",
-      },
-      {
-        url: "",
-        txt: "New Launches",
-      },
+      // {
+      //   url: "/trendings",
+      //   txt: "Trendings",
+      // },
+      // {
+      //   url: "",
+      //   txt: "New Launches",
+      // },
       {
         url: "/membership",
         txt: "Membership",
