@@ -79,12 +79,12 @@ const Network = () => {
           </h1>
         </div>
 
-        <div className="flex flex-row justify-center gap-4">
-          <button className="px-4 py-2 font-semibold bg-rose-700 hover:bg-rose-900 text-white rounded-md focus:outline-none flex items-center gap-2">
+        <div className="flex md:flex-row flex-col mt-4 justify-center gap-4">
+          <button className="px-4 py-2 font-semibold bg-rose-700 hover:bg-rose-900 text-nowrap text-white rounded-md focus:outline-none md:w-fit flex items-center gap-2">
             <BsQuestionSquare className="text-lg font-bold" />
             Ask Your Questions
           </button>
-          <button className="px-4 py-2 font-semibold bg-rose-700 hover:bg-rose-900 text-white rounded-md  focus:outline-none flex items-center gap-2 ">
+          <button className="px-4 py-2 font-semibold bg-rose-700 hover:bg-rose-900 text-white md:w-fit text-nowrap rounded-md  focus:outline-none flex items-center gap-2 ">
             <PiNotePencilBold className="text-lg font-bold" />
             Create Your Posts
           </button>

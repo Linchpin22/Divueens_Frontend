@@ -28,8 +28,8 @@ const Navbar1 = ({ navItemText }) => {
     { title: "Categories", url: "/products" },
     { title: "Top Brands", url: "/top-catagories" },
     // "Div Fashion",
-    { title: "Beauty Advice", url: "/virtual-try-on" },
-    { title: "Tools & Accessories", url: "/maintennace" },
+    { title: "Beauty Trends", url: "/blogs" },
+    { title: "Glow Guide", url: "/virtual-try-on" },
     { title: "Offers", url: "/special-offers" },
   ];
   const subNavItems = [
