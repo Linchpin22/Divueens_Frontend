@@ -13,7 +13,7 @@ import { FaFacebook } from "react-icons/fa";
 // import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
 import Divueens from "../../../assets/Divueens3.jpg";
-import bg from "../../../assets/Shop_By_Category/background.svg";
+// import bg from "../../../assets/Shop_By_Category/background.svg";
 const baadiList = [
   {
     title: "About us",
@@ -199,7 +199,7 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="" style={{backgroundImage: `url(${bg})`}} >
+    <footer data-footer-part="">
       <div className="md:pt-16 pt-1 ">
         <div
           className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
