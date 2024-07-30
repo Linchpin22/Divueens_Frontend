@@ -26,7 +26,7 @@ const ScrollToTop = () => {
     },[])
 
   return (
-    <button className={`scrollToTop fixed bottom-[5%] right-[5%] shadow-xl w-10 h-10 flex items-center justify-center bg-rose-400 rounded-full text-white border-none cursor-pointer z-50 hover:bg-rose-600 hover:shadow-xl hover:shadow-rose-400 md:w-14 md:h-14 md:text-2xl ${isVisible ? 'opacity-100' : 'opacity-0'}`} onClick={scrollToTop}>
+    <button className={`scrollToTop fixed bottom-[5%] right-[2%] shadow-xl w-10 h-10 flex items-center justify-center bg-rose-400 rounded-full text-white border-none cursor-pointer z-50 hover:bg-rose-600 hover:shadow-xl hover:shadow-rose-400 md:w-14 md:h-14 md:text-2xl ${isVisible ? 'opacity-100' : 'opacity-0'}`} onClick={scrollToTop}>
         <FaArrowUp />
     </button>
   )
