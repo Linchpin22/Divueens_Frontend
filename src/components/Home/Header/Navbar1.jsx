@@ -16,10 +16,12 @@ import { FaBars } from "react-icons/fa6";
 import navItemData from "./NavDropDownItems";
 import SearchBoxMob from "./SearchBoxMob";
 import { CartContext } from "../../../context/CartContext";
+import { WishlistContext } from "../../../context/WishlistContext";
 import Divueens from "../../../assets/Divueens3.jpg";
 
 const Navbar1 = ({ navItemText }) => {
   const { numCartItem } = useContext(CartContext);
+  const { numWishItem } = useContext(WishlistContext)
   const [openDropdown, setOpenDropdown] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
@@ -90,19 +92,24 @@ const Navbar1 = ({ navItemText }) => {
               </div>
 
               <div className="hidden lg:flex space-x-5 ml-4 text-slate-500">
-                <NavLink to="/addtocart">
+                <NavLink to="/addtocart" className={`relative`}>
                   <FiShoppingCart
                     size={18}
                     className="relative hover:text-rose-800"
                   />
                   {numCartItem > 0 && (
-                    <div className="absolute rounded-full top-0 right-0 w-[20px] h-[20px] bg-rose-600 text-white flex items-center justify-center text-xs">
+                    <div className="absolute rounded-full top-[-10px] right-[-10px] w-[15px] h-[15px] bg-rose-600 text-white flex items-center justify-center text-xs">
                       {numCartItem}
                     </div>
                   )}
                 </NavLink>
-                <NavLink to="/wishlist">
-                    <FiHeart size={18} className="md:hover:text-rose-800" />
+                <NavLink to="/wishlist" className={`relative`}>
+                  <FiHeart size={18} className="md:hover:text-rose-800" />
+                  {numWishItem > 0 && (
+                    <div className="absolute rounded-full top-[-10px] right-[-10px] w-[15px] h-[15px] bg-rose-600 text-white flex items-center justify-center text-xs">
+                      {numWishItem}
+                    </div>
+                  )}
                 </NavLink>
                 {/* <NavLink to='/profile'> */}
 
@@ -145,8 +152,22 @@ const Navbar1 = ({ navItemText }) => {
                     </button>
 
                     <div className="w-full flex space-x-4 justify-center my-2">
-                      <FiShoppingCart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
-                      <FiHeart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
+                      <NavLink to="/addtocart" className={`relative`}>
+                        <FiShoppingCart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
+                        {numCartItem > 0 && (
+                          <div className="absolute rounded-full top-[-10px] right-[-10px] w-[15px] h-[15px] bg-rose-600 text-white flex items-center justify-center text-xs">
+                            {numCartItem}
+                          </div>
+                        )}
+                      </NavLink>
+                      <NavLink to="/wishlist">
+                        <FiHeart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
+                        {numWishItem > 0 && (
+                          <div className="absolute rounded-full top-[-10px] right-[-10px] w-[15px] h-[15px] bg-rose-600 text-white flex items-center justify-center text-xs">
+                            {numWishItem}
+                          </div>
+                        )}
+                      </NavLink>
                       <FiUser
                         onClick={() => setDisplayAuth(true)}
                         className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full"

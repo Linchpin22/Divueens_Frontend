@@ -1,6 +1,8 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import JoinUsImg from "../../assets/CareersPage/joinus.png";
+import MaintennacePage from '../../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 
 function JoinUs() {
   return (
@@ -13,10 +15,10 @@ function JoinUs() {
             quod!
           </p>
 
-          <button className="capitalize text-nowrap py-2 text-center px-4  bg-rose-700 hover:bg-rose-900  text-white font-semibold rounded-3xl text-base cursor-pointer h-fit w-fit flex items-center mt-4 gap-2">
+          <Link to={'/maintennace'} className="capitalize text-nowrap py-2 text-center px-4  bg-rose-700 hover:bg-rose-900  text-white font-semibold rounded-3xl text-base cursor-pointer h-fit w-fit flex items-center mt-4 gap-2">
 
             explore now <MdArrowOutward className="font-bold text-lg" />
-          </button>
+          </Link>
         </div>
       </div>
       <div>

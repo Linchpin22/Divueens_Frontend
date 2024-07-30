@@ -5,22 +5,24 @@ import Trash from '../../../assets/trash.png';
 import Share from '../../../assets/share.png';
 import productData from '../../ProductList/ProductListItemData';
 import { CartContext } from '../../../context/CartContext';
+import { WishlistContext } from '../../../context/WishlistContext';
 
 const Wishlist = () => {
   const { addCartItemNumber, subCartItemNumber } = useContext(CartContext);
+  const { addWishItemNumber, subWishItemNumber } = useContext(WishlistContext);
   const [wishlist, setWishlist] = useState([]);
   const [wishListItem, setWishListItem] = useState(productData);
-  const [cardItem, setCardItem] = useState([...new Set(JSON.parse(localStorage.getItem('wishlist')))] || []);
+  const [cardItem, setCardItem] = useState(JSON.parse(localStorage.getItem('Item-Id')) || []);
 
   useEffect(() => {
-    const storedWishlist = [...new Set(JSON.parse(localStorage.getItem('wishlist')))] || [];
+    const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     setWishlist(storedWishlist);
     const tempData = wishListItem.filter(product => storedWishlist.includes(product.id));
     if (wishListItem !== tempData) setWishListItem(tempData);
   }, [wishListItem]);
 
   const handleRemoveFromWishlist = (id) => {
-    subCartItemNumber();
+    subWishItemNumber();
     const updatedWishlist = wishlist.filter(item => item !== id);
     setWishlist(updatedWishlist);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
@@ -30,8 +32,10 @@ const Wishlist = () => {
     let updatedItems;
     if (cardItem.includes(ItemId)) {
       updatedItems = cardItem.filter(id => id !== ItemId);
+      subCartItemNumber();
     } else {
       updatedItems = [...cardItem, ItemId];
+      addCartItemNumber();
     }
     setCardItem(updatedItems);
     localStorage.setItem("Item-Id", JSON.stringify(updatedItems));
@@ -75,15 +79,7 @@ const Wishlist = () => {
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                       <button
                         className="bg-rose-800 font-bold text-white rounded-xl text-sm sm:text-base px-6 py-2"
-                        onClick={() => {
-                          if (isInCart) {
-                            subCartItemNumber();
-                            addingItemToCart(item.id);
-                          } else {
-                            addCartItemNumber();
-                            addingItemToCart(item.id);
-                          }
-                        }}
+                        onClick={() => addingItemToCart(item.id)}
                       >
                         {isInCart ? "Remove from Cart" : "Add to Cart"}
                       </button>
