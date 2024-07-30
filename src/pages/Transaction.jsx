@@ -50,7 +50,7 @@ const UPIComponent = () => (
       A payment request will be sent to this upi id.
     </p>
 
-    <Link to={'/Maintennace'} className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-600 transition duration-300">
+    <Link to={'/maintennace'} className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-600 transition duration-300">
       Verify and Pay
     </Link>
   </div>
@@ -127,7 +127,7 @@ const CreditCardComponent = () => (
         </p>
       </div>
 
-      <Link to={'/Maintennace'}
+      <Link to={'/maintennace'}
         className="bg-rose-700 hover:bg-rose-500 text-white font-bold py-2 md:py-2.5 lg:py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full"
         type="button" 
       >
@@ -142,7 +142,7 @@ const CashOnDeliveryComponent = () => (
     <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay at your Door step </h2>
     <hr className="mb-4 md:mb-5 lg:mb-6" />
     <p className='mb-3 md:mb-4 lg:mb-5'><b>25260 users</b> have made payments through UPI in the last 1hr.<b className='text-rose-700'>Switch to upi</b></p>
-    <Link to={'/Maintennace'}
+    <Link to={'/maintennace'}
         className="bg-rose-700 hover:bg-rose-500 text-white font-bold py-2 md:py-2.5 lg:py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full"
         type="button"
       >
@@ -180,7 +180,7 @@ const NetBankingComponent = () => {
         ))}
       </div>
 
-      <Link to={'/Maintennace'} className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-500 transition duration-300 font-semibold">
+      <Link to={'/maintennace'} className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-500 transition duration-300 font-semibold">
         Pay Now
       </Link>
     </div>
@@ -257,7 +257,7 @@ const GiftCardComponent = () => {
           {error && <p className="text-red-500 text-xs italic mt-1">{error}</p>}
         </div>
 
-        <Link to={'/Maintennace'}
+        <Link to={'/maintennace'}
           className="w-full bg-rose-700 hover:bg-rose-600 text-white font-bold py-2 md:py-2.5 lg:py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300"
           type="submit"
         >
@@ -384,7 +384,7 @@ export default function Transaction() {
             <p className="text-gray-600  flex flex-row"><span className='w-[50%]'>Total:</span><span>Rs {total}/-</span> </p>
           </div>
           <div className="border-t border-gray-300 my-2"></div>
-          <Link to={'/Maintennace'} className="w-full h-8 md:h-9 lg:h-10 rounded-lg mt-3 mb-3 lg:text-lg text-sm sm:text-base  border-[2px] border-rose-700 font-semibold hover:text-rose-700 hover:bg-white bg-rose-700 text-white transition-all duration-200 ease-in-out  shadow-lg">you are saving Rs {totaldiscountAmount} /-</Link>
+          <Link to={'/maintennace'} className="w-full h-8 md:h-9 lg:h-10 rounded-lg mt-3 mb-3 lg:text-lg text-sm sm:text-base  border-[2px] border-rose-700 font-semibold hover:text-rose-700 hover:bg-white bg-rose-700 text-white transition-all duration-200 ease-in-out  shadow-lg">you are saving Rs {totaldiscountAmount} /-</Link>
         </div>
       </div>
       

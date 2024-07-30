@@ -46,7 +46,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
+                                <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -56,7 +56,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">Vaseline Shea Butter for Glowing skin (180g), whipped body butter</p>
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
-                                <Link to={'/Maintennace'}
+                                <Link to={'/maintennace'}
                                  className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
@@ -68,7 +68,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
+                                <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -79,7 +79,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
+                                <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -90,7 +90,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
+                                <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -101,7 +101,7 @@ const NewArrivals = () => {
                                     <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                 </div>
 
-                                <Link to={'/Maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
+                                <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                             </div>
                         </SwiperSlide>
 
