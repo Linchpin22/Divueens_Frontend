@@ -31,6 +31,7 @@ const baadiList = [
         //   url: "",
         //   txt: "Press",
         // },
+
         {
           url: "/authenticity",
           txt: "Authenticity",
@@ -39,6 +40,7 @@ const baadiList = [
           url: "/careers",
           txt: "Careers",
         },
+
         // {
         //   url: "/CSR",
         //   txt: "Divueens CSR",
@@ -125,15 +127,15 @@ const baadiList = [
     title: "Top Categories",
     chhotiList: [
       {
-        url: "",
+        url: "/maintennace",
         txt: "Makeup",
       },
       {
-        url: "",
+        url: "/maintennace",
         txt: "Hair",
       },
       {
-        url: "",
+        url: "/maintennace",
         txt: "Organics",
       },
     ],

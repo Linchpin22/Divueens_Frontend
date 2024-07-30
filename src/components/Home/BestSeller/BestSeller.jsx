@@ -7,7 +7,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
+ 
+//import MaintennacePage from '../../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
+
 
 const trending = imageUrls.slice(0, imageUrls.length / 2);
 const newArrivals = imageUrls.slice(imageUrls.length / 2);
@@ -156,9 +159,9 @@ const BestSeller = () => {
 
                   {/* Buynow btn */}
                 <Link to="/">
-                  <button className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
+                <Link to={'/maintennace'}className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
                     Buy Now
-                  </button>
+                  </Link>
                 </Link>
                 </div>
                 
