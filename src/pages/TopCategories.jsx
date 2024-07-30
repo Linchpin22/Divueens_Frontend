@@ -7,6 +7,7 @@ import b1 from './../assets/TopCategories/best-seller-1.png';
 import b2 from './../assets/TopCategories/best-seller-2.png';
 import b3 from './../assets/TopCategories/best-seller-3.png';
 import b4 from './../assets/TopCategories/best-seller-4.png';
+import b5 from './../assets/TopCategories/best-seller-5.jpg';
 import s1 from './../assets/TopCategories/skin-care-1.png';
 import s2 from './../assets/TopCategories/skin-care-2.png';
 import s3 from './../assets/TopCategories/skin-care-3.png';
@@ -51,7 +52,7 @@ export default function TopCategories() {
           </div>
 
           <section className="mt-16 text-black text-xl">
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-4 md:mx-16 pb-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 mx-4 md:mx-16 pb-10">
               <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={b1} alt="Best Seller" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <p className="flex justify-center items-center font-bold pt-5">Best Seller's</p>
@@ -68,12 +69,16 @@ export default function TopCategories() {
                 <img src={b4} alt="Top Brands" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <p className="flex justify-center items-center font-bold pt-5">Top Brands</p>
               </div>
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
+                <img src={b5} alt="Top Brands" className="w-60 h-60 rounded-full object-cover mb-2"/>
+                <p className="flex justify-center items-center font-bold pt-5">Divueens Products</p>
+              </div>
             </div>
           </section>
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Skincare</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-10 mt-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mx-4 md:mx-16 pb-10 mt-10">
               <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={s1} alt="Cleansers" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
@@ -98,12 +103,18 @@ export default function TopCategories() {
                   Sun Care
                 </div>
               </div>
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
+                <img src={s1} alt="Sun Care" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Cleanser
+                </div>
+              </div>
             </div>
           </section>
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Makeup</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 mt-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mx-4 md:mx-16 mt-10">
               <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={m1} alt="Foundations" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
@@ -128,6 +139,12 @@ export default function TopCategories() {
                   Mascaras
                 </div>
               </div>
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
+                <img src={m1} alt="Mascaras" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                Foundations
+                </div>
+              </div>
             </div>
           </section>
 
@@ -139,7 +156,7 @@ export default function TopCategories() {
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Haircare</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-8 mt-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mx-4 md:mx-16 pb-8 mt-10">
               <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={h1} alt="Shampoos" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
@@ -164,12 +181,18 @@ export default function TopCategories() {
                   Hair Tools
                 </div>
               </div>
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
+                <img src={h1} alt="Hair Tools" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Shampoos
+                </div>
+              </div>
             </div>
           </section>
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Beauty Tools & Accessories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-8 mt-10">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 mx-4 md:mx-16 pb-8 mt-10">
               <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={ma1} alt="Brushes TopCategorieslicators" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
@@ -192,6 +215,12 @@ export default function TopCategories() {
                 <img src={ma4} alt="Tools" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
                   Tools
+                </div>
+              </div>
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
+                <img src={ma1} alt="Tools" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Brushes & Applicators
                 </div>
               </div>
             </div>
