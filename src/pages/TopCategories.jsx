@@ -52,21 +52,21 @@ export default function TopCategories() {
 
           <section className="mt-16 text-black text-xl">
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-4 md:mx-16 pb-10">
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={b1} alt="Best Seller" className="w-60 h-60 rounded-lg object-cover mb-2"/>
-                <p className="text-center font-bold pt-5">Best Seller's</p>
+                <p className="flex justify-center items-center font-bold pt-5">Best Seller's</p>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={b2} alt="Trending Products" className="w-60 h-60 rounded-lg object-cover mb-2"/>
-                <p className="text-center font-bold pt-5">Trending Products</p>
+                <p className="flex justify-center items-center font-bold pt-5">Trending Products</p>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={b3} alt="Top Products" className="w-60 h-60 rounded-lg object-cover mb-2"/>
-                <p className="text-center font-bold pt-5">Top Products</p>
+                <p className="flex justify-center items-center font-bold pt-5">Top Products</p>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={b4} alt="Top Brands" className="w-60 h-60 rounded-lg object-cover mb-2"/>
-                <p className="text-center font-bold pt-5">Top Brands</p>
+                <p className="flex justify-center items-center font-bold pt-5">Top Brands</p>
               </div>
             </div>
           </section>
@@ -74,17 +74,29 @@ export default function TopCategories() {
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Skincare</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-10 mt-10">
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={s1} alt="Cleansers" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Cleansers
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={s2} alt="Moisturizers" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Moisturizers
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={s3} alt="Serums" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Serums
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={s4} alt="Sun Care" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Sun Care
+                </div>
               </div>
             </div>
           </section>
@@ -92,17 +104,29 @@ export default function TopCategories() {
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Makeup</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 mt-10">
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={m1} alt="Foundations" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Foundations
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={m2} alt="Lipsticks" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Lipsticks
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={m3} alt="Eyeshadows" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Eyeshadows
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={m4} alt="Mascaras" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Mascaras
+                </div>
               </div>
             </div>
           </section>
@@ -116,17 +140,29 @@ export default function TopCategories() {
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Haircare</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-8 mt-10">
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={h1} alt="Shampoos" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Shampoos
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={h2} alt="Conditioners" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Conditioners
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={h3} alt="Styling Products" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Styling Products
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={h4} alt="Hair Tools" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Hair Tools
+                </div>
               </div>
             </div>
           </section>
@@ -134,17 +170,29 @@ export default function TopCategories() {
           <section className="mt-8">
             <h2 className="text-2xl font-bold mb-4 text-black">Beauty Tools & Accessories</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-8 mt-10">
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={ma1} alt="Brushes TopCategorieslicators" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Brushes & Applicators
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={ma2} alt="Mirrors" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Mirrors
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={ma3} alt="Makeup Bags" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Makeup Bags
+                </div>
               </div>
-              <div className="flex flex-col items-center mb-4 md:mb-0">
+              <div className="relative group flex flex-col items-center mb-4 md:mb-0">
                 <img src={ma4} alt="Tools" className="w-60 h-60 rounded-lg object-cover mb-2"/>
+                <div className="label bg-gray-700/40 w-full h-full max-h-[20px] md:max-h-[30px] flex justify-center items-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden group-hover:max-h-full cursor-pointer no-underline">
+                  Tools
+                </div>
               </div>
             </div>
           </section>
