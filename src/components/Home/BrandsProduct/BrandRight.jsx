@@ -10,7 +10,7 @@ const BrandRight = ({brandImage, products1, products2,products3}) => {
         <>
 
             <div className="flex flex-col md:flex-row items-center gap-4 px-8 py-4">
-                <div className="w-full h-52 lg:w-[30%] md:h-56 rounded-xl flex flex-col items-center justify-center text-center">
+                <div className="w-full h-fit lg:w-[30%] md:h-56 rounded-xl flex flex-col items-center justify-center text-center">
                     <img src={brandImage} className="w-full h-40" alt="" />
                 </div>
                 <div className="w-full h-52 md:w-1/2 lg:w-[70%] md:h-72 border rounded-xl">

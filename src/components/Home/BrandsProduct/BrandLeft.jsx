@@ -59,7 +59,7 @@ const BrandLeft = ({brandImage, products1, products2,products3}) => {
 
                     </Swiper>
                 </div>
-                <div className="w-full h-52 lg:w-[30%] md:h-56 rounded-xl flex flex-col items-center justify-center text-center">
+                <div className="w-full h-fit lg:w-[30%] md:h-56 rounded-xl flex flex-col items-center justify-center text-center">
                     <img src={brandImage} className="w-full h-40" alt="" />
                 </div>
             </div>
