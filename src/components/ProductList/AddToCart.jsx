@@ -71,7 +71,7 @@ function Cart() {
               onRemove={() => toRemoveItemFromCart(item.id)}
             />
           )) : 
-          <div>No data</div>
+          <div>No data!</div>
           }
         </div>
       </div>

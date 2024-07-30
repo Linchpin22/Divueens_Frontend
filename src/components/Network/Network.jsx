@@ -6,31 +6,43 @@ import {
   FaShare,
 } from "react-icons/fa6";
 import { TiPin } from "react-icons/ti";
+import MaintennacePage from '../../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 import { GoPerson } from "react-icons/go";
 import { BsQuestionSquare } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
-import { IoPersonCircleOutline } from "react-icons/io5";
-import { PiNeedle, PiNotePencilBold } from "react-icons/pi";
+import { PiNotePencilBold } from "react-icons/pi";
 import AnswerModal from "./AnswerModel";
 import ReadMore from "./ReadMore";
 import BannerTop from "./../../assets/DivueenNetwork/BannerTop1.png";
 import NetworkBanner from "./../../assets/DivueenNetwork/NetworkBanner.png";
-import BannerMain from "./../../assets/DivueenNetwork/BannerMain.png"; 
-import CuratedImg1 from "./../../assets/DivueenNetwork/CuratedImg1.png"; 
-import CuratedImg2 from "./../../assets/DivueenNetwork/CuratedImg2.png"; 
+import BannerMain from "./../../assets/DivueenNetwork/BannerMain.png";
+import CuratedImg1 from "./../../assets/DivueenNetwork/CuratedImg1.png";
+import CuratedImg2 from "./../../assets/DivueenNetwork/CuratedImg2.png";
 import CuratedImg3 from "./../../assets/DivueenNetwork/CuratedImg3.png";
 import Logo from "./../../assets/DivueenNetwork/logo.png";
+import profilePic from "../../assets/DivueenNetwork/Ellipse.png";
+import { FcLike } from "react-icons/fc";
 
 const Network = () => {
   const [open, setOpen] = useState(false);
   function handleReadNow() {
     setOpen((old) => !old);
   }
+  const post = {
+    likes: 64,
+    comments: 28,
+  };
+  const [reactions, setSeactions] = useState(64);
+  const [noOfAns, setNoOfAns] = useState(80);
 
   function handleAnswer() {}
   return (
     <div className=" bg-gray-100 gray min-h-screen p-6 mt-12 mb-4 w-full mx-auto text-sm">
-      <div style={{background: `url(${BannerTop})`}} className={`flex md:px-12 px-2 py-12 justify-center gap-8 lg:flex-nowrap flex-wrap w-full h-full bg-cover bg-center bg-no-repeat`}>
+      <div
+        style={{ background: `url(${BannerTop})` }}
+        className={`flex md:px-12 px-2 py-12 justify-center gap-8 lg:flex-nowrap flex-wrap w-full h-full bg-cover bg-center bg-no-repeat`}
+      >
         <div className="flex items-center flex-wrap md:flex-nowrap mx-auto justify-center sm:gap-4 ">
           <span className="uppercase text-3xl md:text-5xl font-bold border-b-2 border-black">
             trending
@@ -67,7 +79,7 @@ const Network = () => {
         </div>
       </div>
 
-      <div className="flex flex-col w-11/12  bg-white rounded-lg shadow-md mt-4 py-8 px-12 mx-auto">
+      <div className="flex flex-col w-11/12  bg-white rounded-lg shadow-xl mt-12 py-8 px-12 mx-auto">
         <div className="flex items-center gap-4 mb-4">
           <div className=" bg-rose-700 hover:bg-rose-900 text-white  rounded-full p-4">
             <GoPerson className="text-5xl " />
@@ -89,41 +101,41 @@ const Network = () => {
         </div>
       </div>
 
-      <div className="grid-flow-row auto-rows-max   bg-white mx-auto  w-11/12 rounded-lg shadow-md my-4">
-        <div className="overflow-hidden  max-w-full bg-cover bg-no-repeat">
-          <img
-            className=""
-            src={BannerMain}
-            alt=""
-          />
+      <div className="grid-flow-row auto-rows-max   bg-white mx-auto  w-11/12 rounded-lg shadow-md my-12">
+        <div className="overflow-hidden max-w-fit mx-auto  bg-cover bg-no-repeat">
+          <img className="mx-auto " src={BannerMain} alt="" />
         </div>
-        <div className=" p-8 px-12 text-base row-span-1">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis est
-          minus aut voluptatem necessitatibus magnam tempora voluptatibus, saepe
-          neque architecto! Saepe eum eligendi quibusdam quod cupiditate quidem
-          maiores! Architecto laboriosam magnam distinctio sint voluptatibus
-          inventore corporis natus. Neque reprehenderit sit numquam molestiae,
-          repellat officia aperiam voluptatibus, quae eos facilis quasi alias
-          eaque at commodi ipsam expedita suscipit, illum possimus cum. Nostrum
-          officiis cupiditate qui ad! Necessitatibus facere dicta quas quasi
-          quis. Sit dolor, cupiditate corrupti necessitatibus placeat ea harum
-          repellat quasi minima laudantium maiores. Minus modi, vel soluta
-          repudiandae repellendus consequuntur aut tenetur laborum quod fugit,
-          voluptas aliquid facere accusamus.
+        <div className=" py-12 px-8 md:px-48 md:text-2xl font-semibold text-base row-span-1 ">
+          <p className="mb-2 md:leading-10 leading-8 ">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis est
+            minus aut voluptatem necessitatibus magnam tempora voluptatibus,
+            saepe neque architecto! Saepe eum eligendi quibusdam quod cupiditate
+            quidem Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Necessitatibus, cumque? maiores! Neque reprehenderit sit numquam
+            molestiae, repellat officia aperiam voluptatibus, quae eos facilis
+            quasi alias eaque at commodi ipsam expedita suscipit, illum possimus
+            cum.
+          </p>{" "}
+          <p className=" md:leading-10 leading-8 ">
+            Nostrum officiis cupiditate qui ad! Necessitatibus facere dicta quas
+            quasi quis. Sit dolor, cupiditate corrupti necessitatibus placeat ea
+            harum repellat quasi minima laudantium maiores. Minus modi, vel
+            soluta repudiandae repellendus consequuntur aut tenetur laborum quod
+            fugit, voluptas aliquid facere accusamus.
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-col  w-11/12 mx-auto bg-white rounded-lg shadow-md p-4 border border-gray-200">
+      {/* <div className="flex flex-col  w-11/12 mx-auto bg-white rounded-lg shadow-md p-4 border border-gray-200">
         <div className="flex flex-row justify-between items-center">
-        <div className="overflow-hidden flex bg-cover bg-center max-w-20 rounded-sm">
-            <img className=" "
-            src={Logo} alt="divueens logo " />
-            
-            <div className="font-medium">The Divueens</div>
+          <div className="overflow-hidden bg-cover bg-center max-w-20 rounded-sm">
+            <img className=" " src={Logo} alt="divueens logo " />
+
           </div>
-          <div className="text-gray-500 text-sm">Posted 2 months ago</div>
+            <div className="font-medium">The Diva</div>
+            <div className="text-gray-500 text-sm">Posted 2 months ago</div>
         </div>
-        <p className="text-base  p-8 px-12  leading-relaxed">
+        <p className="text-base  p-8 px-12  leading-re leading-8laxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -133,35 +145,116 @@ const Network = () => {
         </p>
 
         
-        <button className="mt-4 px-4 py-2 bg-rose-700 hover:bg-rose-900 text-white  rounded-md w-fit mx-auto focus:outline-none flex items-center">
+        <Link to={'/maintennace'} className="mt-4 px-4 py-2 bg-rose-700 hover:bg-rose-900 text-white  rounded-md w-fit mx-auto focus:outline-none flex items-center">
 
           Discover More
-        </button>
+        </Link>
+       
+      </div> */}
+
+      <div className="mt-12 md:w-8/12 mx-auto ">
+        <div className="flex items-center justify-start gap-2 mb-4">
+          <TiPin className="text-2xl" />
+          <h2 className="font-semibold text-xl">Pinned Post</h2>
+        </div>
+        <div className="bg-white shadow-md rounded-lg p-6 px-12 max-w-5xl overflow-hidden">
+          <p className="flex-nowrap mb-4 uppercase text-lg font-bold text-gray-700">
+            makeup <span className="capitalize text-gray-400">post</span> in
+          </p>
+          <div className="flex items-center gap-2">
+            <div className="overflow-hidden bg-cover bg-center max-w-20 rounded-sm">
+              <img className=" " src={Logo} alt="divueens logo " />
+            </div>
+            <div className="flex flex-col font-semibold gap-2 my-2">
+              <p className="font-bold">The Divas</p>
+              <div className="flex gap-2 flex-wrap text-gray-500">
+                <p className="font-medium text-nowrap">Posted 2 months ago</p>
+                <p className="flex items-center gap-1">
+                  <FcLike /> {post.likes} Likes
+                </p>
+              </div>
+            </div>
+          </div>
+          <p className="mb-4 py-2 text-base max-w-fit text-wrap">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+          </p>
+          <div className="overflow-hidden  md:px-8 md:py-2 max-w-full bg-cover bg-no-repeat">
+            <img className="" src={NetworkBanner} alt="" />
+            <div className="mt-4 flex items-center justify-evenly md:justify-center md:space-x-4">
+              <button className="bg-rose-700 font-semibold text-white w-fit py-2 px-4 rounded hover:bg-rose-900">
+                <span className="hidden sm:inline-block">Like</span> <FaRegHeart className="inline text-lg mx-2 " />
+              </button>
+              <button className="bg-rose-700 font-semibold text-white w-fit py-2 px-4 rounded hover:bg-rose-900">
+                <span className="hidden sm:inline-block">Comment</span> <FaRegComment className="inline text-lg mx-2 " />
+              </button>
+              <button className="bg-rose-700 font-semibold text-white w-fit py-2 md:px-4 px-2 rounded text-center hover:bg-rose-900">
+                <span className="hidden sm:inline-block">Share Post</span>{" "}
+                <FaShare className="inline text-lg mx-2 " />
+              </button>
+            </div>
+          </div>
+          {/* <div className="mt-4 flex items-center space-x-4">
+            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
+              Like <FaRegHeart className="inline mx-2 " />
+            </button>
+            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
+              Comment <FaRegComment className="inline mx-2 " />
+            </button>
+            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
+              Share Post <FaShare className="inline mx-2 " />
+            </button>
+          </div> */}
+        </div>
       </div>
 
       <div className="mt-12  w-11/12 mx-auto">
         <h2 className="font-bold mb-4 text-2xl uppercase">Topics Right Now</h2>
         <div className="space-y-6">
-          {[...Array(4)].map((_, index) => (
-            <div key={index} className=" px-12 py-8 bg-rose-200 shadow-md rounded-lg p-6">
-              <h3 className=" font-semibold w-fit text-lg mx-auto mb-4 ">
-                Q & A .Topic Skin
+          {[...Array(2)].map((_, index) => (
+            <div
+              key={index}
+              className=" md:px-12 py-8 bg-rose-200 shadow-md rounded-lg p-6"
+            >
+              <h3 className=" font-semibold  border-b-2 border-black w-fit text-base mx-auto mb-4 ">
+                Q & A. <span className="text-xl">Topic Skin</span>
               </h3>
-              <p className="mb-4">
-                <span className="font-semibold text-md">Q :</span> Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam?
-              </p>
-              <p className="flex-nowrap md:px-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam?
-              </p>
-              <div className="mt-4 text-right">
-                <p className="flex-nowrap">Bella D.</p>
-                <p className="flex-nowrap">Answered 1 month ago</p>
-                <p>101 reactions · 64 More Answers</p>
+              <div className="md:mx-12 mt-12 text-justify">
+                <p className="mb-4 font-semibold">
+                  <span className="font-bold text-lg">Q :</span> Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                  minim veniam? Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Non perspiciatis voluptas cupiditate nam
+                  maxime id.
+                </p>
+                <div>
+                  <div>
+                    <img
+                      src={profilePic}
+                      className="size-10 rounded-full"
+                      alt=""
+                    />
+                    <p className="md:text-nowrap">Bella D.</p>
+                  </div>
+                  <div className="mt-1 flex justify-between font-semibold">
+                    <div className="flex gap-4">
+                      <p className="md:text-nowrap">Answered 1 month ago</p>
+                      <p className="md:text-nowrap">{reactions} reactions</p>
+                    </div>
+                    <p className="flex gap-1 items-center">
+                      {noOfAns} More Answers <IoIosArrowForward />
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Voluptatem adipisci, rerum explicabo aperiam
+                  suscipit tempore maxime fugiat commodi voluptates enim. sit
+                  amet consectetur adipisicing elit. Illo dicta eius id quos
+                  obcaecati eos aliquid ipsa incidunt, beatae omnis!
+                </div>
               </div>
               {/* <button className="mt-4 bg-transparent mx-auto shadow-md hover:shadow-inner flex-nowrap py-2 px-4 rounded hover:bg-rose-100">
                 Write An Answer
@@ -197,110 +290,57 @@ const Network = () => {
               more: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto laboriosam enim aliquid, minus error ea distinctio repellat. Temporibus, iste vero.",
             },
           ].map((item, index) => (
-              <div
-                className={`flex flex-wrap items-center bg-rose-200 overflow-hidden  shadow-md rounded-lg justify-between ${
-                  index % 2 !== 0 && "flex-row-reverse"
-                }`}
-              >
-                <div key={index} className="flex-1 px-12 py-8 ">
-                  <h3 className="font-medium mb-2 text-xl lg:text-2xl">
-                    {item.heading}
-                  </h3>
-                  <div className="flex items-start justify-between gap-2 flex-wrap text-lg lg:text-base ">
-                    <p className="">{item.para}</p>
-                    {/* <button className="text-nowrap rounded shadow-md hover:shadow-inner py-1 px-2  font-semibold"
+            <div
+              className={`flex flex-wrap items-center bg-rose-200 overflow-hidden  shadow-md rounded-lg justify-between ${
+                index % 2 !== 0 && "flex-row-reverse"
+              }`}
+            >
+              <div key={index} className="flex-1 px-12 py-8 ">
+                <h3 className="font-medium mb-2 text-xl lg:text-2xl">
+                  {item.heading}
+                </h3>
+                <div className="flex items-start justify-between gap-2 flex-wrap text-lg lg:text-base ">
+                  <p className="">{item.para}</p>
+                  {/* <button className="text-nowrap rounded shadow-md hover:shadow-inner py-1 px-2  font-semibold"
                   onClick={handleReadNow}>
                     Read Now
                   </button> */}
-                    <ReadMore text={item.more} />
-                  </div>
-                  {/* {open&&<h1 className="mt-4 transition-all ease-in-out delay-300">{item.more}</h1>} */}
+                  <ReadMore text={item.more} />
                 </div>
-                <div
-                  className={`bg-cover md:flex-1 bg-no-repeat bg-center w-full`}
-                >
-                  <img
-                    src={item.img}
-                    className=" h-full min-h-200"
-                    alt="beauty image"
-                  />
-                </div>
+                {/* {open&&<h1 className="mt-4 transition-all ease-in-out delay-300">{item.more}</h1>} */}
+              </div>
+              <div
+                className={`bg-cover flex  md:flex-1 bg-no-repeat bg-center w-full "justify-end"
+                `}
+              >
+                <img
+                  src={item.img}
+                  className=" h-full mx-auto min-h-200"
+                  alt="beauty image"
+                />
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="mt-12 md:w-8/12 mx-auto ">
-        <div className="flex items-center justify-start gap-2 mb-4">
-          <TiPin className="text-2xl" />
-          <h2 className="font-semibold text-xl">Pinned Post</h2>
-        </div>
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-5xl overflow-hidden">
-          <p className="flex-nowrap mb-4 uppercase text-lg font-bold text-gray-700">makeup <span className="capitalize text-gray-400">post</span> in</p>
-          <div className="flex items-center gap-2">
-            <div className="overflow-hidden bg-cover bg-center max-w-20 rounded-sm">
-            <img className=" "
-            src={Logo} alt="divueens logo " />
-            </div>
-            <div className="flex flex-col gap-2 my-2">
-            <p className="font-bold">The Divas</p>
-            <p className="font-medium">
-              Posted 2 months ago · 24 Comments · 64 Likes
-            </p>
-          </div>
-          </div>
-          <p className="mb-4 px-8 py-2 text-base max-w-fit text-wrap">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-          <div className="overflow-hidden  md:px-8 md:py-2 max-w-full bg-cover bg-no-repeat">
-            <img
-              className=""
-              src={NetworkBanner}
-              alt=""
-            />
-            <div className="mt-4 flex items-center space-x-4">
-            <button className="bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900">
-              Like <FaRegHeart className="inline mx-2 " />
-            </button>
-            <button className="bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900">
-              Comment <FaRegComment className="inline mx-2 " />
-            </button>
-            <button className="bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900">
-              Share Post <FaShare className="inline mx-2 " />
-            </button>
-          </div>
-          </div>
-          {/* <div className="mt-4 flex items-center space-x-4">
-            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
-              Like <FaRegHeart className="inline mx-2 " />
-            </button>
-            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
-              Comment <FaRegComment className="inline mx-2 " />
-            </button>
-            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
-              Share Post <FaShare className="inline mx-2 " />
-            </button>
-          </div> */}
-        </div>
-      </div>
-
-      <div className="mt-12 w-11/12 mx-auto">
+      <div className="mt-12 md:w-8/12 mx-auto">
         <h2 className="font-bold  mb-4 text-2xl uppercase border-b-2 border-black w-fit pb-1">
           Questions for You
         </h2>
         <div className="space-y-6">
           {[...Array(2)].map((_, index) => (
-            <div key={index} className="bg-white px-12 py-8 shadow-md rounded-lg p-6">
+            <div
+              key={index}
+              className="bg-white px-12 py-8 shadow-md rounded-lg p-6"
+            >
               <h3 className=" font-semibold mb-4">
                 Q: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam?
               </h3>
               <button
-
                 className="mt-4bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900 bg-rose-700 "
-
                 onClick={handleAnswer}
               >
                 Write An Answer
