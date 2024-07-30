@@ -152,7 +152,8 @@ const Slider = () => {
           clickable: true,
         }}
         breakpoints={{
-          425:{slidesPerView:2,
+          425: {
+            slidesPerView: 2,
 
           },
           600: {
@@ -167,7 +168,7 @@ const Slider = () => {
             slidesPerView: 5,
             spaceBetween: 20,
           },
-          
+
         }}
         modules={[Navigation, Pagination]}
         className="mySwiper  w-[95%] relative px-12 md:px-9 py-6 "
@@ -220,7 +221,7 @@ const Slider = () => {
                   <p className="text-sm md:text-lg py-2 font-medium text-rose-800"><span className="text-xs align-text-top">₹</span>
                     {data.price}/-</p>
                   <p className="text-xs text-slate-400 self-center ">
-                    
+
                     <span className="text-emerald-600 pr-1">
                       {(data.price / data.original_price) * 100}%
                     </span>

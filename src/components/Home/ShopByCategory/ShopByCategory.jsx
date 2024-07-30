@@ -30,10 +30,10 @@ const ShopByCategory = () => {
         >
 
           <div className=" w-full h-full">
-            <div className="categories-container grid mx-auto justify-center items-center w-full px-8 lg:w-[85%] xl:w-[65%] h-full grid-cols-2 grid-rows-3 md:grid-rows-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 md:h-[80%] box-border place-content-center z-[2]">
+            <div className="categories-container grid mx-auto justify-center items-center w-full px-8 md:px-0 lg:w-[85%] xl:w-[65%] h-full grid-cols-2 grid-rows-3 md:grid-rows-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 md:h-[80%] box-border place-content-center z-[2]">
               <div
                 style={{ backgroundImage: `url(${Eyes})` }}
-                className="categories-ite shadow-mdm mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline eyes"
+                className="categories-item shadow-md mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline eyes"
               >
                 <a href="https://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">

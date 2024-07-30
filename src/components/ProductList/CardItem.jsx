@@ -5,19 +5,37 @@ import { FaHeart, FaRegHeart, FaStar } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 // import AddCart from './AddCart';
 import {CartContext} from '../../context/CartContext';
+import {WishlistContext} from '../../context/WishlistContext';
 
 
 const CardItem = ({ item }) => {
-    const {addCartItemNumber , subCartItemNumber} = useContext(CartContext)
+    const {addCartItemNumber , subCartItemNumber} = useContext(CartContext);
+    const {addWishItemNumber , subWishItemNumber } = useContext(WishlistContext);
     const [currentPage, setCurrentPage] = useState(1);
     const lastPage = Math.ceil(item.length / 12)
     const [likedCards, setLikedCards] = useState({});
     const [cardItem, setCardItem] = useState([]);
-    const [wishlist, setWishlist] = useState([]);
     useEffect(() => {
         const storedItems = JSON.parse(localStorage.getItem("Item-Id")) || [];
         setCardItem(storedItems);
 
+    }, []);
+    const [wishlist, setWishlist] = useState(() => {
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        return storedWishlist;
+      });
+      
+      useEffect(() => {
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      }, [wishlist]);
+
+    useEffect(() => {
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const likedCardsObj = {};
+        storedWishlist.forEach((id) => {
+            likedCardsObj[id] = true;
+        });
+        setLikedCards(likedCardsObj);
     }, []);
 
     const addingItemToCart = (ItemId) => {
@@ -37,6 +55,7 @@ const CardItem = ({ item }) => {
     };
 
     const handleLike = (id) => {
+        
         let updatedWishlist;
         if (likedCards[id]) {
             updatedWishlist = wishlist.filter(item => item !== id);
@@ -53,17 +72,29 @@ const CardItem = ({ item }) => {
         const endIndex = startIndex + 12;
         const currentPageImages = item.slice(startIndex, endIndex);
         return (
-            <div className='grid gap-x-4 gap-y-2 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-12 md:gap-x-14 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(3,_0.8fr)]'>
+            <div className='grid gap-x-4 gap-y-2 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-12 md:gap-x-14 xl:gap-x-8 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.8fr)]'>
                 {currentPageImages.map((p) => {
                     const isInCart = (cardItem).includes(p.id);
+                    const isInWishlist = (wishlist).includes(p.id);
                     console.log(isInCart)
+
                     return <div key={p.id} className=''>
                         <Link to={`/product-description/${p.id}`} className="group relative mb-2 block h-60 md:h-72 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
                             <img src={p.image} alt='image' className="h-full w-full object-center object-cover transition duration-200 group-hover:scale-110" />
 
                             <div className="absolute left-0 top-0 right-0 px-3 py-1.5 flex items-center justify-between text-white">
-                                <p className="text-[0.8rem] text-rose-500 bg-white px-2 rounded-full" > {p.discount} </p>
-                                <div className='text-[0.9rem] text-rose-600 bg-white p-2 rounded-full md:text-[1.3rem]' onClick={() => handleLike(p.id)}>
+                                <p className="text-xs text-rose-600 bg-white px-2 py-1 rounded-full" > {p.discount}% OFF </p>
+                                <div className='text-xs text-rose-600 bg-white p-2 rounded-full md:text-sm'
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (isInWishlist) {
+                                            subWishItemNumber();
+                                            handleLike(p.id);}
+                                        else{
+                                            addWishItemNumber();
+                                            handleLike(p.id);
+                                        }
+                                    }}>
                                     {likedCards[p.id] ? <FaHeart /> : <FaRegHeart />}
                                 </div>
                             </div>
@@ -71,18 +102,22 @@ const CardItem = ({ item }) => {
 
                         <div className='relative h-36 lg:px-4 md:h-32'>
                             <Link to="/product-description" className="hover:text-gray-800 tracking-tighter mb-1 transition duration-100 font-medium text-[0.8rem] lg:text-[1rem]">{p.name} - {p.category} - {p.shade} - {p.material} - {p.brands}</Link>
-                            <div className='flex items-center lg:mt-1'>
-                                <div className="text-[#ffa200] flex items-center">
+                            <div className='flex items-center justify-start lg:mt-1'>
+                                {/* <div className="text-[#ffa200] flex items-center">
                                     <FaStar />
                                     <FaStar />
                                     <FaStar />
                                     <FaStar />
                                 </div>
-                                <p className='ml-2 text-[0.8rem] sm:text-xs tracking-tighter'>{p.rating} / <span className='text-[#00000077]'>5</span></p>
+                                <p className='ml-2 text-[0.8rem] sm:text-xs tracking-tighter'>{p.rating} / <span className='text-[#00000077]'>5</span></p> */}
+                                <p className='mr-2 text-sm tracking-wider'>{p.rating}/5</p>
+                                <div className="text-[#ffa200] text-sm flex items-center">
+                                    <FaStar />
+                                </div>
                             </div>
-                            <div className="flex items-end justify-between absolute bottom-6 md:bottom-2 sm:gap-2 lg:-bottom-4 xl:-bottom-0 left-0 right-0 xl:px-4">
-                                <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-xl">₹ {p.price} /-</span>
-                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-700'} text-white hover:bg-rose-600 md:w-fit rounded-lg text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-2`} onClick={() => {
+                            <div className="flex items-end justify-between  absolute bottom-6 md:bottom-2 sm:gap-2 lg:-bottom-4 xl:-bottom-0 left-0 right-0 xl:px-4">
+                                <span className="font-[530] text-[0.8rem] sm:text-[1rem] md:text-base lg:text-xl"><span>₹</span>{p.price}/-</span>
+                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-700'} text-white md:px-4 hover:bg-rose-600 md:w-fit rounded-full text-[0.7rem] sm:text-[0.8rem] px-4 py-1 md:p-2`} onClick={() => {
                                     if (isInCart) {
                                         subCartItemNumber()
                                     addingItemToCart(p.id)}
