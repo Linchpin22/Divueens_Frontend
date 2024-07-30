@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import styles from "./BestSeller.module.css";
-import { brand_7, brand_8, imageUrls, product_1, product_2, product_3, product_4, product_5, product_6 } from "../../../assets/assets";
+import { imageUrls} from "../../../assets/assets";
 import { LiaShoppingCartSolid, LiaHeart } from "react-icons/lia";
 import "swiper/css";
 // import "swiper/css/pagination";
@@ -10,8 +10,6 @@ import { Navigation, Pagination } from "swiper/modules";
 
 //import MaintennacePage from '../../pages/MaintennacePage'; 
 import { Link } from 'react-router-dom';
-import BrandLeft from "../BrandsProduct/BrandLeft";
-import BrandRight from "../BrandsProduct/BrandRight";
 
 
 const trending = imageUrls.slice(0, imageUrls.length / 2);
@@ -28,25 +26,6 @@ const BestSeller = () => {
   const handlePrevClick = () => swiper?.slidePrev();
 
   const categories = { trending, newArrivals };
-
-  const brandRight4 = [
-    {
-      brandImage: brand_8,
-      products1: product_4,
-      products2: product_5,
-      products3: product_6,
-    },
-  ]
-
-
-  const brandLeft4 = [
-    {
-      brandImage: brand_7,
-      products1: product_1,
-      products2: product_2,
-      products3: product_3,
-    },
-  ]
 
   return (
     <>
@@ -201,13 +180,6 @@ const BestSeller = () => {
           ></div>
         </Swiper>
       </div>
-
-      {brandLeft4.map((b, i) => {
-        return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
-      })}
-      {brandRight4.map((b, i) => {
-        return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
-      })}
     </>
   );
 };

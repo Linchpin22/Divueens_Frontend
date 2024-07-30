@@ -31,8 +31,8 @@ const Navbar1 = ({ navItemText }) => {
     { title: "Top Brands", url: "/top-catagories" },
     // "Div Fashion",
     { title: "Beauty Trends", url: "/blogs" },
-    { title: "Glow Guide", url: "/virtual-try-on" },
-    { title: "Offers", url: "/special-offers" },
+    { title: "Glow Guide", url: "/tools-and-accessories" },
+    { title: "Offers", url: "/special-offers" }, 
   ];
   const subNavItems = [
     "Face care",

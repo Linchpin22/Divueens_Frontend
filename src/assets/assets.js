@@ -19,8 +19,7 @@ import product_16 from "./product-8.jpg";
 
 import bg_prod from "./background.jpg";
 
-import brand_1 from "./brand-1.jpeg";
-import brand_2 from "./brand-2.jpeg";
+import brand_1 from "./brand_1.png";
 import brand_3 from "./brand-3.png";
 import brand_4 from "./brand-4.png";
 import brand_5 from "./brand-5.png";
@@ -112,8 +111,42 @@ export { default as Pic57 } from "./pic57.png";
 export { default as Pic58 } from "./pic58.png";
 export { default as Pic59 } from "./pic59.png";
 export { default as Pic60 } from "./pic60.png";
-export { default as brand_1 } from "./brand-1.jpeg";
-export { default as brand_2 } from "./brand-2.jpeg";
+
+// Minimalist
+export { default as brand_9 } from "./SpecialOffers/sp48.avif";
+// plum
+export { default as brand_10 } from "./SpecialOffers/sp47.avif";
+// cosrx
+export { default as brand_11 } from "./SpecialOffers/sp45.avif";
+// cetaphil
+export { default as brand_12 } from "./SpecialOffers/sp46.avif";
+// dot and key
+export { default as brand_13 } from "./SpecialOffers/sp44.avif";
+// the ordinary
+export { default as brand_14 } from "./SpecialOffers/sp43.avif";
+// charlotte Tilbury
+export { default as brand_15 } from "./SpecialOffers/sp29.avif";
+// Kay beauty
+export { default as brand_16 } from "./SpecialOffers/sp28.avif";
+// Nykaa
+export { default as brand_17 } from "./SpecialOffers/sp27.avif";
+// Mac
+export { default as brand_18 } from "./SpecialOffers/sp26.avif";
+// Maybelline
+export { default as brand_19 } from "./SpecialOffers/sp25.avif";
+// lakme
+export { default as brand_20 } from "./SpecialOffers/sp24.avif";
+// Sugar
+export { default as brand_21 } from "./brand_1.png";
+// Kylie cosmetics
+export { default as brand_22 } from "./brand_2.png";
+// Renee
+export { default as brand_23 } from "./brand_3.png";
+// nars
+export { default as brand_24 } from "./brand_4.png";
+
+
+export { default as brand_1 } from "./brand_1.png";
 export { default as brand_3 } from "./brand-3.png";
 export { default as brand_4 } from "./brand-4.png";
 export { default as brand_5 } from "./brand-5.png";
@@ -176,6 +209,19 @@ export { default as Banner14 } from "./Banner/banner14.webp";
 export { default as Banner15 } from "./Banner/banner15.webp";
 export { default as Banner16 } from "./Banner/banner16.webp";
 export { default as Banner17 } from "./Banner/banner17.webp";
+
+// Gallery
+export { default as coll1 } from "./Gallery/coll1.png";
+export { default as coll2 } from "./Gallery/coll2.png";
+export { default as coll3 } from "./Gallery/coll3.png";
+export { default as coll4 } from "./Gallery/coll4.png";
+export { default as coll5 } from "./Gallery/coll5.png";
+export { default as coll6 } from "./Gallery/coll6.png";
+export { default as coll7 } from "./Gallery/coll7.png";
+export { default as coll8 } from "./Gallery/coll8.png";
+export { default as coll9 } from "./Gallery/coll9.png";
+export { default as coll10 } from "./Gallery/coll10.png";
+// export { default as coll11 } from "./Gallery/coll11.png";
 
 export const imageUrls = [
   {
@@ -299,7 +345,6 @@ export default MainLogo;
 
 export const brands = [
   brand_1,
-  brand_2,
   brand_3,
   brand_4,
   brand_5,
