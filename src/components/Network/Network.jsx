@@ -23,6 +23,7 @@ import CuratedImg3 from "./../../assets/DivueenNetwork/CuratedImg3.png";
 import Logo from "./../../assets/DivueenNetwork/logo.png";
 import profilePic from "../../assets/DivueenNetwork/Ellipse.png";
 import { FcLike } from "react-icons/fc";
+import { InstagramEmbed, LinkedInEmbed, XEmbed } from "react-social-media-embed";
 
 const Network = () => {
   const [open, setOpen] = useState(false);
@@ -152,12 +153,17 @@ const Network = () => {
        
       </div> */}
 
-      <div className="mt-12 md:w-8/12 mx-auto ">
+      <div className="mt-12 md:w-full mx-auto ">
         <div className="flex items-center justify-start gap-2 mb-4">
           <TiPin className="text-2xl" />
           <h2 className="font-semibold text-xl">Pinned Post</h2>
         </div>
-        <div className="bg-white shadow-md rounded-lg p-6 px-12 max-w-5xl overflow-hidden">
+        <div className="w-full flex flex-row justify-evenly">
+        <XEmbed url="https://x.com/elonmusk/status/1818083969721659861"/>
+        <InstagramEmbed url="https://www.instagram.com/p/C2v-kBUxp1c" />
+        <LinkedInEmbed url="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7219938441201926144" />
+        </div>
+        {/* <div className="bg-white shadow-md rounded-lg p-6 px-12 max-w-5xl overflow-hidden">
           <p className="flex-nowrap mb-4 uppercase text-lg font-bold text-gray-700">
             makeup <span className="capitalize text-gray-400">post</span> in
           </p>
@@ -195,18 +201,7 @@ const Network = () => {
               </button>
             </div>
           </div>
-          {/* <div className="mt-4 flex items-center space-x-4">
-            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
-              Like <FaRegHeart className="inline mx-2 " />
-            </button>
-            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
-              Comment <FaRegComment className="inline mx-2 " />
-            </button>
-            <button className="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300">
-              Share Post <FaShare className="inline mx-2 " />
-            </button>
-          </div> */}
-        </div>
+        </div> */}
       </div>
 
       <div className="mt-12  w-11/12 mx-auto">

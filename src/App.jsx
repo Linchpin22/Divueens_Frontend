@@ -37,6 +37,7 @@ import ReferralPage from "./pages/Referral";
 import Network from "./components/Network/Network";
 import Afterorder from "./pages/OrderConfirmation";
 import CareersPage from "./pages/CareersPage";
+import BlogComponent from "./Blogs/Blogcomponent";
 
 function App() {
   const { pathname } = useLocation();
@@ -99,6 +100,8 @@ function App() {
         <Route path="/confirm-order" element={<Afterorder />} />
 
         <Route path="/careers" element={<CareersPage />} />
+        
+        <Route path="/BlogsPages" element={<BlogComponent />} />
 
       </Routes>
       <Footer />
