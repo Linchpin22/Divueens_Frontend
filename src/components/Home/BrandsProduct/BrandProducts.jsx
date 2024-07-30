@@ -3,7 +3,9 @@ import "swiper/css";
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Scrollbar } from "swiper/modules";
-import { Pic58, brand_2, brand_3, product_1, product_2, product_3, product_4, product_5, product_6 } from '../../../assets/assets';
+import { Banner1, Banner10, Banner11, Banner12, Banner2, Banner3, Banner4, Banner5, Banner6, Banner7, Banner8, Banner9, Pic58, brand_2, brand_3, product_1, product_2, product_3, product_4, product_5, product_6 } from '../../../assets/assets';
+import MaintennacePage from '../../../pages/MaintennacePage'; 
+import {Link} from 'react-router-dom';
 
 
 const BrandProducts = () => {
@@ -41,7 +43,7 @@ const BrandProducts = () => {
                                         <p className="text-xs md:text-sm lg:text-base pt-4 px-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                     </div>
 
-                                    <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                    <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -52,7 +54,7 @@ const BrandProducts = () => {
                                         <p className="text-xs md:text-sm lg:text-base pt-4 px-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                     </div>
 
-                                    <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                    <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -63,7 +65,7 @@ const BrandProducts = () => {
                                         <p className="text-xs md:text-sm lg:text-base pt-4 px-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                     </div>
 
-                                    <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                    <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                                 </div>
                             </SwiperSlide>
 
@@ -102,7 +104,7 @@ const BrandProducts = () => {
                                         <p className="text-xs md:text-sm lg:text-base pt-4 px-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                     </div>
 
-                                    <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                    <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -113,7 +115,7 @@ const BrandProducts = () => {
                                         <p className="text-xs md:text-sm lg:text-base pt-4 px-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                     </div>
 
-                                    <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                    <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
@@ -124,11 +126,26 @@ const BrandProducts = () => {
                                         <p className="text-xs md:text-sm lg:text-base pt-4 px-4 font-semibold hidden transition group-hover:flex text-white">₹ 500</p>
                                     </div>
 
-                                    <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
+                                    <Link to={'/maintennace'} className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</Link>
                                 </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>
+                </div>
+
+                <div className="grid grid-cols-1 px-4 my-4 md:grid-cols-2 w-full h-full">
+                    <img src={Banner1} alt="banner" />
+                    <img src={Banner2} alt="banner" />
+                    <img src={Banner3} alt="banner" />
+                    <img src={Banner4} alt="banner" />
+                    <img src={Banner5} alt="banner" />
+                    <img src={Banner6} alt="banner" />
+                    <img src={Banner7} alt="banner" />
+                    <img src={Banner8} alt="banner" />
+                    <img src={Banner9} alt="banner" />
+                    <img src={Banner10} alt="banner" />
+                    <img src={Banner11} alt="banner" />
+                    <img src={Banner12} alt="banner" />
                 </div>
             </div>
         </>
