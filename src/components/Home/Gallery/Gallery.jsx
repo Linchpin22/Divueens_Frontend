@@ -50,6 +50,50 @@ const Gallery = () => {
                         <img className="h-auto max-w-full rounded-lg" src={coll9} alt="" />
                     </div>
                 </div>
+                <div className="grid gap-4">
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll5} alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll6} alt="" />
+                    </div>
+                </div>
+                <div className="grid gap-4">
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll3} alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll1} alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll7} alt="" />
+                    </div>
+                </div>
+                <div className="grid gap-4">
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll8} alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll10} alt="" />
+                    </div>
+                </div>
+                <div className="grid gap-4">
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll2} alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll4} alt="" />
+                    </div>
+                    <div>
+                        <img className="h-auto max-w-full rounded-lg" src={coll9} alt="" />
+                    </div>
+                </div>
             </div>
 
         </>
