@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./TopBrands.module.css";
-import { Banner, brands } from "../../../assets/assets";
+import { Banner, brand_13, brand_16, brand_17, brand_18, brand_20, brand_21, brand_22, brand_23, brand_4, brand_5, brand_6, brand_7, brands } from "../../../assets/assets";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -14,6 +14,9 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 const TopBrands = () => {
+
+  const brands = [brand_21, brand_23, brand_22, brand_20, brand_18, brand_17, brand_16, brand_13, brand_4, brand_5, brand_6, brand_7,]
+
   return (
     <>
       <div className={`${styles["brand-section"]} mt-8`}>
@@ -28,11 +31,35 @@ const TopBrands = () => {
         >
           {/* -------------- */}
           <Swiper
-            slidesPerView={brands.length - 3}
+            slidesPerView={6}
             spaceBetween={40}
             loop={true}
             autoplay={{
-              delay: 500,
+              delay: 700,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className={`${styles["bar"]} mySwiper mx-auto relative overflow-hidden scroll-smooth snap-start`}
+          >
+            {brands.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className={`${styles["card"]} h-[40px] md:h-[100px] flex items-center justify-center text-center snap-start`}
+              >
+                <img
+                  className="w-full h-ful object-contain snap-start"
+                  src={item}
+                  alt=""
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {/* <Swiper
+            slidesPerView={6}
+            spaceBetween={40}
+            loop={true}
+            autoplay={{
+              delay: 700,
               disableOnInteraction: false,
             }}
             modules={[Autoplay]}
@@ -50,7 +77,7 @@ const TopBrands = () => {
                 />
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
           {/* -------------- */}
         </div>
 
@@ -61,7 +88,7 @@ const TopBrands = () => {
             <div
               className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[35px] bg-white rounded-[50%] blur-[15px] ${styles["spot1"]}`}
             ></div>
-            
+
             <div
               className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[45px] bg-white rounded-[50%] blur-[15px] ${styles["spot2"]}`}
             ></div>
@@ -72,7 +99,7 @@ const TopBrands = () => {
               className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[65px] bg-white rounded-[50%] blur-[15px] ${styles["spot4"]}`}
             ></div>
             <h2 className={`${styles["coinLink"]} text-white font-bold`}>
-            Get Diva coins on every order
+              Get Diva coins on every order
             </h2>
           </div>
         </Link>

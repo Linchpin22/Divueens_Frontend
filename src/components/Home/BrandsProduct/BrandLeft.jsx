@@ -7,8 +7,8 @@ import { Pagination, Scrollbar } from "swiper/modules";
 const BrandLeft = ({brandImage, products1, products2,products3}) => {
     return (
         <>
-            <div className="flex flex-col-reverse md:flex-row items-center gap-4 px-8 py-4">
-                <div className="w-full h-52 md:w-1/2 lg:w-[70%] md:h-72 border rounded-xl">
+            <div className="flex flex-col-reverse md:flex-row items-center gap-4 md:px-20 py-4">
+                <div className="w-full h-52 md:w-1/2 lg:w-[70%] md:h-60 border rounded-xl">
                     <Swiper
                         slidesPerView={3}
                         spaceBetween={20}

@@ -23,24 +23,7 @@ import BrandRight from "../BrandsProduct/BrandRight";
 
 
 const ExclusiveDiscount = () => {
-  const brandLeft3 = [
-    {
-      brandImage: brand_5,
-      products1: product_1,
-      products2: product_2,
-      products3: product_3,
-    },
-  ]
-
-  const brandRight3 = [
-
-    {
-      brandImage: brand_6,
-      products1: product_4,
-      products2: product_5,
-      products3: product_6,
-    },
-  ]
+  
   return (
     <>
       <section className="Exclusive_Discount overflow-hidden font-semibold flex justify-center items-center flex-wrap ">
@@ -92,14 +75,6 @@ const ExclusiveDiscount = () => {
           <img className="w-full h-auto " src={freebies} alt="" />
         </div>
       </section>
-
-
-      {brandLeft3.map((b, i) => {
-        return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
-      })}
-      {brandRight3.map((b, i) => {
-        return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
-      })}
     </>
   );
 };
