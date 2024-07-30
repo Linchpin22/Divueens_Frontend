@@ -1,21 +1,20 @@
-
 import React, { useState, useEffect } from "react";
 import { FaRegEdit } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
 import { AiOutlineDelete } from "react-icons/ai";
+import { LuDoorOpen } from "react-icons/lu";
 
 const MyProfilePage = () => {
   const [picture, setPicture] = useState(
     localStorage.getItem('picture') || "https://ideogram.ai/assets/progressive-image/balanced/response/0VQSifToSfCe9btjHyEzUw"
   );
-  const [name, setName] = useState(localStorage.getItem('name') || "Sneha Maurya");
-  const [email, setEmail] = useState(localStorage.getItem('email') || "SnehaXYZ@gmail.com");
-  const [contact, setContact] = useState(localStorage.getItem('contact') || "9557383222");
-  const [birthday, setBirthday] = useState(localStorage.getItem('birthday') || "16-09-2004");
-  const [gender, setGender] = useState(localStorage.getItem('gender') || "Female");
+  const [name, setName] = useState(localStorage.getItem('name') || "");
+  const [email, setEmail] = useState(localStorage.getItem('email') || "");
+  const [contact, setContact] = useState(localStorage.getItem('contact') || "");
+  const [birthday, setBirthday] = useState(localStorage.getItem('birthday') || "");
+  const [gender, setGender] = useState(localStorage.getItem('gender') || "");
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
-    fullName: '',
+    name: '',
     email: '',
     phoneNumber: '',
     birthday: '',
@@ -29,7 +28,23 @@ const MyProfilePage = () => {
     localStorage.setItem('contact', contact);
     localStorage.setItem('birthday', birthday);
     localStorage.setItem('gender', gender);
+
+    if (name === "" && email === "") {
+      setIsEditing(true);
+    }
   }, [picture, name, email, contact, birthday, gender]);
+
+  useEffect(() => {
+    if (isEditing) {
+      setProfile({
+        name,
+        email,
+        phoneNumber: contact,
+        birthday,
+        gender
+      });
+    }
+  }, [isEditing, name, email, contact, birthday, gender]);
 
   const handlePictureChange = (e) => {
     const file = e.target.files[0];
@@ -46,10 +61,6 @@ const MyProfilePage = () => {
     setPicture(null);
   };
 
-  // const handleChange = (e) => {
-  //   setProfile({ ...profile, [e.target.name]: e.target.value });
-  // };
-
   const handleSave = () => {
     setIsEditing(false);
     setName(profile.name);
@@ -59,18 +70,26 @@ const MyProfilePage = () => {
     setGender(profile.gender);
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProfile(prevProfile => ({
+      ...prevProfile,
+      [name]: value
+    }));
+  };
+
   return (
     <>
       {isEditing ? (
-        <div className="w-full max-w-md">
-          <nav className="flex items-center justify-start p-4 bg-gray-100 shadow-md w-full">
+        <div className="w-full max-w-lg mx-auto shadow-2xl rounded-lg">
+          <nav className="flex rounded-t-lg items-center justify-start p-4 bg-gray-300 shadow-md w-full">
             <button
               onClick={() => setIsEditing(false)}
               className="text-gray-700 hover:text-gray-900 transition duration-300"
             >
-              ←
+              <LuDoorOpen size={20}/>
             </button>
-            <h1 className="ml-4 text-lg font-bold text-gray-700">Edit Profile</h1>
+            <h1 className="ml-4 text-2xl font-bold text-gray-700">Edit Profile</h1>
           </nav>
 
           <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-4">
@@ -82,7 +101,7 @@ const MyProfilePage = () => {
                 name="name"
                 type="text"
                 value={profile.name}
-                onChange={(e) => setProfile({name: e.target.value })}
+                onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -92,9 +111,9 @@ const MyProfilePage = () => {
               </label>
               <input
                 name="email"
-                type="tel"
-                value={profile.email }
-                onChange={(e) => setProfile({ email: e.target.value })}
+                type="email"
+                value={profile.email}
+                onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -105,8 +124,8 @@ const MyProfilePage = () => {
               <input
                 name="phoneNumber"
                 type="tel"
-                value={profile.phoneNumber }
-                onChange={(e) => setProfile({ phoneNumber: e.target.value })}
+                value={profile.phoneNumber}
+                onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -117,8 +136,8 @@ const MyProfilePage = () => {
               <input
                 name="birthday"
                 type="date"
-                value={profile.birthday }
-                onChange={(e) => setProfile({ birthday: e.target.value })}
+                value={profile.birthday}
+                onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
@@ -131,7 +150,7 @@ const MyProfilePage = () => {
                     name="gender"
                     value="Female"
                     checked={profile.gender === 'Female'}
-                    onChange={(e) => setProfile({  gender: e.target.value })}
+                    onChange={handleChange}
                     className="mr-1"
                   />
                   Female
@@ -141,8 +160,8 @@ const MyProfilePage = () => {
                     type="radio"
                     name="gender"
                     value="Male"
-                    checked={profile.gender === 'Male' }
-                    onChange={(e) => setProfile({ gender: e.target.value })}
+                    checked={profile.gender === 'Male'}
+                    onChange={handleChange}
                     className="mr-1"
                   />
                   Male
@@ -152,7 +171,7 @@ const MyProfilePage = () => {
             <div className="flex items-center justify-between">
               <button
                 onClick={handleSave}
-                className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-700 transition duration-300"
+                className="bg-rose-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition duration-300"
               >
                 Save
               </button>
@@ -160,22 +179,22 @@ const MyProfilePage = () => {
           </div>
         </div>
       ) : (
-        <div className="relative md:ml-10 max-w-screen-2xl  bg-white shadow-md rounded-md md:p-10 md:mt-6 m-3 pl-4">
+        <div className="relative md:ml-10 max-w-screen-2xl bg-white shadow-md rounded-md md:p-10 md:mt-6 m-3 pl-4">
           <h2 className="font-semibold md:absolute md:top-6 md:text-xl text-base">
             Profile Picture
           </h2>
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <img
-              className="md:w-24 md:h-24 w-20 h-20 rounded-full object-cover  mt-3 mb-3 "
+              className="md:w-24 md:h-24 w-20 h-20 rounded-full object-cover mt-3 mb-3"
               src={picture}
               alt=""
             />
-            <div className="  ">
+            <div>
               <button
                 className="md:mr-10 bg-rose-200 text-black py-1 md:px-8 px-3 rounded-md mr-3"
                 onClick={() => document.getElementById("pictureInput").click()}
               >
-                <div className="sm:hidden ">
+                <div className="sm:hidden">
                   <FaRegEdit />
                 </div>
                 <div className="hidden sm:block">Change Picture</div>
@@ -184,7 +203,7 @@ const MyProfilePage = () => {
                 className="bg-rose-200 text-black py-1 md:px-8 px-3 rounded-md"
                 onClick={handleDeletePicture}
               >
-                <div className="sm:hidden ">
+                <div className="sm:hidden">
                   <AiOutlineDelete />
                 </div>
                 <div className="hidden sm:block">Delete Picture</div>
@@ -192,12 +211,12 @@ const MyProfilePage = () => {
               <input
                 id="pictureInput"
                 type="file"
-                className="hidden "
+                className="hidden"
                 onChange={handlePictureChange}
               />
             </div>
           </div>
-          <div className="mt-8 ">
+          <div className="mt-8">
             <p className="mb-3">
               <strong>Full Name:</strong> {name}
             </p>
@@ -215,14 +234,12 @@ const MyProfilePage = () => {
             </p>
           </div>
 
-          {(
-            <button
-              onClick={() => setIsEditing(true)}
-              className="flex items-center bg-gray-200 text-black md:py-2 md:px-4 px-2 py-1 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 absolute right-4 top-4"
-            >
-              Edit <span className="ml-2">✏️</span>
-            </button>
-          )}
+          <button
+            onClick={() => setIsEditing(true)}
+            className="flex items-center bg-gray-200 text-black md:py-2 md:px-4 px-2 py-1 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 absolute right-4 top-4"
+          >
+            Edit <span className="ml-2">✏️</span>
+          </button>
         </div>
       )}
     </>
@@ -230,6 +247,3 @@ const MyProfilePage = () => {
 };
 
 export default MyProfilePage;
-
-
-

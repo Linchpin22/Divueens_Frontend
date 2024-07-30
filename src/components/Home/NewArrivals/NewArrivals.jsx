@@ -1,5 +1,6 @@
 import React from 'react'
-import { Pic57 } from '../../../assets/assets'
+import { b1, b2, b3, b4, Pic57, product_11, product_13, product_14 } from '../../../assets/assets'
+import img1 from '../../../assets/myOrders/img1.png'
 import "swiper/css";
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -106,8 +107,51 @@ const NewArrivals = () => {
                     </Swiper>
                 </div>
 
-
             </div>
+
+            <div className="heading md:pt-16 pt-8 md:pb-8">
+                <hr className="bg-gradient-to-l from-rose-700" />
+                <h2 className="text-nowrap">Products</h2>
+                <hr className="bg-gradient-to-r from-rose-700" />
+            </div>
+            <section className="mt-8">
+                <div className="grid grid-cols-2 gap-x-4 px-2 md:gap-x-0 lg:grid-cols-4 gap-y-8 md:px-8 pb-10">
+
+                    <div className="flex flex-col items-center">
+                        <img src={product_11} alt="Top Products" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Products</p> */}
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                        <img src={product_13} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={product_14} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={b1} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={b2} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={b3} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={img1} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <img src={b4} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
+                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
