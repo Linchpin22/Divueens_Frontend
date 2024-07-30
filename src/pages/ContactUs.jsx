@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import {useState} from 'react';
 import Swal from 'sweetalert2';
@@ -10,25 +9,31 @@ const ContactUs = () => {
         setSelectedFile("No file chosen")
     }
     const createTicket = (e) => {
-        e.preventDefault();
-        const email = document.querySelector('input[name="email"]').value;
-        const helpType = document.querySelector('select[name="helpType"]').value;
-        const subject = document.querySelector('input[name="subject"]').value;
-        const description = document.querySelector('textarea[name="description"]').value;
-        const file = document.querySelector('input[type="file"]').value;
-      
-        if (email === '' || helpType === '' || subject === '' || description === '' || file === '') {
+      e.preventDefault();
+      const email = document.querySelector('input[name="email"]').value;
+      const helpType = document.querySelector('select[name="helpType"]').value;
+      const subject = document.querySelector('input[name="subject"]').value;
+      const description = document.querySelector('textarea[name="description"]').value;
+      const file = document.querySelector('input[type="file"]').value;
+  
+      if (email === '' || helpType === '' || subject === '' || description === '' || file === '') {
           Swal.fire({
-            icon:"error",
-            text:"Please fill in all the fields"});
-        } else {
-          Swal.fire({
-            title: "Thank you for connecting with us!",
-            icon: "success",
-            confirmButtonText: "OK"
+              icon: "error",
+              text: "Please fill in all the fields"
           });
-        }
-      };
+      } else {
+          Swal.fire({
+              title: "Thank you for connecting with us!",
+              icon: "success",
+              confirmButtonText: "OK"
+          }).then(() => {
+              document.getElementById('contact-form').reset();
+              setValue(0);
+              setSelectedFile("No file chosen"); 
+          });
+      }
+  };
+  
 
   return (
     <>
