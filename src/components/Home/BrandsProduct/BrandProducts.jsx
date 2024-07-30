@@ -4,7 +4,7 @@ import 'swiper/css/scrollbar';
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { Banner1, Banner10, Banner11, Banner12, Banner13, Banner14, Banner15, Banner16, Banner17, Banner2, Banner3, Banner4, Banner5, Banner6, Banner7, Banner8, Banner9, brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7, brand_8, product_1, product_2, product_3, product_4, product_5, product_6 } from '../../../assets/assets';
+import { Banner1, Banner10, Banner11, Banner12, Banner13, Banner14, Banner15, Banner16, Banner17, Banner2, Banner3, Banner4, Banner5, Banner6, Banner7, Banner8, Banner9, brand_1, brand_18, brand_22, brand_23, brand_4, brand_5, brand_6, brand_7, product_1, product_2, product_3, product_4, product_5, product_6 } from '../../../assets/assets';
 import BrandLeft from './BrandLeft';
 import BrandRight from './BrandRight';
 
@@ -30,7 +30,7 @@ const BrandProducts = () => {
     ]
     const brandLeft2 = [
         {
-            brandImage: brand_3,
+            brandImage: brand_23,
             products1: product_1,
             products2: product_2,
             products3: product_3,
@@ -40,7 +40,7 @@ const BrandProducts = () => {
     const brandRight1 = [
 
         {
-            brandImage: brand_2,
+            brandImage: brand_18,
             products1: product_4,
             products2: product_5,
             products3: product_6,
@@ -56,15 +56,53 @@ const BrandProducts = () => {
         },
     ]
 
+    const brandRight4 = [
+        {
+            brandImage: brand_7,
+            products1: product_4,
+            products2: product_5,
+            products3: product_6,
+        },
+    ]
+
+
+    const brandLeft4 = [
+        {
+            brandImage: brand_22,
+            products1: product_1,
+            products2: product_2,
+            products3: product_3,
+        },
+    ]
+
+    const brandLeft3 = [
+        {
+            brandImage: brand_5,
+            products1: product_1,
+            products2: product_2,
+            products3: product_3,
+        },
+    ]
+
+    const brandRight3 = [
+
+        {
+            brandImage: brand_6,
+            products1: product_4,
+            products2: product_5,
+            products3: product_6,
+        },
+    ]
+
 
     return (
         <>
-            {/* <div className="heading md:pt-16 pt-8 md:pb-8">
+            <div className="heading md:pt-16 pt-8 md:pb-8">
 
                 <hr className="bg-gradient-to-l from-rose-700" />
                 <h2 className="text-nowrap">Top Brands Products</h2>
                 <hr className="bg-gradient-to-r from-rose-700" />
-            </div> */}
+            </div>
 
             <div className="flex flex-col w-full h-full">
                 {/* Brand Products */}
@@ -72,6 +110,26 @@ const BrandProducts = () => {
                     return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
                 })}
                 {brandRight1.map((b, i) => {
+                    return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
+                })}
+                {brandLeft2.map((b, i) => {
+                    return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
+                })}
+                {brandRight2.map((b, i) => {
+                    return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
+                })}
+
+                {brandLeft4.map((b, i) => {
+                    return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
+                })}
+                {brandRight4.map((b, i) => {
+                    return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
+                })}
+
+                {brandLeft3.map((b, i) => {
+                    return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
+                })}
+                {brandRight3.map((b, i) => {
                     return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
                 })}
 
@@ -120,12 +178,7 @@ const BrandProducts = () => {
                     <img src={Banner12} alt="banner" />
                 </div>
 
-                {brandLeft2.map((b, i) => {
-                    return <BrandLeft key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
-                })}
-                {brandRight2.map((b, i) => {
-                    return <BrandRight key={i} brandImage={b.brandImage} products1={b.products1} products2={b.products2} products3={b.products3} />
-                })}
+
             </div>
         </>
     )

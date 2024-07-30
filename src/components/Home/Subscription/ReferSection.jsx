@@ -16,7 +16,7 @@ const ReferSection = () => {
         </div>
         <img
           src={ref_pic}
-          className="lg:w-[70%] w-[85%] shadow-xl shadow-slate-400 bg-rose-600 object-contain mx-auto"
+          className="lg:w-[60%] w-[70%] shadow-xl shadow-slate-400 bg-rose-600 object-contain mx-auto"
         />
       </div>
       <br />
