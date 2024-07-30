@@ -61,7 +61,7 @@ export default function Offer(){
     return(
         <>
        
-    <h2 className="text-[1.1rem] font-bold sm:mt-[2%] md:text-[1.3rem] lg:text-[1.6rem] xl:mt-[2%] xl:text-[1.9rem] lg:mt-[2%] md:mt-[2%] sm:text-[1.1rem] mb-[1rem] ml-[2rem] mt-[2%]">Summer Special</h2>
+    <h2 className="text-[1.1rem] font-bold sm:mt-[2%] md:text-[1.3rem] lg:text-[1.6rem] xl:mt-[2%] xl:text-[1.9rem] lg:mt-[2%] md:mt-[2%] sm:text-[1.1rem] mb-[1rem] ml-[10%] sm:ml-[10%]  md:ml-[10%] lg:ml-[10%] xl:ml-[10%]   mt-[2%]">Summer Special</h2>
 
 <div className="w-[80%] mx-[10%] mt-[2%] mb-[3rem]">
 <Swiper
@@ -93,7 +93,7 @@ export default function Offer(){
 
 </div>
 
-    <h2 className="text-[1.1rem] sm:text-[1.1rem] font-bold md:text-[1.3rem] md:mt-4 lg:text-[1.6rem] xl:text-[1.9rem] lg:mt-4 ml-[2rem] sm:mt-4 mt-[7%]"> Grab It or Miss It Offer </h2>
+    <h2 className="text-[1.1rem] sm:text-[1.1rem] font-bold md:text-[1.3rem] md:mt-4 lg:text-[1.6rem] xl:text-[1.9rem] lg:mt-4 ml-[10%] sm:ml-[10%]  md:ml-[10%] lg:ml-[10%] xl:ml-[10%] sm:mt-4 mt-[7%]"> Grab It or Miss It Offer </h2>
 
     <div
       className="container w-[87%]  my-0 mx-auto p-[20px] bg-white rounded-[5px] sm:w-[87%] md:w-[87%] lg:w-[87%] md:grid md:grid-cols-4 md:grid-rows-2 sm:grid sm:grid-cols-2 sm:grid-rows-4 shadow-md  grid grid-cols-2 grid-rows-4 lg:grid-cols-4 lg:grid-rows-2 gap-6"
@@ -302,7 +302,7 @@ export default function Offer(){
 
 
 
-      <h2 className="text-[1.1rem] font-bold sm:text-[1rem] md:text-[1.3rem] xl:text-[1.9rem] xl:mt-24 lg:text-[1.6rem] lg:mt-[55px] md:mt-[60px] ml-[2rem] sm:mt-16 mt-[8%]">Brands</h2>
+      <h2 className="text-[1.1rem] font-bold sm:text-[1rem] md:text-[1.3rem] xl:text-[1.9rem] xl:mt-24 lg:text-[1.6rem] lg:mt-[55px] md:mt-[60px] ml-[10%] sm:ml-[10%]  md:ml-[10%] lg:ml-[10%] xl:ml-[10%] sm:mt-16 mt-[8%]">Brands</h2>
     <div className='flex justify-evenly mx-[10%] gap-x-[1rem] mb-[4rem] w-[80%] md:mx-[10%] md:gap-x-[3rem] md:my-[7rem] lg:mx-[10%] lg:gap-x-[3rem] lg:my-[7rem] xl:mx-[10%] xl:gap-x-[3rem] xl:my-[7rem]'>
 
    <div><img className='border-2 border-rose-700 rounded-xl' src={sp24} alt="img" /></div>
@@ -316,7 +316,7 @@ export default function Offer(){
 
 
 
-    <h2 className="text-[1.1rem] font-bold ml-[2rem] sm:mt-4 md:text-[1.3rem] md:mt-[60px] xl:text-[1.9rem] lg:text-[1.6rem]  lg:mt-[50px] sm:text-[1.1rem] mt-[8%]">Hurry Up & Grab The Deal Now. </h2>
+    <h2 className="text-[1.1rem] font-bold sm:mt-4 md:text-[1.3rem] md:mt-[60px] xl:text-[1.9rem] lg:text-[1.6rem] ml-[10%] sm:ml-[10%]  md:ml-[10%] lg:ml-[10%] xl:ml-[10%] lg:mt-[50px] sm:text-[1.1rem] mt-[8%]">Hurry Up & Grab The Deal Now. </h2>
 
     <div className="container w-[87%] my-0 mx-auto p-[25px] sm:w-[87%]  md:w-[87%] md:grid md:grid-cols-4 md:grid-rows-2 sm:grid sm:grid-cols-2 sm:grid-rows-4 bg-white rounded-[15px] shadow-md grid grid-cols-2 grid-rows-4 lg:grid-cols-4 lg:grid-rows-2 gap-5">
 
@@ -409,7 +409,7 @@ export default function Offer(){
 
 
 
-    <h2 className="text-[1.1rem] font-bold sm:text-[1rem] md:text-[1.3rem] xl:text-[1.9rem] xl:mt-24 lg:text-[1.6rem] lg:mt-[55px] md:mt-[60px] ml-[2rem] sm:mt-16 mt-[8%]">Trending Designs</h2>
+    <h2 className="text-[1.1rem] font-bold sm:text-[1rem] md:text-[1.3rem] xl:text-[1.9rem] xl:mt-24 lg:text-[1.6rem] lg:mt-[55px] md:mt-[60px] ml-[10%] sm:ml-[10%]  md:ml-[10%] lg:ml-[10%] xl:ml-[10%] sm:mt-16 mt-[8%]">Trending Designs</h2>
 
     <div className="container md:grid md:grid-cols-2 md:grid-rows-3 w-[87%] p-[20px] sm:grid sm:grid-cols-1 sm:grid-rows-6 sm:gap-4 lg:grid lg:grid-cols-2 lg:grid-rows-3 grid grid-rows-6 grid-cols-1 bg-white rounded-[5px] shadow-md mx-auto mt-[1%]">
       
