@@ -5,19 +5,37 @@ import { FaHeart, FaRegHeart, FaStar } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 // import AddCart from './AddCart';
 import {CartContext} from '../../context/CartContext';
+import {WishlistContext} from '../../context/WishlistContext';
 
 
 const CardItem = ({ item }) => {
-    const {addCartItemNumber , subCartItemNumber} = useContext(CartContext)
+    const {addCartItemNumber , subCartItemNumber} = useContext(CartContext);
+    const {addWishItemNumber , subWishItemNumber } = useContext(WishlistContext);
     const [currentPage, setCurrentPage] = useState(1);
     const lastPage = Math.ceil(item.length / 12)
     const [likedCards, setLikedCards] = useState({});
     const [cardItem, setCardItem] = useState([]);
-    const [wishlist, setWishlist] = useState([]);
     useEffect(() => {
         const storedItems = JSON.parse(localStorage.getItem("Item-Id")) || [];
         setCardItem(storedItems);
 
+    }, []);
+    const [wishlist, setWishlist] = useState(() => {
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        return storedWishlist;
+      });
+      
+      useEffect(() => {
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      }, [wishlist]);
+
+    useEffect(() => {
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const likedCardsObj = {};
+        storedWishlist.forEach((id) => {
+            likedCardsObj[id] = true;
+        });
+        setLikedCards(likedCardsObj);
     }, []);
 
     const addingItemToCart = (ItemId) => {
@@ -57,7 +75,9 @@ const CardItem = ({ item }) => {
             <div className='grid gap-x-4 gap-y-2 grid-cols-[repeat(2,_0.6fr)] lg:gap-y-12 md:gap-x-14 xl:gap-x-8 md:grid-cols-[repeat(3,_0.6fr)] xl:grid-cols-[repeat(4,_0.8fr)]'>
                 {currentPageImages.map((p) => {
                     const isInCart = (cardItem).includes(p.id);
+                    const isInWishlist = (wishlist).includes(p.id);
                     console.log(isInCart)
+
                     return <div key={p.id} className=''>
                         <Link to={`/product-description/${p.id}`} className="group relative mb-2 block h-60 md:h-72 overflow-hidden rounded-lg bg-gray-100 lg:mb-3">
                             <img src={p.image} alt='image' className="h-full w-full object-center object-cover transition duration-200 group-hover:scale-110" />
@@ -67,7 +87,13 @@ const CardItem = ({ item }) => {
                                 <div className='text-xs text-rose-600 bg-white p-2 rounded-full md:text-sm'
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        handleLike(p.id);
+                                        if (isInWishlist) {
+                                            subWishItemNumber();
+                                            handleLike(p.id);}
+                                        else{
+                                            addWishItemNumber();
+                                            handleLike(p.id);
+                                        }
                                     }}>
                                     {likedCards[p.id] ? <FaHeart /> : <FaRegHeart />}
                                 </div>
