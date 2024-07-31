@@ -6,6 +6,7 @@ import ShopByCategory from "../components/Home/ShopByCategory/ShopByCategory";
 import Subscription from "../components/Home/Subscription/Subscription";
 import NewArrivals from "../components/Home/NewArrivals/NewArrivals";
 import BrandProducts from "../components/Home/BrandsProduct/BrandProducts";
+import Gallery from "../components/Home/Gallery/Gallery";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <BestSeller />
       <TopBrands />
       <ExclusiveDiscount />
+      <Gallery />
       <ShopByCategory />
       <NewArrivals />
       <BrandProducts />
