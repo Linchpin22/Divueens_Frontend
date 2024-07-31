@@ -106,8 +106,8 @@ const Network = () => {
         <div className="overflow-hidden max-w-fit mx-auto  bg-cover bg-no-repeat">
           <img className="mx-auto " src={BannerMain} alt="" />
         </div>
-        <div className=" py-12 px-8 md:px-48 md:text-2xl font-semibold text-base row-span-1 ">
-          <p className="mb-2 md:leading-10 leading-8 ">
+        <div className=" py-12 px-8 md:px-48 md:text-xl font-medium text-base row-span-1 ">
+          <p className="mb-2 md:leading-8 text-justify">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis est
             minus aut voluptatem necessitatibus magnam tempora voluptatibus,
             saepe neque architecto! Saepe eum eligendi quibusdam quod cupiditate
@@ -116,14 +116,14 @@ const Network = () => {
             molestiae, repellat officia aperiam voluptatibus, quae eos facilis
             quasi alias eaque at commodi ipsam expedita suscipit, illum possimus
             cum.
-          </p>{" "}
-          <p className=" md:leading-10 leading-8 ">
+          </p>
+          {/* <p className=" md:leading-10 leading-8 text-justify">
             Nostrum officiis cupiditate qui ad! Necessitatibus facere dicta quas
             quasi quis. Sit dolor, cupiditate corrupti necessitatibus placeat ea
             harum repellat quasi minima laudantium maiores. Minus modi, vel
             soluta repudiandae repellendus consequuntur aut tenetur laborum quod
             fugit, voluptas aliquid facere accusamus.
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -190,10 +190,12 @@ const Network = () => {
             <img className="" src={NetworkBanner} alt="" />
             <div className="mt-4 flex items-center justify-evenly md:justify-center md:space-x-4">
               <button className="bg-rose-700 font-semibold text-white w-fit py-2 px-4 rounded hover:bg-rose-900">
-                <span className="hidden sm:inline-block">Like</span> <FaRegHeart className="inline text-lg mx-2 " />
+                <span className="hidden sm:inline-block">Like</span>{" "}
+                <FaRegHeart className="inline text-lg mx-2 " />
               </button>
               <button className="bg-rose-700 font-semibold text-white w-fit py-2 px-4 rounded hover:bg-rose-900">
-                <span className="hidden sm:inline-block">Comment</span> <FaRegComment className="inline text-lg mx-2 " />
+                <span className="hidden sm:inline-block">Comment</span>{" "}
+                <FaRegComment className="inline text-lg mx-2 " />
               </button>
               <button className="bg-rose-700 font-semibold text-white w-fit py-2 md:px-4 px-2 rounded text-center hover:bg-rose-900">
                 <span className="hidden sm:inline-block">Share Post</span>{" "}
@@ -203,63 +205,6 @@ const Network = () => {
           </div>
         </div> */}
       </div>
-
-      <div className="mt-12  w-11/12 mx-auto">
-        <h2 className="font-bold mb-4 text-2xl uppercase">Topics Right Now</h2>
-        <div className="space-y-6">
-          {[...Array(2)].map((_, index) => (
-            <div
-              key={index}
-              className=" md:px-12 py-8 bg-rose-200 shadow-md rounded-lg p-6"
-            >
-              <h3 className=" font-semibold  border-b-2 border-black w-fit text-base mx-auto mb-4 ">
-                Q & A. <span className="text-xl">Topic Skin</span>
-              </h3>
-              <div className="md:mx-12 mt-12 text-justify">
-                <p className="mb-4 font-semibold">
-                  <span className="font-bold text-lg">Q :</span> Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam? Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Non perspiciatis voluptas cupiditate nam
-                  maxime id.
-                </p>
-                <div>
-                  <div>
-                    <img
-                      src={profilePic}
-                      className="size-10 rounded-full"
-                      alt=""
-                    />
-                    <p className="md:text-nowrap">Bella D.</p>
-                  </div>
-                  <div className="mt-1 flex justify-between font-semibold">
-                    <div className="flex gap-4">
-                      <p className="md:text-nowrap">Answered 1 month ago</p>
-                      <p className="md:text-nowrap">{reactions} reactions</p>
-                    </div>
-                    <p className="flex gap-1 items-center">
-                      {noOfAns} More Answers <IoIosArrowForward />
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-4">
-                  Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Voluptatem adipisci, rerum explicabo aperiam
-                  suscipit tempore maxime fugiat commodi voluptates enim. sit
-                  amet consectetur adipisicing elit. Illo dicta eius id quos
-                  obcaecati eos aliquid ipsa incidunt, beatae omnis!
-                </div>
-              </div>
-              {/* <button className="mt-4 bg-transparent mx-auto shadow-md hover:shadow-inner flex-nowrap py-2 px-4 rounded hover:bg-rose-100">
-                Write An Answer
-              </button> */}
-              <AnswerModal />
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="mt-12 w-11/12 mx-auto">
         <h2 className="font-bold mb-4 text-2xl uppercase">
           Curated Only for You
@@ -305,12 +250,14 @@ const Network = () => {
                 {/* {open&&<h1 className="mt-4 transition-all ease-in-out delay-300">{item.more}</h1>} */}
               </div>
               <div
-                className={`bg-cover flex  md:flex-1 bg-no-repeat bg-center w-full "justify-end"
+                className={`bg-cover flex justify-center  md:flex-1 bg-no-repeat bg-center w-full ${
+                  index % 2 === 0 && "md:justify-end"
+                }
                 `}
               >
                 <img
                   src={item.img}
-                  className=" h-full mx-auto min-h-200"
+                  className=" h-full min-h-200"
                   alt="beauty image"
                 />
               </div>
@@ -318,32 +265,93 @@ const Network = () => {
           ))}
         </div>
       </div>
-
-      <div className="mt-12 md:w-8/12 mx-auto">
-        <h2 className="font-bold  mb-4 text-2xl uppercase border-b-2 border-black w-fit pb-1">
-          Questions for You
-        </h2>
-        <div className="space-y-6">
-          {[...Array(2)].map((_, index) => (
-            <div
-              key={index}
-              className="bg-white px-12 py-8 shadow-md rounded-lg p-6"
-            >
-              <h3 className=" font-semibold mb-4">
-                Q: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam?
-              </h3>
-              <button
-                className="mt-4bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900 bg-rose-700 "
-                onClick={handleAnswer}
+      
+      <div className="flex items-start w-11/12 mx-auto flex-wrap md:flex-nowrap gap-8 ">
+        <div className="mt-12  w-11/12 mx-auto">
+          <h2 className="font-bold mb-4 text-2xl uppercase">
+            Topics Right Now
+          </h2>
+          <div className="space-y-6">
+            {[...Array(2)].map((_, index) => (
+              <div
+                key={index}
+                className=" md:px-12 py-8 bg-rose-200 shadow-md rounded-lg p-6"
               >
+                <h3 className=" font-semibold  border-b-2 border-black w-fit text-base mx-auto mb-4 ">
+                  Q & A. <span className="text-xl">Topic Skin</span>
+                </h3>
+                <div className="md:mx-12 mt-12 text-justify">
+                  <p className="mb-4 font-semibold">
+                    <span className="font-bold text-lg">Q :</span> Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam? Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Non perspiciatis voluptas cupiditate nam
+                    maxime id.
+                  </p>
+                  <div>
+                    <div>
+                      <img
+                        src={profilePic}
+                        className="size-10 rounded-full"
+                        alt=""
+                      />
+                      <p className="md:text-nowrap">Bella D.</p>
+                    </div>
+                    <div className="mt-1 flex justify-between flex-wrap  font-semibold">
+                      <div className="flex gap-4">
+                        <p className="md:text-nowrap">Answered 1 month ago</p>
+                        <p className="md:text-nowrap">{reactions} reactions</p>
+                      </div>
+                      <p className="flex gap-1 items-center">
+                        {noOfAns} More Answers <IoIosArrowForward />
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    Lorem, ipsum dolor Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Voluptatem adipisci, rerum explicabo
+                    aperiam suscipit tempore maxime fugiat commodi voluptates
+                    enim. sit amet consectetur adipisicing elit. Illo dicta eius
+                    id quos obcaecati eos aliquid ipsa incidunt, beatae omnis!
+                  </div>
+                </div>
+                {/* <button className="mt-4 bg-transparent mx-auto shadow-md hover:shadow-inner flex-nowrap py-2 px-4 rounded hover:bg-rose-100">
                 Write An Answer
-              </button>
-            </div>
-          ))}
+              </button> */}
+                <AnswerModal />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-12 md:w-8/12 mx-auto">
+          <h2 className="font-bold  mb-4 text-2xl uppercase w-fit pb-1">
+            Questions for You
+          </h2>
+          <div className="space-y-6">
+            {[...Array(4)].map((_, index) => (
+              <div
+                key={index}
+                className="bg-white px-12 py-8 shadow-md rounded-lg p-6"
+              >
+                <h3 className=" font-semibold mb-4">
+                  Q: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam?
+                </h3>
+                <button
+                  className="mt-4bg-rose-700 font-semibold text-white py-2 px-4 rounded hover:bg-rose-900 bg-rose-700 "
+                  onClick={handleAnswer}
+                >
+                  Write An Answer
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      
     </div>
   );
 };

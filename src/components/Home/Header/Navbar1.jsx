@@ -19,6 +19,7 @@ import { CartContext } from "../../../context/CartContext";
 import { WishlistContext } from "../../../context/WishlistContext";
 import Divueens from "../../../assets/Divueens3.jpg";
 import { AuthContext } from "../../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar1 = ({ navItemText }) => {
   const { numCartItem } = useContext(CartContext);
@@ -34,8 +35,8 @@ const Navbar1 = ({ navItemText }) => {
     { title: "Top Brands", url: "/top-catagories" },
     // "Div Fashion",
     { title: "Beauty Trends", url: "/blogs" },
-    { title: "Glow Guide", url: "/virtual-try-on" },
-    { title: "Offers", url: "/special-offers" },
+    { title: "Glow Guide", url: "/tools-and-accessories" },
+    { title: "Offers", url: "/special-offers" }, 
   ];
   const subNavItems = [
     "Face care",
@@ -59,6 +60,8 @@ const Navbar1 = ({ navItemText }) => {
     []
   );
 
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -80,7 +83,7 @@ const Navbar1 = ({ navItemText }) => {
               src={Divueens}
               alt="Description"
             /> */}
-          <img className="w-[100px] h-[60px] md:w-[120px] md:h-[80px] object-cover" src={Divueens} alt="Description" />
+          <img className="w-[100px] h-[60px] md:w-[120px] md:h-[80px] object-cover" src={Divueens} alt="Description" onClick={()=> navigate("/")}/>
 
           {/* </Link> */}
         </div>

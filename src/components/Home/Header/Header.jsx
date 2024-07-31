@@ -42,7 +42,7 @@ function Header() {
         Membership Cost Free Gift + Free Shipping & Much More!  
       `,
       buttonText: "Join Now",
-      buttonLink: "#slide2",
+      buttonLink: "/maintennace",
     },
     {
       background:
@@ -57,7 +57,7 @@ function Header() {
         Membership Cost Free Gift + Free Shipping & Much More!  
       `,
       buttonText: "Join Now",
-      buttonLink: "#slide3",
+      buttonLink: "/maintennace",
     },
     {
       background:
@@ -71,7 +71,7 @@ function Header() {
         Membership Cost Free Gift + Free Shipping & Much More!  
       `,
       buttonText: "Join Now",
-      buttonLink: "#slide3",
+      buttonLink: "/maintennace",
     },
     {
       background:
@@ -86,7 +86,7 @@ function Header() {
         Membership Cost Free Gift + Free Shipping & Much More!  
       `,
       buttonText: "Join Now",
-      buttonLink: "#slide3",
+      buttonLink: "/maintennace",
     },
   ];
   const [itemText, setItemText] = useState(navItemData)
