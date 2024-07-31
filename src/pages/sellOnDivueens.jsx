@@ -175,7 +175,7 @@ const Sell = () => {
                   <label className="block text-black mb-2" htmlFor="phone">Phone</label>
                   <div className='flex'>
                     <input
-                      type="numeric"
+                      type="number"
                       id="phone"
                       value={Data.phone}
                       onChange={Phone}
