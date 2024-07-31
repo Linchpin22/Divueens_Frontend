@@ -18,11 +18,14 @@ import SearchBoxMob from "./SearchBoxMob";
 import { CartContext } from "../../../context/CartContext";
 import { WishlistContext } from "../../../context/WishlistContext";
 import Divueens from "../../../assets/Divueens3.jpg";
+import { AuthContext } from "../../../context/AuthContext";
 
 const Navbar1 = ({ navItemText }) => {
   const { numCartItem } = useContext(CartContext);
   const { numWishItem } = useContext(WishlistContext)
+  const { autherisation } = useContext(AuthContext)
   const [openDropdown, setOpenDropdown] = useState(false);
+  const [displayProfile, setDisplayProfile] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
   const [displayOnScroll, setDisplayOnScroll] = useState("");
@@ -113,11 +116,13 @@ const Navbar1 = ({ navItemText }) => {
                 </NavLink>
                 {/* <NavLink to='/profile'> */}
 
-                <FiUser
-                  size={18}
-                  className="hover:text-rose-800"
-                  onClick={() => setDisplayAuth(true)}
-                />
+                <NavLink to={autherisation ? '/profile' : ''}>
+                  <FiUser
+                    size={18}
+                    className="hover:text-rose-800"
+                    onClick={() => {autherisation ? '' : setDisplayAuth(true)}}
+                    />
+                </NavLink>
 
                 {/* </NavLink> */}
               </div>
@@ -168,10 +173,12 @@ const Navbar1 = ({ navItemText }) => {
                           </div>
                         )}
                       </NavLink>
-                      <FiUser
-                        onClick={() => setDisplayAuth(true)}
-                        className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full"
-                      />
+                      <NavLink to={autherisation ? '/profile' : ''}>
+                        <FiUser
+                          onClick={() => autherisation ? '' : setDisplayAuth(true)}
+                          className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full"
+                          />
+                      </NavLink>
                     </div>
                   </div>
                   {/* <div className="relative my-4 pr-4"><SearchBox /></div> */}

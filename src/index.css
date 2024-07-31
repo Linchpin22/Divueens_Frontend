@@ -178,7 +178,7 @@ footer[data-footer-part] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  --color-back: #ffffffa0;
+  --color-back: #ffffffa0[];
   background-image: linear-gradient(var(--color-back), var(--color-back)), url('assets/OurTeam/1.jpg');
   /* background: linear-gradient(to bottom, #ffffff 40%, #f43f5e); */
   /* background: #ffe4e6; */
