@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { FaAngleDown } from "react-icons/fa";
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import P1 from './../assets/SellOnDivueens/p1.png';
 import V1 from './../assets/SellOnDivueens/v1.png';
 import V2 from './../assets/SellOnDivueens/v2.png';
 import V3 from './../assets/SellOnDivueens/v3.png';
 import V4 from './../assets/SellOnDivueens/v4.png';
-import {Faqs} from './FAQ';
+import { Faqs } from './FAQ';
 import { FaRegCircleQuestion } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
-
-import MaintennacePage from '../pages/MaintennacePage'; 
-import {Link} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 const Sell = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -24,8 +20,8 @@ const Sell = () => {
   });
 
   const [active, setActive] = useState(false);
-  const handleActive = (question) =>{
-    setActive((pre)=> (pre === question ? null : question ));
+  const handleActive = (question) => {
+    setActive((pre) => (pre === question ? null : question));
   }
 
   const toggleIndex = (index) => {
@@ -82,13 +78,17 @@ const Sell = () => {
     e.preventDefault();
     const { name, email, phone, company } = Data;
     if (name && email && phone && company) {
-      Swal.fire("Thank You For Subscribing");
-      setData({
-        name: '',
-        email: '',
-        phone: '',
-        company: ''
-      });
+      if (phone.replace(/\D/g, '').length === 10) {
+        Swal.fire("Thank You For Subscribing");
+        setData({
+          name: '',
+          email: '',
+          phone: '',
+          company: ''
+        });
+      } else {
+        Swal.fire("Please enter a valid 10-digit phone number.");
+      }
     }
   };
 
@@ -99,42 +99,41 @@ const Sell = () => {
           <p className='text-[35px] max-lg:text-2xl font-bold'>Become a</p>
           <p className='text-[35px] max-lg:text-2xl font-bold'>Divueens Seller</p>
           <p className='text-[20px] max-lg:text-base lg:mr-10 my-10 max-sm:my-5'>
-            Expand your reach and grow your beauty business with our innovative
-            ecommerce platform.
+            Expand your reach and grow your beauty business with our innovative ecommerce platform.
           </p>
-           <Link to={"/maintennace"}><button className='text-[24px] max-lg:text-lg font-semibold bg-rose-700 text-white hover:bg-rose-600 py-3 px-8 rounded-lg max-[250px]:px-2'>Register Now</button></Link>
-
+          <Link to={"/maintennace"}>
+            <button className='text-[24px] max-lg:text-lg font-semibold bg-rose-700 text-white hover:bg-rose-600 py-3 px-8 rounded-lg max-[250px]:px-2'>Register Now</button>
+          </Link>
         </div>
 
         <div className='mb-4 lg:mb-0 max-w-[90%]'>
-          <img src={P1} className='w-[90%] rounded-xl max-lg:w-full max-sm:w-[500px] max-sm:max-h-[230px]'/>
+          <img src={P1} className='w-[90%] rounded-xl max-lg:w-full max-sm:w-[500px] max-sm:max-h-[230px]' />
         </div>
       </div>
       <div className='mx-auto'>
         <p className='text-[35px] text-center max-lg:text-2xl font-bold'>Steps to Get Started</p>
-        <div className='grid mx-auto grid-cols-4 items-center mt-10  max-sm:block '>
+        <div className='grid mx-auto grid-cols-4 items-center mt-10 max-sm:block '>
           <div className='mx-auto w-fit'>
-            <img src={V1} className='w-[86px] h-[86px] mx-6 max-sm:mt-4'/>
+            <img src={V1} className='w-[86px] h-[86px] mx-6 max-sm:mt-4' />
             <p className='font-semibold mt-2'>Create an account</p>
           </div>
           <div className='mx-auto w-fit'>
-            <img src={V2} className='mx-4 max-sm:mt-4'/>
+            <img src={V2} className='mx-4 max-sm:mt-4' />
             <p className='font-semibold mt-2'>List Your Product</p>
           </div>
           <div className='mx-auto w-fit'>
-            <img src={V3} className='mx-4 max-sm:mt-4'/>
+            <img src={V3} className='mx-4 max-sm:mt-4' />
             <p className='font-semibold mt-2'>Set Up Your Store</p>
           </div>
           <div className='mx-auto w-fit'>
-            <img src={V4} className='mx-4 max-sm:mt-4'/>
+            <img src={V4} className='mx-4 max-sm:mt-4' />
             <p className='font-semibold mt-2 mx-4'>Start Selling</p>
           </div>
         </div>
       </div>
-      <div style={{backgroundImage: `url(${P1})`}} className='bg-no-repeat bg-cover w-[80%] m-auto py-8 px-12 max-sm:px-4 mt-20'>
+      <div style={{ backgroundImage: `url(${P1})` }} className='bg-no-repeat bg-cover w-[80%] m-auto py-8 px-12 max-sm:px-4 mt-20'>
         <p className='text-2xl font-semibold text-white'>
-          As a seller on Divueens, you'll gain access to a vibrant community of beauty
-          enthusiasts and benefit from our robust marketing and sales infrastructure.
+          As a seller on Divueens, you'll gain access to a vibrant community of beauty enthusiasts and benefit from our robust marketing and sales infrastructure.
         </p>
       </div>
       <div>
@@ -176,7 +175,7 @@ const Sell = () => {
                   <label className="block text-black mb-2" htmlFor="phone">Phone</label>
                   <div className='flex'>
                     <input
-                      type="text"
+                      type="number"
                       id="phone"
                       value={Data.phone}
                       onChange={Phone}
@@ -239,29 +238,25 @@ const Sell = () => {
         </div>
       </div> */}
       <div className="w-[90%] md:w-[60%] m-auto mt-4">
-      <div className="flex items-stretch flex-col justify-stretch w-full ">
-      {/* <h1 className="text-4xl m-4 text-white">Divueens</h1> */}
-        
-        <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl  h-fit">
-          <div className="flex flex-row items-stretch text-2xl pb-10 gap-3">
-            <FaRegCircleQuestion/>
-            <h1 className="text-4xl font-bold ]">FAQs</h1>
+        <div className="flex items-stretch flex-col justify-stretch w-full ">
+          {/* <h1 className="text-4xl m-4 text-white">Divueens</h1> */}
+          <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl  h-fit">
+            <div className="flex flex-row items-stretch text-2xl pb-10 gap-3">
+              <FaRegCircleQuestion />
+              <h1 className="text-4xl font-bold">FAQs</h1>
+            </div>
+            <ul className="flex flex-col">
+              {faqData.map((item, index) => (
+                <Faqs key={index} question={item.question} answer={item.answer}
+                  active={active === item.question}
+                  onClick={handleActive} />
+              ))}
+            </ul>
           </div>
-          <ul className="flex flex-col">
-            {faqData.map((item, index)=>(
-              <Faqs key={index} question={item.question} answer={item.answer} 
-              active={active === item.question}  
-              onClick={handleActive} />
-            ))}
-          </ul>
         </div>
-       
       </div>
-
-    </div>
     </div>
   );
 };
 
 export default Sell;
-

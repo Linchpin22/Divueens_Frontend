@@ -47,7 +47,7 @@ const Carousel = () => {
               ))
         }
       </div>
-     <div className="flex place-self-end mt-8">
+     <div className="flex place-content-center gap-5 mt-8">
      {[{
         onClick:prevSlide,
         text:'Prev',
