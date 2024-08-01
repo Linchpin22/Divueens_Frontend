@@ -210,8 +210,8 @@ function Footer() {
             //  style={{ gridArea: "col_Head" }}
             data-footer-part=""
           >
-            <Link to="/" className="logo">
-              <img alt="" className="object-contain h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
+            <Link  to="/" className="logo mx-auto">
+              <img alt="" className="object-contain sm:mr-[200px] mx-auto h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {

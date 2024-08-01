@@ -231,7 +231,6 @@ footer[data-footer-part] {
   }
 
   .col_[data-footer-part]:first-child > .logo > img {
-    margin-right: 5em;
     margin-top: 2em;
   }
 
