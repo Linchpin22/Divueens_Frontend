@@ -21,9 +21,9 @@ const TopBrands = () => {
     <>
       <div className={`${styles["brand-section"]} mt-8`}>
         <div className="heading pt-16 pb-8">
-          <hr className="bg-gradient-to-l from-rose-700" />
-          <h2 className="text-nowrap">Top Brands</h2>
-          <hr className="bg-gradient-to-r from-rose-700" />
+          <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+          <h2 className="text-nowrap" data-aos="fade-up">Top Brands</h2>
+          <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
         </div>
 
         <div
@@ -84,6 +84,7 @@ const TopBrands = () => {
         <Link to="/coins">
           <div
             className={`${styles["heading-2"]} mt-8 font-['Montserrat'] relative p-5 text-center`}
+            
           >
             <div
               className={`${styles["spot"]} absolute top-[-10%] w-[25px] h-[35px] bg-white rounded-[50%] blur-[15px] ${styles["spot1"]}`}
@@ -103,9 +104,7 @@ const TopBrands = () => {
             </h2>
           </div>
         </Link>
-        <br />
 
-        <img src={Banner} className="w-full" alt="banner" />
       </div>
     </>
   );
