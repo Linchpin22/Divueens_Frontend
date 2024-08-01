@@ -32,8 +32,8 @@ function OrderTrackingStepper({ stepConfig = [] }) {
             >
               <div
                 className={`rounded-full p-2 bg-gray-500 ${
-                  currStep >= index + 1 ? "bg-gray-50" : ""
-                } ${currStep === index + 1 ? "bg-gray-50" : ""} `}
+                  currStep >= index + 1 ? "bg-white" : ""
+                } ${currStep === index + 1 ? "bg-white" : ""} `}
               ></div>
             </div>
             <div className="text-wrap  text-sm order-first text-gray-500 text-center">
