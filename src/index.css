@@ -70,8 +70,8 @@ body {
 
   .slide-button {
     padding: 0.5vw 1vw;
-    background-color: black;
-    color: white;
+    /* background-color: black;
+    color: white; */
     text-decoration: none;
     border-radius: 0.5vw;
     font-size: 2vw;
