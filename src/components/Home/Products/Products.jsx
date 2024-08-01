@@ -34,44 +34,44 @@ const Products = () => {
                         768: { slidesPerView: 5, spaceBetween: 20 },
                     }}
                     modules={[Navigation, Scrollbar, Pagination]}
-                    className="mySwiper relative w-full h-full"
+                    className="mySwiper relative w-full h-full px-6"
                 >
                     <SwiperSlide
-                        className='flex items-center justify-between w-full h-full'
+                        className='flex items-center justify-between w-fit h-full'
                     >
-                        <div className="flex flex-col items-center w-full">
+                        <div className="flex flex-col items-center w-fit">
                             <img src={product_11} alt="Top Products" className="w-24 h-24 md:w-28 md:h-28 lg:w-44 lg:h-44 rounded-full object-cover mb-2" />
                             {/* <p className="text-center font-bold pt-5">Top Products</p> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide
-                        className='flex items-center justify-between w-full h-full'
+                        className='flex items-center justify-between w-fit h-full'
                     >
-                        <div className="flex flex-col items-center w-full">
+                        <div className="flex flex-col items-center w-fit">
                             <img src={product_13} alt="Top Brands" className="w-24 h-24 md:w-28 md:h-28 lg:w-44 lg:h-44 rounded-full object-cover mb-2" />
                             {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide
-                        className='flex items-center justify-between w-full h-full'
+                        className='flex items-center justify-between w-fit h-full'
                     >
-                        <div className="flex flex-col items-center w-full">
+                        <div className="flex flex-col items-center w-fit">
                             <img src={product_14} alt="Top Brands" className="w-24 h-24 md:w-28 md:h-28 lg:w-44 lg:h-44 rounded-full object-cover mb-2" />
                             {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide
-                        className='flex items-center justify-between w-full h-full'
+                        className='flex items-center justify-between w-fit h-full'
                     >
-                        <div className="flex flex-col items-center w-full">
+                        <div className="flex flex-col items-center w-fit">
                             <img src={b1} alt="Top Brands" className="w-24 h-24 md:w-28 md:h-28 lg:w-44 lg:h-44 rounded-full object-cover mb-2" />
                             {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide
-                        className='flex items-center justify-between w-full h-full'
+                        className='flex items-center justify-between w-fit h-full'
                     >
-                        <div className="flex flex-col items-center w-full">
+                        <div className="flex flex-col items-center w-fit">
                             <img src={b2} alt="Top Brands" className="w-24 h-24 md:w-28 md:h-28 lg:w-44 lg:h-44 rounded-full object-cover mb-2" />
                             {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
                         </div>
