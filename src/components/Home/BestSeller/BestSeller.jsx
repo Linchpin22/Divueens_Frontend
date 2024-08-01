@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 // import styles from "./BestSeller.module.css";
-import { imageUrls } from "../../../assets/assets";
+import { imageUrls} from "../../../assets/assets";
 import { LiaShoppingCartSolid, LiaHeart } from "react-icons/lia";
 import "swiper/css";
 // import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
- 
+
 //import MaintennacePage from '../../pages/MaintennacePage'; 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const trending = imageUrls.slice(0, imageUrls.length / 2);
@@ -53,7 +53,7 @@ const BestSeller = () => {
               color: selectedCategory === cat ? "#fff" : "#be123c",
             }}
             className={`${idx === 0 ? "first rounded-s-lg" : "second rounded-e-lg"
-            } text-xs md:text-sm transition-all py-1 md:py-2 px-4 md:px-12  font-semibold shadow shadow-slate-400`}
+              } text-xs md:text-sm transition-all py-1 md:py-2 px-4 md:px-12  font-semibold shadow shadow-slate-400`}
           >
             {cat === "trending" ? "Trending Now" : "New Arrivals"}
           </button>
@@ -82,7 +82,7 @@ const BestSeller = () => {
               onMouseLeave={() => setHoveredIndex(null)}
               className='bg-white rounded-lg shadow-xl h-[17rem] md:h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease]'
             >
-              <Link to = {`/product/${data.Name}`} className="h-[70%] block overflow-hidden">
+              <Link to={`/product/${data.Name}`} className="h-[70%] block overflow-hidden">
                 <img
                   onMouseEnter={() => setHoveredImageIndex(index)}
                   onMouseLeave={() => setHoveredImageIndex(null)}
@@ -121,8 +121,8 @@ const BestSeller = () => {
                   {data.Name}
                 </p>
                 <div className="flex px-2 justify-between">
-                  
-                    {/* StarIcons
+
+                  {/* StarIcons
                   <div className="pb-2 gap-[0.02em] flex items-center text-[#f5911e]">
                     {[...Array(Math.floor(data.rating))].map((_, i) => (
                       <FaStar key={i} />
@@ -140,7 +140,7 @@ const BestSeller = () => {
                       <FaRegStar key={i} />
                     ))}
                   </div> */}
-                 
+
                   {/* Pricings */}
                   <div className="flex flex-col ">
                     <p className="text-sm md:text-lg font-semibold text-rose-800">
@@ -158,13 +158,13 @@ const BestSeller = () => {
                   </div>
 
                   {/* Buynow btn */}
-                <Link to="/">
-                <Link to={'/maintennace'}className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
-                    Buy Now
+                  <Link to="/">
+                    <Link to={'/maintennace'} className="bg-rose-700 rounded text-xs md:text-md text-white text-nowrap p-2 font-medium cursor-pointer hover:bg-rose-600">
+                      Buy Now
+                    </Link>
                   </Link>
-                </Link>
                 </div>
-                
+
               </div>
             </SwiperSlide>
           ))}

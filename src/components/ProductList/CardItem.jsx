@@ -101,7 +101,7 @@ const CardItem = ({ item }) => {
                         </Link>
 
                         <div className='relative h-36 lg:px-4 md:h-32'>
-                            <Link to="/product-description" className="hover:text-gray-800 tracking-tighter mb-1 transition duration-100 font-medium text-[0.8rem] lg:text-[1rem]">{p.name} - {p.category} - {p.shade} - {p.material} - {p.brands}</Link>
+                            <Link to="/product-description" className="hover:text-gray-800 tracking-tighter mb-1 transition duration-100 text-[0.8rem] lg:text-[1rem]">{p.name} - {p.category} - {p.shade} - {p.material} - {p.brands}</Link>
                             <div className='flex items-center justify-start lg:mt-1'>
                                 {/* <div className="text-[#ffa200] flex items-center">
                                     <FaStar />
@@ -115,16 +115,19 @@ const CardItem = ({ item }) => {
                                     <FaStar />
                                 </div>
                             </div>
-                            <div className="flex items-end justify-between  absolute bottom-6 md:bottom-2 sm:gap-2 lg:-bottom-4 xl:-bottom-0 left-0 right-0 xl:px-4">
-                                <span className="font-[530] text-[0.8rem] sm:text-[1rem] md:text-base lg:text-xl"><span>₹</span>{p.price}/-</span>
-                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-700'} text-white md:px-4 hover:bg-rose-600 md:w-fit rounded-full text-[0.7rem] sm:text-[0.8rem] px-4 py-1 md:p-2`} onClick={() => {
+                            <div className="flex justify-between items-center absolute bottom-6 md:bottom-2 sm:gap-2 lg:-bottom-4 xl:-bottom-0 left-0 right-0 xl:px-4">
+                                <div className='flex gap-2 items-center'>
+                                    <span className="font-[530] text-[0.8rem] md:text-lg"><span>₹</span>{(p.price-((p.discount/100)*p.price))}/-</span>
+                                    <del className="text-green-600 text-xs md:text-sm"><span>₹</span>{p.price}/-</del>
+                                </div>
+                                <button className={`${isInCart ? 'bg-black' : 'bg-rose-700'} text-white hover:bg-rose-600 md:w-fit rounded-md text-[0.7rem] sm:text-[0.8rem] px-4 py-1 md:p-2`} onClick={() => {
                                     if (isInCart) {
                                         subCartItemNumber()
                                     addingItemToCart(p.id)}
                                     else{
                                         addCartItemNumber()
                                         addingItemToCart(p.id)
-                                    }}}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
+                                    }}}>{isInCart ? "Remove" : "Add to Cart"}</button>
                             </div>
                         </div>
 
