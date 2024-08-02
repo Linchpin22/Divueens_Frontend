@@ -13,11 +13,12 @@ import { FaFacebook } from "react-icons/fa";
 // import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
 import Divueens from "../../../assets/Divueens3.jpg";
-import bg from "../../../assets/Shop_By_Category/background.svg";
+import { Apple, Google } from "../../../assets/assets";
+// import bg from "../../../assets/Shop_By_Category/background.svg";
 const baadiList = [
   {
     title: "About us",
-    chhotiList: 
+    chhotiList:
       [
         {
           url: "/about-us",
@@ -50,40 +51,40 @@ const baadiList = [
           txt: "Investor Relation",
         },
       ]
-    
+
   },
   {
     title: "Help",
     chhotiList: [
       // {
-        //   url: "/privacy-policy",
-        //   txt: "Privacy Policy",
-        // },
-        {
-          url: "/contact-us",
-          txt: "Contact Us",
-        },
-        {
-          url: "/sell-on-divueens",
-          txt: "Sell on Divueens",
-        },
-        {
-          url: "/help-center",
-          txt: "FAQs",
-        },
-        {
-          url: "/return-policy",
-          txt: "Cancellation & Returns",
-        },
-        {
-          url: "/shippingdelivery",
-          txt: "Shipping & Delivery",
-        },
-        {
-          url: "/store-locator",
-          txt: "Store Locator",
-        },
-      ],
+      //   url: "/privacy-policy",
+      //   txt: "Privacy Policy",
+      // },
+      {
+        url: "/contact-us",
+        txt: "Contact Us",
+      },
+      {
+        url: "/sell-on-divueens",
+        txt: "Sell on Divueens",
+      },
+      {
+        url: "/help-center",
+        txt: "FAQs",
+      },
+      {
+        url: "/return-policy",
+        txt: "Cancellation & Returns",
+      },
+      {
+        url: "/shippingdelivery",
+        txt: "Shipping & Delivery",
+      },
+      {
+        url: "/store-locator",
+        txt: "Store Locator",
+      },
+    ],
   },
   {
     title: "Inspire Us",
@@ -171,9 +172,8 @@ function Footer() {
             )}
           </h3>
           <ul
-            className={`close ${
-              toggleView === index + 1 ? "all_Items" : ""
-            } mt-4 space-y-1 text-sm`}
+            className={`close ${toggleView === index + 1 ? "all_Items" : ""
+              } mt-4 space-y-1 text-sm`}
           >
             {lst.chhotiList.map((list2, int) => {
               return (
@@ -199,10 +199,10 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="" style={{backgroundImage: `url(${bg})`}} >
+    <footer data-footer-part="">
       <div className="md:pt-16 pt-1 ">
         <div
-          className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
+          className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 sm:gap-y-8"
           data-footer-part=""
         >
           <div
@@ -210,8 +210,8 @@ function Footer() {
             //  style={{ gridArea: "col_Head" }}
             data-footer-part=""
           >
-            <Link to="/" className="logo">
-              <img alt="" className="object-contain h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
+            <Link to="/" className="logo mx-auto">
+              <img alt="" className="object-contain sm:mr-[200px] mx-auto h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
@@ -232,36 +232,53 @@ function Footer() {
           {/* <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
              */}
         </div>
-            <ul className="flex justify-center gap-4 md:gap-6 w-full float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
-            <li>
-              <a href="/"
-                className={textStyle}
-              >
-                <FaFacebook className="md:h-5  md:w-5 text-black hover:text-blue-500" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/divueens/"
-                 className={textStyle}
-              >
-                <FaInstagram className="md:h-5 md:w-5 text-black hover:text-pink-500" />
-              </a>
-            </li>
-            <li>
-              <a href="/"
-                 className={textStyle}
-              >
-                <FaWhatsapp className="md:h-5 md:w-5 text-black hover:text-green-500" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/divueens/about/"
-                className={textStyle}
-              >
-                <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-blue-600" />
-              </a>
-            </li>
-          </ul>
+        <ul className="flex justify-center gap-4 md:gap-6 w-full relative float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
+          {/* <li>
+            <a href="https://www.linkedin.com/company/divueens/about/"
+              className='w-12 h-12'
+            >
+              <img src={Google} className="w-full h-full" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/divueens/about/"
+              className='w-12 h-12'
+            >
+              <img src={Apple} className="w-full h-full" alt="" />
+            </a>
+          </li> */}
+          <li>
+            <a href="/"
+              className={textStyle}
+            >
+              <FaFacebook className="md:h-5  md:w-5 text-black hover:text-blue-500" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/divueens/"
+              className={textStyle}
+            >
+              <FaInstagram className="md:h-5 md:w-5 text-black hover:text-pink-500" />
+            </a>
+          </li>
+          <li>
+            <a href="/"
+              className={textStyle}
+            >
+              <FaWhatsapp className="md:h-5 md:w-5 text-black hover:text-green-500" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/divueens/about/"
+              className={textStyle}
+            >
+              <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-blue-600" />
+            </a>
+          </li>
+
+          {/* <div className="flex items-center absolute -top-10 -right-12 bottom-0 w-fit h-12">
+          </div> */}
+        </ul>
 
         <hr data-footer-part="" className="mt-6 mx-4 mb-3 border-none h-[0.6px] bg-black" />
 

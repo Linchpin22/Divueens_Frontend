@@ -1,8 +1,38 @@
+import React, { useState, useEffect } from 'react';
+
 export default function Header() {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState('');
+
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setMessage('');
+        setMessageType('');
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(email)) {
+      setMessage('Sign in successful!');
+      setMessageType('success');
+    } else {
+      setMessage('Invalid email. Please try again.');
+      setMessageType('error');
+    }
+  };
+
   return (
     <div>
       <div className="absolute top-[65%] mt-3 w-full z-10">
-        <form className="w-[80%] mx-auto mb-4 mt-4 shadow-xl">
+        <form onSubmit={handleSubmit} className="w-[80%] mx-auto mb-4 mt-4 shadow-xl">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">
             search
           </label>
@@ -14,11 +44,13 @@ export default function Header() {
               ></div>
             </div>
             <input
-              type="search"
+              type="email"
               id="default-search"
               className="outline-none block w-full p-6 ps-16 text-sm text-gray-900 border border-rose-200 rounded-lg bg-white shadow-lg focus:ring-rose-500 focus:border-rose-500 focus:shadow-xl dark:bg-gray-50 dark:border-rose-200 dark:placeholder-gray-500 hover:border-rose-600 dark:text-gray-900 transition-all duration-300 ease-in-out"
-              placeholder="Let's connect"
+              placeholder="Enter your email to sign in"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <button
               type="submit"
@@ -28,7 +60,16 @@ export default function Header() {
             </button>
           </div>
         </form>
+        {message && (
+          <div 
+            className={`w-[80%] mx-auto p-4 rounded-lg ${
+              messageType === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+            } transition-opacity duration-300 ${message ? 'opacity-100' : 'opacity-0'}`}
+          >
+            {message}
+          </div>
+        )}
       </div>
     </div>
-  )
+  );
 }

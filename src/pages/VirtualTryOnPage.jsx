@@ -3,6 +3,7 @@ import { FaRegCircleQuestion } from 'react-icons/fa6';
 import MaintennacePage from '../pages/MaintennacePage'; 
 import {Link} from 'react-router-dom';
 import {Faqs} from './FAQ';
+import virtImage from '../assets/VirtualTryOn.png';
 const Data = [
   {
     title: 'Step 1',
@@ -44,7 +45,7 @@ const VirtualTryOnPage = () => {
           {/* Heading */}
           <p className="lg:text-[60px] text-[30px] font-bold md:text-[40px]">Virtual Try-On</p>
           {/* Subheading */}
-          <p className="text-[19px] font-medium text-wrap lg:text-left text-center">Welcome to Divueens' Virtual Trial experience! Our state of
+          <p className="text-[19px] font-medium text-wrap lg:text-left text-center">Welcome to Divueens&apos; Virtual Trial experience! Our state of
             the art technology allows you to try on a wide range of
             beauty products from the comfort of your home.</p>
           {/* TryOn Button */}
@@ -53,7 +54,7 @@ const VirtualTryOnPage = () => {
         {/* Image Compare */}
         <div className="w-full lg:w-auto">
           {/* Image */}
-          <img src='../src/assets/VirtualTryOn.png' className='width-[200px] lg:full mx-auto lg:m-0' />
+          <img src={virtImage} className='width-[200px] lg:full mx-auto lg:m-0' />
         </div>
       </div>
       {/* How it works */}
