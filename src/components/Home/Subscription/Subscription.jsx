@@ -20,9 +20,9 @@ function Subscription() {
 
       <ReferSection />
       <BlogCards />
-      <ContactSection />
+      {/* <ContactSection /> */}
 
-      <div className="flex items-center flex-col md:flex-row w-full px-8">
+      {/* <div className="flex items-center flex-col md:flex-row w-full px-8">
         <div className="w-full lg:w-1/2 xl:w-[60%] flex flex-col py-4 gap-4">
           <h3 className="text-lg lg:text-2xl font-medium">Lorem ipsum dolor sit amet.</h3>
           <p className="text-sm lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sint est deserunt quibusdam placeat autem. Iste blanditiis odit, expedita ab similique architecto numquam dolorum eligendi?</p>
@@ -30,7 +30,7 @@ function Subscription() {
         <div className="h-64 max-[321px]:h-48 w-full md:h-full lg:h-96 lg:w-1/2 xl:w-[40%]">
           <img src={Mobile_app} className="w-full h-full" alt="" />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

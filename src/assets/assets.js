@@ -168,6 +168,9 @@ export { default as Flipkart } from "./CareersPage/flipkart.svg";
 export { default as PhonePe } from "./CareersPage/phonepe.svg";
 export { default as SnapInc } from "./CareersPage/snapinc.svg";
 export { default as Mobile_app } from "./mobile_app.webp";
+export { default as Apple } from "./apple.png";
+export { default as Google } from "./google.png";
+
 export { default as b1 } from "./TopCategories/best-seller-1.png";
 export { default as b2 } from "./TopCategories/best-seller-2.png";
 export { default as b3 } from "./TopCategories/best-seller-3.png";
