@@ -86,51 +86,6 @@ const ProductList = () => {
     };
 
 
-    const dropdown = [
-        {
-            id: 1,
-            name: 'Category',
-            func: handleCate,
-            isOpen: isCategory,
-            options: ['Lipstick', 'Eyeliner', 'Kajal', 'Mascara', 'Foundation']
-        },
-        {
-            id: 2,
-            name: 'Price',
-            func: handlePrice,
-            isOpen: isPrice,
-            options: [`₹${400}`, `₹${500}`, `₹${600}`]
-        },
-        {
-            id: 3,
-            name: 'Review',
-            func: handleReview,
-            isOpen: isReview,
-            options: ['5', '4', '3', '2', '1']
-        },
-        {
-            id: 4,
-            name: 'Color',
-            func: handleColor,
-            isOpen: isColor,
-            options: ['Pink', 'Rose', 'DarkPink']
-        },
-        {
-            id: 5,
-            name: 'Material',
-            func: handleMaterial,
-            isOpen: isMaterial,
-            options: ['Soft', 'Hard']
-        },
-        {
-            id: 6,
-            name: 'Offer',
-            func: handleOffer,
-            isOpen: isOffer,
-            options: ['10% OFF', '20% OFF']
-        },
-
-    ]
 
     return (
         <>
@@ -183,77 +138,16 @@ const ProductList = () => {
                                 </div>
 
                                 <div className="navbar-nav p-4">
-                                    <div className='grid grid-cols-2 gap-2'>
-                                        {dropdown.map((d) => {
-                                            return <div key={d.id} className='flex items-center relative group'>
-                                                <button onClick={() => { handleDropdownClick(d.id), d.func, handleDropdownClick('dropdown-1') }} className='border-rose-600 border text-rose-700 px-4 py-2 w-full rounded-lg flex items-center justify-between font-medium text-[15px]' >
-                                                    {d.name}
-
-                                                    <IoIosArrowDown className={`transition-all duration-[0.3s] ease-in-out ${openDropdown === d.id ? 'rotate-180' : 'rotate-0'}`} size={20} />
-
-                                                </button>
-
-                                                {openDropdown === d.id && (
-                                                    <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
-                                                        {/* when clicked on any option the menu will be closed */}
-                                                        <ul className="py-2 text-sm" onClick={() => setShowMenu(false)} data-dropdown-id="dropdown-1">
-                                                            {d.options.map((p, index) => {
-                                                                return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
-                                                                    <p
-                                                                        onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}
-                                                                        className="text-gray-800  hover:text-gray-900"
-                                                                    >
-                                                                        {p}
-                                                                    </p>
-                                                                </li>
-                                                            })}
-                                                        </ul>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        })}
-
-                                    </div>
                                     <Filter itemData={productDetails} changedFunction={changeData} small={true} />
                                 </div>
                             </div>
                         )}
                     </div>
-                    {/* Short Filter */}
-                    <div className='hidden lg:flex lg:flex-row flex-col items-center justify-between '>
-                        <div className='flex items-center gap-2'>
-                            {dropdown.map((d) => {
-                                return <div key={d.id} className='flex items-center relative'>
-                                    <button onClick={() => { handleDropdownClick(d.id), d.func }} className='bg-[#d4d4d4] px-2 py-1 rounded-full text-xs flex items-center gap-2 font-medium' >
-                                        {d.name}  <IoIosArrowDown size={15} className={`transition-all duration-[0.3s] ease-in-out ${openDropdown === d.id ? 'rotate-180' : 'rotate-0'}`} />
-                                    </button>
 
-                                    {openDropdown === d.id && (
-                                        <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
-                                            <ul className="py-2 text-xs">
-                                                {d.options.map((p, index) => {
-                                                    return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
-
-                                                        <p
-                                                            onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}
-                                                            className="text-gray-800  hover:text-gray-900"
-                                                        >
-                                                            {p}
-                                                        </p>
-                                                    </li>
-                                                })}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div>
-                            })}
-
-                        </div>
-                    </div>
                 </div>
 
                 {/* Filters and Cards */}
-                <div onClick={() => setOpenDropdown(null)} className='flex flex-col w-full lg:flex-row '>
+                <div className='flex flex-col w-full lg:flex-row '>
                     {/* Filters */}
                     <div className='hidden lg:inline-flex'>
                         <Filter itemData={productDetails} changedFunction={changeData} />
