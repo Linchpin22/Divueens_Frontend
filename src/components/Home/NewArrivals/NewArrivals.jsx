@@ -77,7 +77,7 @@ const NewArrivals = () => {
                     </div>
                 </div>
 
-                <div className="ml-auto w-full h-72 lg:w-[60%] lg:h-96">
+                <div className="ml-auto w-full h-72 lg:w-[70%] lg:h-96">
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={20}

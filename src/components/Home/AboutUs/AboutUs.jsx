@@ -5,8 +5,13 @@ import { Link } from 'react-router-dom'
 const AboutUs = () => {
     return (
         <>
+            <div className="heading md:pt-16 pt-8 md:pb-8">
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+                <h2 className="text-nowrap" data-aos="fade-up">Know More About Divueens</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
+            </div>
             <div className='px-8'>
-                <h3 className='text-left text-3xl font-semibold'>About Us</h3>
+                <h3 className='text-left text-2xl font-semibold'>About Us</h3>
 
                 <div className='mt-4'>
                     <p className='text-sm mb-4 tracking-wide'>Divueens, your one destination for every occasion. The power of beauty lies in our
