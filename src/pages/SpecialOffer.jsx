@@ -214,7 +214,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp11} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -223,7 +223,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp12} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -232,7 +232,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp13} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -242,7 +242,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp14} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -253,7 +253,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp11} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -262,7 +262,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp12} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -272,7 +272,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp13} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -281,7 +281,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp14} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -291,7 +291,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp16} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
       </Swiper>
