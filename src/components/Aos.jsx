@@ -7,7 +7,7 @@ const Aos = ({ children }) => {
     useEffect(() => {
         AOS.init({
             // global settings for aos animation
-            duration: 1000,
+            duration: 800,
             offset: 200, // offset {in px} from the original trigger point
             easing: 'ease',
             once: true, // whether animation should happen only once - while scrolling
