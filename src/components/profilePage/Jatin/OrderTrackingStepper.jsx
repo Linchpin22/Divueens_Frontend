@@ -9,7 +9,6 @@ function OrderTrackingStepper({ stepConfig = [] }) {
   //     return (
   //         (currStep-1)/(stepConfig.length-1)*100
   // )
-
   // }
   return (
     <div className="relative flex  flex-col-reverse justify-end gap-5 w-56 items-center my-10">
@@ -27,7 +26,7 @@ function OrderTrackingStepper({ stepConfig = [] }) {
             </div>
             <div
               className={`rounded-full max-w-min mx-auto p-2 m-4  ${
-                currStep >= index + 1 ? "bg-green-500" : ""
+                currStep >= index + 1 ? "bg-rose-300" : ""
               } ${currStep === index + 1 ? "bg-rose-600" : ""}`}
             >
               <div

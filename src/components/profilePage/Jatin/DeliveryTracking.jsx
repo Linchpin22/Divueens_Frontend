@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OrderTrackingStepper from "./OrderTrackingStepper";
 
-const DeliveryTracking = () => {
+const DeliveryTracking = ({order={}}) => {
   const [orderDetails, setOrderDetails] = useState({
     customerName: "XYZ ABC",
     contactNo: "+91 99999XXXXX",

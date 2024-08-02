@@ -146,7 +146,7 @@ export default function MyOrder2() {
             />}
             </div>
             {/* <div className="flex "> */}
-            {showTracking && <DeliveryTracking />}
+            {showTracking && <DeliveryTracking order={orderData}/>}
             {/* </div> */}
           </div>
         ))}
