@@ -79,9 +79,9 @@ const Gallery = () => {
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
 
-                <hr className="bg-gradient-to-l from-rose-700" />
-                <h2 className="text-nowrap">Product Gallery</h2>
-                <hr className="bg-gradient-to-r from-rose-700" />
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+                <h2 className="text-nowrap" data-aos="fade-up">Product Gallery</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
             </div>
             {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 mt-8">
 

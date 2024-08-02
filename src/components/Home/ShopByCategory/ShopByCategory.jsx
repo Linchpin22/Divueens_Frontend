@@ -18,9 +18,9 @@ const ShopByCategory = () => {
       <section className="Shop_By_Category">
         <div className="heading md:pt-16 pt-8 md:pb-8">
 
-          <hr className="bg-gradient-to-l from-rose-700" />
-          <h2 className="text-nowrap">Shop By Categories</h2>
-          <hr className="bg-gradient-to-r from-rose-700" />
+          <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+          <h2 className="text-nowrap" data-aos="fade-up">Shop By Categories</h2>
+          <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
         </div>
         <div
           style={{
