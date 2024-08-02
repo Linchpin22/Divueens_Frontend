@@ -11,9 +11,9 @@ function Subscription() {
     <>
       <div className="combos_here md:pt-8">
         <div className="heading">
-          <hr className="bg-gradient-to-l from-rose-700" />
-          <h2 className="text-nowrap text-center">Exclusive Combos</h2>
-          <hr className="bg-gradient-to-r from-rose-700" />
+          <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+          <h2 className="text-nowrap text-center" data-aos="fade-up">Exclusive Combos</h2>
+          <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
         </div>
         <Slider />
       </div>

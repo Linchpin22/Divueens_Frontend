@@ -4,7 +4,24 @@ const productDetails = [
   {
     id: 1,
     name: "Moisture Matte Long Stay",
-    price: 500,
+    price: 560,
+    image: Lipstick,
+    rating: 4,
+    reviews: 36,
+    imageUrl: " ",
+    discount: 20,
+    category: "Eyeliner",
+    color: "bg-pink-700",
+    dresStyle: "Casuals",
+    brands: "Lakme",
+    shade: "Pink",
+    material: "Soft", 
+    quantity:1,
+  },
+  {
+    id: 1,
+    name: "Moisture Matte Long ",
+    price: 160,
     image: Lipstick,
     rating: 4,
     reviews: 36,
@@ -55,7 +72,7 @@ const productDetails = [
   {
     id: 4,
     name: "Moisture Matte Long Stay",
-    price: 500,
+    price: 200,
     image: Lipstick,
     rating: 1,
     reviews: 36,
@@ -72,7 +89,7 @@ const productDetails = [
   {
     id: 5,
     name: "Moisture Matte Long Stay",
-    price: 500,
+    price: 300,
     image: Lipstick,
     rating: 2,
     reviews: 36,
@@ -89,7 +106,7 @@ const productDetails = [
   {
     id: 6,
     name: "Moisture Matte Long Stay",
-    price: 500,
+    price: 320,
     image: Lipstick,
     rating: 3,
     reviews: 36,
@@ -106,7 +123,7 @@ const productDetails = [
   {
     id: 7,
     name: "Moisture Matte Long Stay",
-    price: 400,
+    price: 450,
     image: Lipstick,
     rating: 5,
     reviews: 36,
@@ -123,7 +140,7 @@ const productDetails = [
   {
     id: 8,
     name: "Moisture Matte Long Stay",
-    price: 400,
+    price: 190,
     image: Lipstick,
     rating: 4,
     reviews: 36,
@@ -140,7 +157,7 @@ const productDetails = [
   {
     id: 9,
     name: "Moisture Matte Long Stay",
-    price: 400,
+    price: 199,
     image: Lipstick,
     rating: 4,
     reviews: 36,
@@ -157,7 +174,7 @@ const productDetails = [
   {
     id: 10,
     name: "Moisture Matte Long Stay",
-    price: 400,
+    price: 399,
     image: Lipstick,
     rating: 4,
     reviews: 36,
@@ -174,7 +191,7 @@ const productDetails = [
   {
     id: 11,
     name: "Moisture Matte Long Stay",
-    price: 400,
+    price: 699,
     image: Lipstick,
     rating: 4,
     reviews: 36,
@@ -191,7 +208,7 @@ const productDetails = [
   {
     id: 12,
     name: "Moisture Matte Long Stay",
-    price: 400,
+    price: 799,
     image: Lipstick,
     rating: 4,
     reviews: 36,

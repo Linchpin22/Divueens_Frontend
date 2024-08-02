@@ -23,6 +23,7 @@ import {
   mamaearth,
   suntan,
 } from "../../../assets/assets";
+import AboutUs from "../AboutUs/AboutUs";
 
 
 const ExclusiveDiscount = () => {
@@ -170,7 +171,9 @@ const ExclusiveDiscount = () => {
             onClick={handleNextClick}
           ></div>
         </Swiper>
+
       </section>
+      <AboutUs />
     </>
   );
 };
