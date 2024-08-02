@@ -15,12 +15,13 @@ import { FaBars } from "react-icons/fa6";
 // import { Divueens } from "../../../assets/assets";
 import navItemData from "./NavDropDownItems";
 import SearchBoxMob from "./SearchBoxMob";
-import { CartContext } from "../../../context/CartContext";
+import Cart from "../../../shoppingCart/Cart";
 import { WishlistContext } from "../../../context/WishlistContext";
+import { CartContext } from "../../../context/CartContext";
 import Divueens from "../../../assets/Divueens3.jpg";
 
 const Navbar1 = ({ navItemText }) => {
-  const { numCartItem } = useContext(CartContext);
+  const { numCartItem,setOpen } = useContext(CartContext);
   const { numWishItem } = useContext(WishlistContext)
   const [openDropdown, setOpenDropdown] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
@@ -63,7 +64,7 @@ const Navbar1 = ({ navItemText }) => {
   };
 
   const [hoveredCategory, setHoveredCategory] = useState(null);
-
+  
   return (
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
@@ -92,8 +93,8 @@ const Navbar1 = ({ navItemText }) => {
               </div>
 
               <div className="hidden lg:flex space-x-5 ml-4 text-slate-500">
-                <NavLink to="/addtocart" className={`relative`}>
-                  <FiShoppingCart
+                <NavLink onClick={()=>{setOpen(true)}} className={`relative`}>
+                  <FiShoppingCart 
                     size={18}
                     className="relative hover:text-rose-800"
                   />
@@ -103,6 +104,7 @@ const Navbar1 = ({ navItemText }) => {
                     </div>
                   )}
                 </NavLink>
+                <Cart />
                 <NavLink to="/wishlist" className={`relative`}>
                   <FiHeart size={18} className="md:hover:text-rose-800" />
                   {numWishItem > 0 && (
@@ -152,7 +154,7 @@ const Navbar1 = ({ navItemText }) => {
                     </button>
 
                     <div className="w-full flex space-x-4 justify-center my-2">
-                      <NavLink to="/addtocart" className={`relative`}>
+                      <NavLink to="/Cart" className={`relative`}>
                         <FiShoppingCart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
                         {numCartItem > 0 && (
                           <div className="absolute rounded-full top-[-10px] right-[-10px] w-[15px] h-[15px] bg-rose-600 text-white flex items-center justify-center text-xs">
@@ -289,7 +291,7 @@ const Navbar1 = ({ navItemText }) => {
                               const subcategoryItems =
                                 subcategory[subcategoryLabel];
                               if (!subcategoryItems) return null;
-                              console.log(categoryData);
+                              // console.log(categoryData);
 
                               return (
                                 <div className="w-full" key={subcategoryLabel}>
