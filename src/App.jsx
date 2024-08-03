@@ -37,6 +37,7 @@ import ReferralPage from "./pages/Referral";
 import Network from "./components/Network/Network";
 import Afterorder from "./pages/OrderConfirmation";
 import CareersPage from "./pages/CareersPage";
+import Checkoutpage from "./pages/Checkoutpage";
 
 function App() {
   const { pathname } = useLocation();
@@ -84,7 +85,7 @@ function App() {
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/maintennace" element={<MaintennacePage />} />
         <Route path="/transaction" element={<Transaction />} />
-
+        <Route path="/checkoutpage" element={<Checkoutpage />} />
         
 {/* change */}
         <Route path="/:category/:subcategory" element={<ProductList />} />
