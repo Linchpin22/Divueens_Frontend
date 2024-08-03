@@ -6,9 +6,9 @@ const AboutUs = () => {
     return (
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
-                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
-                <h2 className="text-nowrap" data-aos="fade-up">Know More About Divueens</h2>
-                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
+                <h2 className="text-nowrap" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in">Know More About Divueens</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
             </div>
             <div className='px-8 text-center mt-8 md:mt-0 md:text-left'>
                 <h3 className='text-base md:text-xl lg:text-2xl font-semibold'>About Us</h3>

@@ -79,9 +79,9 @@ const Gallery = () => {
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
 
-                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
-                <h2 className="text-nowrap" data-aos="fade-up">Product Gallery</h2>
-                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
+                <h2 className="text-nowrap" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in">Product Gallery</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
             </div>
             {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 mt-8">
 
@@ -176,7 +176,8 @@ const Gallery = () => {
                 breakpoints={{
                     320: { slidesPerView: 1, spaceBetween: 20 },
                     768: { slidesPerView: 3, spaceBetween: 20 },
-                    1440: { slidesPerView: 5, spaceBetween: 20 },
+                    1024: { slidesPerView: 4, spaceBetween: 40 },
+                    1440: { slidesPerView: 5, spaceBetween: 40 },
                 }}
                 modules={[Navigation, Pagination]}
                 className="mySwiper relative py-10 px-14 "
