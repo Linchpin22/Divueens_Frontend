@@ -13,7 +13,7 @@ import { FaFacebook } from "react-icons/fa";
 // import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
 import Divueens from "../../../assets/Divueens3.jpg";
-import { Apple, Google } from "../../../assets/assets";
+import { Apple, FBG, Google } from "../../../assets/assets";
 // import bg from "../../../assets/Shop_By_Category/background.svg";
 const baadiList = [
   {
@@ -199,8 +199,12 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="">
-      <div className="md:pt-16 pt-1 ">
+    <footer className="w-screen h-screen lg:h-80 mt-4 relative">
+      <div className="h-full opacity-40">
+        <img src={FBG} className="object-cover w-full h-full" alt="" />
+      </div>
+
+      <div className={`absolute top-5 left-0 right-0 bottom-0 z-10`}>
         <div
           className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 sm:gap-y-8"
           data-footer-part=""
@@ -211,7 +215,7 @@ function Footer() {
             data-footer-part=""
           >
             <Link to="/" className="logo mx-auto">
-              <img alt="" className="object-contain sm:mr-[200px] mx-auto h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
+              <img alt="" className="object-contain sm:mr-[200px] mx-auto h-[5rem] w-[10rem] md:h-[10rem] md:w-22 mix-blend-overlay" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
