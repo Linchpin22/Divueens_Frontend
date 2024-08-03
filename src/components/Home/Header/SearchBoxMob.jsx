@@ -98,7 +98,7 @@ const SearchBoxMob = () => {
         <span className="text-lg text-gray-800"><FaSearch onClick={() => setChangeLayout(true)} className="inline mb-2" /></span>
       )}
       {changeLayout && (
-        <div className="fixed w-screen h-screen top-0 left-0 bg-rose-400 bg-opacity-90 lg:hidden">
+        <div className="absolute w-screen h-screen top-0 left-0 bg-rose-400 bg-opacity-90 lg:hidden">
           <button
             type="button"
             className="absolute top-10 right-4 btn-close text-rose-800 font-medium text-4xl cursor-pointer"

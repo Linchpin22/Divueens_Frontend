@@ -41,9 +41,9 @@ const BlogCards = () => {
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
 
-                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
-                <h2 className="text-nowrap" data-aos="fade-up">Blogs</h2>
-                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
+                <h2 className="text-nowrap" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in">Blogs</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
             </div>
             <div className='ml-auto w-fit px-10'>
                 <Link to={'/blogs'} className='px-4 py-2 text-white bg-black/60 rounded-lg flex items-center gap-2 border hover:bg-black text-sm md:text-base'>More <FaLongArrowAltRight size={22} /></Link>

@@ -199,8 +199,8 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer className="w-screen h-screen lg:h-80 mt-4 relative">
-      <div className="h-full opacity-40">
+    <footer className="w-screen h-full lg:h-80 mt-4 relative">
+      <div className="h-[26rem] lg:h-full opacity-40">
         <img src={FBG} className="object-cover w-full h-full" alt="" />
       </div>
 
@@ -236,21 +236,7 @@ function Footer() {
           {/* <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
              */}
         </div>
-        <ul className="flex justify-center gap-4 md:gap-6 w-full relative float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
-          {/* <li>
-            <a href="https://www.linkedin.com/company/divueens/about/"
-              className='w-12 h-12'
-            >
-              <img src={Google} className="w-full h-full" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/divueens/about/"
-              className='w-12 h-12'
-            >
-              <img src={Apple} className="w-full h-full" alt="" />
-            </a>
-          </li> */}
+        <ul className="flex justify-center mt-6 gap-4 md:gap-6 w-full relative float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
           <li>
             <a href="/"
               className={textStyle}
@@ -280,8 +266,10 @@ function Footer() {
             </a>
           </li>
 
-          {/* <div className="flex items-center absolute -top-10 -right-12 bottom-0 w-fit h-12">
-          </div> */}
+          <div className="flex items-center md:gap-0 absolute -top-6 md:top-0 md:right-[20%] lg:right-40 md:bottom-0 w-fit h-12">
+            <img src={Google} className="w-24 h-[2.5rem] md:w-36 md:h-12" alt="" />
+            <img src={Apple} className="w-24 h-[2.5rem] md:w-36 md:h-12" alt="" />
+          </div>
         </ul>
 
         <hr data-footer-part="" className="mt-6 mx-4 mb-3 border-none h-[0.6px] bg-black" />
