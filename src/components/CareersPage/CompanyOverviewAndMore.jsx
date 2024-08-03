@@ -96,7 +96,7 @@ const CompanyOverviewAndMore = () => {
                 </div>
             </div>
             {/* Our Core Values */}
-            <div className="w-[95%] flex flex-col mx-auto shadow-2xl gap-7 justify-center items-center">
+            <div className="w-[95%] flex flex-col mx-auto shadow-2xl gap-7 justify-center rounded-md items-center">
                 <div className='flex flex-col gap-8 text-center p-10'>
                     <p className='text-2xl font-semibold md:text-3xl'>Our Core Values</p>
                     <p className='text-xl text-justify font-medium w-[80%] mx-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non perferendis esse amet accusantium officia autem consectetur accusamus incidunt fugit veritatis!</p>
