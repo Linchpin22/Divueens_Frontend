@@ -1,5 +1,6 @@
 import { CartContext } from "../context/CartContext";
 import { useState,useContext } from 'react'
+import {Link} from "react-router-dom";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -109,22 +110,21 @@ export default function Cart() {
                   </div>
                   <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                   <div className="mt-6">
-                    <a
-                      href="/addtocart"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-rose-700"
+                    <Link
+                      to="/checkoutpage"
+                      className="flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-rose-700" 
                     >
                       Checkout
-                    </a>
+                    </Link>
                   </div>
                   <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
                       or{' '}
                       <button
                         type="button"
-                        onClick={() => setOpen(false)}
                         className="font-medium text-indigo-600 hover:text-indigo-500"
                       >
-                        Continue Shopping
+                        <Link to="/products">Continue Shopping</Link>
                         <span aria-hidden="true"> &rarr;</span>
                       </button>
                     </p>

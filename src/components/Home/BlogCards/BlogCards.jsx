@@ -4,6 +4,9 @@ import L1 from '../../../assets/WhoWeAre/l1.png'
 import L2 from '../../../assets/WhoWeAre/l2.png'
 import L3 from '../../../assets/WhoWeAre/l3.png'
 import Subscription from '../../Subscription/Subscription'
+import { FaLongArrowAltRight, FaShippingFast } from 'react-icons/fa'
+import { RiSecurePaymentFill } from 'react-icons/ri'
+import { FaTrophy } from 'react-icons/fa6'
 
 const BlogCards = () => {
 
@@ -38,12 +41,12 @@ const BlogCards = () => {
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
 
-                <hr className="bg-gradient-to-l from-rose-700" />
-                <h2 className="text-nowrap">Blogs</h2>
-                <hr className="bg-gradient-to-r from-rose-700" />
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+                <h2 className="text-nowrap" data-aos="fade-up">Blogs</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
             </div>
-            <div className='text-right w-full py-4 px-10'>
-                <Link to={'/blogs'} className='px-4 py-2 text-white bg-black/60 rounded-lg w-fit border hover:bg-black text-sm md:text-base'>View More</Link>
+            <div className='ml-auto w-fit px-10'>
+                <Link to={'/blogs'} className='px-4 py-2 text-white bg-black/60 rounded-lg flex items-center gap-2 border hover:bg-black text-sm md:text-base'>More <FaLongArrowAltRight size={22} /></Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8 mt-4">
                 {blog.map((b) => {
@@ -58,7 +61,7 @@ const BlogCards = () => {
             </div>
 
 
-            <div className='bg-black/80 text-white grid grid-cols-2 gap-x-32 max-md:block mt-12'>
+            <div className='bg-gradient-to-r from-rose-700 to-rose-300 text-white grid grid-cols-2 gap-x-32 max-md:block mt-12'>
                 <div className='ml-[14%] my-[8%] max-md:ml-[10%]'>
                     <p className='text-lg lg:text-2xl font-semibold max-sm:text-xl max-sm:pt-4 mb-4'>Don't miss an Update!!</p>
                     <p className='text-sm lg:text-[15px] lg:leading-[2rem] font-[400]'>Get the latest beauty trends, exclusive offers, and stories
@@ -70,22 +73,27 @@ const BlogCards = () => {
             </div>
             {/* Last */}
             <div className='w-[90%] m-auto grid grid-cols-1 md:grid-cols-3 my-8'>
-                <div className='flex items-center justify-center w-full gap-4 py-2 md:gap-0 md:py-0'>
-                    <img src={L1} className='w-14 md:w-[25%] lg:w-[15%] grayscale' />
+                <div className='flex items-center justify-center w-full gap-4 py-2 md:py-0'>
+                    {/* <img src={L1} className='w-14 md:w-[25%] lg:w-[15%] grayscale' /> */}
+                    <FaTrophy size={50} className='text-rose-600' />
                     <div className='w-full flex items-center gap-1 md:w-fit md:flex-col'>
                         <p className='text-base md:text-lg font-semibold md:text-center'>100% Original</p>
                         <p className='text-base md:text-lg font-semibold md:text-center'>Product</p>
                     </div>
                 </div>
-                <div className='flex items-center justify-center w-full gap-4 py-2 md:gap-0 md:py-0'>
-                    <img src={L2} className='w-16 md:w-[30%] lg:w-[25%] grayscale' />
+                <div className='flex items-center justify-center w-full gap-4 py-2 md:py-0'>
+                    {/* <img src={L2} className='w-16 md:w-[30%] lg:w-[25%] grayscale' /> */}
+
+                    <FaShippingFast size={50} className='text-rose-600' />
                     <div className='w-full flex items-center gap-1 md:w-fit md:flex-col'>
                         <p className='text-base md:text-lg font-semibold md:text-center'>Free Delivery</p>
                         <p className='text-base md:text-lg font-semibold md:text-center'>on Prepaid</p>
                     </div>
                 </div>
-                <div className='flex items-center justify-center w-full gap-4 py-2 md:gap-0 md:py-0'>
-                    <img src={L3} className='w-16 md:w-[30%] lg:w-[25%] grayscale' />
+                <div className='flex items-center justify-center w-full gap-4 py-2 md:py-0'>
+                    {/* <img src={L3} className='w-16 md:w-[30%] lg:w-[25%] grayscale' /> */}
+                    <RiSecurePaymentFill size={50} className='text-rose-600' />
+
                     <div className='w-full flex items-center gap-1 md:w-fit md:flex-col'>
                         <p className='text-base md:text-lg font-semibold md:text-center'>Secure</p>
                         <p className='text-base md:text-lg font-semibold md:text-center'>Payments</p>
