@@ -23,7 +23,7 @@ import { AuthContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Navbar1 = ({ navItemText }) => {
-  const { numCartItem,setOpen } = useContext(CartContext);
+  const { numCartItem, setOpen } = useContext(CartContext);
   const { numWishItem } = useContext(WishlistContext)
   const { autherisation } = useContext(AuthContext)
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -36,8 +36,8 @@ const Navbar1 = ({ navItemText }) => {
     { title: "Top Brands", url: "/top-catagories" },
     // "Div Fashion",
     { title: "Beauty Trends", url: "/blogs" },
-    { title: "Glow Guide", url: "/tools-and-accessories" },
-    { title: "Offers", url: "/special-offers" }, 
+    { title: "Discounts", url: "/discounts" },
+    { title: "Offers", url: "/special-offers" },
   ];
   const subNavItems = [
     "Face care",
@@ -70,7 +70,7 @@ const Navbar1 = ({ navItemText }) => {
   };
 
   const [hoveredCategory, setHoveredCategory] = useState(null);
-  
+
   return (
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
@@ -84,7 +84,7 @@ const Navbar1 = ({ navItemText }) => {
               src={Divueens}
               alt="Description"
             /> */}
-          <img className="w-[100px] h-[60px] md:w-[120px] md:h-[80px] object-cover" src={Divueens} alt="Description" onClick={()=> navigate("/")}/>
+          <img className="w-[100px] h-[60px] md:w-[120px] md:h-[80px] object-cover" src={Divueens} alt="Description" onClick={() => navigate("/")} />
 
           {/* </Link> */}
         </div>
@@ -99,8 +99,8 @@ const Navbar1 = ({ navItemText }) => {
               </div>
 
               <div className="hidden lg:flex space-x-5 ml-4 text-slate-500">
-                <NavLink onClick={()=>{setOpen(true)}} className={`relative`}>
-                  <FiShoppingCart 
+                <NavLink onClick={() => { setOpen(true) }} className={`relative`}>
+                  <FiShoppingCart
                     size={18}
                     className="relative hover:text-rose-800"
                   />
@@ -125,8 +125,8 @@ const Navbar1 = ({ navItemText }) => {
                   <FiUser
                     size={18}
                     className="hover:text-rose-800"
-                    onClick={() => {autherisation ? '' : setDisplayAuth(true)}}
-                    />
+                    onClick={() => { autherisation ? '' : setDisplayAuth(true) }}
+                  />
                 </NavLink>
 
                 {/* </NavLink> */}
@@ -150,7 +150,7 @@ const Navbar1 = ({ navItemText }) => {
               ))}
             </div>
             {isOpen && (
-              <div className="absolute max-h-screen h-screen top-0 bg-white/95 right-0 w-[70%] md:w-[45%] z-50 shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
+              <div className="absolute max-h-screen h-screen -top-4 md:-top-6 bg-white/95 backdrop-blur-sm right-0 w-64 md:w-72 z-50 shadow-lg shadow-slate-600 py-4 pl-4 transition-[transform] duration-[0.5s] ease-in-out lg:hidden">
                 <div>
                   <div className="flex items-center justify-between pr-4">
                     <button
@@ -162,7 +162,7 @@ const Navbar1 = ({ navItemText }) => {
                     </button>
 
                     <div className="w-full flex space-x-4 justify-center my-2">
-                      <NavLink to="/Cart" className={`relative`}>
+                      <NavLink onClick={() => { setOpen(true) }} className={`relative`}>
                         <FiShoppingCart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
                         {numCartItem > 0 && (
                           <div className="absolute rounded-full top-[-10px] right-[-10px] w-[15px] h-[15px] bg-rose-600 text-white flex items-center justify-center text-xs">
@@ -170,6 +170,7 @@ const Navbar1 = ({ navItemText }) => {
                           </div>
                         )}
                       </NavLink>
+                      <Cart />
                       <NavLink to="/wishlist">
                         <FiHeart className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full" />
                         {numWishItem > 0 && (
@@ -182,7 +183,7 @@ const Navbar1 = ({ navItemText }) => {
                         <FiUser
                           onClick={() => autherisation ? '' : setDisplayAuth(true)}
                           className="w-8 h-8 p-2 text-lg border border-rose-400 text-rose-400 rounded-full"
-                          />
+                        />
                       </NavLink>
                     </div>
                   </div>

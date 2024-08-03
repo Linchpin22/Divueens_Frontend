@@ -51,6 +51,14 @@ import Lips from "./Shop_By_Category/Lips.webp";
 import Eyes from "./Shop_By_Category/Eyes.webp";
 import Hair from "./Shop_By_Category/Hair.png";
 import Perfume from "./Shop_By_Category/Perfume.png";
+export {default as Serum} from "./Shop_By_Category/serum.png";
+export { default as Shampoo } from "./Shop_By_Category/shampoo.png";
+export { default as Sunscreen } from "./Shop_By_Category/sunscreen.png";
+export { default as Lipsticks } from "./Shop_By_Category/lipstick.png";
+export { default as Mascara } from "./Shop_By_Category/mascara.png";
+export { default as Moisturizer } from "./Shop_By_Category/moisturizer.png";
+export { default as Facewash } from "./Shop_By_Category/facewash.png";
+export { default as Cleanser } from "./Shop_By_Category/cleanser.png";
 
 import sub_1 from "./Subscription/1.png";
 import sub_2 from "./Subscription/2.png";
@@ -225,6 +233,8 @@ export { default as coll8 } from "./Gallery/coll8.png";
 export { default as coll9 } from "./Gallery/coll9.png";
 export { default as coll10 } from "./Gallery/coll10.png";
 // export { default as coll11 } from "./Gallery/coll11.png";
+
+export {default as FBG} from './OurTeam/1.jpg'
 
 export const imageUrls = [
   {
