@@ -11,21 +11,30 @@ const Wishlist = () => {
   const { addCartItemNumber, subCartItemNumber } = useContext(CartContext);
   const { addWishItemNumber, subWishItemNumber } = useContext(WishlistContext);
   const [wishlist, setWishlist] = useState([]);
-  const [wishListItem, setWishListItem] = useState(productData);
-  const [cardItem, setCardItem] = useState(JSON.parse(localStorage.getItem('Item-Id')) || []);
+  const [wishListItem, setWishListItem] = useState([]);
+  const [cardItem, setCardItem] = useState([]);
 
   useEffect(() => {
+    // Load wishlist and cart items from local storage on mount
     const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     setWishlist(storedWishlist);
-    const tempData = wishListItem.filter(product => storedWishlist.includes(product.id));
-    if (wishListItem !== tempData) setWishListItem(tempData);
-  }, [wishListItem]);
+
+    // const storedCartItems = JSON.parse(localStorage.getItem('Item-Id')) || [];
+    // setCardItem(storedCartItems);
+
+    // Filter product data to only include items in the wishlist
+    const filteredProducts = productData.filter(product => storedWishlist.includes(product.id));
+    setWishListItem(filteredProducts);
+  }, []);
 
   const handleRemoveFromWishlist = (id) => {
     subWishItemNumber();
     const updatedWishlist = wishlist.filter(item => item !== id);
     setWishlist(updatedWishlist);
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+
+    // Remove the item from wishListItem state
+    setWishListItem(prevItems => prevItems.filter(item => item.id !== id));
   };
 
   const addingItemToCart = (ItemId) => {
@@ -39,6 +48,11 @@ const Wishlist = () => {
     }
     setCardItem(updatedItems);
     localStorage.setItem("Item-Id", JSON.stringify(updatedItems));
+
+    // Remove from wishlist if added to cart
+    if (!cardItem.includes(ItemId)) {
+      handleRemoveFromWishlist(ItemId);
+    }
   };
 
   return (
@@ -47,7 +61,7 @@ const Wishlist = () => {
       <div>
         {wishListItem.length ? (
           wishListItem.map((item) => {
-            const isInCart = cardItem.includes(item.id);
+            
             return (
               <div key={item.id} className="rounded-xl shadow-xl mb-4 flex flex-col sm:flex-row">
                 <div className="p-3 my-5 w-full sm:w-64 flex justify-center">
@@ -81,7 +95,7 @@ const Wishlist = () => {
                         className="bg-rose-800 font-bold text-white rounded-xl text-sm sm:text-base px-6 py-2"
                         onClick={() => addingItemToCart(item.id)}
                       >
-                        {isInCart ? "Remove from Cart" : "Add to Cart"}
+                         Add to Cart
                       </button>
                       <button className="p-1 rounded-md flex items-center justify-center">
                         <img src={Share} className='h-5' alt="Share" />
