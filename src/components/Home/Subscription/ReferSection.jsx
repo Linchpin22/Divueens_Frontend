@@ -1,5 +1,6 @@
 import React from "react";
 import { ref_pic } from "../../../assets/assets";
+import { Link } from "react-router-dom";
 
 const ReferSection = () => {
   return (
@@ -10,12 +11,14 @@ const ReferSection = () => {
           <h2 className="text-nowrap" data-aos="fade-up">Refer your Friend</h2>
           <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
         </div>
-        <img
-          src={ref_pic}
-          className="lg:w-[60%] w-[80%] shadow-xl shadow-slate-400 bg-rose-600 object-contain mx-auto"
-        />
+        <Link to={'/referral'}>
+          <img
+            src={ref_pic}
+            className="lg:w-[60%] w-[80%] shadow-xl shadow-slate-400 bg-rose-600 object-contain mx-auto"
+          />
+        </Link>
       </div>
-      
+
     </>
   );
 };

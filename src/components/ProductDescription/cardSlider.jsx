@@ -79,7 +79,7 @@ const cardSlider = () => {
       >
         {relatedProducts.map((data, i) => (
           <SwiperSlide
-            className="border rounded-lg overflow-hidden shadow-md shadow-zinc-400 bg-white"
+            className="border rounded-lg overflow-hidden shadow-md shadow-zinc-400 bg-white mb-4"
             key={i}
           >
             <div className="w-full">
@@ -89,7 +89,7 @@ const cardSlider = () => {
                 className="lg:w-full w-[300px] object-cover bg-black"
               />
             </div>
-            <div className="opacity-0 bg-black hover:opacity-100 hover:bg-opacity-20 absolute top-0 left-0 right-0 bottom-0 h-[100%] transition-all duration-[0.7s] flex items-center justify-center">
+            <div className="opacity-0 bg-black hover:opacity-100 hover:bg-opacity-20 absolute top-0 left-0 right-0 bottom-0 h-[100%] transition-all  duration-[0.7s] flex items-center justify-center">
               <Link to={""}>
                 <button className="bg-rose-700 text-white cursor-pointe text-sm p-3 rounded-md shadow-md font-medium shadow-black hover:bg-rose-600">
                   Buy Now
