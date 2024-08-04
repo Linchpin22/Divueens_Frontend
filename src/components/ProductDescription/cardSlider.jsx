@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { Navigation} from "swiper/modules";
 import { Link } from "react-router-dom";
 
-const cardSlider = () => {
+const  cardSlider = () => {
   const relatedProducts = [
     {
       id: 1, src: img, title: 'Sony BRAVIA XR Android Tv', price: '800.22', buttonText: 'Add to cart', original_price: 12000,
@@ -79,14 +79,14 @@ const cardSlider = () => {
       >
         {relatedProducts.map((data, i) => (
           <SwiperSlide
-            className="border rounded-lg overflow-hidden shadow-md shadow-zinc-400 bg-white mb-4"
+            className="border rounded-lg overflow-hidden h-auto md:h-auto shadow-md lg:w-full w-[300px] shadow-zinc-400 bg-white mb-4"
             key={i}
           >
-            <div className="w-full">
+            <div className="w-full ">
               <img
                 src={data.src}
                 alt=""
-                className="lg:w-full w-[300px] object-cover bg-black"
+                className=" object-cover bg-black"
               />
             </div>
             <div className="opacity-0 bg-black hover:opacity-100 hover:bg-opacity-20 absolute top-0 left-0 right-0 bottom-0 h-[100%] transition-all  duration-[0.7s] flex items-center justify-center">
@@ -143,7 +143,7 @@ const cardSlider = () => {
           </SwiperSlide>
         ))}
         <div
-          className="swiper-button-prev after:content-['prev'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800 absolute top-1/2 left-2"
+          className="swiper-button-prev after:content-['prev'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800 absolute top-1/2 "
           onClick={handlePrevClick}
         ></div>
         {/* <div
@@ -152,7 +152,7 @@ const cardSlider = () => {
         ></div> */}
 
         <div
-          className="swiper-button-next absolute top-1/2 right-0 after:content-['next'] after:text-xs after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800"
+          className="swiper-button-next absolute top-1/2 right-0 after:content-['next'] after:text-xs mx-2 after:font-extrabold after:text-center after:px-[13px] after:py-2 after:rounded-full after:text-white after:bg-rose-700 rounded-full after:hover:bg-rose-800"
           onClick={handleNextClick}
         ></div>
       </Swiper>

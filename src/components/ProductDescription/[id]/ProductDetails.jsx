@@ -7,6 +7,10 @@ import SizeSelector from "../SizeSelector";
 import RelatedProducts from "../RelatedProducts";
 import StarRating from "../StarRating";
 import ProductsYouMightLike from "../ProductsYouMightLike";
+import { BiArrowFromRight } from "react-icons/bi";
+import { TbArrowNarrowLeft, TbArrowNarrowRight } from "react-icons/tb";
+import profileImg from './../../../assets/DivueenNetwork/Ellipse.png'
+import { FaStar } from "react-icons/fa6";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -14,7 +18,7 @@ const ProductDetails = () => {
   const [productDetail, setProductDetail] = useState({});
   useEffect(() => {
     const filterData = products.filter((p) => p.id == id);
-    setProductDetail(filterData[0]);
+    setProductDetail(filterData[0]);    
   }, [id]);
 
   console.log(productDetail);
@@ -58,7 +62,7 @@ const ProductDetails = () => {
             {view ? "Less" : "More"}
           </button>
         </div>
-      </div>
+       </div>
     );
   };
 
@@ -67,20 +71,12 @@ const ProductDetails = () => {
   return (
     <div>
       {productDetail && (
-        <div className="mx-auto w-fit">
-          
-
-          <div class="font-sans">
+        <div className="mx-auto w-80 md:w-fit  ">
+          <div class="font-sans ">
             <div class="p-4 lg:max-w-6xl max-w-2xl max-lg:mx-auto">
-              <div class="grid items-start grid-cols-1 lg:grid-cols-2 gap-8 max-lg:gap-16">
-                <div class="w-full lg:sticky top-0 flex gap-3">
-                  <img
-                    src={productDetail.image}
-                    alt="Product"
-                    class="w-3/4 rounded-lg object-cover"
-                  />
-
-                  <div class="w-20 flex flex-col max-sm:mb-4 gap-3">
+              <div class="grid  items-start justify-items-center grid-cols-1 lg:grid-cols-2 gap-8 max-lg:gap-16">
+                <div class=" w-80 mx-auto  lg:sticky top-0 flex gap-3">
+                  <div class="w-20 mx-auto flex flex-col max-sm:mb-4 gap-3">
                     {["", "", "", ""].map((item, i) => {
                       return (
                         <img
@@ -89,11 +85,17 @@ const ProductDetails = () => {
                           onClick={(e) => {
                             setProductImage(e.target.src);
                           }}
-                          class="w-full cursor-pointer rounded-lg"
+                          class="cursor-pointer rounded-lg"
                         />
                       );
                     })}
                   </div>
+                  <img
+                    src={productDetail.image}
+                    alt="Product"
+                    class="w-3/4 rounded-lg object-cover"
+                  />
+
                 </div>
 
                 <div>
@@ -102,7 +104,7 @@ const ProductDetails = () => {
                       <h2 class="text-2xl font-bold text-gray-800">
                         {productDetail.name}
                       </h2>
-                      <div className="">
+                      {/* <div className="">
                         {[
                           {
                             title: "Brand",
@@ -126,10 +128,43 @@ const ProductDetails = () => {
                             </p>
                           );
                         })}
-                      </div>
+                      </div> */}
+                      <div class="flex space-x-2 mt-4">
+                            {/* <svg class="w-5 fill-orange-400" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-5 fill-orange-400" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-5 fill-orange-400" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-5 fill-orange-400" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg>
+                            <svg class="w-5 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                            </svg> */}
+                            <FaStar className="text-orange-400 mx-1" />
+                            <FaStar className="text-orange-400 mx-1" />
+                            <FaStar className="text-orange-400 mx-1" />
+                            <FaStar className="text-orange-400 mx-1" />
+                            <FaStar className="text-gray-300" />
+
+                        </div>
                     </div>
 
-                    <div class="ml-auto flex flex-wrap gap-4">
+                    {/* <div class="ml-auto flex flex-wrap gap-4">
                       <button
                         type="button"
                         class="px-2.5 py-1.5 bg-pink-100 text-xs text-pink-600 rounded-md flex items-center"
@@ -180,10 +215,10 @@ const ProductDetails = () => {
                           />
                         </svg>
                       </button>
-                    </div>
+                    </div> */}
                   </div>
 
-                  <hr class="my-8" />
+                  <hr class="my-6" />
 
                   <div class="flex flex-wrap gap-4 items-start">
                     <div>
@@ -196,7 +231,7 @@ const ProductDetails = () => {
                       </p>
                     </div>
 
-                    <div class="flex flex-wrap  gap-4 ml-auto">
+                    {/* <div class="flex flex-wrap  gap-4 ml-auto">
                       <button
                         type="button"
                         class="px-2.5 py-1.5 bg-pink-100 text-xs text-pink-600 rounded-md flex items-center"
@@ -236,12 +271,12 @@ const ProductDetails = () => {
                         </svg>
                         87 Reviews
                       </button>
-                    </div>
+                    </div> */}
                   </div>
 
-                  <hr class="my-8" />
+                  <hr class="my-6" />
 
-                  <div>
+                  {/* <div>
                     <h3 class="text-xl md:text-start text-center font-bold text-gray-800">
                       Choose a Size
                     </h3>
@@ -251,15 +286,15 @@ const ProductDetails = () => {
                         onSizeChange={handleSizeChange}
                       />
                     </div>
-                  </div>
+                  </div> */}
 
-                  <hr class="my-8" />
+                  {/* <hr class="my-6" /> */}
 
                   <div>
-                    <h3 class="text-xl md:text-start text-center font-bold text-gray-800">
+                    <h3 class="text-xl md:text-start  font-bold text-gray-800">
                       Choose a Shade
                     </h3>
-                    <div class="flex  mx-auto md:mx-0 w-fit flex-wrap gap-4 mt-4">
+                    <div class="flex  w-fit flex-wrap gap-4 mt-4">
                       <button
                         type="button"
                         class="w-10 h-10 bg-rose-400 border border-white hover:border-gray-800 rounded-md shrink-0"
@@ -279,18 +314,18 @@ const ProductDetails = () => {
                     </div>
                   </div>
 
-                  <hr class="my-8" />
+                  <hr class="my-6" />
                   <QuantitySelector
                     quantity={quantity}
                     onQuantityChange={handleQuantityChange}
                   />
-                  <hr class="my-8" />
+                  <hr class="my-6" />
 
-                  <div class="flex w-fit  mx-auto md:mx-0 flex-wrap gap-4">
+                  <div class="flex flex-wrap gap-4">
                     <Link
                       type="button"
                       to={`/order-now/${productDetail.id}`}
-                      class="min-w-[200px]  w-fit text-center mx-auto md:mx-0 px-4 py-3 bg-rose-700 hover:bg-rose-900 text-white text-sm font-semibold rounded-md"
+                      class="min-w-[200px] text-center px-4 py-3 bg-rose-700 hover:bg-rose-900 text-white text-sm font-semibold rounded-md"
                     >
                       Buy now
                     </Link>
@@ -302,13 +337,97 @@ const ProductDetails = () => {
                     {/* </Link> */}
                     <button
                       type="button"
-                      class="min-w-[200px]  w-fit  mx-auto md:mx-0 px-4 py-2.5 border border-rose-800 bg-transparent hover:bg-rose-50 text-rose-800 text-sm font-semibold rounded-md"
+                      class="min-w-[200px] px-4 py-2.5 border border-rose-800 bg-transparent hover:bg-rose-50 text-rose-800 text-sm font-semibold rounded-md"
                     >
                       Add to cart
                     </button>
                   </div>
-                  {/* Tabs */}
-                  <div className="w-full max-w-5xl mt-10">
+                  <hr class="my-6" />
+
+                  <div class="mt-8">
+                           <div className="flex  flex-row justify-between">
+                           <h3 class="text-xl font-bold text-gray-800">Reviews(10)</h3>
+                           <button type="button" class="w-fit text-gray-800 font-semibold flex gap-1 items-center md:flex-nowrap text-sm">Read all reviews <TbArrowNarrowRight/></button>
+                           </div>
+                            <div class="space-y-3 mt-4">
+                                <div class="flex items-center">
+                                    <p class="text-sm text-gray-800 font-bold">5.0</p>
+                            <FaStar className="text-orange-400 mx-1" />
+                                    
+                                    <div class="bg-gray-300 rounded w-full h-2 ml-3">
+                                        <div class="w-2/3 h-full rounded bg-orange-400"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-800 font-bold ml-3">66%</p>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="text-sm text-gray-800 font-bold">4.0</p>
+                            <FaStar className="text-orange-400 mx-1" />
+                                    
+                                    <div class="bg-gray-300 rounded w-full h-2 ml-3">
+                                        <div class="w-1/3 h-full rounded bg-orange-400"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-800 font-bold ml-3">33%</p>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="text-sm text-gray-800 font-bold">3.0</p>
+                            <FaStar className="text-orange-400 mx-1" />
+                                    
+                                          
+                                    <div class="bg-gray-300 rounded w-full h-2 ml-3">
+                                        <div class="w-1/6 h-full rounded bg-orange-400"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-800 font-bold ml-3">16%</p>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="text-sm text-gray-800 font-bold">2.0</p>
+                            <FaStar className="text-orange-400 mx-1" />
+                                    
+                                    <div class="bg-gray-300 rounded w-full h-2 ml-3">
+                                        <div class="w-1/12 h-full rounded bg-orange-400"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-800 font-bold ml-3">8%</p>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <p class="text-sm text-gray-800 font-bold">1.0</p>
+                            <FaStar className="text-orange-400 mx-1" />
+                                    
+                                    <div class="bg-gray-300 rounded w-full h-2 ml-3">
+                                        <div class="w-[6%] h-full rounded bg-orange-400"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-800 font-bold ml-3">6%</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start mt-8">
+                                <img src={profileImg} class="w-12 h-12 rounded-full border-2 border-white" />
+                                <div class="ml-3">
+                                    <h4 class="text-sm font-bold">Alina Doe</h4>
+                                    <div class="flex space-x-1 mt-1">
+                            <FaStar className="text-orange-400" />
+                                       
+                            <FaStar className="text-orange-400" />
+                                       
+                            <FaStar className="text-orange-400" />
+                                       
+                            <FaStar className="text-gray-300" />
+                            <FaStar className="text-gray-300" />
+                                                                                                                      <p class="text-xs !ml-2 font-semibold">2 mins ago</p>
+                                    </div>
+                                    <p class="text-xs mt-4">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                  
+                </div>
+                
+              </div>
+              {/* Tabs */}
+              <div className="w-fit mx-auto max-w-5xl mt-10">
                     <ul class="flex border-b">
                       <li
                         class={` font-semibold text-sm  py-3 px-8 cursor-pointer transition-all ${
@@ -339,10 +458,11 @@ const ProductDetails = () => {
                       <RenderContent val={activeTab} />
                     </div>
                   </div>
-                </div>
-              </div>
-            <RelatedProducts />
+            <div className="mx-auto max-w-5xl">
             <ProductsYouMightLike/>
+            <RelatedProducts />
+            </div>
+            <hr class="my-6" />
             </div>
           </div>
         </div>
