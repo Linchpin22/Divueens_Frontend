@@ -214,7 +214,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp11} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -223,7 +223,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp12} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -232,7 +232,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp13} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -242,7 +242,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp14} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -253,7 +253,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp11} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -262,7 +262,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp12} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -272,7 +272,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp13} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -281,7 +281,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp14} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
 
@@ -291,7 +291,7 @@ export default function Offer(){
         className="bg-white hover:shadow-md lg:w-full sm:w-full curser:pointer border-0 column transition duration-200 rounded-xl hover:bg-white hover:border-0 hover:scale-102"
       >
         <img src={sp16} alt="Loreal hair care products" className="w-[100%] lg:w-[100%] md:w-[100%] sm:w-[100%] rounded-xl" />
-        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[1rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
+        <div className="title text-center sm:text-[1rem] xl:text-xl lg:text-lg text-[0.7rem] sm:px-2 md:text-sm font-medium text-black mt-[10px]">Up to 51 ℅ off on all the products</div>
         
       </div></SwiperSlide>
       </Swiper>
@@ -322,7 +322,7 @@ export default function Offer(){
 
 
       <div className="product border-[1px] border-solid lg:w-full md:w-full sm:w-full bg-white p-4 md:pb-3 sm:p-0 transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 rounded-xl">
-        <img src={img5} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="max-w-[100%] lg:w-[100%] sm:w-full rounded-xl h-auto"/>
+        <img src={sp11} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="max-w-[100%] lg:w-[100%] sm:w-full rounded-xl h-auto"/>
         <div className="rating text-center lg:text-lg xl:text-xl text-[0.8rem] md:text-sm font-medium sm:px-2 sm:text-[1rem] text-black mt-2">4.4 / 5 <span className='text-yellow-400'>&#9733;</span> <span className='text-gray-400'>(58.8k)</span></div>
         <div className="title font-normal lg:text-lg xl:text-xl mt-[10px] md:text-sm text-[0.8rem] sm:px-2 text-black sm:text-[1rem] sm:mb-2 text-center">Neutrogena Hydro Boost Hyaluronic Acid Water Gel...</div>
        
@@ -330,7 +330,7 @@ export default function Offer(){
 
 
       <div className="product  border-[1px]  lg:w-full border-solid-#ddd md:w-full p-[20px] sm:w-full md:pb-3 text-center sm:p-0 bg-white rounded-xl transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 ">
-        <img src={img6} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
+        <img src={sp12} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
         <div className="rating color-yellow xl:text-xl lg:text-lg md:text-sm text-[0.8rem] sm:px-2 sm:text-[1rem] text-black text-center font-medium mt-2">4.4  / 5<span className='text-yellow-400'>&#9733;</span> <span className='text-gray-400'>(58.8k)</span></div>
         <div className="title font-normal xl:text-xl lg:text-lg md:text-sm mt-[10px] sm:px-2 sm:text-[1rem] sm:mb-2 text-[0.8rem] text-black text-center ">Neutrogena Hydro Boost Hyaluronic Acid Water Gel...</div>
        
@@ -338,7 +338,7 @@ export default function Offer(){
 
 
       <div className="product border-[1px] lg:w-full  border-solid-#ddd p-[20px] sm:w-full text-center md:pb-3 md:w-full sm:p-0 bg-white transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 rounded-xl">
-        <img src={img7} alt="Wella Professionals INVIGO Nutri Enrich Deep Nourishing Conditioner" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
+        <img src={sp13} alt="Wella Professionals INVIGO Nutri Enrich Deep Nourishing Conditioner" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
         <div className="rating color-yellow xl:text-xl lg:text-lg md:text-sm sm:px-2 sm:text-[1rem] text-center text-black text-[0.8rem] font-medium mt-2">4.4  / 5<span className='text-yellow-400'>&#9733;</span> <span className='text-gray-400'>(4k)</span></div>
         <div className="title font-normal xl:text-xl lg:text-lg sm:px-2 md:text-sm sm:text-[1rem] sm:mb-2 mt-[10px] text-[0.8rem] text-black text-center">Wella Professionals INVIGO Nutri Enrich Deep...</div>
         
@@ -349,7 +349,7 @@ export default function Offer(){
 
 
       <div className="product border-[1px] border-solid-#ddd lg:w-full sm:w-full p-[20px] md:w-full md:pb-3 text-center sm:p-0 bg-white transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 rounded-xl">
-        <img src={img8} alt="Schwarzkopf Professional Bonacure Repair Rescue Conditioner" className="w-full sm:w-full rounded-xl"/>
+        <img src={sp14} alt="Schwarzkopf Professional Bonacure Repair Rescue Conditioner" className="w-full sm:w-full rounded-xl"/>
         <div className="rating lg:text-lg xl:text-xl color-yellow md:text-sm sm:px-2 sm:text-[1rem] text-[0.8rem] text-black text-center font-medium mt-2">4.3  / 5<span className='text-yellow-400'>&#9733;</span> <span className='text-gray-400'>(3.2k)</span></div>
         <div className="title lg:text-lg xl:text-xl font-normal md:text-sm sm:px-2 sm:text-[1rem] sm:mb-2 text-[0.8rem] mt-[10px] text-black text-center">Schwarzkopf Professional Bonacure Repair Rescue...</div>
         
@@ -357,7 +357,7 @@ export default function Offer(){
 
      
       <div className="product border-[1px] border-solid lg:w-full md:w-full sm:w-full bg-white p-4 md:pb-3 sm:p-0 transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 rounded-xl">
-        <img src={img1} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="max-w-[100%] lg:w-[100%] sm:w-full rounded-xl h-auto"/>
+        <img src={sp16} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="max-w-[100%] lg:w-[100%] sm:w-full rounded-xl h-auto"/>
         <div className="rating text-center lg:text-lg xl:text-xl text-[0.8rem] md:text-sm font-medium sm:px-2 sm:text-[1rem] text-black mt-2">4.4  / 5<span className='text-yellow-400'>&#9733;</span> <span className='text-gray-400'>(58.8k)</span></div>
         <div className="title font-normal lg:text-lg xl:text-xl mt-[10px] md:text-sm text-[0.8rem] sm:px-2 text-black sm:text-[1rem] sm:mb-2 text-center">Neutrogena Hydro Boost Hyaluronic Acid Water Gel...</div>
        
@@ -365,7 +365,7 @@ export default function Offer(){
 
 
       <div className="product  border-[1px]  lg:w-full border-solid-#ddd md:w-full p-[20px] sm:w-full md:pb-3 text-center sm:p-0 bg-white rounded-xl transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 ">
-        <img src={img2} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
+        <img src={sp15} alt="Neutrogena Hydro Boost Hyaluronic Acid Water Gel" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
         <div className="rating color-yellow xl:text-xl lg:text-lg md:text-sm text-[0.8rem] sm:px-2 sm:text-[1rem] text-black text-center font-medium mt-2">4.4  / 5<span className='text-yellow-400'>&#9733;</span> <span className='text-gray-500'>(58.8k)</span></div>
         <div className="title font-normal xl:text-xl lg:text-lg md:text-sm mt-[10px] sm:px-2 sm:text-[1rem] sm:mb-2 text-[0.8rem] text-black text-center ">Neutrogena Hydro Boost Hyaluronic Acid Water Gel...</div>
        
@@ -373,7 +373,7 @@ export default function Offer(){
 
 
       <div className="product border-[1px] lg:w-full  border-solid-#ddd p-[20px] sm:w-full text-center md:pb-3 md:w-full sm:p-0 bg-white transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 rounded-xl">
-        <img src={img3} alt="Wella Professionals INVIGO Nutri Enrich Deep Nourishing Conditioner" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
+        <img src={sp17} alt="Wella Professionals INVIGO Nutri Enrich Deep Nourishing Conditioner" className="w-full lg:w-[100%] sm:w-full rounded-xl"/>
         <div className="rating color-yellow xl:text-xl lg:text-lg md:text-sm sm:px-2 sm:text-[1rem] text-center text-black text-[0.8rem] font-medium mt-2">4.4 / 5 <span className='text-yellow-400'>&#9733;</span> <span className='text-gray-500'>(4k)</span></div>
         <div className="title font-normal xl:text-xl lg:text-lg sm:px-2 md:text-sm sm:text-[1rem] sm:mb-2 mt-[10px] text-[0.8rem] text-black text-center">Wella Professionals INVIGO Nutri Enrich Deep...</div>
         
@@ -384,7 +384,7 @@ export default function Offer(){
 
 
       <div className="product border-[1px] border-solid-#ddd lg:w-full sm:w-full p-[20px] md:w-full md:pb-3 text-center sm:p-0 bg-white transition duration-200 hover:bg-white hover:shadow-md hover:border-0 hover:scale-102 rounded-xl">
-        <img src={img4} alt="Schwarzkopf Professional Bonacure Repair Rescue Conditioner" className="w-full sm:w-full rounded-xl"/>
+        <img src={sp11} alt="Schwarzkopf Professional Bonacure Repair Rescue Conditioner" className="w-full sm:w-full rounded-xl"/>
         <div className="rating lg:text-lg xl:text-xl color-yellow md:text-sm sm:px-2 sm:text-[1rem] text-[0.8rem] text-black text-center font-medium mt-2">4.3  / 5&#9733; <span className='text-gray-500'>(3.2k)</span></div>
         <div className="title lg:text-lg xl:text-xl font-normal md:text-sm sm:px-2 sm:text-[1rem] sm:mb-2 text-[0.8rem] mt-[10px] text-black text-center">Schwarzkopf Professional Bonacure Repair Rescue...</div>
         

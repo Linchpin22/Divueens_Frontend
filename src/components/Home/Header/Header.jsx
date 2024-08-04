@@ -6,9 +6,9 @@ import Carousel from "./Carousel";
 import logo from "../../../assets/CarouselImages/heart.png";
 import Image1 from "../../../assets/CarouselImages/Image1.png";
 import Image6 from "../../../assets/CarouselImages/Image6.png";
-import Image3 from "../../../assets/CarouselImages/Image3.png";
-import Image4 from "../../../assets/CarouselImages/Image4.png";
-import Image5 from "../../../assets/CarouselImages/Image5.png";
+import Image3 from "../../../assets/CarouselImages/Image33.png";
+import Image4 from "../../../assets/CarouselImages/Image44.png";
+import Image5 from "../../../assets/CarouselImages/Image2.png";
 import { useLocation } from "react-router-dom";
 import Navbar1 from "./Navbar1";
 import navItemData from "./NavDropDownItems";
@@ -21,7 +21,7 @@ function Header() {
     //   text: `
     //   <span className="logoANDname">
     //   <img src=${logo} alt="Additional Content" className="additional-image w-[13%]" />
-    //     <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
+    //     <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">⭐ELITE<span className="italic-text">Pro💎</span></span>
     //     </span>
     //     <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
     //     Membership Cost Free Gift + Free Shipping & Much More!
@@ -36,7 +36,7 @@ function Header() {
       text: `
       <span className="logoANDname flex items-center">
       
-        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
+        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">⭐ELITE<span className="italic-text">Pro💎</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
         Membership Cost Free Gift + Free Shipping & Much More!  
@@ -51,7 +51,7 @@ function Header() {
       text: `
       <span className="logoANDname flex items-center">
       
-        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
+        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">⭐ELITE<span className="italic-text">Pro💎</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
         Membership Cost Free Gift + Free Shipping & Much More!  
@@ -65,7 +65,7 @@ function Header() {
       image: Image4,
       text: `
       <span className="logoANDname flex items-center">
-        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
+        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">⭐ELITE<span className="italic-text">Pro💎</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
         Membership Cost Free Gift + Free Shipping & Much More!  
@@ -80,7 +80,7 @@ function Header() {
       text: `
       <span className="logoANDname flex items-center">
       
-        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">ELITE<span className="italic-text">Pro</span></span>
+        <span className="bold-text1 font-bold font-['Montserrat'] text-[2.5vw]">⭐ELITE<span className="italic-text">Pro💎</span></span>
         </span>
         <div className="new-line"><span className="bold-text2 font-bold font-['Montserrat'] text-[2vw]"> FULL ON BEAUTY, FULL ON SAVINGS!</div></span>
         Membership Cost Free Gift + Free Shipping & Much More!  

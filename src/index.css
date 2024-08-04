@@ -70,8 +70,8 @@ body {
 
   .slide-button {
     padding: 0.5vw 1vw;
-    background-color: black;
-    color: white;
+    /* background-color: black;
+    color: white; */
     text-decoration: none;
     border-radius: 0.5vw;
     font-size: 2vw;
@@ -171,10 +171,15 @@ body {
 
 /* ----------------------------------------------- Footer Style ------------------------------------------------------- */
 
-footer[data-footer-part] {
+footer {
   /* border-top-left-radius: 50px; */
   /* border-top-right-radius: 50px; */
   font-family: "Josefin Sans";
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* --color-back: #ffffffa0[]; */
+  /* background-image: url('assets/OurTeam/1.jpg'); */
   /* background: linear-gradient(to bottom, #ffffff 40%, #f43f5e); */
   /* background: #ffe4e6; */
   /* background: rgb(220, 217, 217) */
@@ -231,7 +236,6 @@ footer[data-footer-part] {
   }
 
   .col_[data-footer-part]:first-child > .logo > img {
-    margin-right: 5em;
     margin-top: 2em;
   }
 

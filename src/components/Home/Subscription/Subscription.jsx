@@ -11,26 +11,26 @@ function Subscription() {
     <>
       <div className="combos_here md:pt-8">
         <div className="heading">
-          <hr className="bg-gradient-to-l from-rose-700" />
-          <h2 className="text-nowrap text-center">Exclusive Combos</h2>
-          <hr className="bg-gradient-to-r from-rose-700" />
+          <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
+          <h2 className="text-nowrap text-center" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in">Exclusive Combos</h2>
+          <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
         </div>
         <Slider />
       </div>
 
       <ReferSection />
       <BlogCards />
-      <ContactSection />
+      {/* <ContactSection /> */}
 
-      <div className="flex items-center w-full px-8">
-        <div className="w-[60%] flex flex-col gap-4">
-          <h3 className="text-2xl font-medium">Lorem ipsum dolor sit amet.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sint est deserunt quibusdam placeat autem. Iste blanditiis odit, expedita ab similique architecto numquam dolorum eligendi?</p>
+      {/* <div className="flex items-center flex-col md:flex-row w-full px-8">
+        <div className="w-full lg:w-1/2 xl:w-[60%] flex flex-col py-4 gap-4">
+          <h3 className="text-lg lg:text-2xl font-medium">Lorem ipsum dolor sit amet.</h3>
+          <p className="text-sm lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sint est deserunt quibusdam placeat autem. Iste blanditiis odit, expedita ab similique architecto numquam dolorum eligendi?</p>
         </div>
-        <div className="w-[40%] h-96">
+        <div className="h-64 max-[321px]:h-48 w-full md:h-full lg:h-96 lg:w-1/2 xl:w-[40%]">
           <img src={Mobile_app} className="w-full h-full" alt="" />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

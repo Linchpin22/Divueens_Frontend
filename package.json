@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "react": "^18.3.1",
     "react-card-slider-component": "^1.0.9",
     "react-dom": "^18.3.1",
@@ -17,6 +20,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.24.0",
     "react-slick": "^0.30.2",
+    "react-social-media-embed": "^2.5.13",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.12.3",
     "swiper": "^11.1.4"

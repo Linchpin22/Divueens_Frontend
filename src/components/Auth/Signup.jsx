@@ -1,8 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from "../../context/AuthContext";
 
 const Signup = ({ move, setMove, changeView }) => {
+  const {OTP, autherisation, setAutherisation} = useContext(AuthContext);
   const [generateOTP, setGenerateOTP] = useState(false);
   const [otpText, setOtpText] = useState(false);
   const [otpV, setOtpV] = useState("");
@@ -49,7 +51,7 @@ const Signup = ({ move, setMove, changeView }) => {
     }
   };
 
-  const isOtpValid = otpInputs.every(input => input !== "");
+  const isOtpValid = ( () => OTP === otpInputs.join(''));
 
   return (
     <>
@@ -99,8 +101,8 @@ const Signup = ({ move, setMove, changeView }) => {
         </div>
         <div className="flex">
           <div className='border mt-2 w-[100%] px-4 py-2 text-white bg-gradient-to-l from-rose-700 to-rose-300 rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
-            <NavLink to="/profile">
-              <button onClick={() => changeView(false)} type="submit" disabled={!acceptTerms || !isOtpValid}>
+            <NavLink to={autherisation ? '':'/profile'}>
+              <button onClick={() => {setAutherisation(acceptTerms || isOtpValid); changeView(false)}} type="submit" disabled={!acceptTerms || !isOtpValid}>
                 <span>Verify & Continue</span>
               </button>
             </NavLink>
