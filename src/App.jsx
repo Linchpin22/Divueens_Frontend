@@ -42,7 +42,7 @@ import Paymentnow from "./pages/Paymentnow";
 import Checkoutpage from "./pages/Checkoutpage";
 
 import BlogComponent from "./Blogs/Blogcomponent";
-import Checkoutnewaddress from "./pages/Checkoutnewaddress";
+// import Checkoutnewaddress from "./pages/Checkoutnewaddress";
 
 
 function App() {
@@ -93,7 +93,7 @@ function App() {
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/checkoutpage" element={<Checkoutpage />} />
         <Route path="/Paymentnow" element={<Paymentnow />} />
-        <Route path="/Checkoutnewaddress" element={<Checkoutnewaddress />} />
+        {/* <Route path="/Checkoutnewaddress" element={<Checkoutnewaddress />} /> */}
         
 {/* change */}
         <Route path="/:category/:subcategory" element={<ProductList />} />

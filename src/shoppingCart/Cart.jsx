@@ -31,7 +31,8 @@ const products = [
 
 export default function Cart() {
   
-  const {open,setOpen} = useContext(CartContext)
+  const {open,setOpen} = useContext(CartContext);
+  
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
       <DialogBackdrop
@@ -112,7 +113,7 @@ export default function Cart() {
                   <div className="mt-6">
                     <Link
                       to="/checkoutpage"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-rose-700" 
+                      className="flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-rose-700" onClick={()=>setOpen(false)}
                     >
                       Checkout
                     </Link>

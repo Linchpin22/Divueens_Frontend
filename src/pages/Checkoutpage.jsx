@@ -1,8 +1,17 @@
 import {Link} from 'react-router-dom';
 import { MdDeleteOutline } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import {useState} from 'react';
+import {useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+import Checkoutnewaddress from './Checkoutnewaddress';
+
+
 
 export default function Checkoutpage(){
+   
+    const {show,useShow} = useContext(CartContext);
+
     return(
 
         <>
@@ -66,51 +75,48 @@ export default function Checkoutpage(){
                 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div className="bg-gray-100 rounded-md p-4 h-max">
                     <h3 className="text-lg max-sm:text-base font-bold text-gray-800 border-b border-gray-300 pb-2">Order Summary</h3>
+                
+                
+                    <div>
+
+                <div className='flex justify-between'>
+
+                <h4 className="font-medium">address:</h4>
+                 <div className='flex mt-1.5 gap-x-2'><span className='text-lg'><MdDeleteOutline /></span>
+                  <span><FaEdit /></span></div>
+
+                 </div>
+
+                 <div><p className='text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sed?</p></div>
+
+                 </div>
 
 
-
-
-
-                  <div className=''>
-
-                    <div className='flex justify-between'>
-
-                    <h4 className="font-medium">address:</h4>
-                    <div className='flex mt-1.5 gap-x-2'><span className='text-lg'><MdDeleteOutline /></span>
-                    <span><FaEdit /></span></div>
-
-                    </div>
-
-                    <div><p className='text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sed?</p></div>
-
-                  </div>
-
-
-
+                
+                
 
                   <div className='mt-6 text-rose-600 text-center border-2 border-rose-700'>
-                    <button><Link to="/Checkoutnewaddress" >Add New Address</Link></button>
+                    <button onClick={()=>useShow(true)}>Add New Address</button>
+                    
                   </div>
+                  {show && <Checkoutnewaddress onClose={()=>useShow(false)} />}
+
+
+
+
+
+
 
                   
+                    <div class="flex border mt-4 border-blue-600 overflow-hidden rounded-md">
+                        <input type="email" placeholder="Promo code"
+                            class="w-full outline-none bg-white text-rose-600 text-sm px-2 py-1.5" />
+                        <button type='button' class="flex items-center justify-center font-semibold tracking-wide bg-rose-600 hover:bg-rose-700 px-4 text-sm text-white">
+                            Apply
+                        </button>
+                    </div>
 
 
 
@@ -127,8 +133,8 @@ export default function Checkoutpage(){
                     </ul>
 
                     <div className="mt-6 space-y-3">
-                        <button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-rose-600 hover:bg-rose-700 text-white rounded-md"><Link to="/Paymentnow" >Payment Now</Link></button>
-                         <button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-transparent text-gray-800 border border-gray-300 rounded-md"> <Link to="/products">Continue Shopping</Link></button>
+                    <Link to="/Paymentnow" ><button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-rose-600 hover:bg-rose-700 text-white rounded-md">Payment Now</button></Link>
+                        <Link to="/products"> <button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-transparent text-gray-800 border border-gray-300 rounded-md"> Continue Shopping</button></Link>
                     </div>
                 </div>
             </div>
