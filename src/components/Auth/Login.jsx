@@ -25,22 +25,22 @@ const Login = ({ move, setMove }) => {
       <form
         onSubmit={handleOTP}
         action="/"
-        className={`w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)] ${move ? 'ml-0' : 'ml-[-50%]'}`}
+        className={`w-1/2 [transition:all_0.6s_cubic-bezier(0.68,-0.55,0.265,1.55)] ${move ? 'ml-0' : 'ml-[-50%]'} flex flex-col items-center justify-center`}
       >
-        <h2 className='font-semibold text-[25px] text-center mt-[30px]'>Login With Mobile</h2>
-        <div className="h-[50px] w-full mt-8 md:mt-[50px] ">
+        <h2 className='font-semibold text-[20px] md:text-[25px] text-center'>Login With Mobile</h2>
+        <div className="w-full mt-6 md:mt-[20px] ">
           <input
             type="text"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
+            className="h-full w-full outline-none px-2 py-1 md:px-4 md:py-2 rounded-md border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
             inputMode="numeric"
             placeholder="Phone Number"
             required
           />
         </div>
-        {error && <p className="text-red-500 text-center md:mt-2">{error}</p>}
-        <div className='border mt-8 md:mt-[50px] px-4 py-2 text-white bg-gradient-to-l from-[#881337] to-[#fb7185] rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
+        {error && <p className="text-red-500 text-center text-xs mt-2 md:text-base md:mt-2">{error}</p>}
+        <div className='border mt-4 md:mt-[20px] px-4 py-2 text-white bg-gradient-to-l from-[#881337] to-[#fb7185] w-full rounded-md text-center text-sm md:text-[15px] font-medium cursor-pointer'>
           <button type="submit">
             <span>Send OTP</span>
           </button>
@@ -48,7 +48,7 @@ const Login = ({ move, setMove }) => {
         <div className="mt-2 text-center">
           <a
             href="#"
-            className="text-gray-700 "
+            className="text-gray-700 text-xs md:text-[13px]"
             onClick={() => setMove(true)}
           >
             Login via Email

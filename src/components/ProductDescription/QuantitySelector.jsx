@@ -12,7 +12,7 @@ const QuantitySelector = ({ quantity, onQuantityChange }) => {
   };
 
   return (
-    <div className="flex gap-1 md:mx-0 mx-auto w-fit items-center">
+    <div className="flex gap-1 items-center">
       <button
         className=" w-fit  md:mx-0 px-4 py-2.5 border border-rose-800 bg-transparent hover:bg-rose-50 text-rose-800 text-sm font-semibold rounded-md"
         onClick={handleDecrement}
