@@ -75,8 +75,8 @@ const ProductDetails = () => {
         <div className="mx-auto w-80 md:w-fit  ">
           <div class="font-sans ">
             <div class="p-4 lg:max-w-6xl max-w-2xl max-lg:mx-auto">
-              <div class="grid  items-start justify-items-center grid-cols-1 lg:grid-cols-2 gap-8 max-lg:gap-16">
-                <div className="w-80 mx-auto  lg:sticky top-0">
+              <div class="grid items-start justify-items-center grid-cols-1 lg:grid-cols-2 w-full gap-8 max-lg:gap-16">
+                <div className="w-80 lg:justify-self-end lg:sticky top-0">
                   <div class="  flex gap-3">
                     <div class="w-20 mx-auto flex flex-col max-sm:mb-4 gap-3">
                       {["", "", "", ""].map((item, i) => {
@@ -113,9 +113,9 @@ const ProductDetails = () => {
                         "Comfortable Fit",
                       ].map((featureName) => {
                         return (
-                          <li class="grid grid-cols-8 items-center text-sm text-gray-600">
-                            <FaCheckCircle className="text-base text-rose-600 col-span-1 sm:col-span-2 gap-1" />
-                            <h1 className="col-span-7 sm:col-span-6">{featureName}</h1>
+                          <li class="grid grid-cols-5 gap-2 items-center text-sm text-gray-600">
+                            <FaCheckCircle className="text-base text-rose-600 col-span-1 justify-self-end gap-1" />
+                            <h1 className="col-span-4">{featureName}</h1>
                           </li>
                         );
                       })}
@@ -155,16 +155,16 @@ const ProductDetails = () => {
                         })}
                       </div> */}
                       <div class="flex space-x-2 mt-4">
-                        <FaStar className="text-orange-400 mx-1" />
-                        <FaStar className="text-orange-400 mx-1" />
-                        <FaStar className="text-orange-400 mx-1" />
-                        <FaStar className="text-orange-400 mx-1" />
-                        <FaStar className="text-gray-300 mx-1" />
+                        <FaStar className="text-orange-400" />
+                        <FaStar className="text-orange-400" />
+                        <FaStar className="text-orange-400" />
+                        <FaStar className="text-orange-400" />
+                        <FaStar className="text-gray-300" />
                       </div>
                     </div>
                   </div>
 
-                  <hr class="my-6" />
+                  <hr class="my-5" />
 
                   <div class="flex flex-wrap gap-4 items-start">
                     <div>
@@ -178,7 +178,7 @@ const ProductDetails = () => {
                     </div>
                   </div>
 
-                  <hr class="my-6" />
+                  <hr class="my-5" />
 
                   {/* <div>
                     <h3 class="text-xl md:text-start text-center font-bold text-gray-800">
@@ -192,13 +192,13 @@ const ProductDetails = () => {
                     </div>
                   </div> */}
 
-                  {/* <hr class="my-6" /> */}
+                  {/* <hr class="my-5" /> */}
 
                   <div>
                     <h3 class="text-xl md:text-start  font-bold text-gray-800">
                       Choose a Shade
                     </h3>
-                    <div class="flex  w-fit flex-wrap gap-4 mt-4">
+                    <div class="flex  w-fit flex-wrap gap-4 mt-3">
                       <button
                         type="button"
                         class="w-10 h-10 bg-rose-400 border border-white hover:border-gray-800 rounded-md shrink-0"
@@ -209,7 +209,7 @@ const ProductDetails = () => {
                       ></button>
                       <button
                         type="button"
-                        class="w-10 h-10 bg-rose-800 border border-white hover:border-gray-800 rounded-md shrink-0"
+                        class="w-10 h-10 bg-rose-800 border-white hover:border-gray-800 border-2 rounded-md shrink-0"
                       ></button>
                       <button
                         type="button"
@@ -218,12 +218,12 @@ const ProductDetails = () => {
                     </div>
                   </div>
 
-                  <hr class="my-6" />
+                  <hr class="my-5" />
                   <QuantitySelector
                     quantity={quantity}
                     onQuantityChange={handleQuantityChange}
                   />
-                  <hr class="my-6" />
+                  <hr class="my-5" />
 
                   <div class="flex flex-wrap gap-4">
                     <Link
@@ -246,7 +246,7 @@ const ProductDetails = () => {
                       Add to cart
                     </button>
                   </div>
-                  <hr class="my-6" />
+                  <hr class="my-5" />
 
                   <div class="mt-8">
                     <div className="flex  flex-row justify-between">
@@ -363,23 +363,20 @@ const ProductDetails = () => {
                   >
                     Specification
                   </li>
-                  {/* <li class={`text-gray-500 font-semibold text-sm hover:bg-rose-100 py-3 px-8 cursor-pointer transition-all ${activeTab === "reviews" ? "text-rose-800 bg-rose-100  border-b-2 border-rose-800" : "text-gray-500"}`} onClick={() => setActiveTab("reviews")}>
-                    Reviews
-                  </li> */}
                 </ul>
 
                 <div className="mt-4">
                   <RenderContent val={activeTab} />
                 </div>
               </div>
-              <hr class="my-6" />
+              <hr class="my-5" />
 
               <div className="mx-auto max-w-5xl">
                 <ProductsYouMightLike />
-                <hr class="my-6" />
+                <hr class="my-5" />
                 <RelatedProducts />
               </div>
-              <hr class="my-6" />
+              <hr class="my-5" />
             </div>
           </div>
         </div>
