@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdDeleteOutline } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Checkoutnewaddress from "./Checkoutnewaddress";
