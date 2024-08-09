@@ -22,22 +22,22 @@ export default function Checkoutpage(){
             <div className="grid md:grid-cols-3 gap-8 mt-16">
                 <div className="md:col-span-2 space-y-4">
 
-// =======
+{/* // =======
 // import { useState, useContext, useEffect } from 'react';
 // import { CartContext } from '../context/CartContext';
 // import allItemData from '../components/ProductList/ProductListItemData';
 // import OrderSummary from '../components/OrderingGateway/OrderSummary';
-// >>>>>>> main
+// >>>>>>> main */}
 
-// export default function Checkoutpage() {
-//     const { subCartItemNumber } = useContext(CartContext);
-//     const [arrayOfCartItemId, setArrayOfCartItemId] = useState(JSON.parse(localStorage.getItem("Item-Id")) || []);
-//     const [cartItemData, setCartItemData] = useState([]);
-//     const [itemData, setItemData] = useState(allItemData);
+{/* // export default function Checkoutpage() { */}
+{/* //     const { subCartItemNumber } = useContext(CartContext); */}
+{/* //     const [arrayOfCartItemId, setArrayOfCartItemId] = useState(JSON.parse(localStorage.getItem("Item-Id")) || []); */}
+{/* //     const [cartItemData, setCartItemData] = useState([]); */}
+{/* //     const [itemData, setItemData] = useState(allItemData); */}
 
-//     useEffect(() => {
-//         const modifiedCartData = itemData.filter((val) => arrayOfCartItemId.includes(val.id));
-//         setCartItemData(modifiedCartData);
+{/* //     useEffect(() => { */}
+{/* //         const modifiedCartData = itemData.filter((val) => arrayOfCartItemId.includes(val.id)); */}
+{/* //         setCartItemData(modifiedCartData);
 //         const gv = JSON.parse(localStorage.getItem("Item-Id")) || [];
 //         if (gv !== arrayOfCartItemId) return setArrayOfCartItemId(JSON.parse(localStorage.getItem("Item-Id")) || []);
 //     }, [subCartItemNumber]);
@@ -82,7 +82,7 @@ export default function Checkoutpage(){
 //                 <h1 className="text-3xl font-bold text-gray-800 text-center">Shopping Cart</h1>
 
 //                 <div className="grid md:grid-cols-3 gap-8 mt-16">
-//                     <div className="md:col-span-2 space-y-4">
+//                     <div className="md:col-span-2 space-y-4"> */}
                         <div className="grid grid-cols-3 items-start gap-4">
                             {cartItemData.map((item) => (
                                 <div key={item.id} className="col-span-2 flex items-start gap-4">
@@ -186,7 +186,7 @@ export default function Checkoutpage(){
                     <Link to="/Paymentnow" ><button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-rose-600 hover:bg-rose-700 text-white rounded-md">Payment Now</button></Link>
                         <Link to="/products"> <button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-transparent text-gray-800 border border-gray-300 rounded-md"> Continue Shopping</button></Link>
                     </div>
-// =======
+{/* // =======
 //                     <OrderSummary
 //                         subtotal={subtotal}
 //                         tax={tax}
@@ -194,7 +194,7 @@ export default function Checkoutpage(){
 //                         total={total}
 //                     />
 
-// >>>>>>> main
+// >>>>>>> main */}
                 </div>
             </div>
         </>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Checkoutaddress(){
+const Checkoutaddress = () => {
   return (
     <>
     <div>
@@ -9,7 +9,7 @@ export default function Checkoutaddress(){
 
 <h4 className="font-medium">address:</h4>
 <div className='flex mt-1.5 gap-x-2'><span className='text-lg'><MdDeleteOutline /></span>
-<span><Link to="/Checkoutnewaddress" ><FaEdit /></Link></span></div>
+<span><FaEdit /></span></div>
 
 </div>
 
@@ -22,4 +22,4 @@ export default function Checkoutaddress(){
   )
 }
 
-
+export default Checkoutaddress
