@@ -137,7 +137,7 @@ export default function Cart() {
                   <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                   <div className="mt-6">
                     <Link
-                      to="/checkoutpage"
+                      to={"/checkoutpage"}
                       className="flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-rose-700" onClick={()=>setOpen(false)}
 
                     >
