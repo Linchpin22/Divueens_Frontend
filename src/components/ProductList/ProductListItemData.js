@@ -19,7 +19,7 @@ const productDetails = [
     quantity:1,
   },
   {
-    id: 1,
+    id: 13,
     name: "Moisture Matte Long ",
     price: 160,
     image: Lipstick,

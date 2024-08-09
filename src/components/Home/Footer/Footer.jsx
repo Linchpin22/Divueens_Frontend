@@ -13,7 +13,7 @@ import { FaFacebook } from "react-icons/fa";
 // import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
 import Divueens from "../../../assets/Divueens3.jpg";
-import { Apple, Google } from "../../../assets/assets";
+import { Apple, FBG, Google } from "../../../assets/assets";
 // import bg from "../../../assets/Shop_By_Category/background.svg";
 const baadiList = [
   {
@@ -199,8 +199,12 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="">
-      <div className="md:pt-16 pt-1 ">
+    <footer className="w-screen h-full lg:h-80 mt-4 relative">
+      <div className="h-[26rem] lg:h-full opacity-40">
+        <img src={FBG} className="object-cover w-full h-full" alt="" />
+      </div>
+
+      <div className={`absolute top-5 left-0 right-0 bottom-0 z-10`}>
         <div
           className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 sm:gap-y-8"
           data-footer-part=""
@@ -211,7 +215,7 @@ function Footer() {
             data-footer-part=""
           >
             <Link to="/" className="logo mx-auto">
-              <img alt="" className="object-contain sm:mr-[200px] mx-auto h-[5rem] w-[10rem] md:h-[10rem] md:w-22" src={Divueens} />
+              <img alt="" className="object-contain sm:mr-[200px] mx-auto h-[5rem] w-[10rem] md:h-[10rem] md:w-22 mix-blend-overlay" src={Divueens} />
             </Link>
             {/* <ul className="all_Items mt-6 space-y-3 text-sm">
               {_1stList.map((list2, int) => {
@@ -232,21 +236,7 @@ function Footer() {
           {/* <ul className="col_ col-span-2 flex justify-center gap-8 pt-12 md:pt-5 lg:pr-12 lg:mr-6 sm:col-span-3 lg:col-span-4 lg:justify-end">
              */}
         </div>
-        <ul className="flex justify-center gap-4 md:gap-6 w-full relative float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
-          {/* <li>
-            <a href="https://www.linkedin.com/company/divueens/about/"
-              className='w-12 h-12'
-            >
-              <img src={Google} className="w-full h-full" alt="" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/divueens/about/"
-              className='w-12 h-12'
-            >
-              <img src={Apple} className="w-full h-full" alt="" />
-            </a>
-          </li> */}
+        <ul className="flex justify-center mt-6 gap-4 md:gap-6 w-full relative float-right md:py-4 pt-6 pb-2 md:mr-24 md:justify-end">
           <li>
             <a href="/"
               className={textStyle}
@@ -276,8 +266,10 @@ function Footer() {
             </a>
           </li>
 
-          {/* <div className="flex items-center absolute -top-10 -right-12 bottom-0 w-fit h-12">
-          </div> */}
+          <div className="flex items-center md:gap-0 absolute -top-6 md:top-0 md:right-[20%] lg:right-40 md:bottom-0 w-fit h-12">
+            <img src={Google} className="w-24 h-[2.5rem] md:w-36 md:h-12" alt="" />
+            <img src={Apple} className="w-24 h-[2.5rem] md:w-36 md:h-12" alt="" />
+          </div>
         </ul>
 
         <hr data-footer-part="" className="mt-6 mx-4 mb-3 border-none h-[0.6px] bg-black" />

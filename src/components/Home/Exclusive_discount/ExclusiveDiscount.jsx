@@ -23,6 +23,7 @@ import {
   mamaearth,
   suntan,
 } from "../../../assets/assets";
+import AboutUs from "../AboutUs/AboutUs";
 
 
 const ExclusiveDiscount = () => {
@@ -135,9 +136,9 @@ const ExclusiveDiscount = () => {
 
         <br />
         <div className="heading pt-8 md:pt-16 pb-8">
-          <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
-          <h2 className="text-nowrap" data-aos="fade-up">Freebies of the Month</h2>
-          <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
+          <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000" data-aos-easing="ease-in"  />
+          <h2 className="text-nowrap" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000" data-aos-easing="ease-in" >Freebies of the Month</h2>
+          <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="2000" data-aos-easing="ease-in"  />
         </div>
         <br />
         <div className="banner-image">
@@ -170,7 +171,9 @@ const ExclusiveDiscount = () => {
             onClick={handleNextClick}
           ></div>
         </Swiper>
+
       </section>
+      <AboutUs />
     </>
   );
 };

@@ -38,14 +38,12 @@ const BestSeller = () => {
 
       <p
         className='text-center text-lg font-normal text-slate-400'
-        data-aos="fade-up"
       >
         Your Cosmetics and Skincare Products
       </p>
 
       <div
         className='my-10 mx-auto text-center'
-        data-aos="flip-up"
       >
         {["trending", "newArrivals"].map((cat, idx) => (
           <button
