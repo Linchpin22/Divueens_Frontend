@@ -19,10 +19,12 @@ export const CartCountProvider = (props) => {
     localStorage.setItem('cartItemCount', newCount.toString());
   };
   const [open, setOpen] = useState(false);
+  const[show,useShow] = useState(true);
 
   return (
     <CartContext.Provider value={{
       open,setOpen,
+      show,useShow,
       numCartItem,
       setNumCartItem,
       addCartItemNumber,

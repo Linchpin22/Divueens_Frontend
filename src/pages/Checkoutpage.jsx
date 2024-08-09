@@ -1,66 +1,88 @@
 import { Link } from 'react-router-dom';
 import { MdDeleteOutline } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
-
-import { useState, useContext, useEffect } from 'react';
+import {useState} from 'react';
+import {useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import allItemData from '../components/ProductList/ProductListItemData';
-import OrderSummary from '../components/OrderingGateway/OrderSummary';
-
-export default function Checkoutpage() {
-    const { subCartItemNumber } = useContext(CartContext);
-    const [arrayOfCartItemId, setArrayOfCartItemId] = useState(JSON.parse(localStorage.getItem("Item-Id")) || []);
-    const [cartItemData, setCartItemData] = useState([]);
-    const [itemData, setItemData] = useState(allItemData);
-
-    useEffect(() => {
-        const modifiedCartData = itemData.filter((val) => arrayOfCartItemId.includes(val.id));
-        setCartItemData(modifiedCartData);
-        const gv = JSON.parse(localStorage.getItem("Item-Id")) || [];
-        if (gv !== arrayOfCartItemId) return setArrayOfCartItemId(JSON.parse(localStorage.getItem("Item-Id")) || []);
-    }, [subCartItemNumber]);
-
-    const toRemoveItemFromCart = (itemId) => {
-        subCartItemNumber();
-        setArrayOfCartItemId((prevArray) => {
-            const updatedCartArray = prevArray.filter((val) => val !== itemId);
-            localStorage.setItem("Item-Id", JSON.stringify(updatedCartArray));
-            return updatedCartArray;
-        });
-    };
+import Checkoutnewaddress from './Checkoutnewaddress';
 
 
-    const calculateSubtotal = () => {
-        return cartItemData.reduce((total, item) => total + item.price * item.quantity, 0);
-    };
 
-    const calculateTax = (subtotal) => {
 
-        const taxRate = 0.02;
-        return subtotal * taxRate;
-    };
+export default function Checkoutpage(){
+   
+    const {show,useShow} = useContext(CartContext);
 
-    const calculateShipping = () => {
+    return(
 
-        return 60.00;
-    };
-
-    const calculateTotal = (subtotal, tax, shipping) => {
-        return subtotal + tax + shipping;
-    };
-
-    const subtotal = calculateSubtotal();
-    const tax = calculateTax(subtotal);
-    const shipping = calculateShipping();
-    const total = calculateTotal(subtotal, tax, shipping);
-
-    return (
         <>
-            <div className="font-sans max-w-5xl max-md:max-w-xl mx-auto bg-white py-4">
-                <h1 className="text-3xl font-bold text-gray-800 text-center">Shopping Cart</h1>
+       <div className="font-sans max-w-5xl max-md:max-w-xl mx-auto bg-white py-4">
+            <h1 className="text-3xl font-bold text-gray-800 text-center">Shopping Cart</h1>
 
-                <div className="grid md:grid-cols-3 gap-8 mt-16">
-                    <div className="md:col-span-2 space-y-4">
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+                <div className="md:col-span-2 space-y-4">
+
+{/* // =======
+// import { useState, useContext, useEffect } from 'react';
+// import { CartContext } from '../context/CartContext';
+// import allItemData from '../components/ProductList/ProductListItemData';
+// import OrderSummary from '../components/OrderingGateway/OrderSummary';
+// >>>>>>> main */}
+
+{/* // export default function Checkoutpage() { */}
+{/* //     const { subCartItemNumber } = useContext(CartContext); */}
+{/* //     const [arrayOfCartItemId, setArrayOfCartItemId] = useState(JSON.parse(localStorage.getItem("Item-Id")) || []); */}
+{/* //     const [cartItemData, setCartItemData] = useState([]); */}
+{/* //     const [itemData, setItemData] = useState(allItemData); */}
+
+{/* //     useEffect(() => { */}
+{/* //         const modifiedCartData = itemData.filter((val) => arrayOfCartItemId.includes(val.id)); */}
+{/* //         setCartItemData(modifiedCartData);
+//         const gv = JSON.parse(localStorage.getItem("Item-Id")) || [];
+//         if (gv !== arrayOfCartItemId) return setArrayOfCartItemId(JSON.parse(localStorage.getItem("Item-Id")) || []);
+//     }, [subCartItemNumber]);
+
+//     const toRemoveItemFromCart = (itemId) => {
+//         subCartItemNumber();
+//         setArrayOfCartItemId((prevArray) => {
+//             const updatedCartArray = prevArray.filter((val) => val !== itemId);
+//             localStorage.setItem("Item-Id", JSON.stringify(updatedCartArray));
+//             return updatedCartArray;
+//         });
+//     };
+
+
+//     const calculateSubtotal = () => {
+//         return cartItemData.reduce((total, item) => total + item.price * item.quantity, 0);
+//     };
+
+//     const calculateTax = (subtotal) => {
+
+//         const taxRate = 0.02;
+//         return subtotal * taxRate;
+//     };
+
+//     const calculateShipping = () => {
+
+//         return 60.00;
+//     };
+
+//     const calculateTotal = (subtotal, tax, shipping) => {
+//         return subtotal + tax + shipping;
+//     };
+
+//     const subtotal = calculateSubtotal();
+//     const tax = calculateTax(subtotal);
+//     const shipping = calculateShipping();
+//     const total = calculateTotal(subtotal, tax, shipping);
+
+//     return (
+//         <>
+//             <div className="font-sans max-w-5xl max-md:max-w-xl mx-auto bg-white py-4">
+//                 <h1 className="text-3xl font-bold text-gray-800 text-center">Shopping Cart</h1>
+
+//                 <div className="grid md:grid-cols-3 gap-8 mt-16">
+//                     <div className="md:col-span-2 space-y-4"> */}
                         <div className="grid grid-cols-3 items-start gap-4">
                             {cartItemData.map((item) => (
                                 <div key={item.id} className="col-span-2 flex items-start gap-4">
@@ -97,13 +119,82 @@ export default function Checkoutpage() {
                         <hr className="border-gray-300" />
                     </div>
 
-                    <OrderSummary
-                        subtotal={subtotal}
-                        tax={tax}
-                        shipping={shipping}
-                        total={total}
-                    />
 
+                    <hr className="border-gray-300" />
+
+                </div>
+
+
+                <div className="bg-gray-100 rounded-md p-4 h-max">
+                    <h3 className="text-lg max-sm:text-base font-bold text-gray-800 border-b border-gray-300 pb-2">Order Summary</h3>
+                
+                
+                    <div>
+
+                <div className='flex justify-between'>
+
+                <h4 className="font-medium">address:</h4>
+                 <div className='flex mt-1.5 gap-x-2'><span className='text-lg'><MdDeleteOutline /></span>
+                  <span><FaEdit /></span></div>
+
+                 </div>
+
+                 <div><p className='text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sed?</p></div>
+
+                 </div>
+
+
+                
+                
+
+                  <div className='mt-6 text-rose-600 text-center border-2 border-rose-700'>
+                    <button onClick={()=>useShow(true)}>Add New Address</button>
+                    
+                  </div>
+                  {show && <Checkoutnewaddress onClose={()=>useShow(false)} />}
+
+
+
+
+
+
+
+                  
+                    <div class="flex border mt-4 border-blue-600 overflow-hidden rounded-md">
+                        <input type="email" placeholder="Promo code"
+                            class="w-full outline-none bg-white text-rose-600 text-sm px-2 py-1.5" />
+                        <button type='button' class="flex items-center justify-center font-semibold tracking-wide bg-rose-600 hover:bg-rose-700 px-4 text-sm text-white">
+                            Apply
+                        </button>
+                    </div>
+
+
+
+
+
+
+
+                    <ul className="text-gray-800 mt-6 space-y-3">
+                        <li className="flex flex-wrap gap-4 text-sm">Subtotal <span className="ml-auto font-bold">$200.00</span></li>
+                        <li className="flex flex-wrap gap-4 text-sm">Shipping <span className="ml-auto font-bold">$2.00</span></li>
+                        <li className="flex flex-wrap gap-4 text-sm">Tax <span className="ml-auto font-bold">$4.00</span></li>
+                        <hr className="border-gray-300" />
+                        <li className="flex flex-wrap gap-4 text-sm font-bold">Total <span className="ml-auto">$206.00</span></li>
+                    </ul>
+
+                    <div className="mt-6 space-y-3">
+                    <Link to="/Paymentnow" ><button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-rose-600 hover:bg-rose-700 text-white rounded-md">Payment Now</button></Link>
+                        <Link to="/products"> <button type="button" className="text-sm px-4 py-2.5 w-full font-semibold tracking-wide bg-transparent text-gray-800 border border-gray-300 rounded-md"> Continue Shopping</button></Link>
+                    </div>
+{/* // =======
+//                     <OrderSummary
+//                         subtotal={subtotal}
+//                         tax={tax}
+//                         shipping={shipping}
+//                         total={total}
+//                     />
+
+// >>>>>>> main */}
                 </div>
             </div>
         </>

@@ -3,7 +3,6 @@ import React from 'react'
 const Checkoutaddress = () => {
   return (
     <>
-    
     <div>
 
 <div className='flex justify-between'>
@@ -17,6 +16,7 @@ const Checkoutaddress = () => {
 <div><p className='text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sed?</p></div>
 
 </div>
+
     
     </>
   )
