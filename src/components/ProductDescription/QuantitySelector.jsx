@@ -12,18 +12,18 @@ const QuantitySelector = ({ quantity, onQuantityChange }) => {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex gap-1 items-center">
       <button
-        className="border-2 border-gray-300 w-10 h-10 flex items-center justify-center text-rose-600 hover:bg-gray-200 transition duration-150 ease-in-out"
+        className=" w-fit  md:mx-0 px-4 py-2.5 border border-rose-800 bg-transparent hover:bg-rose-50 text-rose-800 text-sm font-semibold rounded-md"
         onClick={handleDecrement}
       >
         -
       </button>
-      <span className="border-2 border-gray-300 w-10 h-10 flex items-center justify-center text-rose-600">
+      <span className="w-fit  md:mx-0 px-4 py-2.5 border border-rose-800 bg-transparent text-rose-800 text-sm font-semibold rounded-md">
         {quantity}
       </span>
       <button
-        className="border-2 border-gray-300 w-10 h-10 flex items-center justify-center text-rose-600 hover:bg-gray-200 transition duration-150 ease-in-out"
+        className="w-fit  md:mx-0 px-4 py-2.5 border border-rose-800 bg-transparent hover:bg-rose-50 text-rose-800 text-sm font-semibold rounded-md"
         onClick={handleIncrement}
       >
         +

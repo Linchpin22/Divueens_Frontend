@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import styles from "./BestSeller.module.css";
-import { imageUrls} from "../../../assets/assets";
+import { b1, b2, imageUrls, product_11, product_13, product_14, img1 } from "../../../assets/assets";
 import { LiaShoppingCartSolid, LiaHeart } from "react-icons/lia";
 import "swiper/css";
 // import "swiper/css/pagination";
@@ -29,10 +29,11 @@ const BestSeller = () => {
 
   return (
     <>
+
       <div className="heading flex justify-center items-center">
-        <hr className="bg-gradient-to-l from-rose-700" />
-        <h2 className="text-xl text-nowrap text-center">Best Seller</h2>
-        <hr className="bg-gradient-to-r from-rose-700" />
+        <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" />
+        <h2 className="text-xl text-nowrap text-center" data-aos="fade-up">Best Seller</h2>
+        <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" />
       </div>
 
       <p
@@ -81,6 +82,7 @@ const BestSeller = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               className='bg-white rounded-lg shadow-xl h-[17rem] md:h-[20rem] overflow-hidden cursor-pointer transition-[0.9s_ease]'
+
             >
               <Link to={`/product/${data.Name}`} className="h-[70%] block overflow-hidden">
                 <img

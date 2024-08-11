@@ -61,20 +61,23 @@ const NewArrivals = () => {
     return (
         <>
             <div className="heading md:pt-16 pt-8 md:pb-8">
-                <hr className="bg-gradient-to-l from-rose-700" />
-                <h2 className="text-nowrap">New Arrivals</h2>
-                <hr className="bg-gradient-to-r from-rose-700" />
+                <hr className="bg-gradient-to-l from-rose-700" data-aos="fade-right" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
+                <h2 className="text-nowrap" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in">New Arrivals</h2>
+                <hr className="bg-gradient-to-r from-rose-700" data-aos="fade-left" data-aos-delay="3000" data-aos-duration="2000" data-aos-easing="ease-in" />
             </div>
             <div className="flex flex-col lg:flex-row w-full h-full relative px-8 md:px-2">
-                <div className="w-full h-52 select-none backdrop-blur-3xl bg-gradient-to-r from-white to-white/75 lg:w-[40%] lg:h-96 ">
-                    <div className="w-full h-full flex flex-col justify-center items-center text-center">
-                        <h1 className="text-[1.5rem] md:text-[2rem] xl:text-[4.5rem] dancing-script lg:-rotate-[25deg] font-bold">New Arrivals</h1>
-                        <p className="text-[1rem] md:text-[1.5rem] xl:text-[2.5rem] dancing-script lg:-rotate-[25deg] font-semibold">Shop Now</p>
+                <div className="w-full h-52 select-none backdrop-blur-3xl bg-gradient-to-r from-white to-white/75 lg:w-[35%] lg:h-96 px-4">
+                    <div className="w-full h-full flex flex-col justify-center text-center gap-2 lg:text-left">
+                        {/* <h1 className="text-[1.8rem] md:text-[2rem] dancing-script font-bold">New Arrivals</h1> */}
+                        
+                        <p className="text-[0.8rem] md:text-[1rem] font-medium">
+                        Step into the world of latest fashion trends with our New Arrivals! Our collection brings you the freshest styles, straight from the runways. From statement-making dresses to modern tops, we have something for every taste. Browse through our latest additions and elevate your style game!
+                        </p>
 
                     </div>
                 </div>
 
-                <div className="ml-auto  w-full h-72 lg:w-[60%] lg:h-96">
+                <div className="ml-auto w-full h-72 lg:w-[70%] lg:h-96">
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={20}
@@ -83,18 +86,18 @@ const NewArrivals = () => {
                         }}
                         breakpoints={{
                             320: { slidesPerView: 2, spaceBetween: 20 },
-                            768: { slidesPerView: 3, spaceBetween: 20 },
-                            1440: { slidesPerView: 4, spaceBetween: 20 },
+                            768: { slidesPerView: 4, spaceBetween: 0 },
+                            1440: { slidesPerView: 4, spaceBetween: 0 },
                         }}
                         modules={[Pagination, Scrollbar]}
-                        className="mySwiper w-full h-full py-4 lg:px-4">
+                        className="mySwiper w-full h-full py-4">
                         {product.map((p, i) => {
-                            return <SwiperSlide key={i} className='rounded-xl w-full h-[100%] overflow-hidden group relative'>
+                            return <SwiperSlide key={i} className='rounded-xl w-full h-[100%] overflow-hidden group relative mx-4'>
                                 <img src={p.img} alt="" className="w-full h-full object-cover transition group-hover:scale-110 duration-75" />
                                 <div className="absolute bg-black/5 flex flex-col justify-between top-0 bottom-0 right-0 left-0 group-hover:bg-black/50">
                                     <div>
-                                        <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">{p.title}</p>
-                                        <p className="text-xs md:text-sm lg:text-base pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ {p.price}</p>
+                                        <p className="text-xs md:text-sm pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">{p.title}</p>
+                                        <p className="text-xs md:text-sm pt-4 pl-4 font-semibold hidden transition group-hover:flex text-white">₹ {p.price}</p>
                                     </div>
 
                                     <button className='text-center hidden group-hover:flex bg-rose-700 px-4 text-white font-medium text-base md:text-lg w-fit mr-auto rounded-tr-xl'>Buy Now</button>
@@ -106,50 +109,6 @@ const NewArrivals = () => {
                 </div>
 
             </div>
-
-            <div className="heading md:pt-16 pt-8 md:pb-8">
-                <hr className="bg-gradient-to-l from-rose-700" />
-                <h2 className="text-nowrap">Products</h2>
-                <hr className="bg-gradient-to-r from-rose-700" />
-            </div>
-            <section className="mt-8">
-                <div className="grid grid-cols-2 gap-x-4 px-2 md:gap-x-0 lg:grid-cols-4 gap-y-8 md:px-8 pb-10">
-
-                    <div className="flex flex-col items-center">
-                        <img src={product_11} alt="Top Products" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Products</p> */}
-                    </div>
-
-                    <div className="flex flex-col items-center">
-                        <img src={product_13} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img src={product_14} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img src={b1} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img src={b2} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img src={b3} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img src={img1} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <img src={b4} alt="Top Brands" className=" w-40 h-40 md:w-60 md:h-60 rounded-full object-cover mb-2" />
-                        {/* <p className="text-center font-bold pt-5">Top Brands</p> */}
-                    </div>
-                </div>
-            </section>
         </>
     )
 }

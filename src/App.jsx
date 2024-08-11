@@ -37,7 +37,13 @@ import ReferralPage from "./pages/Referral";
 import Network from "./components/Network/Network";
 import Afterorder from "./pages/OrderConfirmation";
 import CareersPage from "./pages/CareersPage";
+import Paymentnow from "./pages/Paymentnow";
+
+import Checkoutpage from "./pages/Checkoutpage";
+
 import BlogComponent from "./Blogs/Blogcomponent";
+// import Checkoutnewaddress from "./pages/Checkoutnewaddress";
+
 
 function App() {
   const { pathname } = useLocation();
@@ -85,7 +91,9 @@ function App() {
         <Route path="/addtocart" element={<AddToCart />} />
         <Route path="/maintennace" element={<MaintennacePage />} />
         <Route path="/transaction" element={<Transaction />} />
-
+        <Route path="/checkoutpage" element={<Checkoutpage />} />
+        <Route path="/Paymentnow" element={<Paymentnow />} />
+        {/* <Route path="/Checkoutnewaddress" element={<Checkoutnewaddress />} /> */}
         
 {/* change */}
         <Route path="/:category/:subcategory" element={<ProductList />} />
@@ -102,7 +110,7 @@ function App() {
         <Route path="/careers" element={<CareersPage />} />
         
         <Route path="/BlogsPages" element={<BlogComponent />} />
-
+        
       </Routes>
       <Footer />
     </>
